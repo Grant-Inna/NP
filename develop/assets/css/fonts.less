@@ -1,0 +1,49 @@
+@family: 'Oswald';
+
+@weight1: 'Regular';
+@w-num1: 400;
+
+@weight2: 'Semibold';
+@w-num2: 600;
+
+@weight3: 'Bold';
+@w-num3: 700;
+
+@family2: 'OpenSans';
+
+
+
+@font-path: '../fonts/@{family}/@{family}';
+@font-path2: '../fonts/OpenSans/@{family2}';
+
+@font-face {
+  font-family: @family;
+    src: local('@{family} @{weight1}'), local('@{family}-@{weight1}'),
+        url('@{font-path}-@{weight1}.ttf') format('truetype');
+    font-weight: @w-num1;
+    font-style: normal;
+}
+@font-face {
+  font-family: @family;
+    src: local('@{family} @{weight3}'), local('@{family}-@{weight3}'),
+        url('@{font-path}-@{weight3}.ttf') format('truetype');
+    font-weight: @w-num3;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: @family2;
+    src: local('@{family} @{weight1}'), local('@{family}-@{weight1}'),
+        url('@{font-path2}-@{weight1}.ttf') format('truetype');
+    font-weight: @w-num1;
+    font-style: normal;
+}
+@font-face {
+  font-family: @family2;
+    src: local('@{family} @{weight2}'), local('@{family}-@{weight2}'),
+        url('@{font-path2}-@{weight2}.ttf') format('truetype');
+    font-weight: @w-num2;
+    font-style: normal;
+}
+
+
