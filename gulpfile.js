@@ -32,15 +32,15 @@ let gridOptions = {
    },
    breakPoints: {
       xxl: {
-         width: "1240px"
+         width: "1280px"
       },
       xl: {
          width: "1150px"
       },
       lg: {
          width: "995px",
-         fields: "30px",
-         offset: "20px"
+         fields: "40px",
+         offset: "15px"
       },
       md: {
          width: "770px"
@@ -98,8 +98,8 @@ function data(done){
    done();
 }
 function fonts(done){
-   return gulp.src(src +' data/fonts/*')
-   .pipe(gulp.dest( dist + ' data/fonts'));
+   return gulp.src(src +' fonts/*')
+   .pipe(gulp.dest( dist + ' fonts'));
    done();
 }
 function js(done){
