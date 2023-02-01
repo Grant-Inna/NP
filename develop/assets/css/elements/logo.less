@@ -1,0 +1,40 @@
+:root {
+   --width-image: 14vw;
+   --height-image: 12vw;
+   
+   
+   --width-title: 31vw;
+   --height-title: calc( 31vw / 5.9);
+}
+
+.header__main_logo {
+   position: relative;
+   z-index: 50;
+   
+   width: var(--width-image, 308px);
+   height: var(--height-image, 254px);
+   max-width: 308px;
+   min-width: 135px;
+   min-height: 95px;
+   
+   .logo-image();
+   
+   margin-right: 2rem;
+   
+   flex-shrink: 0;
+}
+
+.header__logo_title {
+   width: var(--width-title, 476px);
+   height: var(--height-title, 115px);
+   
+   max-width: 476px;
+   min-width: 214px;
+   max-height: 115px;
+   min-height: 35px;
+   
+   .logo-title();
+   
+   flex-shrink: 0;
+}
+

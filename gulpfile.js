@@ -31,11 +31,17 @@ let gridOptions = {
       fields: "50px" // fields не меньше offset делённого на 2
    },
    breakPoints: {
+      large: {
+         width: "1380px"
+      },
       xxl: {
          width: "1280px"
       },
       xl: {
          width: "1150px"
+      },
+      middle: {
+        width: "1070px"
       },
       lg: {
          width: "995px",
@@ -98,14 +104,22 @@ function data(done){
    done();
 }
 function fonts(done){
-   return gulp.src(src +' fonts/*')
-   .pipe(gulp.dest( dist + ' fonts'));
+   return gulp.src(src +'fonts/**/*')
+   .pipe(gulp.dest( dist + 'fonts'));
    done();
 }
 function js(done){
-   return gulp.src(src + 'js/*')
+   return gulp.src(src + 'js/concat/*.js')
    .pipe(gulpif(isProd, uglify()))
-   .pipe(gulp.dest( dist + 'js'));
+   .pipe(concat('concat.js'))
+   .pipe(gulp.dest( dist + 'js'))
+   .pipe(gulpif(isSync, browserSync.stream()));
+   done();
+}
+function js_copy(done){
+   return gulp.src(src + 'js/jquery.js')
+   .pipe(gulpif(isProd, uglify()))
+   .pipe(gulp.dest( dist + 'js'))
    done();
 }
 
@@ -129,8 +143,8 @@ function watch(done){
    gulp.watch( src + 'images/**/*', images);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
-   gulp.watch( src + 'data/**/*', data);
-   gulp.watch( src + 'js/*', js);
+   gulp.watch( src + 'js/*.js', js);
+   gulp.watch( src + 'js/concat/*.js', js);
    done();
 }
 
@@ -139,14 +153,16 @@ function grid(done){
    done();
 }
 
-const build = gulp.series(clear,
+const build_old = gulp.series(clear,
    gulp.parallel(html, styles, js, images, data, fonts )
 );
+const build = gulp.parallel(html, styles, js, js_copy, images, data, fonts );
 
 gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', gulp.parallel(grid));
 gulp.task('fonts', fonts);
 gulp.task('js', js);
+gulp.task('js_copy', js_copy);
 gulp.task('data', data);
 // gulp.task('ie', ie7);

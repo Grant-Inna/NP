@@ -1,0 +1,45 @@
+.pseudo() {
+    content: '';
+   display: block;
+   position: absolute;
+}
+header.header__container:after {
+  .pseudo();
+   z-index: 15;
+   
+   width: 45%;
+   height: 100%;
+   
+   top: 0;
+   left: 0;
+   
+   background: @color-background-blue-dark;
+   .large-block({
+      width: calc(40% - 10vw);
+   })
+}
+header.header__container:before {
+   .pseudo();
+   z-index: 10;
+   
+   width: 100%;
+   height: 250%;
+   
+   top: 0;
+   right: 0;
+   
+   .header-pseudo-blue();
+}
+
+.header__main_logo:before {
+   .pseudo();
+   top: 8vw;
+   right: 1vw;
+   
+    width: 23vw;
+    max-width: 445px;
+    height: 21vw;
+    max-height: 380px;
+   
+   .logo-pseudo();
+}

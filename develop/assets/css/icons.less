@@ -2,3 +2,45 @@
    background-image: url("../data/@{folder}/@{name}.svg");
    background-repeat: no-repeat;
 }
+.icon-color-svg( @folder, @color, @name ) {
+   background-image: url("../data/@{folder}/@{color}/@{name}.svg");
+   background-repeat: no-repeat;
+}
+.icon-30() {
+   background-size: contain;
+   background-position: center;
+   width: 2rem;
+   height: 2rem;
+}
+.icon-20() {
+   background-size: contain;
+   background-position: center;
+   width: 1.3rem;
+   height: 1.3rem;
+}
+
+.icon_arrow_thin {
+   .icon-color-svg( 'icons', 'black', 'arr-bottom' );
+   background-size: contain;
+   background-position: center;
+   width: 1.3rem;
+   height: 1rem;
+   
+   .tr();
+}
+.icon_eye {
+   .icon-color-svg( 'icons', 'black', 'eye_on' );
+   .icon-30();
+}
+.icon_eye_off {
+   .icon-color-svg( 'icons', 'black', 'eye_off' );
+   .icon-30();
+}
+.icon_search {
+   .icon-color-svg( 'icons', 'black', 'search' );
+   .icon-30();
+}
+.icon_close {
+   .icon-color-svg( 'icons', 'black', 'close' );
+   .icon-30();
+}

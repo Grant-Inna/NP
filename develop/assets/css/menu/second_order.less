@@ -1,0 +1,79 @@
+.menu__second_order {
+    position: absolute;
+    top: @height-menu;
+    width: 115%;
+    min-width: 250px;
+    
+    .body-semibold-55();
+    color: @color-text-black;
+
+    background-color: #ffffff;
+    border-top: 4px solid @color-background-orange-main;
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    
+    box-shadow: none;
+
+    z-index: 335;
+
+    height: 0;
+    opacity: 0;
+    .tr();
+}
+.menu__second_order {
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: .2s;
+}
+.second_order__item {
+    margin-bottom: 1.2rem;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+.menu_checkbox:checked ~ .icon_arrow_thin {
+    .rotate();
+}
+.menu_checkbox:checked ~ .menu__second_order {
+    border-top-width: 10px;
+    box-shadow: @box-shadow;
+    padding-top: 1.8rem;
+    padding-bottom: 2rem;
+    .tr();
+}
+.menu_checkbox:checked ~ .menu__second_order,
+.menu_checkbox:checked ~ .menu__second_order .second_order__item {
+    opacity: 1;
+    display: block;
+    height: auto;
+    .tr();
+}
+
+
+
+/*  При наведении
+
+.menu_checkbox:hover ~ .icon_arrow_thin {
+    .rotate();
+}
+.menu_checkbox:hover ~ .menu__second_order {
+    border-top-width: 10px;
+    box-shadow: @box-shadow;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    .tr();
+}
+.menu_checkbox:hover ~ .menu__second_order,
+.menu_checkbox:hover ~ .menu__second_order .second_order__item {
+    opacity: 1;
+    .tr();
+}
+.menu_checkbox:hover ~ .menu__second_order,
+.menu_checkbox:hover ~ .menu__second_order .second_order__item {
+    height: auto;
+    transition: .1s;
+}
+*/
+
+

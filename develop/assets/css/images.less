@@ -1,0 +1,70 @@
+.cover() {
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.contain() {
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.bg( @name ) {
+   background-image: url("../data/bg/@{name}");
+}
+
+.orange_header() {
+   .bg('header-orange.svg');
+   background-position: right;
+   .cover();
+}
+.orange_header-small() {
+   .bg('header-orange.svg');
+   background-position: right;
+   .cover();
+}
+.blue_header-bg() {
+   .bg('header-blue.svg');
+   background-position: right;
+   .cover();
+   .to( 1450px, {
+      background-position: 70%;
+   })
+}
+.header-pseudo-blue() {
+   .bg('header-pseudo-blue.png');
+   background-position: right top;
+   .contain();
+}
+
+.logo-image() {
+   background-image: url("../data/logo/npr.svg");
+   .contain();
+   background-position: top;
+}
+.logo-title() {
+   background-image: url("../data/logo/npr_text.svg");
+   .contain();
+   background-position: left top;
+}
+.logo-pseudo() {
+   .bg('polygon-3-main.png');
+   background-position: center;
+   .contain();
+}
+
+
+.aside-arrow-white() {
+   background-image: url("../data/icons/white/arrow.svg");
+   .cover();
+   background-position: center;
+   
+   width: 5rem;
+   height: 4rem;
+}
+.aside-arrow-blue() {
+   background-image: url("../data/icons/blue/arrow.svg");
+   .cover();
+   background-position: center;
+   
+   width: 5rem;
+   height: 4rem;
+}

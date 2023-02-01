@@ -1,8 +1,10 @@
 @columns: 24;
 @atom: (100% / @columns);
 
+@break_large: 1380px;
 @break_xxl: 1280px;
 @break_xl: 1150px;
+@break_middle: 1070px;
 @break_lg: 995px;
 @break_md: 770px;
 @break_sm: 580px;
@@ -10,8 +12,10 @@
 @break_xxs: 360px;
 
 @offset: 30px;
+@offset_large: @offset;
 @offset_xxl: @offset;
 @offset_xl: @offset;
+@offset_middle: @offset;
 @offset_lg: 15px;
 @offset_md: @offset_lg;
 @offset_sm: @offset_lg;
@@ -19,8 +23,10 @@
 @offset_xxs: @offset_xs;
 
 @offset_one_side: (@offset / 2);
+@offset_large_one_side: (@offset_large / 2);
 @offset_xxl_one_side: (@offset_xxl / 2);
 @offset_xl_one_side: (@offset_xl / 2);
+@offset_middle_one_side: (@offset_middle / 2);
 @offset_lg_one_side: (@offset_lg / 2);
 @offset_md_one_side: (@offset_md / 2);
 @offset_sm_one_side: (@offset_sm / 2);
@@ -122,6 +128,11 @@
     width: ~"calc(@{val} - @{offset})";
 }
 
+.size-large(@n){
+    @val: 100% / @columns * @n;
+    .large(width, ~"calc(@{val} - @{offset_large})");
+}
+
 .size-xxl(@n){
     @val: 100% / @columns * @n;
     .xxl(width, ~"calc(@{val} - @{offset_xxl})");
@@ -130,6 +141,11 @@
 .size-xl(@n){
     @val: 100% / @columns * @n;
     .xl(width, ~"calc(@{val} - @{offset_xl})");
+}
+
+.size-middle(@n){
+    @val: 100% / @columns * @n;
+    .middle(width, ~"calc(@{val} - @{offset_middle})");
 }
 
 .size-lg(@n){
@@ -187,6 +203,38 @@
 .shift-padding-right(@n){
     @val: 100% / @columns * @n;
     padding-right: ~"calc(@{val} + @{offset_one_side})";
+}
+
+.shift-large(@n){
+    @val: 100% / @columns * @n;
+    .large(margin-left, ~"calc(@{val} + @{offset_large_one_side})");
+    .large(margin-right, ~"calc(@{val} + @{offset_large_one_side})");
+}
+
+.shift-large-left(@n){
+    @val: 100% / @columns * @n;
+    .large(margin-left, ~"calc(@{val} + @{offset_large_one_side})");
+}
+
+.shift-large-right(@n){
+    @val: 100% / @columns * @n;
+    .large(margin-right, ~"calc(@{val} + @{offset_large_one_side})");
+}
+
+.shift-large-padding(@n){
+    @val: 100% / @columns * @n;
+    .large(padding-left, ~"calc(@{val} + @{offset_large_one_side})");
+    .large(padding-right, ~"calc(@{val} + @{offset_large_one_side})");
+}
+
+.shift-large-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .large(padding-left, ~"calc(@{val} + @{offset_large_one_side})");
+}
+
+.shift-large-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .large(padding-right, ~"calc(@{val} + @{offset_large_one_side})");
 }
 
 .shift-xxl(@n){
@@ -251,6 +299,38 @@
 .shift-xl-padding-right(@n){
     @val: 100% / @columns * @n;
     .xl(padding-right, ~"calc(@{val} + @{offset_xl_one_side})");
+}
+
+.shift-middle(@n){
+    @val: 100% / @columns * @n;
+    .middle(margin-left, ~"calc(@{val} + @{offset_middle_one_side})");
+    .middle(margin-right, ~"calc(@{val} + @{offset_middle_one_side})");
+}
+
+.shift-middle-left(@n){
+    @val: 100% / @columns * @n;
+    .middle(margin-left, ~"calc(@{val} + @{offset_middle_one_side})");
+}
+
+.shift-middle-right(@n){
+    @val: 100% / @columns * @n;
+    .middle(margin-right, ~"calc(@{val} + @{offset_middle_one_side})");
+}
+
+.shift-middle-padding(@n){
+    @val: 100% / @columns * @n;
+    .middle(padding-left, ~"calc(@{val} + @{offset_middle_one_side})");
+    .middle(padding-right, ~"calc(@{val} + @{offset_middle_one_side})");
+}
+
+.shift-middle-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .middle(padding-left, ~"calc(@{val} + @{offset_middle_one_side})");
+}
+
+.shift-middle-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .middle(padding-right, ~"calc(@{val} + @{offset_middle_one_side})");
 }
 
 .shift-lg(@n){
@@ -413,6 +493,18 @@
     .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
 }
 
+.large(@name, @value){
+    @media screen and (max-width: @break_large){
+        @{name}: @value;
+    }
+}
+
+.large-block(@content){
+    @media screen and (max-width: @break_large){
+        @content();
+    }
+}
+
 .xxl(@name, @value){
     @media screen and (max-width: @break_xxl){
         @{name}: @value;
@@ -433,6 +525,18 @@
 
 .xl-block(@content){
     @media screen and (max-width: @break_xl){
+        @content();
+    }
+}
+
+.middle(@name, @value){
+    @media screen and (max-width: @break_middle){
+        @{name}: @value;
+    }
+}
+
+.middle-block(@content){
+    @media screen and (max-width: @break_middle){
         @content();
     }
 }
