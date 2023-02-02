@@ -43,3 +43,44 @@ header.header__container:before {
    
    .logo-pseudo();
 }
+
+.aside__block_white .header__aside_icon:after {
+   .pseudo();
+   top: 0;
+   right: 0;
+   
+   
+   width: 21.5rem;
+   height: 4rem;
+   
+   .aside-icon-tail();
+}
+header.header__container .wrapper:after {
+   .pseudo();
+   .wrapper-main-blue();
+   top: 25%;
+   right: 4%;
+   
+   width: 9vw;
+   height: 10vw;
+   
+   .to( 1448px, {
+      right: 2%;
+   });
+   .xxl-block({
+      right: 3%;
+   });
+   .to( 1200px, {
+      right: 1%;
+   });
+   
+}
+header.header__container .wrapper:before {
+   .pseudo();
+   .wrapper-main-white();
+   bottom: -2vw;
+   right: 11%;
+   
+   width: 5vw;
+   height: 5vw;
+}
