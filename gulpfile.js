@@ -24,18 +24,23 @@ const base = './develop/',
 
 let gridOptions = {
    columns: 24,
-   offset: "30px",
+   offset: "20px",
    // mobileFirst: true,
    container: {
       maxWidth: "1440px",
-      fields: "50px" // fields не меньше offset делённого на 2
+      fields: "50px" // поля, fields не меньше offset делённого на 2
    },
    breakPoints: {
+      ll: {
+         width: "1480px"
+      },
       large: {
          width: "1380px"
       },
       xxl: {
-         width: "1280px"
+         width: "1280px",
+         fields: "40px",
+         offset: "15px"
       },
       xl: {
          width: "1150px"
@@ -45,19 +50,17 @@ let gridOptions = {
       },
       lg: {
          width: "995px",
-         fields: "40px",
-         offset: "15px"
       },
       md: {
-         width: "770px"
+         width: "770px",
+         fields: "20px",
+         offset: "10px"
       },
       sm: {
          width: "580px"
       },
       xs: {
-         width: "470px",
-         fields: "20px",
-         offset: "10px"
+         width: "470px"
       },
       xxs: {
          width: "360px"

@@ -1,4 +1,15 @@
 $(document).ready(function () {
+   /* плавный скрол */
+   
+   if ($('#back').length > 0) {
+    
+      $('#back').on( 'click', function() {
+         $('body, html').animate({scrollTop: 0 }, 500); // плавно переходим наверх
+      });
+   }
+});
+
+$(document).ready(function () {
    /* выбор только одного checkbox */
 
    if($('.menu_container').length > 0) {

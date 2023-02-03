@@ -85,3 +85,30 @@
    .contain();
    background-position: center;
 }
+
+.footer-bg-orange() {
+   .bg('footer-orange.svg');
+}
+
+.logo( @name ) {
+   background-image: url("../data/logo/@{name}.svg");
+   .contain();
+   background-position: center;
+}
+.logo-np() {
+   .logo('npr-footer');
+}
+.logo-minpros() {
+   .logo('minpros');
+}
+
+
+.map-bg() {
+   .bg( 'long-blue-gradient.png' );
+   background-repeat: no-repeat;
+   background-size: 100% 75%;
+}
+.map() {
+   .bg( 'map.png' );
+   .contain();
+}
