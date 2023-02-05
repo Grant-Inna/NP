@@ -75,6 +75,13 @@ function html(done){
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
+function html_pages(done){
+   return gulp.src( base + '**/*.jade' )
+   .pipe(jade())
+   .pipe(gulp.dest( prod ))
+   .pipe(gulpif(isSync, browserSync.stream()));
+   done();
+}
 
 function styles(){
    return gulp.src( [ src + 'css/style.less' ])
@@ -89,11 +96,6 @@ function styles(){
    .pipe(gulp.dest( dist + 'css'))
    .pipe(gulpif(isSync, browserSync.stream()))
 }
-// function ie7(done) {
-//    return gulp.src( src + 'css/fontello-ie7.css' )
-//    .pipe(gulp.dest( dist + 'css/' ));
-//    done();
-// }
 
 function images(done){
    return gulp.src( src + 'images/**/*')
@@ -122,7 +124,7 @@ function js(done){
 function js_copy(done){
    return gulp.src(src + 'js/jquery.js')
    .pipe(gulpif(isProd, uglify()))
-   .pipe(gulp.dest( dist + 'js'))
+   .pipe(gulp.dest( dist + 'js'));
    done();
 }
 
@@ -143,6 +145,10 @@ function watch(done){
    gulp.watch( src + 'css/**/*.less', styles);
    gulp.watch( base + '*.jade', html);
    gulp.watch( src + 'jade/**/*.jade', html);
+   gulp.watch( src + 'jade/**/**/*.jade', html);
+   gulp.watch( src + 'jade/**/**/*.jade', html_pages);
+   gulp.watch( base + 'federal_projects/*.jade', html_pages);
+   gulp.watch( base + 'infrastructure/*.jade', html_pages);
    gulp.watch( src + 'images/**/*', images);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
@@ -159,7 +165,7 @@ function grid(done){
 const build_old = gulp.series(clear,
    gulp.parallel(html, styles, js, images, data, fonts )
 );
-const build = gulp.parallel(html, styles, js, js_copy, images, data, fonts );
+const build = gulp.parallel(html, html_pages, styles, js, js_copy, images, data, fonts );
 
 gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
@@ -168,4 +174,4 @@ gulp.task('fonts', fonts);
 gulp.task('js', js);
 gulp.task('js_copy', js_copy);
 gulp.task('data', data);
-// gulp.task('ie', ie7);
+gulp.task('html_pages', html_pages);

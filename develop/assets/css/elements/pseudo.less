@@ -43,6 +43,16 @@ header.header__container:before {
    
    .logo-pseudo();
 }
+#container .header__main_logo:before {
+   .logo-pseudo-md();
+    top: 7vw;
+    right: -9vw;
+   
+   width: 21vw;
+    max-width: 340px;
+    height: 22vw;
+    max-height: 220px;
+}
 
 .aside__block_white .header__aside_icon:after {
    .pseudo();
@@ -101,4 +111,37 @@ footer.footer__container:after {
    .middle-block({
       width: 20vw;
    })
+}
+
+
+#container {
+   header.header__container:before {
+      height: 225%;
+      //max-height: 45vw;
+      max-height: 1100px;
+      .xxl-block({
+         height: 245%;
+      });
+   }
+   header.header__container .wrapper:before {
+      content: none;
+   }
+   .header__aside_text:after {
+      .pseudo();
+      .header-aside-image();
+      
+      top: -1rem;
+      left: -9rem;
+      
+      width: 68px;
+      height: 89px;
+      
+      transform: rotate(47deg);
+   }
+   
+   
+   &.container__school .header__container:before {
+      .header-pseudo-school();
+   }
+
 }

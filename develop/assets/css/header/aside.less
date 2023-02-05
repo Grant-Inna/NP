@@ -73,3 +73,20 @@ aside.header__aside_holder {
       .aside-arrow-blue();
    }
 }
+
+#container {
+   
+   .header__aside_block.aside__block_white {
+      transform: rotate(-40deg) translateX(-1vw) translateY(-1vw);
+   
+      .from(1650px, {
+         transform: rotate(-40deg) translateX(-2vw) translateY(-1vw);
+      });
+   }
+   .header__aside_text {
+      position: relative;
+      z-index: 50;
+      .headline-4();
+      line-height: 2.6rem;
+   }
+}

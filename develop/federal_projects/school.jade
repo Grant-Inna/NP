@@ -1,0 +1,16 @@
+doctype
+html
+   include ../assets/jade/static/__header
+   +head('Современная школа | Федеральные проекты')
+
+   body
+      #container.container__school
+         include ../assets/jade/menu/menu
+         include ../assets/jade/menu/mobile
+         include ../assets/jade/content/pages/header
+
+         include ../assets/jade/content/pages/__caption
+         +caption( 'Современная школа', 'Федеральный проект <b>&laquo;Современная школа&raquo;</b> направлен на&nbsp;обеспечение возможности детям получать качественное общее образование в&nbsp;условиях, отвечающих современным требованиям, независимо от&nbsp;места проживания ребенка, обеспечение возможности профессионального развития педагогических работников, а&nbsp;также на&nbsp;организацию комплексного психолого-педагогического сопровождения участников образовательных отношений.')
+
+
+         include ../assets/jade/footer/footer

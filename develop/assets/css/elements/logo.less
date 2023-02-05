@@ -38,3 +38,32 @@
    flex-shrink: 0;
 }
 
+
+:root {
+      --width-image-p: 15vw;
+      --height-image-p: 13vw;
+      
+      --width-title-p: 45vw;
+      --height-title-p: calc( 45vw / 5.9);
+}
+
+#container {
+   .header__main_logo {
+      position: relative;
+      z-index: 50;
+   
+      width: var(--width-image-p, 244px);
+      height: var(--height-image-p, 200px);
+      max-width: 308px;
+      min-width: 135px;
+      min-height: 112px;
+   }
+   .header__logo_title {
+      width: var(--width-title-p, 476px);
+      height: var(--height-title-p, 115px);
+      
+      .md-block({
+         .logo-title-xs();
+      })
+   }
+}

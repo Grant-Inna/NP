@@ -5,5 +5,5 @@ mixin federal_cell( title, image, text )
       img.tile_federal__image( src='./assets/data/images/federal_tile/#{image}.jpg?v=1')
       .tile_federal__about
          .tile_federal__text !{text}
-         a.tile_federal__button.button_orange
+         a( href='./federal_projects/#{image}.html' ).tile_federal__button.button_orange
             span Перейти

@@ -1,18 +1,19 @@
-include __second
+include __federal
+include __infrastructure
 .menu__items_holder
    label#federal.menu__item
       input( type='checkbox' name='menu' ).hidden.menu_checkbox
       span Федеральные проекты
       i.icon_arrow_thin
       .menu__second_order
-         +second('Современная школа')
-         +second('Успех каждого ребенка')
-         +second('Молодые профессионалы')
-         +second('Цифровая образовательная среда')
-         +second('Социальные лифты для каждого')
-         +second('Социальная активность')
-         +second('Патриотическое воспитание')
-         +second('Молодежь России')
+         +federal('Современная школа', 'school')
+         +federal('Успех каждого ребенка', 'success')
+         +federal('Молодые профессионалы', 'professional')
+         +federal('Цифровая образовательная среда', 'cos')
+         +federal('Социальная активность', 'social_activity')
+         +federal('Социальные лифты для каждого', 'social_lift')
+         +federal('Патриотическое воспитание', 'patriot')
+         +federal('Молодежь России', 'youth')
 
    label.menu__item
       input( type='checkbox' name='menu' ).hidden.menu_checkbox
@@ -20,17 +21,17 @@ include __second
       span.add проекта
       i.icon_arrow_thin
       .menu__second_order
-         +second('Центр образования «Точка роста»')
-         +second('Центр «IT-куб»')
-         +second('Кванториум')
-         +second('Школьный Кванториум')
-         +second('Детский и мобильный технопарк')
-         +second('«Кванториум»')
-         +second('Педагогический Кванториум')
-         +second('Центр опережающей профессиональной подготовки')
-         +second('Центр «ДНК»')
-         +second('Центр выявления и поддержки одарённых детей')
-         +second('Центр непрерывного повышения профессионального мастерства педагогических работников')
+         +infrastructure('Центр образования «Точка роста»', 'tochka_rosta')
+         +infrastructure('Центр «IT-куб»', 'IT-kub')
+         +infrastructure('Кванториум', 'kvantorium')
+         +infrastructure('Школьный Кванториум', 'school_kvantorium')
+         +infrastructure('Детский и мобильный технопарк', 'mobile_technopark')
+         +infrastructure('«Кванториум»', 'kvantorium_2')
+         +infrastructure('Педагогический Кванториум', 'pedagogical_kvantorium')
+         +infrastructure('Центр опережающей профессиональной подготовки', 'center_advanced_training')
+         +infrastructure('Центр «ДНК»', 'center_DNA')
+         +infrastructure('Центр выявления и поддержки одарённых детей', 'center_gifted_children')
+         +infrastructure('Центр непрерывного повышения профессионального мастерства педагогических работников', 'center_teachers_professional_development')
 
    a.menu__item Результаты
    a.menu__item План развития

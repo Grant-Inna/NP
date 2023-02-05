@@ -45,8 +45,18 @@
    .contain();
    background-position: left top;
 }
+.logo-title-xs() {
+   background-image: url("../data/logo/np_text-xs.svg");
+   .contain();
+   background-position: left top;
+}
 .logo-pseudo() {
    .bg('polygon-3-main.png');
+   background-position: center;
+   .contain();
+}
+.logo-pseudo-md() {
+   .bg('polygon-2.svg');
    background-position: center;
    .contain();
 }
@@ -111,4 +121,23 @@
 .map() {
    .bg( 'map.png' );
    .contain();
+}
+
+.header-aside-image() {
+   .bg('header-aside-text.svg');
+   background-position: center;
+   .contain();
+}
+
+
+/* pages main images */
+
+.image( @name ) {
+   background-image: url("../data/images/pages/@{name}.jpg");
+}
+
+.header-pseudo-school() {
+   .image('school');
+   background-position: bottom;
+   .cover();
 }
