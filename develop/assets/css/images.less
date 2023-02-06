@@ -23,7 +23,7 @@
 }
 .blue_header-bg() {
    .bg('header-blue.svg');
-   background-position: right;
+   background-position: top;
    .cover();
    .to( 1450px, {
       background-position: 70%;
@@ -135,9 +135,46 @@
 .image( @name ) {
    background-image: url("../data/images/pages/@{name}.jpg");
 }
+.headline( @name ) {
+   background-image: url("../data/images/@{name}.png");
+}
 
 .header-pseudo-school() {
    .image('school');
-   background-position: bottom;
+   background-position: right;
    .cover();
+}
+
+.headline-blue() {
+   .bg('1.svg');
+   background-position: right;
+   .contain();
+}
+.icon-result() {
+   .headline('1');
+   background-position: left;
+   .contain();
+}
+.icon-ensuring() {
+   .headline('2');
+   background-position: left;
+   .contain();
+}
+.headline-blue-dark() {
+   .bg('2.svg');
+   background-position: right;
+   .contain();
+}
+
+.deadline-icon() {
+   .headline('3');
+   background-position: left;
+   .contain();
+}
+
+
+.deadline-pseudo-blue() {
+   .bg('deadline-pseudo-blue.png');
+   background-position: right;
+   .contain();
 }

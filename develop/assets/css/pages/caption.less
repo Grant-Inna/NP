@@ -13,33 +13,22 @@ main.caption__container .wrapper {
 .caption__border {
    z-index: 80;
    width: 80%;
-   height: 400px;
+   height: calc( 27rem - 2vw );
    
    position: absolute;
    display: block;
-   top: 0;
+   top: 1rem;
    
    border: 2px solid @color-background-white;
    transform: rotateX(7deg) rotateY(7deg) matrix(1, 0, 0.01, 1, 3, -3);
    transform-origin: 40% 145% 0;
-   
-   .to( 1750px, {
-      height: 17vh;
-   });
-   .to( 1450px, {
-      height: 18vh;
-   });
-   .xxl-block({
-      height: 17vh;
-   });
-   margin-left: 2vw;
 }
 .caption__holder {
    position: absolute;
    display: block;
    width: 72%;
-   top: 2vw;
-   margin-left: 4vw;
+   top: 4rem;
+   margin-left: 5vw;
    //bottom: 2vw;
    z-index: 90;
    

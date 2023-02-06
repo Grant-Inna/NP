@@ -1,0 +1,38 @@
+section.deadline__container {
+   position: relative;
+   z-index: 100;
+   margin-top: 4rem;
+}
+section.deadline__container .wrapper {
+   position: relative;
+   z-index: 110;
+   
+   .blue_header-bg();
+   
+   .flex();
+   .items-center();
+   padding-top: 2rem;
+   padding-bottom: 4rem;
+}
+.deadline__icon {
+   position: relative;
+   z-index: 120;
+   
+   .deadline-icon();
+   .icon-block();
+   height: 17rem;
+}
+.deadline__text {
+   color: @color-text-white;
+   text-transform: uppercase;
+}
+.deadline__text_span {
+   .headline-5();
+   line-height: 2.5rem;
+}
+.deadline__text_main {
+   .oswald-bold();
+   font-size: 3.7rem; // 52
+   line-height: 4.5rem;
+   margin-top: .5rem;
+}

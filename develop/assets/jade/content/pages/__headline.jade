@@ -1,0 +1,8 @@
+mixin headline( color, icon, h, txt )
+   .headline__container( class='headline_#{color}' )
+      .wrapper
+         .headline__holder.inner
+            .headline__icon( class='icon_#{icon}' )
+            .headline__text
+               .headline__header !{h}
+               .headline__about !{txt}
