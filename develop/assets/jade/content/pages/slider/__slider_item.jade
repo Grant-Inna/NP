@@ -1,0 +1,5 @@
+mixin slider_item( title, txt, link )
+   a( href='#{link}' target='_blank' ).slider__item
+      .slider__image
+         img( src='../assets/images/projects/#{title}.png')
+      .slider__about !{txt}

@@ -6,6 +6,12 @@
    background-image: url("../data/@{folder}/@{color}/@{name}.svg");
    background-repeat: no-repeat;
 }
+.icon-60() {
+   background-size: contain;
+   background-position: center;
+   width: 4rem;
+   height: 4rem;
+}
 .icon-30() {
    background-size: contain;
    background-position: center;
@@ -70,4 +76,16 @@
 .icon_load() {
    .icon-color-svg( 'icons', 'blue', 'load' );
    .icon-25();
+}
+
+
+.prev() {
+   .icon-svg( 'icons', 'prev' );
+   background-size: contain;
+   background-position: center;
+}
+.next() {
+   .icon-svg( 'icons', 'next' );
+   background-size: contain;
+   background-position: center;
 }

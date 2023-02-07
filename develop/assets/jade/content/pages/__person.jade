@@ -1,0 +1,13 @@
+mixin person( status, f, i, o, position, image )
+   .person__content
+      .person__image
+         img( src='../assets/images/person/#{image}.jpg' )
+      .person__text
+         .person__status.mb4 !{status}
+         .person__name !{f}
+            br
+            | !{i}
+            br
+            | !{o}
+         .person__position !{position}
+

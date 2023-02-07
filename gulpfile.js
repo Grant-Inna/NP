@@ -122,7 +122,7 @@ function js(done){
    done();
 }
 function js_copy(done){
-   return gulp.src(src + 'js/jquery.js')
+   return gulp.src([src + 'js/jquery.js', src + 'js/slick.min.js'])
    .pipe(gulpif(isProd, uglify()))
    .pipe(gulp.dest( dist + 'js'));
    done();

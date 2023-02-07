@@ -1,5 +1,5 @@
-mixin middle( main, span )
+mixin middle( span, class1, main, class2, span2, class3 )
    .info_block__text
-      span.info_block__text_span !{span}
-      span.info_block__text_main !{main}
-      span.info_block__text_span !{span}
+      .info_block__text_span( class='#{class1}') !{span}
+      .info_block__text_main( class='#{class2}') !{main}
+      .info_block__text_span( class='#{class3}') !{span2}

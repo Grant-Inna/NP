@@ -1,0 +1,48 @@
+section.sources__container {
+   position: relative;
+   z-index: 200;
+}
+
+.wrapper.mb5 {
+}
+
+.sources__content {
+   .row();
+}
+.sources__holder {
+   .col();
+   .size(8);
+   .column();
+   
+   &:first-of-type {
+      .size(6);
+   }
+}
+
+.sources__text {
+   .headline-1();
+   color: @color-text-gray;
+}
+
+.sources__from {
+   .body-bold-2();
+   line-height: 2.2rem;
+   color: @color-text-gray;
+   
+   margin-bottom: 1rem;
+}
+
+.sources__amount {
+   color: @color-text-blue;
+   .oswald-bold();
+   font-size: 4.3rem; // 65
+   line-height: 4.6rem;
+   
+   margin-top: auto;
+   
+   span {
+      display: block;
+      font-size: 2.1rem;
+      text-transform: uppercase;
+   }
+}
