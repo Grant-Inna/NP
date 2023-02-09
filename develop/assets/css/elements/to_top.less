@@ -1,13 +1,20 @@
 @width-back: 9rem;
 @height-back: @width-back / 2.5;
-
-.to_top__holder {
+.to_top__container {
    position: relative;
+   z-index: 9999;
+}
+.to_top__holder {
+   position: absolute;
    z-index: 999999;
+   bottom: 0;
+   right: 0;
    .flex-center();
    cursor: pointer;
+   
    width: @width-back;
    height: @height-back;
+   
    background: @color-background-white;
    box-shadow: @box-shadow-light;
    

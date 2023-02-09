@@ -5,6 +5,15 @@ aside.header__aside_holder {
    padding-top: 6vw;
    width: 37%;
    margin-left: auto;
+   
+}
+#container_main aside.header__aside_holder {
+   .from( 1620px, {
+      padding-top: 8vw;
+   });
+   .from( 2000px, {
+      padding-top: 10vw;
+   });
 }
 
 .header__aside_block {
@@ -61,7 +70,7 @@ aside.header__aside_holder {
    });
    
    .from(2800px, {
-      transform: rotate(-40deg) translateX(-3vw) translateY(-1vw);
+      transform: rotate(-40deg) translateX(-1vw) translateY(0);
    });
    
    
@@ -75,13 +84,27 @@ aside.header__aside_holder {
 }
 
 #container {
+   aside.header__aside_holder {
+      .from( 2000px, {
+         padding-top: 4vw;
+      });
+      .middle-block({
+         padding-top: calc( 2rem + 60px);
+      })
+   }
    
    .header__aside_block.aside__block_white {
-      transform: rotate(-40deg) translateX(-1vw) translateY(-1vw);
+      transform: rotate(-40deg) translateX(9rem) translateY(6rem);
    
-      .from(1650px, {
-         transform: rotate(-40deg) translateX(1vw) translateY(0vw);
+      .from(2050px, {
+         transform: rotate(-40deg) translateX(4rem) translateY(3rem);
       });
+      .to( 1380px, {
+         transform: rotate(-40deg) translateX(9rem) translateY(5rem);
+      });
+      .middle-block({
+         transform: rotate(-40deg) translateX(6rem) translateY(4.5rem);
+      })
    }
    .header__aside_text {
       position: relative;

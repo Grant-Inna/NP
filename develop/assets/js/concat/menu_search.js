@@ -2,7 +2,7 @@ $(document).ready(function () {
    /* поиск */
    /* при нажатии на иконку проявление строки поиска и скрытие пунктов меню */
 
-   if($('.menu_container').length > 0) {
+   if($('.menu__container').length > 0) {
       let $search_icon = $('.menu__form .menu__search'),
           $menu_items = $('.menu__items_holder'),
           $search_line =$('.menu__search_line'),
@@ -35,7 +35,6 @@ $(document).ready(function () {
       /* показываем элементы через удаление скрывающего класса */
       let $element1 =$(element1),
           $element2 =$(element2);
-      console.log('djikb');
       $element1.removeClass('hidden');
       $element2.removeClass('hidden');
       

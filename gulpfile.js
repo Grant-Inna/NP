@@ -24,7 +24,7 @@ const base = './develop/',
 
 let gridOptions = {
    columns: 24,
-   offset: "20px",
+   offset: "30px",
    // mobileFirst: true,
    container: {
       maxWidth: "1440px",
@@ -40,13 +40,13 @@ let gridOptions = {
       xxl: {
          width: "1280px",
          fields: "40px",
-         offset: "15px"
+         offset: "18px"
       },
       xl: {
          width: "1150px"
       },
       middle: {
-        width: "1070px"
+         width: "1070px"
       },
       lg: {
          width: "995px",
@@ -54,7 +54,7 @@ let gridOptions = {
       md: {
          width: "770px",
          fields: "20px",
-         offset: "10px"
+         offset: "12px"
       },
       sm: {
          width: "580px"
@@ -75,10 +75,17 @@ function html(done){
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
-function html_pages(done){
-   return gulp.src( base + '**/*.jade' )
+function federal_projects(done){
+   return gulp.src([ base + 'federal_projects/*.jade' ] )
    .pipe(jade())
-   .pipe(gulp.dest( prod ))
+   .pipe(gulp.dest( prod + 'federal_projects'))
+   .pipe(gulpif(isSync, browserSync.stream()));
+   done();
+}
+function infrastructure(done){
+   return gulp.src([ base + 'infrastructure/*.jade'] )
+   .pipe(jade())
+   .pipe(gulp.dest( prod + 'infrastructure' ))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
@@ -146,9 +153,9 @@ function watch(done){
    gulp.watch( base + '*.jade', html);
    gulp.watch( src + 'jade/**/*.jade', html);
    gulp.watch( src + 'jade/**/**/*.jade', html);
-   gulp.watch( src + 'jade/**/**/*.jade', html_pages);
-   gulp.watch( base + 'federal_projects/*.jade', html_pages);
-   gulp.watch( base + 'infrastructure/*.jade', html_pages);
+   // gulp.watch( src + 'jade/**/**/*.jade', html_pages);
+   gulp.watch( base + 'federal_projects/*.jade', federal_projects);
+   gulp.watch( base + 'infrastructure/*.jade', infrastructure);
    gulp.watch( src + 'images/**/*', images);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
@@ -165,7 +172,7 @@ function grid(done){
 const build_old = gulp.series(clear,
    gulp.parallel(html, styles, js, images, data, fonts )
 );
-const build = gulp.parallel(html, html_pages, styles, js, js_copy, images, data, fonts );
+const build = gulp.parallel(html, federal_projects, infrastructure, styles, js, js_copy, images, data, fonts );
 
 gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
@@ -174,4 +181,6 @@ gulp.task('fonts', fonts);
 gulp.task('js', js);
 gulp.task('js_copy', js_copy);
 gulp.task('data', data);
-gulp.task('html_pages', html_pages);
+gulp.task('federal_projects', federal_projects);
+gulp.task('infrastructure', infrastructure);
+// gulp.task('html_pages', html_pages);

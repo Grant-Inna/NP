@@ -26,7 +26,7 @@
    background-position: top;
    .cover();
    .to( 1450px, {
-      background-position: 70%;
+      //background-position: 70%;
    })
 }
 .header-pseudo-blue() {
@@ -116,10 +116,11 @@
 .map-bg() {
    .bg( 'long-blue-gradient.png' );
    background-repeat: no-repeat;
-   background-size: 100% 75%;
+   .cover();
 }
 .map() {
    .bg( 'map.png' );
+   background-position: center;
    .contain();
 }
 
@@ -141,6 +142,12 @@
 
 .header-pseudo-school() {
    .image('school');
+   background-position-x: right;
+    background-position-y: 95%;
+   .cover();
+}
+.header-pseudo-success() {
+   .image('success');
    background-position-x: right;
     background-position-y: 95%;
    .cover();

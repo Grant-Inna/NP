@@ -64,15 +64,32 @@
 .body-semibold-1() {
    .opensans-semibold();
    font-size: 2rem; // 30
+   line-height: 2.3rem; // 30
+
+   .ll-block({
+      font-size: 1.6rem;
+      line-height: 2rem; // 30
+   })
 }
 
 .body-bold-2() {
    .opensans-bold();
    font-size: 1.7rem; // 26
+   line-height: 2.2rem;
+   .ll-block({
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+   })
 }
 .body-regular-2() {
    .opensans-regular();
    font-size: 1.7rem; // 26
+   line-height: 2.1rem;
+   
+   .ll-block({
+      font-size: 1.35rem;
+      line-height: 1.65rem;
+   })
 }
 
 .body-bold-3() {
@@ -102,8 +119,8 @@
    font-size: 1.2rem; // 18
    text-transform: uppercase;
    
-   .md-block({
-      font-size: 1.3rem;
+   .ll-block({
+      font-size: 1rem;
       text-transform: none;
    })
 }
@@ -138,8 +155,8 @@
    .opensans-regular();
    font-size: 1.1rem; // 16
    
-   .md-block({
-      font-size: 1.3rem;
+   .ll-block({
+      font-size: 1rem;
    })
 }
 .body-bold-6() {
@@ -154,7 +171,7 @@
    .opensans-semibold();
    font-size: 1.1rem; // 16
    
-   .md-block({
-      font-size: 1.3rem;
+   .ll-block({
+      font-size: 1rem;
    })
 }

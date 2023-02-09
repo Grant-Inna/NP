@@ -5,7 +5,7 @@ html
 
    body
       #container.container__school
-         include ../assets/jade/menu/menu
+         include ../assets/jade/menu/federal/menu
          include ../assets/jade/menu/mobile
          include ../assets/jade/content/pages/header
 
@@ -49,18 +49,17 @@ html
          include ../assets/jade/content/pages/slider/__slider_item
          section.slider__container.mb5
             .wrapper
-               .slider__content
+               .slider__content.inner
                   +slider_item( 'tochka', 'Центры образования  <b>Центры образования</b> Центры образования Центры образования Центры образования', 'tochka')
                   +slider_item( 'kvantorium', 'Кванториум', 'kvantorium')
                   +slider_item( 'pedagogikal_m', 'Центр непрерывного', 'pedagogikal_m')
-                  //+slider_item( 'pedagogikal_m', 'Центр непрерывного', 'pedagogikal_m')
+                  +slider_item( 'pedagogikal_m', 'Центр непрерывного', 'pedagogikal_m')
 
          include ../assets/jade/content/pages/__person
          section.person__container
             .wrapper.mb5
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
-                  +person( 'Администратор', 'Зырянова', 'Анастасия', 'Владимировна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
 
          include ../assets/jade/content/pages/__sources
          section.sources__container

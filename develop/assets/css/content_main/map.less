@@ -2,26 +2,31 @@ section.map__container {
    position: relative;
    z-index: 50;
    width: 100%;
-   height: 40rem;
+   height: 30rem;
+   .column-center();
+   
    margin-top: 4rem;
-   margin-bottom: 6rem;
    .map-bg();
+   
+   overflow: hidden;
 }
 section.map__container .wrapper {
-   .flex();
-   .justify-center();
 }
 .map {
-   width: 80%;
-   margin-top: 1rem;
+   min-height: 100%;
    margin-right: 5%;
-}
-.map__content {
+   .map();
    position: absolute;
    z-index: 60;
-   top: 16rem;
-   left: 0;
-   right: 0;
+   top: 40%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   
+   opacity: .6;
+}
+.map__content {
+   position: relative;
+   z-index: 100;
    
    .column-center();
 }

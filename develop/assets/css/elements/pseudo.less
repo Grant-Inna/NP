@@ -46,13 +46,13 @@ header.header__container:before {
 }
 #container .header__main_logo:before {
    .logo-pseudo-md();
-    top: 7vw;
-    right: -9vw;
+    top: calc( 3rem + 3vw );
+    right: calc( -14rem + 3vw );
    
-   width: 21vw;
-    max-width: 340px;
+    width: 21vw;
+    max-width: 300px;
     height: 22vw;
-    max-height: 220px;
+    max-height: 200px;
 }
 
 .aside__block_white .header__aside_icon:after {
@@ -70,10 +70,11 @@ header.header__container .wrapper:after {
    .pseudo();
    .wrapper-main-blue();
    top: 25%;
-   right: 4%;
+   right: calc( 3% - 2vw );
    
    width: 9vw;
    height: 10vw;
+   
    
    .to( 1448px, {
       right: 2%;
@@ -140,10 +141,13 @@ footer.footer__container:after {
    }
    
    header.header__container:before {
-      height: 285%;
+      //height: 285%;
    }
    &.container__school .header__container:before {
       .header-pseudo-school();
+   }
+   &.container__success .header__container:before {
+      .header-pseudo-success();
    }
    
    .headline_blue:after {
@@ -153,8 +157,8 @@ footer.footer__container:after {
       bottom: -2rem;
       right: -2rem;
       
-      width: 30rem;
-      height: 30rem;
+      width: 38rem;
+      height: 38rem;
    }
    .headline_blue-dark:after {
       .pseudo();
@@ -170,7 +174,7 @@ footer.footer__container:after {
    .pseudo();
    .wrapper-main-blue();
    top: 25%;
-   right: 2%;
+   right: -1%;
    
    width: 9vw;
    height: 10vw;
@@ -178,12 +182,9 @@ footer.footer__container:after {
    .to( 1448px, {
       right: 2%;
    });
-   .xxl-block({
-      right: 3%;
-   });
-   .to( 1200px, {
-      right: 5%;
-   });
+   .middle-block({
+      top: 52%;
+   })
 }
 }
 section.deadline__container:before {
@@ -204,10 +205,10 @@ section.deadline__container:before {
       .pseudo();
       z-index: 300;
       
-      width: 40%;
-      height: 100%;
+      width: 35%;
+      height: 50%;
       
-      top: 3%;
+      top: 1%;
       right: -8%;
       
       .polygon-3-main-white();
@@ -232,8 +233,8 @@ section.deadline__container:before {
       height: 15%;
       transform: rotate(40deg);
       
-      top: 7%;
-      right: 3%;
+      top: 5%;
+      right: 2%;
       
       .polygon-1-white();
    }
