@@ -1,2 +1,2 @@
 # NP
-[View](https://grant-inna.github.io/NP/build/index.html)
+[View](https://grant-inna.github.io/NP/build/)
