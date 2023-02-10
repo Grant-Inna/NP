@@ -1,0 +1,5 @@
+$(document).ready(function(){0<$("#back").length&&$("#back").on("click",function(){$("body, html").animate({scrollTop:0},500)})});
+$(document).ready(function(){if(0<$(".menu__container").length){let e=$('.menu__items_holder input[type="checkbox"]');e.on("change",function(){$("input.menu_checkbox").not(this).prop("checked",!1)})}});
+$(document).ready(function(){if(0<$(".menu__container").length){let e=$(".menu__form .menu__search"),n=$(".menu__items_holder"),s=$(".menu__search_line"),a=$(".menu__eye"),_=$(".menu__close"),l="hidden";e.on("click",function(){s.removeClass(l),_.removeClass(l),a.addClass(l),n.addClass(l)}),_.on("click",function(){s.addClass(l),_.addClass(l),a.removeClass(l),n.removeClass(l)})}});
+$(document).ready(function(){$(".mobile__container").css("display","block")});
+$(document).ready(function(){$(".slider__content").slick({slidesToShow:3,slidesToScroll:1,speed:400,arrows:!0,infinite:!0,autoplay:!1,responsive:[{breakpoint:900,settings:{arrows:!0,slidesToShow:2,slidesToScroll:1}},{breakpoint:650,settings:{arrows:!0,slidesToShow:1,slidesToScroll:1}}]})});
