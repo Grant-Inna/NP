@@ -153,7 +153,8 @@ function watch(done){
    gulp.watch( base + '*.jade', html);
    gulp.watch( src + 'jade/**/*.jade', html);
    gulp.watch( src + 'jade/**/**/*.jade', html);
-   // gulp.watch( src + 'jade/**/**/*.jade', html_pages);
+   gulp.watch( src + 'jade/**/*.jade', federal_projects);
+   gulp.watch( src + 'jade/**/*.jade', infrastructure);
    gulp.watch( base + 'federal_projects/*.jade', federal_projects);
    gulp.watch( base + 'infrastructure/*.jade', infrastructure);
    gulp.watch( src + 'images/**/*', images);

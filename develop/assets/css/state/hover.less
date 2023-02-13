@@ -10,7 +10,7 @@ input:checked ~ i {
     .tr();
 }
 
-#container_main a.header__aside_block.aside__block_white:hover {
+.header__aside_block.aside__block_white:hover {
    text-shadow: @shadow-text-white;
    .tr();
 }
@@ -20,6 +20,10 @@ input:checked ~ i {
 }
 .header__aside_block:hover .header__aside_icon {
    transform: translateX(10px);
+   .tr();
+}
+#container .header__aside_block:hover .header__aside_text:after {
+   transform: translateX(8px) translateY(-50%);
    .tr();
 }
 
