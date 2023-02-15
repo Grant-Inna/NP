@@ -29,7 +29,8 @@ section.person__container .wrapper {
    
    flex-grow: 1;
    
-   .flex-center();
+   .flex();
+   .items-start();
    
    padding: @inner;
    background-color: @color-additional-blue;
@@ -47,10 +48,11 @@ section.person__container .wrapper {
    }
    
    .lg-block({
-      //.items-start();
-      padding: 4vw;
-      
+      padding: 3vw;
    });
+   .md-block({
+      padding: 4vw;
+   })
 }
 .person__image {
    max-width: 50%;
@@ -72,6 +74,12 @@ section.person__container .wrapper {
 .person__status {
    .body-regular-3();
    line-height: 1.8rem;
+   margin-top: 2vw;
+   
+   .lg-block({
+     margin-top: 0;
+      margin-bottom: 3rem;
+   });
 }
 .person__name  {
    .body-semibold-1();
