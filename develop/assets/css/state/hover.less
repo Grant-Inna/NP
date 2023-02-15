@@ -68,3 +68,20 @@ input:checked ~ i {
    text-shadow: @shadow-text-white;
    .tr()
 }
+a.mobile__item:hover,
+label .mobile__item:hover span,
+.mobile__item input:checked ~ span {
+   color: @color-text-white;
+   text-shadow: @shadow-text-white;
+   .tr()
+}
+.mobile__item:hover i,
+.mobile__item input:checked ~ i {
+   .icon-color-svg( 'icons', 'white', 'arr-bottom' );
+    .tr();
+}
+.mobile__item .second_order__item:hover {
+   color: @color-text-white;
+   text-shadow: @shadow-text-white;
+   .tr()
+}

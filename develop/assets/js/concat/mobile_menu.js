@@ -9,7 +9,10 @@ $(document).ready(function () {
       
       let menu_width;
       
-      width > 600 ? menu_width = width / 2 : menu_width = width; // Ширина меню зависит от размера экрана
+      if ( width < 380 ) { menu_width = width * 0.9 } // Ширина меню зависит от размера экрана
+      else if ( width < 450 ) { menu_width = width * 0.8  }
+      else if ( width > 800 ) { menu_width = width / 2.2  }
+      else { menu_width = width * 0.7 }
       
       var style_blackLayer = {
          display : "block",
