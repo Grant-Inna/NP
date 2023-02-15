@@ -47,6 +47,9 @@ main.caption__container .wrapper {
    .md-block({
       top: 6rem;
       margin-left: 7vw;
+   });
+   .xs-block({
+      top: 4.2rem;
    })
 }
 .caption__title {
@@ -57,7 +60,12 @@ main.caption__container .wrapper {
       margin-top: 1rem;
       font-size: 4.7rem;
       line-height: 5rem;
-   })
+   });
+   .xs-block({
+      margin-top: 1rem;
+      font-size: 3.7rem;
+      line-height: 4rem;
+   });
 }
 .caption__text {
    .body-regular-3();
@@ -93,11 +101,16 @@ main.caption__container .wrapper {
 .caption__title_big {
    .opensans-regular();
    font-size: 2.4rem;
+   line-height: 2.7rem;
    display: none;
    
    .md-block({
       display: block;
-   })
+   });
+   .xs-block({
+      font-size: 2rem;
+      line-height: 2.2rem;
+   });
 }
 .caption__text_mobile {
    display: none;

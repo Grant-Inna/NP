@@ -30,7 +30,7 @@ menu.aside_menu__container {
    .aside-menu-bg();
    
    .tr();
-    max-height: 95vh;
+    //max-height: 95vh;
 }
 .aside_menu__holder {
    position: relative;
@@ -53,11 +53,11 @@ menu.aside_menu__container {
    line-height: 2.3rem;
    color: @color-text-white;
    
-   padding: 4rem 4rem 4rem;
+   padding: 2vw 0 4rem 2vw;
    
    .ll-block({
       font-size: 1.3rem;
-      line-height: 1.8rem; // 30
+      line-height: 1.5rem; // 30
    })
 }
 .aside_menu__items {
@@ -67,6 +67,10 @@ menu.aside_menu__container {
        opacity: 1;
        display: block;
       
-      padding: 1.5rem 0;
+      padding: 2vw 0;
+      
+      .xs-block({
+         padding: 3vw 0;
+      })
    }
 }

@@ -6,7 +6,8 @@ $(document).ready(function () {
       
       let menu_width;
       
-      width > 700 ? menu_width = width / 1.9 : menu_width = width; // Ширина меню зависит от размера экрана
+      width > 800 ? menu_width = width / 2.2 : menu_width = width * 0.7; // Ширина меню зависит от размера экрана
+      if ( width < 380 ) { menu_width = width }
       
       var $pages_aside_trigger = $('#container .header__aside_block'),
           $pages_aside = $('#container menu.aside_menu__container'),
