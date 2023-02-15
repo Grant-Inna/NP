@@ -86,11 +86,27 @@ aside.header__aside_holder {
 
 #container {
    aside.header__aside_holder {
+      width: calc(37% + 3vw);
       .from( 2000px, {
          padding-top: 4vw;
       });
       .middle-block({
-         padding-top: calc( 2rem + 60px);
+         padding-top: 60px;
+         width: 41%;
+      });
+      .lg-block({
+         padding-top: 19px;
+         width: 46%;
+      });
+      .md-block({
+         width: 46%;
+      });
+      .sm-block({
+         padding-top: 50px;
+         width: 47%;
+      });
+      .xs-block({
+         width: 52%;
       })
    }
    
@@ -105,6 +121,12 @@ aside.header__aside_holder {
       });
       .middle-block({
          transform: rotate(0) translateX(2rem) translateY(2.5rem);
+      });
+      .xs-block({
+         transform: rotate(0) translateX(1rem) translateY(2.5rem);
+      });
+      .xxs-block({
+         transform: rotate(0) translateX(-2rem) translateY(2.5rem);
       })
    }
    .header__aside_text {
@@ -112,5 +134,7 @@ aside.header__aside_holder {
       z-index: 50;
       .headline-4();
       line-height: 2.6rem;
+      
    }
 }
+

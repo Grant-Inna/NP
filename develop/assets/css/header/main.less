@@ -3,12 +3,13 @@
 @padding-bottom: 5rem;
 
 .header__main_holder {
-   width: 60%;
+   width: calc( 60% - 3vw );
    .flex();
    flex-shrink: 0;
    
    padding-top: @padding-top;
    padding-bottom: @padding-bottom;
+   
 }
 
 .header__text {
@@ -32,5 +33,21 @@
       //padding-top: calc(5rem + 60px);
       padding-top: 60px;
       padding-bottom: 7rem;
+      
+      .middle-block({
+         width: 40%;
+         padding-top: 30px;
+         padding-bottom: 6rem;
+      });
+      .md-block({
+         width: 40%;
+         padding-top: 30px;
+         padding-bottom: 4rem;
+      });
+      .sm-block({
+         width: 35vw;
+         padding-top: 19px;
+         padding-bottom: 6rem;
+      })
    }
 }

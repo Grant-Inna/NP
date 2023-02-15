@@ -17,6 +17,9 @@
    
    .from( 2850px, {
       margin-top: 23rem;
+   });
+   .md-block({
+      margin-top: 0;
    })
 }
 .headline_blue-dark {
@@ -28,9 +31,32 @@
    .flex();
    .items-center();
    margin-bottom: 4rem;
+   
+   .md-block({
+      .column();
+      .items-start();
+   })
 }
 .headline__icon {
    .icon-block();
+   
+   
+   .middle-block({
+       width: 17rem;
+      height: 12.7rem;
+      margin-right: 2rem;
+   });
+   .lg-block({
+       width: 13rem;
+      height: 8.7rem;
+      margin-right: 1.5rem;
+   });
+   .md-block({
+      width: 16rem;
+      height: 12.7rem;
+      margin-right: 0;
+      margin-bottom: 1.3rem;
+   });
 }
 .headline__text {
    color: @color-text-white;

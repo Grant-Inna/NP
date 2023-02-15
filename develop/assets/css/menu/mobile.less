@@ -1,6 +1,6 @@
 menu.mobile__container {
    position: absolute;
-   z-index: 999;
+   z-index: 510;
    top: 0;
    left: 0;
    width: 100%;
@@ -18,20 +18,6 @@ menu.mobile__container {
       display: block;
    })
 }
-#black_back {
-   position: absolute;
-   z-index: 999;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background-color: rgba(17, 17, 17, 0.5);
-   width: 100%;
-   height: 100%;
-   .tr();
-   display: none;
-}
-
 
 menu.mobile__container .wrapper {
    .flex();
@@ -40,50 +26,14 @@ menu.mobile__container .wrapper {
 }
 .mobile__icon {
    position: relative;
-   z-index: 9999;
+   z-index: 600;
    
-   width: 24px;
-   height: 19.2px;
-   flex-shrink: 0;
-   
-   margin-top: 18px;
-   
-   .column();
-   .justify-around();
-   
-   .tr();
-}
-.first,
-.middle,
-.last {
-   position: relative;
-   z-index: 99999;
-   width: 100%;
-   height: 2px;
-   background-color: @color-background-white;
-   .tr();
-}
-
-#show.mobile__icon {
-   .middle {
-      background-color: transparent;
-      transform: rotate(135deg);
-      .tr();
-   }
-   .first {
-      .tr();
-      transform: rotate(135deg) translateY(-7.2px) translateX(2.4px);
-   }
-   .last {
-      .tr();
-      transform: rotate(-135deg) translateY(7.2px) translateX(2.4px);
-   }
 }
 
 
 .mobile__menu {
    position: absolute;
-   z-index: 99;
+   z-index: 510;
    right: -110%;
    top: -37.2px;
    height: calc( 100vh + 37.2px);

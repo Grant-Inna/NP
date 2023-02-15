@@ -3,6 +3,10 @@ mixin caption( title, text )
       .wrapper
          .caption__border.inner
          .caption__content
+            .caption__title_big Федеральный проект
             .caption__title !{title}
-            .caption__text !{text}
+            .caption__text.caption__text_desktop !{text}
+   .caption__mobile
+      .wrapper.inner
+         .caption__text.caption__text_mobile !{text}
 

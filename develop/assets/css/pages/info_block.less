@@ -12,6 +12,11 @@ section.info_block__container .wrapper {
    
    .flex();
    .row-flex();
+   
+   .md-block({
+      padding-top: 3rem;
+      .justify-center();
+   })
 }
 
 @num: 2.5;
@@ -19,6 +24,9 @@ section.info_block__container .wrapper {
    .col();
    .size(8);
    .size-xxl(12);
+   .size-md(20);
+   .size-sm(22);
+   .size-xs(24);
    
    margin-bottom: @offset * @num;
     .xxl-block({
@@ -26,6 +34,12 @@ section.info_block__container .wrapper {
     });
     .md-block({
        margin-bottom: @offset_md * @num + 1rem;
+    });
+    .sm-block({
+       margin-bottom: @offset_md * @num;
+    });
+    .xs-block({
+       margin-bottom: @offset_md * 1.5;
     });
 }
 .info_block__text_main {

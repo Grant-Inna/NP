@@ -3,6 +3,9 @@ section.person__container {
    z-index: 200;
 }
 section.person__container .wrapper {
+   .sm-block({
+      padding: 0;
+   })
 }
 
 .person__holder {
@@ -10,6 +13,10 @@ section.person__container .wrapper {
    
    .flex();
    .justify-evenly();
+   
+   .md-block({
+      .column();
+   })
 }
 
 .person__content {
@@ -17,6 +24,8 @@ section.person__container .wrapper {
    z-index: 150;
    .col();
    .size(12);
+   .size-md(24);
+   //.size-md(12);
    
    flex-grow: 1;
    
@@ -27,7 +36,21 @@ section.person__container .wrapper {
    
    &:nth-of-type(2) {
       background-color: @color-background-blue-light;
+      
+      
+      .md-block({
+         margin-top: 3rem;
+      });
+      .sm-block({
+         margin-top: 1.5rem;
+      })
    }
+   
+   .lg-block({
+      //.items-start();
+      padding: 4vw;
+      
+   });
 }
 .person__image {
    max-width: 50%;
@@ -35,6 +58,7 @@ section.person__container .wrapper {
    margin-right: @inner-md;
    
    flex-shrink: 0;
+   
    
    img {
       min-width: 100%;
@@ -47,6 +71,7 @@ section.person__container .wrapper {
 }
 .person__status {
    .body-regular-3();
+   line-height: 1.8rem;
 }
 .person__name  {
    .body-semibold-1();

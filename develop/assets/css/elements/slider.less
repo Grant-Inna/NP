@@ -45,6 +45,9 @@ section.slider__container .wrapper {
    .md-block({
       left: @fields_md * -2;
    });
+    .sm-block({
+      left: @fields_md * -1.5;
+   });
 }
 
 .slick-next {
@@ -60,6 +63,9 @@ section.slider__container .wrapper {
    });
    .md-block({
       right: @fields_md * -2;
+   });
+   .sm-block({
+      right: @fields_md * -1.5;
    });
 }
 
@@ -105,5 +111,8 @@ section.slider__container .wrapper {
    
    .to(650px, {
       height: calc(12rem - 5vw);
+   });
+   .to(450px, {
+      height: 13rem;
    });
 }

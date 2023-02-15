@@ -1,13 +1,13 @@
 $(document).ready(function () {
    /* мобильное меню */
+   const width =  $(document).width();
 
    if($('.mobile__container').css( 'display' ) === 'block') {
       var $icon = $('.mobile__icon'),
           $menu = $('.mobile__menu'),
           $blackLayer = $('#black_back');
       
-      var width = $(document).width(),
-          menu_width;
+      let menu_width;
       
       width > 600 ? menu_width = width / 2 : menu_width = width; // Ширина меню зависит от размера экрана
       
@@ -20,16 +20,19 @@ $(document).ready(function () {
          width: menu_width
       };
       
-      $icon.on( 'click', showMenu);
-      
+      if (!$('menu.mobile__container').hasClass('main-menu')) {
+         $icon.on('click', showMenu);
+      }
    }
+   
    function showMenu() {
       $icon.prop( 'id', 'show');
+      $('menu.mobile__container').addClass('main-menu');
      
-      $menu.css( style_menu); // Появление меню
+      $menu.css( style_menu ); // Появление меню
       $blackLayer.css( style_blackLayer ); // Появление заднего фона
       
-      $icon.on( 'click', function ( event ) { // Скрытие меню при повторниом клике
+      $icon.on( 'click', function ( event ) { // Скрытие меню при повторном клике
          event.stopPropagation();
          hideMenu();
       });
@@ -42,6 +45,7 @@ $(document).ready(function () {
    }
    function hideMenu() {
       $icon.prop( 'id', '');
+      $('menu.mobile__container').removeClass('main-menu');
    
       $menu.prop( 'style', '');  // Скрытие меню
       $blackLayer.prop( 'style', '');  // Скрытие задника

@@ -1,11 +1,12 @@
 .pseudo() {
-    content: '';
+   content: '';
    display: block;
    position: absolute;
 }
+
 header.header__container:after,
 section.deadline__container:after {
-  .pseudo();
+   .pseudo();
    z-index: 15;
    
    width: 45%;
@@ -19,6 +20,7 @@ section.deadline__container:after {
       width: calc(40% - 10vw);
    })
 }
+
 header.header__container:before {
    .pseudo();
    z-index: 10;
@@ -37,22 +39,38 @@ header.header__container:before {
    top: 8vw;
    right: 1vw;
    
-    width: 23vw;
-    max-width: 445px;
-    height: 21vw;
-    max-height: 380px;
+   width: 23vw;
+   max-width: 445px;
+   height: 21vw;
+   max-height: 380px;
    
    .logo-pseudo();
 }
+
 #container .header__main_logo:before {
    .logo-pseudo-md();
-    top: calc( 3rem + 3vw );
-    right: calc( -14rem + 3vw );
+   top: calc(3rem + 3vw);
+   right: calc(-12rem + 3vw);
    
-    width: 21vw;
-    max-width: 300px;
-    height: 22vw;
-    max-height: 200px;
+   width: 21vw;
+   max-width: 300px;
+   min-width: 200px;
+   height: 22vw;
+   max-height: 200px;
+   
+   .middle-block({
+      top: calc(2rem + 3vw);
+       right: calc(-7rem + 3vw);
+   });
+   .sm-block({
+       top: 14vw;
+       right: -5rem;
+       width: 37vw;
+       min-width: 190px;
+   });
+   .xs-block({
+      display: none;
+   })
 }
 
 .aside__block_white .header__aside_icon:after {
@@ -66,26 +84,28 @@ header.header__container:before {
    
    .aside-icon-tail();
 }
+
 header.header__container .wrapper:after {
    .pseudo();
    .wrapper-main-blue();
    top: 25%;
-   right: calc( 3% - 2vw );
+   right: calc(3% - 2vw);
    
    width: 9vw;
    height: 10vw;
    
    
-   .to( 1448px, {
+   .to(1448px, {
       right: 2%;
    });
    .xxl-block({
       right: 3%;
    });
-   .to( 1200px, {
+   .to(1200px, {
       right: 1%;
    });
 }
+
 header.header__container .wrapper:before {
    .pseudo();
    .wrapper-main-white();
@@ -120,13 +140,18 @@ footer.footer__container:after {
       height: @height-header-pseudo;
       //max-height: 45vw;
       max-height: 1100px;
-      //.xxl-block({
-      //   height: 245%;
-      //});
+      .md-block({
+         height: calc( 315% - 2vw );
+      });
+      .sm-block({
+         height: calc( 270% - 2vw );
+      });
    }
+   
    header.header__container .wrapper:before {
       content: none;
    }
+   
    .header__aside_text:after {
       .pseudo();
       .aside-arrow-white();
@@ -141,12 +166,10 @@ footer.footer__container:after {
       height: 5rem;
    }
    
-   header.header__container:before {
-      //height: 285%;
-   }
    &.container__school .header__container:before {
       .header-pseudo-school();
    }
+   
    &.container__success .header__container:before {
       .header-pseudo-success();
    }
@@ -161,6 +184,7 @@ footer.footer__container:after {
       width: 38rem;
       height: 38rem;
    }
+   
    .headline_blue-dark:after {
       .pseudo();
       .headline-blue-dark();
@@ -170,24 +194,30 @@ footer.footer__container:after {
       
       width: 44rem;
       height: 105%;
+      
+      .md-block({
+         top: -14%;
+      })
    }
+   
    header.header__container .wrapper:after {
-   .pseudo();
-   .wrapper-main-blue();
-   top: 25%;
-   right: -1%;
-   
-   width: 9vw;
-   height: 10vw;
-   
-   .to( 1448px, {
-      right: 2%;
-   });
-   .middle-block({
-      top: 52%;
-   })
+      .pseudo();
+      .wrapper-main-blue();
+      top: 25%;
+      right: -1%;
+      
+      width: 9vw;
+      height: 10vw;
+      
+      .to(1448px, {
+         right: 2%;
+      });
+      .middle-block({
+         top: 52%;
+      })
+   }
 }
-}
+
 section.deadline__container:before {
    .pseudo();
    z-index: 10;
@@ -213,7 +243,11 @@ section.deadline__container:before {
       right: -8%;
       
       .polygon-3-main-white();
+      .md-block({
+         display: none;
+      })
    }
+   
    &:first-child:before {
       .pseudo();
       z-index: 300;
@@ -225,7 +259,11 @@ section.deadline__container:before {
       left: 3%;
       
       .polygon-1-white();
+      .md-block({
+         display: none;
+      })
    }
+   
    &:nth-of-type(2):before {
       .pseudo();
       z-index: 300;
@@ -238,8 +276,12 @@ section.deadline__container:before {
       right: 2%;
       
       .polygon-1-white();
+      .md-block({
+         display: none;
+      })
    }
 }
+
 #container:after {
    .pseudo();
    z-index: 10;
@@ -251,6 +293,7 @@ section.deadline__container:before {
    left: 50vw;
    .polygon-purple();
 }
+
 #container:before {
    .pseudo();
    z-index: 15;
@@ -263,3 +306,4 @@ section.deadline__container:before {
    .polygon-1-white();
    transform: rotate(70deg);
 }
+
