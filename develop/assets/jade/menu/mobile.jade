@@ -1,3 +1,5 @@
+include __infrastructure
+
 #black_back
 menu.mobile__container
    .wrapper
@@ -6,3 +8,26 @@ menu.mobile__container
          .middle
          .last
    .mobile__menu
+      .mobile__items
+         a.mobile__item О проекте "Образование"
+         .mobile__item
+            lebel(  )
+               input( type='checkbox' ).hidden.menu_checkbox
+               span Инфраструктура проекта
+               i.icon_arrow_thin-white
+               .menu__second_order
+                  +infrastructure('Центр образования «Точка роста»', 'tochka_rosta')
+                  +infrastructure('Центр «IT-куб»', 'IT-kub')
+                  +infrastructure('Кванториум', 'kvantorium')
+                  +infrastructure('Школьный Кванториум', 'school_kvantorium')
+                  +infrastructure('Детский и мобильный технопарк', 'mobile_technopark')
+                  +infrastructure('«Кванториум»', 'kvantorium_2')
+                  +infrastructure('Педагогический Кванториум', 'pedagogical_kvantorium')
+                  +infrastructure('Центр опережающей профессиональной подготовки', 'center_advanced_training')
+                  +infrastructure('Центр «ДНК»', 'center_DNA')
+                  +infrastructure('Центр выявления и поддержки одарённых детей', 'center_gifted_children')
+                  +infrastructure('Центр непрерывного повышения профессионального мастерства педагогических работников', 'center_teachers_professional_development')
+
+
+         a.mobile__item Результаты
+         a.mobile__item План развития проекта

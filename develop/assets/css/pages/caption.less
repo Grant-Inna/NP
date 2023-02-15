@@ -46,6 +46,7 @@ main.caption__container .wrapper {
    });
    .md-block({
       top: 6rem;
+      margin-left: 7vw;
    })
 }
 .caption__title {
@@ -54,8 +55,8 @@ main.caption__container .wrapper {
    
    .md-block({
       margin-top: 1rem;
-      font-size: 5rem;
-      line-height: 6rem;
+      font-size: 4.7rem;
+      line-height: 5rem;
    })
 }
 .caption__text {
@@ -69,6 +70,12 @@ main.caption__container .wrapper {
       line-height: 1.7rem;
    })
 }
+.caption__text_desktop {
+   .md-block({
+      display: none;
+   })
+}
+
 .caption__mobile {
    margin-top: calc(25rem + 3vw);
    padding-top: 4rem;
@@ -78,20 +85,23 @@ main.caption__container .wrapper {
    
    .md-block({
       display: block;
-   })
+   });
+   .sm-block({
+      display: block;
+   });
 }
 .caption__title_big {
    .opensans-regular();
    font-size: 2.4rem;
-}
-.caption__text_desktop {
+   display: none;
+   
    .md-block({
-      display: none;
+      display: block;
    })
 }
 .caption__text_mobile {
    display: none;
-   
+   margin-top: 0;
    .md-block({
       display: block;
    })

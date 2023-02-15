@@ -44,8 +44,31 @@ menu.mobile__container .wrapper {
    padding: 8rem 6rem 3rem 3rem;
    
    transition: all .4s ease-in-out;
-  
-   .xs-block({
-      min-width: 320px;
-   })
+}
+.mobile__items {
+   .body-regular-2();
+   color: @color-text-white;
+   max-width: 19rem;
+}
+.mobile__item {
+   cursor: pointer;
+   box-sizing: border-box;
+   padding-bottom: 1.5rem;
+   margin-top: 1.7rem;
+   
+   border-bottom: 1px solid @opacity-white-item-30;
+   
+   .flex();
+   .items-center();
+   
+   .icon_arrow_thin-white {
+      margin-left: .6rem;
+   }
+   
+   .icon_arrow_thin-white {
+      display: inline-block;
+   }
+   .menu__second_order {
+      position: relative;
+   }
 }
