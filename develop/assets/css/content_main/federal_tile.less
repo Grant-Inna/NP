@@ -2,10 +2,19 @@ section.tile_federal__container {
    position: relative;
    z-index: 110;
    margin-top: 8rem;
+   
+   .middle-block({
+      margin-top: 5rem;
+   })
 }
 section.tile_federal__container .wrapper {}
 .tile_federal__row{
-   .row-flex()
+   .row-flex();
+   
+   .md-block({
+      margin-right: 2.5vw;
+      margin-left: 2.5vw;
+   })
 }
 
 
@@ -17,9 +26,8 @@ section.tile_federal__container .wrapper {}
    
    .col();
    .size(6);
-   .size-ll(6);
-   .size-xxl(6);
-   .size-middle(6);
+   .size-ll(8);
+   .size-xxl(8);
    
     margin-top: @offset_one_side;
     margin-bottom: @offset_one_side;
@@ -28,10 +36,11 @@ section.tile_federal__container .wrapper {}
         margin-bottom: @offset_lg_one_side;
     });
     .md-block({
-        margin-top: @offset_xs_one_side;
-        margin-bottom: @offset_xs_one_side;
+        margin: @offset_xs_one_side 3%;
+       
+       max-width: 94%;
+       height: 35rem;
     });
-   
 }
 .tile_federal__title {
    position: absolute;
@@ -58,6 +67,10 @@ img.tile_federal__image {
    min-height: 100%;
    min-width: 100%;
     object-fit: cover;
+   
+   .md-block({
+      max-height: 100%;
+   })
 }
 
 .tile_federal__about {
@@ -73,12 +86,15 @@ img.tile_federal__image {
    
    box-sizing: border-box;
    padding: 2rem;
-  /* .ll-block({
-      padding-top: 2vw;
+   .ll-block({
+      padding: 3rem;
    });
    .middle-block({
-      padding-top: 40px;
-   });*/
+      padding: 1rem;
+   });
+   .sm-block({
+      padding: 2.5rem;
+   });
    
    box-shadow: @box-shadow;
    
@@ -97,4 +113,9 @@ img.tile_federal__image {
 }
 a.tile_federal__button {
    margin-top: auto;
+}
+
+
+.tile_federal__row .slick-slide.slick-current.slick-active {
+   max-height: 35rem;
 }

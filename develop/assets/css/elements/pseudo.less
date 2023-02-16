@@ -45,6 +45,10 @@ header.header__container:before {
    max-height: 380px;
    
    .logo-pseudo();
+   
+   .xs-block({
+      display: none;
+   })
 }
 
 #container .header__main_logo:before {
@@ -83,6 +87,10 @@ header.header__container:before {
    height: 4rem;
    
    .aside-icon-tail();
+   
+   .middle-block({
+      display: none;
+   })
 }
 
 header.header__container .wrapper:after {
@@ -97,6 +105,7 @@ header.header__container .wrapper:after {
    
    .to(1448px, {
       right: 2%;
+      top: 38%;
    });
    .xxl-block({
       right: 3%;
@@ -104,6 +113,10 @@ header.header__container .wrapper:after {
    .to(1200px, {
       right: 1%;
    });
+   
+   .middle-block({
+      top: 70%;
+   })
 }
 
 header.header__container .wrapper:before {
@@ -269,6 +282,9 @@ section.deadline__container:before {
       right: -8%;
       
       .polygon-3-main-white();
+      .lg-block({
+         transform: rotate(25deg) translateX(8px);
+      });
       .md-block({
          display: none;
       })
@@ -302,6 +318,9 @@ section.deadline__container:before {
       right: 2%;
       
       .polygon-1-white();
+      .lg-block({
+         transform: rotate(83deg) translateX(-2px) translateY(-7px);
+      });
       .md-block({
          display: none;
       })

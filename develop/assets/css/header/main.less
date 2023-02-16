@@ -1,9 +1,8 @@
-
 @padding-top: 7rem;
 @padding-bottom: 5rem;
 
 .header__main_holder {
-   width: calc( 60% - 3vw );
+   width: calc(60% - 3vw);
    .flex();
    flex-shrink: 0;
    
@@ -19,35 +18,55 @@
    color: @color-text-white;
    .body-regular-3();
    line-height: 2rem;
-
+   
+   
+   .xs-block({
+      width: 160%;
+      max-width: 90vw;
+      margin-left: -45%;
+   });
+   .xxs-block({
+      width: 160%;
+      max-width: 90vw;
+      margin-left: -60%;
+   })
 }
+
 .header__button {
    max-width: 282px;
    margin-top: 1.5rem;
+   
+   
+   .xs-block({
+      max-width: 78vw;
+      margin-left: -45%;
+   });
+   .xxs-block({
+      max-width: 78vw;
+      margin-left: -60%;
+   });
 }
 
-.header__title {}
-
-#container {
-   .header__main_holder {
-      //padding-top: calc(5rem + 60px);
-      padding-top: 60px;
-      padding-bottom: 7rem;
-      
-      .middle-block({
-         width: 40%;
-         padding-top: 30px;
-         padding-bottom: 6rem;
-      });
-      .md-block({
-         width: 40%;
-         padding-top: 30px;
-         padding-bottom: 4rem;
-      });
-      .sm-block({
-         width: 35vw;
-         padding-top: 19px;
-         padding-bottom: 6rem;
-      })
-   }
+.header__title {
 }
+
+
+.header__main_holder {
+   //padding-top: calc(5rem + 60px);
+   padding-top: 60px;
+   padding-bottom: 7rem;
+   
+   .middle-block({
+      width: 90%;
+      padding-top: 30px;
+      padding-bottom: 3rem;
+   });
+   .md-block({
+      padding-top: 30px;
+   });
+   .sm-block({
+      padding-top: 19px;
+      padding-bottom: 2rem;
+   })
+}
+
