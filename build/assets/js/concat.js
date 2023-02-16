@@ -65,22 +65,21 @@ $(document).ready(function () {
          hideAsideMenu();
       });
       
-      $pages_aside_trigger.unbind( 'click', showAsideMenu );  // Удаляем eventListener
+      $pages_aside_trigger.off( 'click', showAsideMenu );  // Удаляем eventListener
    }
    function hideAsideMenu() {
       // $icon.prop( 'id', '').prop( 'style', ''); // Скрываем крестик
    
       
       $cross.prop( 'id', '');
-       $pages_aside_bg.animate( style_aside_c, 5, function() {
-         $pages_aside.slideUp(600); // Скрытие меню
-      });
-      
+      $pages_aside_bg.css( style_aside_c );
+      $pages_aside.slideUp(600); // Скрытие меню
+
       $blackLayer.prop( 'style', '');  // Скрытие задника
       
-      $cross.unbind( 'click', hideAsideMenu ); // Удаляем eventListener
-      $blackLayer.unbind( 'click', hideAsideMenu ); // Удаляем eventListener
-      $pages_aside_trigger.unbind( 'click', hideAsideMenu ); // Удаляем eventListener
+      $cross.off( 'click', hideAsideMenu ); // Удаляем eventListener
+      $blackLayer.off( 'click', hideAsideMenu ); // Удаляем eventListener
+      $pages_aside_trigger.off( 'click', hideAsideMenu ); // Удаляем eventListener
       
       $pages_aside_trigger.on( 'click', function ( event ) { // Показ меню при повторниом клике
          event.stopPropagation();
