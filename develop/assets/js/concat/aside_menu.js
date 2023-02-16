@@ -72,7 +72,7 @@ $(document).ready(function () {
    
       
       $cross.prop( 'id', '');
-       $pages_aside_bg.animate( style_aside_c, 20, function() {
+       $pages_aside_bg.animate( style_aside_c, 5, function() {
          $pages_aside.slideUp(600); // Скрытие меню
       });
       

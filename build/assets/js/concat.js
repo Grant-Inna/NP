@@ -1,6 +1,317 @@
-$(document).ready(function(){var i=$(document).width();if(0<$("menu.aside_menu__container").length){let n;n=i<380?.9*i:i<450?.8*i:750<i?i/2.2:.7*i;var o=$("#container .header__aside_block"),c=$("#container menu.aside_menu__container"),t=$("#container .aside_menu__bg"),a=$("#container .aside_menu__cross"),e=$("#black_back");c.hide();var d={display:"block",opacity:"1"},s={top:0,bottom:"-100%",opacity:"1"},u={top:"-100%",bottom:"100%",opacity:0};c.width(n),t.width(n),i<1280&&(o.on("click",p),"block"===$(".menu__container").css("display")&&c.css("top","65px"))}function p(){c.show(),t.animate(s,2,function(){a.prop("id","show_aside")}),e.css(d),a.on("click",function(n){_()}),e.on("click",function(n){n.stopPropagation(),_()}),o.unbind("click",p)}function _(){a.prop("id",""),t.animate(u,20,function(){c.slideUp(600)}),e.prop("style",""),a.unbind("click",_),e.unbind("click",_),o.unbind("click",_),o.on("click",function(n){n.stopPropagation(),p()})}});
-$(document).ready(function(){0<$("#back").length&&$("#back").on("click",function(){$("body, html").animate({scrollTop:0},500)})});
-$(document).ready(function(){if(0<$(".menu__container").length){let e=$('.menu__items_holder input[type="checkbox"]');e.on("change",function(){$("input.menu_checkbox").not(this).prop("checked",!1)})}});
-$(document).ready(function(){if(0<$(".menu__container").length){let e=$(".menu__form .menu__search"),n=$(".menu__items_holder"),s=$(".menu__search_line"),a=$(".menu__eye"),_=$(".menu__close"),l="hidden";e.on("click",function(){s.removeClass(l),_.removeClass(l),a.addClass(l),n.addClass(l)}),_.on("click",function(){s.addClass(l),_.addClass(l),a.removeClass(l),n.removeClass(l)})}});
-$(document).ready(function(){var n=$(document).width();if("block"===$(".mobile__container").css("display")){var i=$(".mobile__icon"),c=$(".mobile__menu"),a=$("#black_back");let o;o=n<380?.9*n:n<450?.8*n:800<n?n/2.2:.7*n;var e={display:"block",opacity:"1"},t={right:"0",width:o};$("menu.mobile__container").hasClass("main-menu")||i.on("click",l)}function l(){i.prop("id","show"),$("menu.mobile__container").addClass("main-menu"),c.css(t),a.css(e),i.on("click",function(o){o.stopPropagation(),s()}),a.on("click",function(o){o.stopPropagation(),s()}),i.off("click",l)}function s(){i.prop("id",""),$("menu.mobile__container").removeClass("main-menu"),c.prop("style",""),a.prop("style",""),a.off("click",s),i.off("click",s),i.on("click",function(o){o.stopPropagation(),l()})}});
-$(document).ready(function(){const e=$(".slider__content");0<e.length&&e.on("destroy",function(e,i){const s=debounce(()=>{i.activeBreakpoint<window.innerWidth||($(this).slick(i.options),window.removeEventListener("resize",s))},200);window.addEventListener("resize",s)}).slick({slidesToShow:3,slidesToScroll:1,speed:400,arrows:!0,infinite:!0,autoplay:!1,responsive:[{breakpoint:900,settings:{arrows:!0,slidesToShow:2,slidesToScroll:1}},{breakpoint:770,settings:"unslick"}]});const i=$(".tile_federal__row");0<i.length&&i.on("destroy",function(e,i){const s=debounce(()=>{i.activeBreakpoint<window.innerWidth||($(this).slick(i.options),window.removeEventListener("resize",s))},200);window.addEventListener("resize",s)}).slick({slidesToShow:1,slidesToScroll:1,speed:400,arrows:!0,mobileFirst:!0,infinite:!0,autoplay:!1,responsive:[{breakpoint:770,settings:"unslick"},{breakpoint:580,settings:{arrows:!0,slidesToShow:2,slidesToScroll:2}}]})});
+$(document).ready(function () {
+   /* боковое меню */
+   const width =  $(document).width();
+
+   if($('menu.aside_menu__container').length > 0 ) {
+      
+      let menu_width;
+      
+      if ( width < 380 ) { menu_width = width * 0.9 } // Ширина меню зависит от размера экрана
+      else if ( width < 450 ) { menu_width = width * 0.8  }
+      else if ( width > 750 ) { menu_width = width / 2.2  }
+      else { menu_width = width * 0.7 }
+      
+      var $pages_aside_trigger = $('#container .header__aside_block'),
+          $pages_aside = $('#container menu.aside_menu__container'),
+          $pages_aside_bg = $('#container .aside_menu__bg'),
+          $cross = $('#container .aside_menu__cross'),
+         
+          $blackLayer = $('#black_back');
+      
+      $pages_aside.hide();
+      
+      var style_blackLayer = {
+         display : "block",
+         opacity: "1"
+      };
+      var style_aside = {
+         top: 0,
+         bottom: '-100%',
+         opacity: '1'
+      };
+      var style_aside_c = {
+         top: '-100%',
+         bottom: '100%',
+         opacity: 0
+      };
+      
+      $pages_aside.width(menu_width);
+      $pages_aside_bg.width(menu_width);
+      
+      if ( width < 1280 ) {
+         $pages_aside_trigger.on( 'click', showAsideMenu);
+        
+         if ($('.menu__container').css( 'display' ) === 'block') {
+            $pages_aside.css( 'top', '65px')
+         }
+      }
+   }
+   
+   function showAsideMenu() {
+      // $icon.prop( 'id', 'show').css( 'z-index', '2200'); // Выводим крестик
+      
+      $pages_aside.show(); // Появление меню
+      $pages_aside_bg.animate( style_aside, 2, function() {
+         $cross.prop( 'id', 'show_aside');
+      });
+      $blackLayer.css( style_blackLayer ); // Появление заднего фона
+
+      
+      $cross.on( 'click', function ( event ) { // Скрытие меню при клике по крестику
+         hideAsideMenu();
+      });
+      $blackLayer.on( 'click', function ( event ) { // Скрытие меню при клике по заднику
+         event.stopPropagation();
+         hideAsideMenu();
+      });
+      
+      $pages_aside_trigger.unbind( 'click', showAsideMenu );  // Удаляем eventListener
+   }
+   function hideAsideMenu() {
+      // $icon.prop( 'id', '').prop( 'style', ''); // Скрываем крестик
+   
+      
+      $cross.prop( 'id', '');
+       $pages_aside_bg.animate( style_aside_c, 5, function() {
+         $pages_aside.slideUp(600); // Скрытие меню
+      });
+      
+      $blackLayer.prop( 'style', '');  // Скрытие задника
+      
+      $cross.unbind( 'click', hideAsideMenu ); // Удаляем eventListener
+      $blackLayer.unbind( 'click', hideAsideMenu ); // Удаляем eventListener
+      $pages_aside_trigger.unbind( 'click', hideAsideMenu ); // Удаляем eventListener
+      
+      $pages_aside_trigger.on( 'click', function ( event ) { // Показ меню при повторниом клике
+         event.stopPropagation();
+         showAsideMenu();
+      });
+   }
+});
+
+$(document).ready(function () {
+   /* плавный скрол */
+   
+   if ($('#back').length > 0) {
+    
+      $('#back').on( 'click', function() {
+         $('body, html').animate({scrollTop: 0 }, 500); // плавно переходим наверх
+      });
+   }
+});
+
+$(document).ready(function () {
+   /* выбор только одного checkbox */
+
+   if($('.menu__container').length > 0) {
+      let checker = $('.menu__items_holder input[type="checkbox"]');
+      
+      checker.on('change', function() {
+          $('input.menu_checkbox').not(this).prop('checked', false);
+      });
+      // Можно подумать над закрытием при клике вне меню
+   }
+   
+});
+
+$(document).ready(function () {
+   /* поиск */
+   /* при нажатии на иконку проявление строки поиска и скрытие пунктов меню */
+
+   if($('.menu__container').length > 0) {
+      let $search_icon = $('.menu__form .menu__search'),
+          $menu_items = $('.menu__items_holder'),
+          $search_line =$('.menu__search_line'),
+          $menu__eye =$('.menu__eye'),
+          $close_icon = $('.menu__close'),
+          hidden = 'hidden';
+      
+      
+      $search_icon.on( 'click', function() {
+         /* показываем элементы через удаление скрывающего класса */
+         $search_line.removeClass(hidden);
+         $close_icon.removeClass(hidden);
+         
+         $menu__eye.addClass(hidden);
+         $menu_items.addClass(hidden);
+         // show( $search_line, $close_icon )
+      });
+      $close_icon.on( 'click', function() {
+         $search_line.addClass(hidden);
+         $close_icon.addClass(hidden);
+         
+         $menu__eye.removeClass(hidden);
+         $menu_items.removeClass(hidden);
+      
+      
+   })
+   }
+   
+   function show( element1, element2 ) {
+      /* показываем элементы через удаление скрывающего класса */
+      let $element1 =$(element1),
+          $element2 =$(element2);
+      $element1.removeClass('hidden');
+      $element2.removeClass('hidden');
+      
+      hide( '.menu__search_line', '.menu__eye' );
+   }
+   
+   function hide( element1, element2 ) {
+      /* скрываем элементы через добавление класса */
+      let $element1 =$(element1),
+          $element2 =$(element2);
+      
+      $element1.addClass('hidden');
+      $element2.addClass('hidden');
+   }
+});
+
+$(document).ready(function () {
+   /* мобильное меню */
+   const width =  $(document).width();
+
+   if($('.mobile__container').css( 'display' ) === 'block') {
+      var $icon = $('.mobile__icon'),
+          $menu = $('.mobile__menu'),
+          $blackLayer = $('#black_back');
+      
+      let menu_width;
+      
+      if ( width < 380 ) { menu_width = width * 0.9 } // Ширина меню зависит от размера экрана
+      else if ( width < 450 ) { menu_width = width * 0.8  }
+      else if ( width > 800 ) { menu_width = width / 2.2  }
+      else { menu_width = width * 0.7 }
+      
+      var style_blackLayer = {
+         display : "block",
+         opacity: "1"
+      };
+      var style_menu = {
+         right : "0",
+         width: menu_width
+      };
+      
+      if (!$('menu.mobile__container').hasClass('main-menu')) {
+         $icon.on('click', showMenu);
+      }
+   }
+   
+   function showMenu() {
+      $icon.prop( 'id', 'show');
+      $('menu.mobile__container').addClass('main-menu');
+     
+      $menu.css( style_menu ); // Появление меню
+      $blackLayer.css( style_blackLayer ); // Появление заднего фона
+      
+      $icon.on( 'click', function ( event ) { // Скрытие меню при повторном клике
+         event.stopPropagation();
+         hideMenu();
+      });
+      $blackLayer.on( 'click', function ( event ) { // Скрытие меню при клике по заднику
+         event.stopPropagation();
+         hideMenu();
+      });
+      
+      $icon.off( 'click', showMenu );  // Удаляем eventListener
+   }
+   function hideMenu() {
+      $icon.prop( 'id', '');
+      $('menu.mobile__container').removeClass('main-menu');
+   
+      $menu.prop( 'style', '');  // Скрытие меню
+      $blackLayer.prop( 'style', '');  // Скрытие задника
+      
+      $blackLayer.off( 'click', hideMenu ); // Удаляем eventListener
+      $icon.off( 'click', hideMenu ); // Удаляем eventListener
+      
+      $icon.on( 'click', function ( event ) { // Показ меню при повторниом клике
+         event.stopPropagation();
+         showMenu();
+      });
+   }
+   
+});
+
+$(document).ready(function(){
+
+   /* slick */
+   
+   const $slider = $('.slider__content');
+   
+   if ($slider.length > 0) {
+      
+      $slider
+      .on("destroy", function(_, slick) {
+         const reinit = debounce(() => {
+            if (slick.activeBreakpoint < window.innerWidth) return;
+            $(this).slick(slick.options);
+            window.removeEventListener("resize", reinit);
+         }, 200);
+         window.addEventListener("resize", reinit);
+      })
+      .slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         speed: 400,
+         arrows: true,
+         infinite: true,
+         autoplay: false,
+         responsive: [
+            {
+               breakpoint: 900,
+               settings: {
+                  arrows: true,
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+               }
+            },
+            {
+               breakpoint: 770,
+               settings: "unslick"
+            }
+         ]
+      });
+   }
+   
+   const $slider_cell = $('.tile_federal__row');
+   
+   if ($slider_cell.length > 0) {
+      
+      $slider_cell
+      .on("destroy", function(_, slick) {
+         const reinit = debounce(() => {
+            if (slick.activeBreakpoint < window.innerWidth) return;
+            $(this).slick(slick.options);
+            window.removeEventListener("resize", reinit);
+         }, 200);
+         window.addEventListener("resize", reinit);
+      })
+      .slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         speed: 400,
+         arrows: true,
+         mobileFirst: true,
+         infinite: true,
+         autoplay: false,
+         responsive: [
+            {
+               breakpoint: 770,
+               settings: "unslick"
+            },
+            {
+               breakpoint: 580,
+               settings: {
+                  arrows: true,
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+               }
+            }
+         ]
+      });
+   }
+   
+   
+   
+});
