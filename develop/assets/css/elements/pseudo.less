@@ -148,6 +148,15 @@ footer.footer__container:after {
       });
    }
    
+   .container__cos header.header__container:before {
+      height: calc( 325% - 2vw );
+      .md-block({
+         height: calc( 325% - 2vw );
+      });
+      .sm-block({
+         height: calc( 280% - 2vw );
+      });
+   }
    header.header__container .wrapper:before {
       content: none;
    }
@@ -172,6 +181,9 @@ footer.footer__container:after {
    
    &.container__success .header__container:before {
       .header-pseudo-success();
+   }
+   &.container__cos .header__container:before {
+      .header-pseudo-cos();
    }
    
    .headline_blue:after {
