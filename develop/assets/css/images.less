@@ -136,24 +136,42 @@
 .headline( @name ) {
    background-image: url("../data/images/@{name}.png");
 }
-
-.header-pseudo-school() {
-   .image('school');
+.header-pages() {
    background-position-x: right;
     background-position-y: 95%;
    .cover();
+}
+.header-pseudo-school() {
+   .image('school');
+   .header-pages();
 }
 .header-pseudo-success() {
    .image('success');
-   background-position-x: right;
-    background-position-y: 95%;
-   .cover();
+   .header-pages();
+}
+.header-pseudo-professional() {
+   .image('professional');
+  .header-pages();
 }
 .header-pseudo-cos() {
    .image('cos');
-   background-position-x: right;
-    background-position-y: 95%;
-   .cover();
+  .header-pages();
+}
+.header-pseudo-social_activity() {
+   .image('social_activity');
+  .header-pages();
+}
+.header-pseudo-social_lift() {
+   .image('social_lift');
+  .header-pages();
+}
+.header-pseudo-patriot() {
+   .image('patriot');
+  .header-pages();
+}
+.header-pseudo-youth() {
+   .image('youth');
+  .header-pages();
 }
 
 .headline-blue() {
