@@ -4,7 +4,6 @@ menu.mobile__container {
    top: 0;
    left: 0;
    width: 100%;
-   //paddingding: 1.5rem 0;
    margin: 0;
    margin-block-start: 0;
    margin-block-end: 0;
@@ -17,16 +16,16 @@ menu.mobile__container {
    .middle-block({
       display: block;
    });
-   
-   .menu__icons_holder {
-   
-   }
 }
 
 menu.mobile__container .wrapper {
    .flex();
    .justify-end();
    .items-end();
+}
+
+menu.mobile__container .wrapper > div {
+   cursor: pointer;
 }
 
 .mobile__icon {
@@ -97,42 +96,42 @@ menu.mobile__container .wrapper {
    border-bottom: 1px solid @opacity-white-item-30;
    
    .tr();
+}
+
+.mobile__item .icon_arrow_thin-white {
+   display: inline-block;
+   box-sizing: border-box;
+   margin-left: .6rem;
+   margin-bottom: -1px;
+}
+
+.mobile__item .menu__second_order {
+   position: relative;
+   top: unset;
+   background-color: transparent;
+   color: @color-text-white;
    
-   .icon_arrow_thin-white {
-      display: inline-block;
-      box-sizing: border-box;
-      margin-left: .6rem;
-      margin-bottom: -1px;
-   }
+   width: auto;
+   min-width: 27rem;
    
-   .menu__second_order {
-      position: relative;
-      top: unset;
-      background-color: transparent;
-      color: @color-text-white;
-      
-      width: auto;
-      min-width: 27rem;
-      
-      border-top: none;
-      
-      margin-top: 1rem;
-      margin-left: 1.6rem;
-      padding-right: 0;
-      padding-left: 0;
-      
-      box-shadow: none;
-      
-      z-index: 335;
-      
-      height: 0;
-      opacity: 0;
-      .tr();
-   }
+   border-top: none;
    
-   .second_order__item {
-      font-size: 1.1rem;
-   }
+   margin-top: 1rem;
+   margin-left: 1.6rem;
+   padding-right: 0;
+   padding-left: 0;
+   
+   box-shadow: none;
+   
+   z-index: 335;
+   
+   height: 0;
+   opacity: 0;
+   .tr();
+}
+
+.mobile__item .second_order__item {
+   font-size: 1.1rem;
 }
 
 label.mobile__item {
@@ -164,8 +163,8 @@ a.mobile__item:last-of-type {
 
 
 .mobile__form {
-       position: relative;
-    z-index: 300;
+   position: relative;
+   z-index: 300;
    .flex();
    width: 100%;
    margin-bottom: 4rem;

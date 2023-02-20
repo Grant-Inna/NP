@@ -142,7 +142,7 @@
    .cover();
    .md-block({
       background-position-y: 113%;
-      background-size: auto 80%;
+      background-size: 100% 80%;
    })
 }
 .header-pseudo-school() {
@@ -245,10 +245,16 @@
 
 .sources-icon() {
    .bg('sources.svg');
-   background-repeat: no-repeat;
    background-position: center;
-   background-size: contain;
+   .contain();
    
    width: 100%;
    height: 14rem;
+}
+
+
+.projects-slick() {
+   .bg('projects-slick.svg');
+   background-position: center;
+   .contain();
 }
