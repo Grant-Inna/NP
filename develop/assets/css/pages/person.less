@@ -25,7 +25,6 @@ section.person__container .wrapper {
    .col();
    .size(12);
    .size-md(24);
-   //.size-md(12);
    
    flex-grow: 1;
    
@@ -38,7 +37,6 @@ section.person__container .wrapper {
    
    &:nth-of-type(2) {
       background-color: @color-background-blue-light;
-      
       
       .md-block({
          margin-top: 3rem;
@@ -54,6 +52,9 @@ section.person__container .wrapper {
    .md-block({
       .items-start();
       padding: 4vw;
+   });
+   .xxs-block({
+      .column();
    })
 }
 .person__image {
@@ -63,25 +64,49 @@ section.person__container .wrapper {
    
    flex-shrink: 0;
    
+   .xxs-block({
+      max-width: 100%;
+      max-height: unset;
+      margin-right: 0;
+      margin-bottom: 3vw;
+   });
    
    img {
       min-width: 100%;
       min-height: 100%;
       max-height: 30.2rem;
+      
+      .xxs-block({
+         max-width: 100%;
+         max-height: unset;
+      });
    }
 }
 .person__text {
    color: @color-text-white;
+   
+   .xxs-block({
+      margin-bottom: 3vw;
+   })
 }
 .person__status {
+   display: inline-block;
+   position: relative;
+   z-index: 300;
    .body-regular-3();
    line-height: 1.8rem;
-   margin-top: 2vw;
+   
+   background-color: #0055FF;
+   padding: 5px 10px 6px 8px ;
    
    .lg-block({
      margin-top: 0;
       margin-bottom: 3rem;
    });
+   .md-block({
+      background-color: unset;
+      padding: 0;
+   })
 }
 .person__name  {
    .body-semibold-1();

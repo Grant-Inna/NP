@@ -56,19 +56,21 @@ $(document).ready(function(){
          slidesToShow: 1,
          slidesToScroll: 1,
          speed: 400,
-         arrows: true,
+         arrows: false,
+         dots: true,
          mobileFirst: true,
          infinite: true,
          autoplay: false,
          responsive: [
             {
-               breakpoint: 770,
+               breakpoint: 800,
                settings: "unslick"
             },
             {
                breakpoint: 580,
                settings: {
-                  arrows: true,
+                  arrows: false,
+                  dots: true,
                   slidesToShow: 2,
                   slidesToScroll: 2
                }

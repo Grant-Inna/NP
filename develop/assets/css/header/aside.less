@@ -7,12 +7,13 @@ aside.header__aside_holder {
    margin-left: auto;
    
 }
+
 #container_main aside.header__aside_holder {
-    width: 36%;
-   .from( 1620px, {
+   width: 36%;
+   .from(1620px, {
       padding-top: 8vw;
    });
-   .from( 2000px, {
+   .from(2000px, {
       padding-top: 10vw;
       width: 34%;
    });
@@ -25,13 +26,21 @@ aside.header__aside_holder {
    .middle-block({
       width: 100%;
       flex-direction: row;
+      flex-wrap: wrap;
       .justify-start();
       .items-end();
       padding-top: 2rem;
       margin-bottom: 2rem;
    });
    .md-block({
-      .justify-evenly();
+      .column();
+      .items-start();
+   })
+}
+
+#container_main aside.header__aside_holder > div {
+   .middle-block({
+      min-width: 270px;
    })
 }
 
@@ -41,12 +50,14 @@ aside.header__aside_holder {
    .items-center();
    .tr();
 }
+
 .header__aside_text {
    .headline-3();
    line-height: 3.2rem;
    text-transform: uppercase;
    
 }
+
 .header__aside_icon {
    margin-right: 1.8rem;
    .tr();
@@ -57,37 +68,41 @@ aside.header__aside_holder {
       height: 8rem;
    });
    .md-block({
-      display: none;
+      //display: none;
    })
 }
+
 .aside__block_white {
    transform: rotate(-40deg) translateX(5vw) translateY(-1vw);
    
    .from(1650px, {
       transform: rotate(-40deg) translateX(4vw) translateY(-2vw);
    });
-  
+   
    .middle-block({
       transform: rotate(0) translateX(0) translateY(0);
    });
    
    .justify-end();
    
-   .header__aside_text {
-      color: @color-text-white;
-      
-      span {
-         .oswald-bold();
-         font-size: 3.5rem;
-      }
-   }
-   .header__aside_icon {
-      position: relative;
-      z-index: 50;
-      .aside-arrow-white();
-      
+}
+
+.aside__block_white .header__aside_text {
+   color: @color-text-white;
+   
+   span {
+      .oswald-bold();
+      font-size: 3.5rem;
    }
 }
+
+.aside__block_white .header__aside_icon {
+   position: relative;
+   z-index: 50;
+   .aside-arrow-white();
+}
+
+
 .aside__block_blue {
    transform: rotate(-40deg) translateX(-4vw) translateY(3vw);
    
@@ -107,78 +122,32 @@ aside.header__aside_holder {
       transform: rotate(0) translateX(0) translateY(0);
       margin-left: 1rem;
    });
+   .md-block({
+      margin-left: auto;
+   });
    
    .justify-start();
-   .header__aside_text {
-      color: @color-text-blue;
-      white-space: nowrap;
-      .middle-block({
-         color: @color-text-white;
-      });
-      .md-block({
-      
-      })
-   }
-   .header__aside_icon {
-      .aside-arrow-blue();
-      .middle-block({
-         margin-left: 1.3rem;
-          .aside-arrow-white();
-       });
-   }
 }
 
-#container {
-   aside.header__aside_holder {
-      width: calc(37% + 3vw);
-      .from( 2000px, {
-         padding-top: 4vw;
-      });
-      .middle-block({
-         padding-top: 60px;
-         width: 41%;
-      });
-      .lg-block({
-         padding-top: 19px;
-         width: 46%;
-      });
-      .md-block({
-         width: 46%;
-      });
-      .sm-block({
-         padding-top: 50px;
-         width: 47%;
-      });
-      .xs-block({
-         width: 52%;
-      })
-   }
+.aside__block_blue .header__aside_text {
+   color: @color-text-blue;
+   white-space: nowrap;
+   .middle-block({
+      color: @color-text-white;
+   });
+   .md-block({
    
-   .header__aside_block.aside__block_white {
-      transform: rotate(-40deg) translateX(9rem) translateY(6rem);
-   
-      .from(2050px, {
-         transform: rotate(-40deg) translateX(4rem) translateY(3rem);
-      });
-      .to( 1380px, {
-         transform: rotate(-40deg) translateX(9rem) translateY(5rem);
-      });
-      .middle-block({
-         transform: rotate(0) translateX(2rem) translateY(2.5rem);
-      });
-      .xs-block({
-         transform: rotate(0) translateX(1rem) translateY(2.5rem);
-      });
-      .xxs-block({
-         transform: rotate(0) translateX(-2rem) translateY(2.5rem);
-      })
-   }
-   .header__aside_text {
-      position: relative;
-      z-index: 50;
-      .headline-4();
-      line-height: 2.6rem;
-      
-   }
+   })
 }
 
+.aside__block_blue .header__aside_icon {
+   .aside-arrow-blue();
+   .middle-block({
+      margin-left: 1.3rem;
+      .aside-arrow-white();
+      width: 8rem;
+      height: 8rem;
+   });
+}
+
+@import "aside_pages";

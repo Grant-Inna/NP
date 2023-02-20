@@ -2,22 +2,26 @@
    background-image: url("../data/@{folder}/@{name}.svg");
    background-repeat: no-repeat;
 }
+
 .icon-color-svg( @folder, @color, @name ) {
    background-image: url("../data/@{folder}/@{color}/@{name}.svg");
    background-repeat: no-repeat;
 }
+
 .icon-60() {
    background-size: contain;
    background-position: center;
    width: 4rem;
    height: 4rem;
 }
+
 .icon-30() {
    background-size: contain;
    background-position: center;
    width: 2rem;
    height: 2rem;
 }
+
 .icon-25() {
    background-size: contain;
    background-position: center;
@@ -33,7 +37,7 @@
 }
 
 .icon_arrow_thin {
-   .icon-color-svg( 'icons', 'black', 'arr-bottom' );
+   .icon-color-svg('icons', 'black', 'arr-bottom');
    background-size: contain;
    background-position: center;
    width: 1.3rem;
@@ -41,8 +45,9 @@
    
    .tr();
 }
+
 .icon_arrow_thin-white {
-   .icon-color-svg( 'icons', 'white', 'arr-bottom' );
+   .icon-color-svg('icons', 'white', 'arr-bottom');
    background-size: contain;
    background-position: center;
    width: 1.1rem;
@@ -50,51 +55,72 @@
    
    .tr();
 }
+
 .icon_eye {
-   .icon-color-svg( 'icons', 'black', 'eye_on' );
+   .icon-color-svg('icons', 'black', 'eye_on');
    .icon-30();
 }
+
 .icon_eye_off {
-   .icon-color-svg( 'icons', 'black', 'eye_off' );
+   .icon-color-svg('icons', 'black', 'eye_off');
    .icon-30();
 }
+
+.mobile__eye .icon_eye {
+   .icon-color-svg('icons', 'white', 'eye_on');
+}
+
+.mobile__eye .icon_eye_off {
+   .icon-color-svg('icons', 'white', 'eye_off');
+}
+
 .icon_search {
-   .icon-color-svg( 'icons', 'black', 'search' );
+   .icon-color-svg('icons', 'black', 'search');
    .icon-30();
 }
+
+.mobile__form .icon_search {
+   .icon-color-svg('icons', 'white', 'search');
+   width: 28px;
+   height: 43.2px;
+   margin-right: -6px;
+}
+
 .icon_close {
-   .icon-color-svg( 'icons', 'black', 'close' );
+   .icon-color-svg('icons', 'black', 'close');
    .icon-30();
 }
 
 .icon-on_top() {
-   .icon-svg( icons, on-top );
+   .icon-svg(icons, on-top);
    .icon-20();
 }
 
 
 .icon-phone() {
-   .icon-color-svg( 'icons', 'white', 'phone' );
+   .icon-color-svg('icons', 'white', 'phone');
    .icon-20();
 }
+
 .icon-mail() {
-   .icon-color-svg( 'icons', 'white', 'mail' );
+   .icon-color-svg('icons', 'white', 'mail');
    .icon-20();
 }
 
 .icon_load() {
-   .icon-color-svg( 'icons', 'blue', 'load' );
+   .icon-color-svg('icons', 'blue', 'load');
    .icon-25();
 }
 
 
 .prev() {
-   .icon-svg( 'icons', 'prev' );
+   .icon-svg('icons', 'prev');
    background-size: contain;
    background-position: center;
 }
+
 .next() {
-   .icon-svg( 'icons', 'next' );
+   .icon-svg('icons', 'next');
    background-size: contain;
    background-position: center;
 }

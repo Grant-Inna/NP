@@ -48,6 +48,11 @@ footer.footer__container .wrapper {
    .xl-block({ @mr: 4vw; margin-right: @mr; });
    .to( 850px, {
       margin-bottom: 1rem;
+   });
+   .xs-block({
+      width: 13rem;
+      height: 12rem;
+      .logo-image();
    })
 }
 
@@ -70,11 +75,15 @@ footer.footer__container .wrapper {
    .items-start();
    box-sizing: border-box;
    padding-bottom: .3rem;
+   
+   .xs-block({
+      transform: translateX(-7rem);
+   })
 }
 .footer__logo {
    .flex();
    .to( 850px, {
-      .column()   ;
+      .column();
    })
 }
 
