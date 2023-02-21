@@ -1,6 +1,7 @@
 section.person__container {
    position: relative;
    z-index: 200;
+   padding-top: 3rem;
 }
 section.person__container .wrapper {
    .sm-block({
@@ -21,7 +22,7 @@ section.person__container .wrapper {
 
 .person__content {
    position: relative;
-   z-index: 150;
+   z-index: 350;
    .col();
    .size(12);
    .size-md(24);
@@ -30,7 +31,7 @@ section.person__container .wrapper {
    
    .flex();
    .justify-center();
-   .items-center();
+   .items-start();
    
    padding: @inner;
    background-color: @color-additional-blue;
@@ -84,7 +85,8 @@ section.person__container .wrapper {
 }
 .person__text {
    color: @color-text-white;
-   
+       position: relative;
+    z-index: 350;
    .xxs-block({
       margin-bottom: 3vw;
    })
@@ -107,6 +109,9 @@ section.person__container .wrapper {
       background-color: unset;
       padding: 0;
    })
+}
+.person__content&:nth-of-type(2) .person__status {
+   background-color: @color-additional-blue;
 }
 .person__name  {
    .body-semibold-1();

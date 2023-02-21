@@ -36,6 +36,7 @@ section.info_block__container .wrapper {
    .size-sm(24);
    .size-xs(24);
    
+   
    margin-bottom: @offset * @num;
     .xxl-block({
        margin-bottom: @offset_xxl * @num + 1rem;
@@ -52,14 +53,28 @@ section.info_block__container .wrapper {
 }
 .info_block__text_main {
    color: @color-text-blue;
-   .body-semibold-1();
+   .opensans-semibold();
+   font-size: 2rem; // 30
+   line-height: 2.3rem;
+
+   .ll-block({
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+   })
 }
 .info_block__text_span {
    color: @color-text-gray;
-   .body-regular-4();
-   line-height: 1.5rem; // 20
    
-   margin-top: .5rem;
+   .opensans-regular();
+   font-size: 1.3rem; // 20
+   line-height: 1.7rem;
+   
+   .md-block({
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+   });
+   
+   //margin-top: .5rem;
 }
 
 .info_block__more {
@@ -78,6 +93,26 @@ section.info_block__container .wrapper {
 .block {
    display: block;
 }
+.full {
+   .col();
+   .size(24);
+   .size-xxl(24);
+   .size-md(24);
+}
+.half {
+   .size(12);
+   .size-xxl(12);
+   .size-md(22);
+   .size-sm(24);
+   .size-xs(24);
+}
 .inline {
    display: inline;
+}
+.text_blue {
+   .opensans-regular();
+   font-size: 1.7rem;
+   line-height: 2rem;
+   
+   color: #014BE4;
 }

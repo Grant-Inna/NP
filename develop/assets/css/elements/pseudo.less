@@ -188,20 +188,43 @@ footer.footer__container:after {
    height: 8rem;
    .middle-block({
       top: 63%;
-    left: -29%;
+      left: -29%;
       width: 8rem;
       height: 6rem;
    })
 }
 
-#container.container__school .header__container:before { .header-pseudo-school();}
-#container.container__success .header__container:before { .header-pseudo-success();}
-#container.container__professional .header__container:before { .header-pseudo-professional();}
-#container.container__cos .header__container:before { .header-pseudo-cos();}
-#container.container__social_activity .header__container:before { .header-pseudo-social_activity();}
-#container.container__social_lift .header__container:before { .header-pseudo-social_lift();}
-#container.container__patriot .header__container:before { .header-pseudo-patriot();}
-#container.container__youth .header__container:before { .header-pseudo-youth();}
+#container.container__school .header__container:before {
+   .header-pseudo-school();
+}
+
+#container.container__success .header__container:before {
+   .header-pseudo-success();
+}
+
+#container.container__professional .header__container:before {
+   .header-pseudo-professional();
+}
+
+#container.container__cos .header__container:before {
+   .header-pseudo-cos();
+}
+
+#container.container__social_activity .header__container:before {
+   .header-pseudo-social_activity();
+}
+
+#container.container__social_lift .header__container:before {
+   .header-pseudo-social_lift();
+}
+
+#container.container__patriot .header__container:before {
+   .header-pseudo-patriot();
+}
+
+#container.container__youth .header__container:before {
+   .header-pseudo-youth();
+}
 
 #container .headline_blue:after {
    .pseudo();
@@ -263,15 +286,21 @@ section.deadline__container:before {
    &:first-child:after {
       .pseudo();
       z-index: 300;
+      .polygon-3-person-white();
+      width: 26%;
+    height: 90%;
+    top: 2%;
+    right: -6%;
       
-      width: 35%;
-      height: 50%;
-      
-      top: 1%;
-      right: -8%;
-      
-      .polygon-3-main-white();
-      .lg-block({
+      .ll-block({
+         width: 35%;
+         height: 50%;
+         
+         top: 1%;
+         right: -8%;
+         
+         
+         .polygon-3-main-white();
          transform: rotate(25deg) translateX(8px);
       });
       .md-block({
@@ -339,6 +368,8 @@ section.deadline__container:before {
    right: 3vw;
    .polygon-1-white();
    transform: rotate(70deg);
+   
+   display: none;
 }
 
 .mobile__menu:after {
@@ -363,5 +394,5 @@ section.deadline__container:before {
    
    background-color: #444444;
    
-   .lg( display, none )
+   .lg(display, none)
 }
