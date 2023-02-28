@@ -2,7 +2,7 @@ $(document).ready(function(){
 
    /* slick */
    
-   const $slider = $('.slider__content');
+   /*const $slider = $('.slider__content');
    
    if ($slider.length > 0) {
       
@@ -37,7 +37,7 @@ $(document).ready(function(){
             }
          ]
       });
-   }
+   }*/
    
    const $slider_cell = $('.tile_federal__row');
    

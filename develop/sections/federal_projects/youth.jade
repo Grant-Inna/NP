@@ -1,23 +1,23 @@
 doctype
 html
-   include ../assets/jade/static/__header
-   +head('Молодежь России | Федеральные проекты', '..')
+   include ../../assets/jade/static/__header
+   +head('Молодежь России | Федеральные проекты', '../..')
 
    body
       #container.container__youth
-         include ../assets/jade/menu/federal/menu
-         include ../assets/jade/menu/federal/mobile
-         include ../assets/jade/content/pages/header
+         include ../../assets/jade/menu/federal/menu
+         include ../../assets/jade/menu/federal/mobile
+         include ../../assets/jade/content/pages/header
 
-         include ../assets/jade/content/pages/__caption
+         include ../../assets/jade/content/pages/__caption
          +caption( 'Молодежь России', 'Федеральный проект &laquo;Развитие системы поддержки молодежи ("Молодежь России")&raquo; направлен на&nbsp;<b>создание условий для эффективной самореализации молодежи, в&nbsp;том числе развитие инфраструктуры</b>. В&nbsp;рамках проекта предусмотрены мероприятия для повышения охвата молодежными проектами и&nbsp;программами и&nbsp;информирования молодежи о&nbsp;возможностях, механизмах и&nbsp;путях её самореализации в&nbsp;России.')
 
-         include ../assets/jade/content/pages/__headline
+         include ../../assets/jade/content/pages/__headline
          +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
 
-         include ../assets/jade/content/pages/__info_block-simple/top
-         include ../assets/jade/content/pages/__info_block-simple/middle
-         include ../assets/jade/content/pages/__info_block-simple/top-bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top
+         include ../../assets/jade/content/pages/__info_block-simple/middle
+         include ../../assets/jade/content/pages/__info_block-simple/top-bottom
          section.info_block__container
             .wrapper.mb2
                .info_block__content
@@ -29,25 +29,25 @@ html
                   +top-bottom( '900 000 УЧАСТНИКОВ', '', 'Всероссийского студенческого конкурса', 'inline mr', ' &laquo;ТВОЙ&nbsp;ХОД&raquo;', 'mt', '')
                   +top('36 ПРОСВЕТИТЕЛЬСКИХ МЕРОПРИЯТИЙ', 'inline mr', 'с&nbsp;участием экспертов, деятелей науки и&nbsp;культуры, выдающихся ученых, спортсменов, общественных и&nbsp;государственных деятелей и&nbsp;представителей бизнес&ndash;сообщества в&nbsp;субъектах Российской Федерации', 'inline', 'full')
 
-         include ../assets/jade/content/pages/__deadline
+         include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2022', '30.12.2024')
 
-         include ../assets/jade/content/pages/__person
+         include ../../assets/jade/content/pages/__person
          section.person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель и&nbsp;администратор проекта', 'Разуваева', 'Ксения', 'Денисовна', 'руководитель Федерального агентства по&nbsp;делам молодёжи', 'razyvaeva')
 
-         include ../assets/jade/content/pages/__sources
+         include ../../assets/jade/content/pages/__sources
          section.sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
+                     .sources__text Источники финансирования проекта
                      .sources__icon
-                     .sources__text Источники
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '44,38')
 
 
-         include ../assets/jade/footer/footer
-      include ../assets/jade/static/scripts
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts

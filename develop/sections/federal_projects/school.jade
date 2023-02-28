@@ -1,23 +1,23 @@
 doctype
 html
-   include ../assets/jade/static/__header
-   +head('Современная школа | Федеральные проекты', '..')
+   include ../../assets/jade/static/__header
+   +head('Современная школа | Федеральные проекты', '../..')
 
    body
       #container.container__school
-         include ../assets/jade/menu/federal/menu
-         include ../assets/jade/menu/federal/mobile
-         include ../assets/jade/content/pages/header
+         include ../../assets/jade/menu/federal/menu
+         include ../../assets/jade/menu/federal/mobile
+         include ../../assets/jade/content/pages/header
 
-         include ../assets/jade/content/pages/__caption
+         include ../../assets/jade/content/pages/__caption
          +caption( 'Современная школа', 'Федеральный проект <b>&laquo;Современная школа&raquo;</b> направлен на&nbsp;обеспечение возможности детям получать качественное общее образование в&nbsp;условиях, отвечающих современным требованиям, независимо от&nbsp;места проживания ребенка, обеспечение возможности профессионального развития педагогических работников, а&nbsp;также на&nbsp;организацию комплексного психолого&ndash;педагогического сопровождения участников образовательных отношений.')
 
-         include ../assets/jade/content/pages/__headline
-         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
+         include ../../assets/jade/content/pages/__headline
+         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта &laquo;Современная школа&raquo; к&nbsp;концу 2024 года' )
 
-         include ../assets/jade/content/pages/__info_block-simple/top
-         include ../assets/jade/content/pages/__info_block-simple/middle
-         include ../assets/jade/content/pages/__info_block-simple/top-bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top
+         include ../../assets/jade/content/pages/__info_block-simple/middle
+         include ../../assets/jade/content/pages/__info_block-simple/top-bottom
          section.info_block__container
             .wrapper.mb2
                .info_block__content
@@ -43,33 +43,27 @@ html
                   span Благодаря реализации федерального проекта к&nbsp;2024 году будут обновлены
                   b.ml содержание и&nbsp;технологии преподавания общеобразовательных программ, в&nbsp;том числе общеобразовательных дисциплин в&nbsp;профессиональных образовательных организациях
 
-         include ../assets/jade/content/pages/__deadline
+         include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2019', '30.12.2024')
 
-         include ../assets/jade/content/pages/slider/__slider_item
-         section.slider__container
-            .wrapper
-               .slider__content.inner
-                  +slider_item( 'tochka', 'Центры образования  <b>Центры образования</b> Центры образования Центры образования Центры образования', 'tochka')
-
-         include ../assets/jade/content/pages/__person
+         include ../../assets/jade/content/pages/__person
          section.person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
 
-         include ../assets/jade/content/pages/__sources
+         include ../../assets/jade/content/pages/__sources
          section.sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
+                     .sources__text Источники финансирования проекта
                      .sources__icon
-                     .sources__text Источники
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '522,0')
                      +sources( 'Из них передано субъектам<br>Российской Федерации', '502,8 ')
 
 
-         include ../assets/jade/footer/footer
-      include ../assets/jade/static/scripts
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts
 

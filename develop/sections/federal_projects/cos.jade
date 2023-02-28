@@ -1,24 +1,24 @@
 doctype
 html
-   include ../assets/jade/static/__header
-   +head('Цифровая образовательная среда | Федеральные проекты', '..')
+   include ../../assets/jade/static/__header
+   +head('Цифровая образовательная среда | Федеральные проекты', '../..')
 
    body
       #container.container__cos
-         include ../assets/jade/menu/federal/menu
-         include ../assets/jade/menu/federal/mobile
-         include ../assets/jade/content/pages/header
+         include ../../assets/jade/menu/federal/menu
+         include ../../assets/jade/menu/federal/mobile
+         include ../../assets/jade/content/pages/header
 
-         include ../assets/jade/content/pages/__caption
+         include ../../assets/jade/content/pages/__caption
          +caption( 'Цифровая образовательная среда', 'Федеральный проект &laquo;Цифровая образовательная среда&raquo; направлен на&nbsp;<b>создание и&nbsp;внедрение в&nbsp;образовательных организациях цифровой образовательной среды, а&nbsp;также обеспечение реализации цифровой трансформации системы образования</b>. В&nbsp;рамках проекта ведется работа по&nbsp;оснащению организаций современным оборудованием и&nbsp;развитие цифровых сервисов и&nbsp;контента для образовательной деятельности.')
 
-         include ../assets/jade/content/pages/__headline
+         include ../../assets/jade/content/pages/__headline
          +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
 
-         include ../assets/jade/content/pages/__info_block-simple/top
-         include ../assets/jade/content/pages/__info_block-simple/middle
-         include ../assets/jade/content/pages/__info_block-simple/bottom
-         include ../assets/jade/content/pages/__info_block-simple/top-bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top
+         include ../../assets/jade/content/pages/__info_block-simple/middle
+         include ../../assets/jade/content/pages/__info_block-simple/bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top-bottom
          section.info_block__container
             .wrapper.mb2
                .info_block__content
@@ -34,34 +34,34 @@ html
                   +top( '41 КОМПЛЕКТ', 'inline mr', 'верифицированного цифрового образовательного контента, соответствующего ФГОС общего образования', 'inline', 'half')
                   +top( '40% ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ', '', 'из&nbsp;числа субъектов Российской Федерации, участвующих в&nbsp;эксперименте по&nbsp;модернизации начального общего, основного общего и&nbsp;среднего общего образования, будут оснащены компьютерным, мультимедийным, презентационным оборудованием и&nbsp;программным обеспечением', '', 'full')
 
-         include ../assets/jade/content/pages/__deadline
+         include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2019', '30.12.2024')
 
-         include ../assets/jade/content/pages/slider/__slider_item
+         include ../../assets/jade/content/pages/slider/__slider_item
          section.slider__container
             .wrapper
                .slider__content.inner
                   +slider_item( 'it-kub', 'Центры цифрового образования детей  &laquo;IT&ndash;куб&raquo;', '')
 
-         include ../assets/jade/content/pages/__person
+         include ../../assets/jade/content/pages/__person
          section.person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
                   +person( 'Администратор', 'Горобец', 'Андрей', 'Валерьевич', 'директор Департамента цифровой трансформации и&nbsp;больших данных', 'gorobec')
 
-         include ../assets/jade/content/pages/__sources
+         include ../../assets/jade/content/pages/__sources
          section.sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
+                     .sources__text Источники финансирования проекта
                      .sources__icon
-                     .sources__text Источники
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '73,4')
                      +sources( 'Из них передано субъектам<br>Российской Федерации', '62,9')
 
 
 
-         include ../assets/jade/footer/footer
-      include ../assets/jade/static/scripts
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts

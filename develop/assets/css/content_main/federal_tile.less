@@ -19,9 +19,11 @@ section.tile_federal__container .wrapper {}
 
 
 .tile_federal__cell {
+   display: block;
    position: relative;
    cursor: pointer;
-   
+   border-radius: 3px;
+   overflow: hidden;
    padding-top: 60px;
    
    .col();
@@ -91,7 +93,7 @@ img.tile_federal__image {
       padding: 3rem;
    });
    .middle-block({
-      padding: 2rem;
+      display: none;
    });
    .sm-block({
       padding: 2.5rem;

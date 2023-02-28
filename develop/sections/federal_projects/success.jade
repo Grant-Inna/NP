@@ -1,23 +1,23 @@
 doctype
 html
-   include ../assets/jade/static/__header
-   +head('Успех каждого ребенка | Федеральные проекты', '..')
+   include ../../assets/jade/static/__header
+   +head('Успех каждого ребенка | Федеральные проекты', '../..')
 
    body
       #container.container__success
-         include ../assets/jade/menu/federal/menu
-         include ../assets/jade/menu/federal/mobile
-         include ../assets/jade/content/pages/header
+         include ../../assets/jade/menu/federal/menu
+         include ../../assets/jade/menu/federal/mobile
+         include ../../assets/jade/content/pages/header
 
-         include ../assets/jade/content/pages/__caption
+         include ../../assets/jade/content/pages/__caption
          +caption( 'Успех каждого ребенка', 'Федеральный проект &laquo;Успех каждого ребенка&raquo; <b>направлен на&nbsp;создание и&nbsp;работу системы выявления, поддержки и&nbsp;развития способностей и&nbsp;талантов детей и&nbsp;молодежи</b>. В&nbsp;рамках проекта ведется работа по&nbsp;обеспечению равного доступа детей к&nbsp;актуальным и&nbsp;востребованным программам дополнительного образования, выявлению талантов каждого ребенка и&nbsp;ранней профориентации обучающихся.')
 
-         include ../assets/jade/content/pages/__headline
+         include ../../assets/jade/content/pages/__headline
          +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
 
-         include ../assets/jade/content/pages/__info_block-simple/top
-         include ../assets/jade/content/pages/__info_block-simple/middle
-         include ../assets/jade/content/pages/__info_block-simple/top-bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top
+         include ../../assets/jade/content/pages/__info_block-simple/middle
+         include ../../assets/jade/content/pages/__info_block-simple/top-bottom
          section.info_block__container
             .wrapper.mb2
                .info_block__content
@@ -33,10 +33,10 @@ html
                   +top-bottom( '1&nbsp;072&nbsp;560 ДЕТЕЙ', '', 'примут участие в&nbsp;профориентационном проекте', 'inline', ' &laquo;БИЛЕТ В&nbsp;БУДУЩЕЕ&raquo;', 'mt', 'half')
                   +top-bottom('1&nbsp;125&nbsp;000 детей и&nbsp;молодежи,', '', 'которые вовлечены в&nbsp;детско&ndash;юношеский и&nbsp;студенческий спорт через мероприятия Общественно&ndash;государственного физкультурно&ndash;спортивного объединения', 'inline mr', ' &laquo;ЮНОСТЬ&nbsp;РОССИИ&raquo;', 'inline', 'full')
 
-         include ../assets/jade/content/pages/__deadline
+         include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2019', '30.12.2024')
 
-         include ../assets/jade/content/pages/slider/__slider_item
+         include ../../assets/jade/content/pages/slider/__slider_item
          section.slider__container
             .wrapper
                .slider__content.inner
@@ -44,25 +44,25 @@ html
                   +slider_item( 'sirius', 'Центры выявления и&nbsp;поддержки одарённых детей', '')
                   +slider_item( 'kvantorium', 'Детские и&nbsp;мобильные технопарки  &laquo;Кванториум&raquo;', '')
 
-         include ../assets/jade/content/pages/__person
+         include ../../assets/jade/content/pages/__person
          section.person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
                   +person( 'Администратор', 'Грибов', 'Денис', 'Евгеньевич', 'заместитель Министра просвещения Российской Федерации', 'gribov')
 
-         include ../assets/jade/content/pages/__sources
+         include ../../assets/jade/content/pages/__sources
          section.sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
+                     .sources__text Источники финансирования проекта
                      .sources__icon
-                     .sources__text Источники
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '52,6')
                      +sources( 'Из них передано субъектам<br>Российской Федерации', '42,4')
 
 
 
-         include ../assets/jade/footer/footer
-      include ../assets/jade/static/scripts
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts

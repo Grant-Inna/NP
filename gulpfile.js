@@ -76,16 +76,16 @@ function html(done){
    done();
 }
 function federal_projects(done){
-   return gulp.src([ base + 'federal_projects/*.jade' ] )
+   return gulp.src([ base + 'sections/federal_projects/*.jade' ] )
    .pipe(jade())
-   .pipe(gulp.dest( prod + 'federal_projects'))
+   .pipe(gulp.dest( prod + 'sections/federal_projects'))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
 function infrastructure(done){
-   return gulp.src([ base + 'infrastructure/*.jade'] )
+   return gulp.src([ base + 'sections/infrastructure/*.jade'] )
    .pipe(jade())
-   .pipe(gulp.dest( prod + 'infrastructure' ))
+   .pipe(gulp.dest( prod + 'sections/infrastructure' ))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
@@ -155,8 +155,8 @@ function watch(done){
    gulp.watch( src + 'jade/**/**/*.jade', html);
    gulp.watch( src + 'jade/**/*.jade', federal_projects);
    gulp.watch( src + 'jade/**/*.jade', infrastructure);
-   gulp.watch( base + 'federal_projects/*.jade', federal_projects);
-   gulp.watch( base + 'infrastructure/*.jade', infrastructure);
+   gulp.watch( base + 'sections/federal_projects/*.jade', federal_projects);
+   gulp.watch( base + 'sections/infrastructure/*.jade', infrastructure);
    gulp.watch( src + 'images/**/*', images);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);

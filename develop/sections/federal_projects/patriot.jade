@@ -1,24 +1,24 @@
 doctype
 html
-   include ../assets/jade/static/__header
-   +head('Патриотическое воспитание | Федеральные проекты', '..')
+   include ../../assets/jade/static/__header
+   +head('Патриотическое воспитание | Федеральные проекты', '../..')
 
    body
       #container.container__patriot
-         include ../assets/jade/menu/federal/menu
-         include ../assets/jade/menu/federal/mobile
-         include ../assets/jade/content/pages/header
+         include ../../assets/jade/menu/federal/menu
+         include ../../assets/jade/menu/federal/mobile
+         include ../../assets/jade/content/pages/header
 
-         include ../assets/jade/content/pages/__caption
+         include ../../assets/jade/content/pages/__caption
          +caption( 'Патриотическое воспитание', 'Федеральный проект &laquo;Патриотическое воспитание граждан Российской Федерации&raquo; направлен <b>на&nbsp;обеспечение функционирования системы патриотического воспитания граждан Российской Федерации</b>. В&nbsp;рамках проекта ведется работа по&nbsp;развитию воспитательной работы в&nbsp;образовательных организациях общего и&nbsp;профессионального образования, проведению мероприятий патриотической направленности.')
 
-         include ../assets/jade/content/pages/__headline
+         include ../../assets/jade/content/pages/__headline
          +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
 
-         include ../assets/jade/content/pages/__info_block-simple/top
-         include ../assets/jade/content/pages/__info_block-simple/middle
-         include ../assets/jade/content/pages/__info_block-simple/bottom
-         include ../assets/jade/content/pages/__info_block-simple/top-bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top
+         include ../../assets/jade/content/pages/__info_block-simple/middle
+         include ../../assets/jade/content/pages/__info_block-simple/bottom
+         include ../../assets/jade/content/pages/__info_block-simple/top-bottom
          section.info_block__container
             .wrapper.mb2
                .info_block__content
@@ -32,27 +32,27 @@ html
                   +top-bottom('1&nbsp;750&nbsp;000 детей,', 'inline mr', 'вовлеченных в&nbsp;деятельность детско&ndash;юношеского военно&ndash;патриотического общественного движения', 'inline mr', ' &laquo;ЮНАРМИЯ&raquo;', 'inline', '')
                   +top-bottom('3&nbsp;000&nbsp;000 детей,', 'inline mr', 'вовлеченных в&nbsp;деятельность Общероссийской общественно&ndash;государственной детско&ndash;юношеской организации', 'inline mr', ' &laquo;РОССИЙСКОЕ ДВИЖЕНИЕ ШКОЛЬНИКОВ&raquo;', 'mt', 'full')
 
-         include ../assets/jade/content/pages/__deadline
+         include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2021', '31.12.2024')
 
-         include ../assets/jade/content/pages/__person
+         include ../../assets/jade/content/pages/__person
          section.person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
                   +person( 'Администратор', 'Грибов', 'Денис', 'Евгеньевич', 'заместитель Министра просвещения Российской Федерации', 'gribov')
 
-         include ../assets/jade/content/pages/__sources
+         include ../../assets/jade/content/pages/__sources
          section.sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
+                     .sources__text Источники финансирования проекта
                      .sources__icon
-                     .sources__text Источники
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '13,6')
 
 
 
-         include ../assets/jade/footer/footer
-      include ../assets/jade/static/scripts
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts
