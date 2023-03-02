@@ -1,27 +1,38 @@
 :root {
-   --width-image: 14vw;
-   --height-image: 12vw;
+   --width-image-p: 15vw;
+   --height-image-p: 10vw;
    
-   
-   --width-title: 31vw;
-   --height-title: calc(31vw / 5.9);
+   --width-title-p: 45vw;
+   --height-title-p: calc(45vw / 5.9);
 }
 
 .header__main_logo {
    position: relative;
    z-index: 50;
-   
-   width: var(--width-image, 308px);
-   height: var(--height-image, 254px);
-   max-width: 308px;
-   min-width: 115px;
-   min-height: 75px;
-   
    .logo-image();
    
+   width: var(--width-image-p, 244px);
+   height: var(--height-image-p, 200px);
+   max-width: 308px;
+   /*min-width: 115px;
+   min-height: 80px;
+   */
    margin-right: 2rem;
-   
    flex-shrink: 0;
+   
+   .middle-block({
+      margin-right: 1.5rem;
+   });
+   .md-block({
+      width: 12vw;
+      height: 11vw;
+   });
+   //.sm-block({
+   //   margin-right: 1.2rem;
+   //});
+   .xs-block({
+      margin-right: 1rem;
+   });
 }
 
 .header__logo_title {
@@ -36,53 +47,32 @@
    .logo-title();
    
    flex-shrink: 0;
-}
-
-
-:root {
-   --width-image-p: 15vw;
-   --height-image-p: 10vw;
    
-   --width-title-p: 45vw;
-   --height-title-p: calc(45vw / 5.9);
-}
-
-.header__main_logo {
-   position: relative;
-   z-index: 50;
-   
-   width: var(--width-image-p, 244px);
-   height: var(--height-image-p, 200px);
-   max-width: 308px;
-   min-width: 115px;
-   min-height: 80px;
-   .middle-block({
-      margin-right: 1.5rem;
-   });
-   .sm-block({
-      margin-right: 1.2rem;
-   });
-   .xs-block({
-      margin-right: .6rem;
-   });
-}
-
-.header__logo_title {
-   width: var(--width-title-p, 476px);
-   height: var(--height-title-p, 115px);
    
    .md-block({
       .logo-title-xs();
-      width: 15vw;
+      width: calc(280px + 8vw);
       height: 9vw;
    });
-   .sm-block({
-      margin-top: 4rem;
-      width: 45vw;
-      min-width: 45vw;
+   .xs-block({
+      margin-top: 2.5rem;
+      margin-left: -20%;
+       width: 110%;
+       height: 55px;
    });
-   //.xs-block({
-   //   margin-right: 1rem;
-   //});
+   .xxs-block({
+      margin-right: 3rem;
+   });
+}
+.header__logo_top {
+   .logo-title-top();
+   width: calc(90px + 16vw);
+   height: 27px;
+   margin-bottom: 1rem;
+   display: none;
+   
+   .md-block({
+      display: block;
+   });
 }
 

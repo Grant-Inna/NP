@@ -1,20 +1,27 @@
 section.tile_federal__container {
    position: relative;
    z-index: 110;
-   margin-top: 8rem;
+   margin-top: 5rem;
    
    .middle-block({
-      margin-top: 5rem;
+      margin-bottom: 6rem;
    })
 }
 section.tile_federal__container .wrapper {}
 .tile_federal__row {
    .row-flex();
    
-   //.md-block({
-   //   margin-right: 2.5vw;
-   //   margin-left: 2.5vw;
-   //})
+}
+.tile_federal__caption {
+   padding-top: 0;
+   margin-bottom: 4.5rem;
+   
+   
+   .middle-block({
+      padding-top: 3.5rem;
+      border-top: 3px solid #014BE4;
+      border-radius: 2px;
+   })
 }
 
 
@@ -22,8 +29,7 @@ section.tile_federal__container .wrapper {}
    display: block;
    position: relative;
    cursor: pointer;
-   border-radius: 3px;
-   overflow: hidden;
+   
    padding-top: 60px;
    
    .col();
@@ -52,7 +58,10 @@ section.tile_federal__container .wrapper {}
    right: 0;
    
    height: 80px;
-   background-color: @color-background-blue-card;
+   background-color: #f8fafc;
+   //background-color: @color-background-blue-card;
+   border-top-right-radius: 3px;
+   border-top-left-radius: 3px;
    
    .flex-center();
    box-sizing: border-box;
@@ -62,7 +71,8 @@ section.tile_federal__container .wrapper {}
    span {
       text-align: center;
    
-      color: @color-text-white;
+      color: @color-text-black;
+      //color: @color-text-white;
       .body-bold-5();
    }
 }
@@ -70,6 +80,7 @@ img.tile_federal__image {
    min-height: 100%;
    min-width: 100%;
     object-fit: cover;
+   border-radius: 3px;
    
    .md-block({
       max-height: 100%;
@@ -83,6 +94,8 @@ img.tile_federal__image {
    left: 0;
    right: 0;
    bottom: 0;
+   
+   border-radius: 3px;
    
    .column();
    background-color: @color-background-white;

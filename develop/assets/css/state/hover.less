@@ -1,26 +1,16 @@
-.menu__item:hover,
-input:checked ~ span,
-.second_order__item:hover {
-   color: @color-button-blue-hover;
-   .tr();
-}
-.menu__item:hover i,
-input:checked ~ i {
-   .icon-color-svg( 'icons', 'blue', 'arr-bottom' );
-    .tr();
-}
+
 
 .header__aside_block.aside__block_white:hover {
    text-shadow: @shadow-text-white;
    .tr();
+    .middle-block({
+       text-shadow: @shadow-text-blue;
+    });
 }
 .header__aside_block.aside__block_blue:hover {
    text-shadow: @shadow-text-blue;
    .tr();
    
-    .middle-block({
-       text-shadow: @shadow-text-white;
-    });
 }
 .header__aside_block:hover .header__aside_icon {
    transform: translateX(10px);

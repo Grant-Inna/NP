@@ -8,6 +8,7 @@ html
          include ../../assets/jade/menu/federal/menu
          include ../../assets/jade/menu/federal/mobile
          include ../../assets/jade/content/pages/header
+         +header( 'Федеральные<br>проекты' )
 
          include ../../assets/jade/content/pages/__caption
          +caption( 'Социальные лифты для каждого', 'Федеральный проект &laquo;Социальные лифты для каждого&raquo; нацелен на&nbsp;<b>создание для граждан возможностей для профессионального и&nbsp;карьерного роста путем формирования и&nbsp;развития системы профессиональных конкурсов</b>.')
@@ -47,7 +48,7 @@ html
             .wrapper
                .sources__content.inner
                   .sources__title
-                     .sources__text Источники финансирования проекта
+                     .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '11,5')

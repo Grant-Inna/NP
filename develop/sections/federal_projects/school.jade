@@ -8,6 +8,7 @@ html
          include ../../assets/jade/menu/federal/menu
          include ../../assets/jade/menu/federal/mobile
          include ../../assets/jade/content/pages/header
+         +header( 'Федеральные<br>проекты' )
 
          include ../../assets/jade/content/pages/__caption
          +caption( 'Современная школа', 'Федеральный проект <b>&laquo;Современная школа&raquo;</b> направлен на&nbsp;обеспечение возможности детям получать качественное общее образование в&nbsp;условиях, отвечающих современным требованиям, независимо от&nbsp;места проживания ребенка, обеспечение возможности профессионального развития педагогических работников, а&nbsp;также на&nbsp;организацию комплексного психолого&ndash;педагогического сопровождения участников образовательных отношений.')
@@ -57,7 +58,7 @@ html
             .wrapper
                .sources__content.inner
                   .sources__title
-                     .sources__text Источники финансирования проекта
+                     .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '522,0')

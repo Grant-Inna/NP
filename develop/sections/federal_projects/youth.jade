@@ -8,6 +8,7 @@ html
          include ../../assets/jade/menu/federal/menu
          include ../../assets/jade/menu/federal/mobile
          include ../../assets/jade/content/pages/header
+         +header( 'Федеральные<br>проекты' )
 
          include ../../assets/jade/content/pages/__caption
          +caption( 'Молодежь России', 'Федеральный проект &laquo;Развитие системы поддержки молодежи ("Молодежь России")&raquo; направлен на&nbsp;<b>создание условий для эффективной самореализации молодежи, в&nbsp;том числе развитие инфраструктуры</b>. В&nbsp;рамках проекта предусмотрены мероприятия для повышения охвата молодежными проектами и&nbsp;программами и&nbsp;информирования молодежи о&nbsp;возможностях, механизмах и&nbsp;путях её самореализации в&nbsp;России.')
@@ -43,7 +44,7 @@ html
             .wrapper
                .sources__content.inner
                   .sources__title
-                     .sources__text Источники финансирования проекта
+                     .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '44,38')

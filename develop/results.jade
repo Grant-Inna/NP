@@ -1,0 +1,20 @@
+doctype
+html
+   include ./assets/jade/static/__header
+   +head('Результаты работы | Национальный проект &laquo;Образование&raquo;', '..')
+
+   body
+      #container.container__results
+         include ./assets/jade/menu/federal/menu
+         include ./assets/jade/menu/federal/mobile
+         include ./assets/jade/content/pages/header
+         +header( '2019-2022<br>результаты' )
+
+         .page__title_main.title-blue Ключевые результаты национального проекта «образование»
+
+         include assets/jade/footer/footer
+
+
+      script( src='./assets/js/jquery.js' )
+      script( src='./assets/js/slick.min.js' )
+      script( src='./assets/js/concat.js' )

@@ -1,11 +1,12 @@
-header.header__container
-   .wrapper
-      a( href='../../' ).header__main_holder
-         .header__main_logo
-         .header__logo_title
-      aside.header__aside_holder
-         .header__aside_block.aside__block_white
-            .header__aside_text Федеральные
-               br
-               | проекты
+mixin header( text )
+   header.header__container
+      .wrapper
+         a( href='../../' ).header__main_holder
+            .header__main_logo
+            .header__title
+               .header__logo_top
+               .header__logo_title
+         aside.header__aside_holder
+            .header__aside_block.aside__block_white
+               .header__aside_text !{text}
 

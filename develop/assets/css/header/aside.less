@@ -9,7 +9,7 @@ aside.header__aside_holder {
 }
 
 #container_main aside.header__aside_holder {
-   width: 36%;
+   width: 34%;
    .from(1620px, {
       padding-top: 8vw;
    });
@@ -30,7 +30,14 @@ aside.header__aside_holder {
       .justify-start();
       .items-end();
       padding-top: 2rem;
-      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      margin-top: 2rem;
+      
+      background-color: @color-background-white;
+      padding-right: @inner * 2;
+      padding-left: @inner;
+      box-sizing: border-box;
+      
    });
    .md-block({
       .column();
@@ -55,7 +62,6 @@ aside.header__aside_holder {
    .headline-3();
    line-height: 3.2rem;
    text-transform: uppercase;
-   
 }
 
 .header__aside_icon {
@@ -65,7 +71,7 @@ aside.header__aside_holder {
    .middle-block({
       margin-right: 1rem;
       width: 8rem;
-      height: 8rem;
+      height: 6rem;
    });
    .md-block({
       //display: none;
@@ -85,6 +91,9 @@ aside.header__aside_holder {
    
    .justify-end();
    
+   .xs-block({
+      margin-bottom: 2rem;
+   })
 }
 
 .aside__block_white .header__aside_text {
@@ -92,14 +101,22 @@ aside.header__aside_holder {
    
    span {
       .oswald-bold();
-      font-size: 3.5rem;
+      font-size: 3.2rem;
    }
+   
+   .middle-block({
+      color: @color-text-blue;
+   })
 }
 
 .aside__block_white .header__aside_icon {
    position: relative;
    z-index: 50;
    .aside-arrow-white();
+   
+   .middle-block({
+      .aside-arrow-blue();
+   })
 }
 
 
@@ -125,6 +142,9 @@ aside.header__aside_holder {
    .md-block({
       margin-left: auto;
    });
+   .xs-block({
+      margin-left: 0;
+   });
    
    .justify-start();
 }
@@ -133,7 +153,7 @@ aside.header__aside_holder {
    color: @color-text-blue;
    white-space: nowrap;
    .middle-block({
-      color: @color-text-white;
+      //color: @color-text-white;
    });
    .md-block({
    
@@ -144,10 +164,13 @@ aside.header__aside_holder {
    .aside-arrow-blue();
    .middle-block({
       margin-left: 1.3rem;
-      .aside-arrow-white();
-      width: 8rem;
-      height: 8rem;
+      //.aside-arrow-white();
+      width: 5rem;
+      height: 4rem;
    });
+   .xs-block({
+      margin-left: 0;
+   })
 }
 
 @import "aside_pages";

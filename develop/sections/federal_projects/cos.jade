@@ -8,6 +8,7 @@ html
          include ../../assets/jade/menu/federal/menu
          include ../../assets/jade/menu/federal/mobile
          include ../../assets/jade/content/pages/header
+         +header( 'Федеральные<br>проекты'  )
 
          include ../../assets/jade/content/pages/__caption
          +caption( 'Цифровая образовательная среда', 'Федеральный проект &laquo;Цифровая образовательная среда&raquo; направлен на&nbsp;<b>создание и&nbsp;внедрение в&nbsp;образовательных организациях цифровой образовательной среды, а&nbsp;также обеспечение реализации цифровой трансформации системы образования</b>. В&nbsp;рамках проекта ведется работа по&nbsp;оснащению организаций современным оборудованием и&nbsp;развитие цифровых сервисов и&nbsp;контента для образовательной деятельности.')
@@ -55,7 +56,7 @@ html
             .wrapper
                .sources__content.inner
                   .sources__title
-                     .sources__text Источники финансирования проекта
+                     .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '73,4')

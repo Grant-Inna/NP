@@ -8,6 +8,7 @@ html
          include ../../assets/jade/menu/federal/menu
          include ../../assets/jade/menu/federal/mobile
          include ../../assets/jade/content/pages/header
+         +header( 'Федеральные<br>проекты'  )
 
          include ../../assets/jade/content/pages/__caption
          +caption( 'Патриотическое воспитание', 'Федеральный проект &laquo;Патриотическое воспитание граждан Российской Федерации&raquo; направлен <b>на&nbsp;обеспечение функционирования системы патриотического воспитания граждан Российской Федерации</b>. В&nbsp;рамках проекта ведется работа по&nbsp;развитию воспитательной работы в&nbsp;образовательных организациях общего и&nbsp;профессионального образования, проведению мероприятий патриотической направленности.')
@@ -47,7 +48,7 @@ html
             .wrapper
                .sources__content.inner
                   .sources__title
-                     .sources__text Источники финансирования проекта
+                     .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
                      +sources( 'Федеральный<br>бюджет', '13,6')

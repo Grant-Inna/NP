@@ -34,48 +34,97 @@
     .tr();
 }
 
-.menu_checkbox:checked ~ .icon_arrow_thin {
-    .rotate();
-}
-.menu_checkbox:checked ~ .menu__second_order {
-    border-top-width: 10px;
-    box-shadow: @box-shadow;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    .tr();
-}
-.menu_checkbox:checked ~ .menu__second_order,
-.menu_checkbox:checked ~ .menu__second_order .second_order__item {
-    opacity: 1;
-    display: block;
-    height: auto;
-    .tr();
+
+// Срабатывание при наведении
+.menu__items_holder {
+    .menu__item:hover,
+    .second_order__item:hover {
+        color: @color-button-blue-hover;
+        .tr();
+    }
+    
+    .menu__item:hover i {
+        .icon-color-svg('icons', 'blue', 'arr-bottom');
+        .tr();
+    }
+    
+    .menu_checkbox:hover ~ .icon_arrow_thin {
+        .rotate();
+    }
+    
+    .menu_checkbox:hover ~ .menu__second_order {
+        border-top-width: 10px;
+        box-shadow: @box-shadow;
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+        .tr();
+    }
+    
+    .menu_checkbox:hover ~ .menu__second_order,
+    .menu_checkbox:hover ~ .menu__second_order .second_order__item {
+        opacity: 1;
+        .tr();
+    }
+    
+    .menu_checkbox:hover ~ .menu__second_order,
+    .menu_checkbox:hover ~ .menu__second_order .second_order__item {
+        opacity: 1;
+        display: block;
+        height: auto;
+        transition: .1s;
+    }
+    
+    // Отмена срабатывания по клику
+    /*.menu_checkbox:checked ~ .icon_arrow_thin {
+        transform: none;
+    }
+    
+    .menu_checkbox:checked ~ .menu__second_order {
+        padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: none;
+    }
+    
+    .menu_checkbox:checked ~ .menu__second_order,
+    .menu_checkbox:checked ~ .menu__second_order .second_order__item {
+        height: 0;
+        opacity: 0;
+        display: none;
+    }*/
 }
 
-
-
-/*  При наведении
-
-.menu_checkbox:hover ~ .icon_arrow_thin {
-    .rotate();
+.mobile__container {
+    
+    .menu_checkbox:checked ~ .icon_arrow_thin {
+        .rotate();
+    }
+    .menu_checkbox:checked ~ .menu__second_order {
+        border-top-width: 10px;
+        //box-shadow: @box-shadow;
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+        .tr();
+    }
+    .menu_checkbox:checked ~ .menu__second_order,
+    .menu_checkbox:checked ~ .menu__second_order .second_order__item {
+        opacity: 1;
+        display: block;
+        height: auto;
+        .tr();
+    }
+    // Отмена срабатывания по наведению
+    /*.menu_checkbox:hover ~ .icon_arrow_thin {
+        transform: none;
+    }
+    .menu_checkbox:hover ~ .menu__second_order {
+        padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: none;
+    }
+    .menu_checkbox:hover ~ .menu__second_order,
+    .menu_checkbox:hover ~ .menu__second_order .second_order__item {
+        height: 0;
+        opacity: 0;
+        display: none;
+    }*/
 }
-.menu_checkbox:hover ~ .menu__second_order {
-    border-top-width: 10px;
-    box-shadow: @box-shadow;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
-    .tr();
-}
-.menu_checkbox:hover ~ .menu__second_order,
-.menu_checkbox:hover ~ .menu__second_order .second_order__item {
-    opacity: 1;
-    .tr();
-}
-.menu_checkbox:hover ~ .menu__second_order,
-.menu_checkbox:hover ~ .menu__second_order .second_order__item {
-    height: auto;
-    transition: .1s;
-}
-*/
-
-
