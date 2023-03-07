@@ -14,13 +14,13 @@ html
          +caption( 'Социальная активность', 'Федеральный проект &laquo;Социальная активность&raquo; направлен на&nbsp;<b>создание условий для развития и&nbsp;поддержки добровольчества (волонтерства)</b> как ключевого элемента социальной ответственности развитого гражданского общества.')
 
          include ../../assets/jade/content/pages/__headline
-         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
+         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта &laquo;Социальная активность&raquo; к&nbsp;концу 2024 года' )
 
          include ../../assets/jade/content/pages/__info_block-simple/top
          include ../../assets/jade/content/pages/__info_block-simple/middle
          include ../../assets/jade/content/pages/__info_block-simple/bottom
          include ../../assets/jade/content/pages/__info_block-simple/top-bottom
-         section.info_block__container
+         section( aria-label='Перечень прогнозируемых результатов работы проекта "Социальная активность"' ).info_block__container
             .wrapper.mb2
                .info_block__content
                   +bottom( 'Ежегодный охват информационной и&nbsp;рекламной кампанией по&nbsp;популяризации добровольчества (волонтерства)&nbsp;&mdash;', '', 'НЕ&nbsp;МЕНЕЕ 5 МИЛЛИОНОВ ПРОСМОТРОВ', 'mt', 'half')
@@ -32,18 +32,18 @@ html
 
 
          include ../../assets/jade/content/pages/__deadline
-         +deadline( '01.01.2019', '30.12.2024')
+         +deadline( '01.01.2019', '30.12.2024', '"Социальная активность"')
 
          include ../../assets/jade/content/pages/__sources
-         section.sources__container
+         section( aria-label='Источники финансирования проекта "Социальная активность"' ).sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
                      .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
-                     +sources( 'Федеральный<br>бюджет', '36,7')
-                     +sources( 'Из них передано субъектам<br>Российской Федерации', '3,5')
+                     +sources( 'Федеральный<br>бюджет', '24,2')
+                     +sources( 'Из них передано субъектам<br>Российской Федерации', '2,9')
 
 
 

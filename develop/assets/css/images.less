@@ -34,6 +34,11 @@
    background-position: right top;
    .contain();
 }
+.header-pseudo-blue-gradient() {
+   .bg('pseudo-blue-gradient.svg');
+   background-position: right;
+   .cover();
+}
 
 .logo-image() {
    background-image: url("../data/logo/npr.svg");
@@ -147,7 +152,7 @@
    .cover();
    .md-block({
       background-position-y: 113%;
-      background-size: auto 80%;
+      background-size: cover;
    })
 }
 .header-pseudo-school() {

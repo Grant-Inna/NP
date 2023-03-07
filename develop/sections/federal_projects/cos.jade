@@ -14,53 +14,54 @@ html
          +caption( 'Цифровая образовательная среда', 'Федеральный проект &laquo;Цифровая образовательная среда&raquo; направлен на&nbsp;<b>создание и&nbsp;внедрение в&nbsp;образовательных организациях цифровой образовательной среды, а&nbsp;также обеспечение реализации цифровой трансформации системы образования</b>. В&nbsp;рамках проекта ведется работа по&nbsp;оснащению организаций современным оборудованием и&nbsp;развитие цифровых сервисов и&nbsp;контента для образовательной деятельности.')
 
          include ../../assets/jade/content/pages/__headline
-         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
+         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта &laquo;Цифровая образовательная среда&raquo; к&nbsp;концу 2024 года' )
 
          include ../../assets/jade/content/pages/__info_block-simple/top
          include ../../assets/jade/content/pages/__info_block-simple/middle
          include ../../assets/jade/content/pages/__info_block-simple/bottom
          include ../../assets/jade/content/pages/__info_block-simple/top-bottom
-         section.info_block__container
+         section( aria-label='Перечень прогнозируемых результатов работы проекта "Цифровая образовательная среда"' ).info_block__container
             .wrapper.mb2
                .info_block__content
                   +top( '29&nbsp;586 ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ,', '', 'оснащенных оборудованием для&nbsp;внедрения цифровой образовательной среды', '', '')
                   +top( '340 ЦЕНТРОВ', '', 'цифрового образования детей  &laquo;IT&ndash;КУБ&raquo;', '', '')
                   +top( '602&nbsp;700 ПЕДАГОГОВ,', '', 'подключенных к&nbsp;платформе цифровой образовательной среды', '', '')
-                  .info_block__text.half
-                     .info_block__text_main( class='inline mr') 40% педагогов
-                     .info_block__text_span( class='inline mr') из&nbsp;не&nbsp;менее чем
-                     .info_block__text_main( class='inline') 30% школ
-                     .info_block__text_span( class='') будут использовать сервисы федеральной информационно&ndash;сервисной платформы цифровой образовательной среды
+                  article.info_block__text.half
+                     h1( class='inline mr') 40% педагогов
+                     .span( class='inline mr') из&nbsp;не&nbsp;менее чем
+                     h2( class='inline') 30% школ
+                     .span( class='') будут использовать сервисы федеральной информационно&ndash;сервисной платформы цифровой образовательной среды
 
                   +top( '41 КОМПЛЕКТ', 'inline mr', 'верифицированного цифрового образовательного контента, соответствующего ФГОС общего образования', 'inline', 'half')
                   +top( '40% ОБРАЗОВАТЕЛЬНЫХ ОРГАНИЗАЦИЙ', '', 'из&nbsp;числа субъектов Российской Федерации, участвующих в&nbsp;эксперименте по&nbsp;модернизации начального общего, основного общего и&nbsp;среднего общего образования, будут оснащены компьютерным, мультимедийным, презентационным оборудованием и&nbsp;программным обеспечением', '', 'full')
 
          include ../../assets/jade/content/pages/__deadline
-         +deadline( '01.01.2019', '30.12.2024')
+         +deadline( '01.01.2019', '30.12.2024', '"Цифровая образовательная среда"')
 
          include ../../assets/jade/content/pages/slider/__slider_item
-         section.slider__container
+         section( aria-label='Объекты инфраструктуры' ).slider__container
             .wrapper
-               .slider__content.inner
-                  +slider_item( 'it-kub', 'Центры цифрового образования детей  &laquo;IT&ndash;куб&raquo;', '')
+               .title.mb5.inner Инфраструктурные объекты
+               .slider__content
+                  +slider_item( '-one', 'it-kub', 'Центры цифрового образования детей  &laquo;IT&ndash;куб&raquo;', '')
 
          include ../../assets/jade/content/pages/__person
-         section.person__container
+         section( aria-label='Руководитель и администратор проекта "Цифровая образовательная среда"' ).person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
                   +person( 'Администратор', 'Горобец', 'Андрей', 'Валерьевич', 'директор Департамента цифровой трансформации и&nbsp;больших данных', 'gorobec')
 
          include ../../assets/jade/content/pages/__sources
-         section.sources__container
+         section( aria-label='Источники финансирования проекта "Цифровая образовательная среда"' ).sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
                      .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
-                     +sources( 'Федеральный<br>бюджет', '73,4')
-                     +sources( 'Из них передано субъектам<br>Российской Федерации', '62,9')
+                     +sources( 'Федеральный<br>бюджет', '70,1')
+                     +sources( 'Из них передано субъектам<br>Российской Федерации', '60,3')
 
 
 

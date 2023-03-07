@@ -33,7 +33,7 @@ aside.header__aside_holder {
       padding-bottom: 2rem;
       margin-top: 2rem;
       
-      background-color: @color-background-white;
+      //background-color: @color-background-white;
       padding-right: @inner * 2;
       padding-left: @inner;
       box-sizing: border-box;
@@ -103,9 +103,10 @@ aside.header__aside_holder {
       .oswald-bold();
       font-size: 3.2rem;
    }
-   
+}
+#container_main .aside__block_white .header__aside_text {
    .middle-block({
-      color: @color-text-blue;
+      //color: @color-text-blue;
    })
 }
 
@@ -115,7 +116,9 @@ aside.header__aside_holder {
    .aside-arrow-white();
    
    .middle-block({
-      .aside-arrow-blue();
+      //.aside-arrow-blue();
+      width: 5rem;
+      height: 4rem;
    })
 }
 
@@ -153,7 +156,7 @@ aside.header__aside_holder {
    color: @color-text-blue;
    white-space: nowrap;
    .middle-block({
-      //color: @color-text-white;
+      color: @color-text-white;
    });
    .md-block({
    
@@ -164,7 +167,7 @@ aside.header__aside_holder {
    .aside-arrow-blue();
    .middle-block({
       margin-left: 1.3rem;
-      //.aside-arrow-white();
+      .aside-arrow-white();
       width: 5rem;
       height: 4rem;
    });

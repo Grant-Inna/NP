@@ -14,54 +14,55 @@ html
          +caption( 'Успех каждого ребенка', 'Федеральный проект &laquo;Успех каждого ребенка&raquo; <b>направлен на&nbsp;создание и&nbsp;работу системы выявления, поддержки и&nbsp;развития способностей и&nbsp;талантов детей и&nbsp;молодежи</b>. В&nbsp;рамках проекта ведется работа по&nbsp;обеспечению равного доступа детей к&nbsp;актуальным и&nbsp;востребованным программам дополнительного образования, выявлению талантов каждого ребенка и&nbsp;ранней профориентации обучающихся.')
 
          include ../../assets/jade/content/pages/__headline
-         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
+         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта &laquo;Успех каждого ребенка&raquo; к&nbsp;концу 2024 года' )
 
          include ../../assets/jade/content/pages/__info_block-simple/top
          include ../../assets/jade/content/pages/__info_block-simple/middle
          include ../../assets/jade/content/pages/__info_block-simple/top-bottom
-         section.info_block__container
+         section( aria-label='Перечень прогнозируемых результатов работы проекта "Успех каждого ребенка"' ).info_block__container
             .wrapper.mb2
                .info_block__content
                   +top( '85 РЕГИОНАЛЬНЫХ ЦЕНТРОВ', '', 'региональных центров выявления, поддержки и&nbsp;развития способностей и&nbsp;талантов у&nbsp;детей и&nbsp;молодежи', '', '')
                   +top( '1&nbsp;354&nbsp;725 НОВЫХ МЕСТ', '', 'дополнительного образования детей', '', '')
                   +middle( 'Более 5&nbsp;миллионов участников открытых онлайн&ndash;уроков', '', ' &laquo;ПРОЕКТОРИЯ&raquo;', 'inline mr', 'ежегодно', 'inline', '')
-                  .info_block__text.full
-                     .info_block__text_span( class='inline mr') Ежегодное проведение всероссийской олимпиады школьников ПО&nbsp;
-                     .info_block__text_main( class='inline mr') 24&nbsp;
-                     .info_block__text_span( class='inline mr') ОБЩЕОБРАЗОВАТЕЛЬНЫМ&nbsp;ПРЕДМЕТАМ и&nbsp;обеспечение участия сборных команд России
-                     .info_block__text_main( class='inline') в&nbsp;международных олимпиадах
+                  article.info_block__text.full
+                     .span( class='inline') Ежегодное проведение всероссийской олимпиады школьников ПО&nbsp;
+                     h1( class='inline') 24&nbsp;
+                     .span( class='inline mr') ОБЩЕОБРАЗОВАТЕЛЬНЫМ&nbsp;ПРЕДМЕТАМ и&nbsp;обеспечение участия сборных команд России
+                     h2( class='inline') в&nbsp;международных олимпиадах
                   +top( '5&nbsp;783 общеобразовательных организаций', 'inline mr', 'сельской местности и&nbsp;малых городов с&nbsp;современными условиями для&nbsp;занятий физической культурой и&nbsp;спортом', 'inline', 'half')
                   +top-bottom( '1&nbsp;072&nbsp;560 ДЕТЕЙ', '', 'примут участие в&nbsp;профориентационном проекте', 'inline', ' &laquo;БИЛЕТ В&nbsp;БУДУЩЕЕ&raquo;', 'mt', 'half')
                   +top-bottom('1&nbsp;125&nbsp;000 детей и&nbsp;молодежи,', '', 'которые вовлечены в&nbsp;детско&ndash;юношеский и&nbsp;студенческий спорт через мероприятия Общественно&ndash;государственного физкультурно&ndash;спортивного объединения', 'inline mr', ' &laquo;ЮНОСТЬ&nbsp;РОССИИ&raquo;', 'inline', 'full')
 
          include ../../assets/jade/content/pages/__deadline
-         +deadline( '01.01.2019', '30.12.2024')
+         +deadline( '01.01.2019', '30.12.2024', '"Успех каждого ребенка"')
 
          include ../../assets/jade/content/pages/slider/__slider_item
-         section.slider__container
+         section( aria-label='Объекты инфраструктуры' ).slider__container
             .wrapper
-               .slider__content.inner
-                  +slider_item( 'dnk', 'Центры дополнительного образования детей  &laquo;Дом научной коллаборации&raquo;', '')
-                  +slider_item( 'sirius', 'Центры выявления и&nbsp;поддержки одарённых детей', '')
-                  +slider_item( 'kvantorium', 'Детские и&nbsp;мобильные технопарки  &laquo;Кванториум&raquo;', '')
+               .title.mb5.inner Инфраструктурные объекты
+               .slider__content
+                  +slider_item( '', 'dnk', 'Центры дополнительного образования детей  &laquo;Дом научной коллаборации&raquo;', '')
+                  +slider_item( '', 'sirius', 'Центры выявления и&nbsp;поддержки одарённых детей', '')
+                  +slider_item( '', 'kvantorium', 'Детские и&nbsp;мобильные технопарки  &laquo;Кванториум&raquo;', '')
 
          include ../../assets/jade/content/pages/__person
-         section.person__container
+         section( aria-label='Руководитель и администратор проекта "Успех каждого ребенка"' ).person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
                   +person( 'Администратор', 'Грибов', 'Денис', 'Евгеньевич', 'заместитель Министра просвещения Российской Федерации', 'gribov')
 
          include ../../assets/jade/content/pages/__sources
-         section.sources__container
+         section( aria-label='Источники финансирования проекта "Успех каждого ребенка"' ).sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
                      .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
-                     +sources( 'Федеральный<br>бюджет', '52,6')
-                     +sources( 'Из них передано субъектам<br>Российской Федерации', '42,4')
+                     +sources( 'Федеральный<br>бюджет', '60,1')
+                     +sources( 'Из них передано субъектам<br>Российской Федерации', '41,5')
 
 
 

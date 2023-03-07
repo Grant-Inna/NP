@@ -21,15 +21,70 @@
    text-align: left;
 }
 .title-blue {
+   color: @color-text-blue;
+   text-align: center;
+}
+main h1 {
    .oswald-regular();
    font-size: 4rem;
-   line-height: 4.4rem;
+   line-height: 4.6rem;
    
    .ll-block({
       font-size: 3.8rem;
-      line-height: 4.2rem;
+      line-height: 4.4rem;
    });
    
+   .middle-block({
+      font-size: 3rem;
+      line-height: 3.8rem;
+   });
+}
+
+main h2 {
+   .oswald-light();
+   font-size: 1.5rem;
+   line-height: 3.4rem;
+}
+
+.headline() {
    color: @color-text-blue;
-   text-align: center;
+   .opensans-semibold();
+}
+article h1 {
+   .headline();
+   font-size: 2rem; // 30
+   line-height: 2.3rem;
+
+   .ll-block({
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+   });
+}
+article h2 {
+   .headline();
+   font-size: 1.7rem; // 30
+   line-height: 2rem;
+
+   .ll-block({
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+   });
+}
+article h3 {
+   .headline();
+   font-size: 1.5rem; // 30
+   line-height: 1.8rem;
+}
+article .span {
+   .opensans-regular();
+   color: @color-text-gray;
+   
+   .opensans-regular();
+   font-size: 1.3rem; // 20
+   line-height: 1.7rem;
+   /*
+   .md-block({
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+   });*/
 }

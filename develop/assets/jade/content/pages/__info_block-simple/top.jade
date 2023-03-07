@@ -1,4 +1,4 @@
 mixin top( main, class1, span, class2, class_main )
-   .info_block__text( class='#{class_main}')
-      .info_block__text_main( class='#{class1}') !{main}
-      .info_block__text_span( class='#{class2}') !{span}
+   article.info_block__text( class='#{class_main}')
+      h1( class='#{class1}') !{main}
+      .span( class='#{class2}') !{span}

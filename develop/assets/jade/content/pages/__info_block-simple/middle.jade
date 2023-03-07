@@ -1,5 +1,5 @@
 mixin middle( span, class1, main, class2, span2, class3, class_main )
-   .info_block__text( class='#{class_main}')
+   article.info_block__text( class='#{class_main}')
       .info_block__text_span( class='#{class1}') !{span}
-      .info_block__text_main( class='#{class2}') !{main}
+      h1.info_block__text_main( class='#{class2}') !{main}
       .info_block__text_span( class='#{class3}') !{span2}

@@ -1,5 +1,5 @@
-mixin deadline( from, to )
-   section.deadline__container.mt3
+mixin deadline( from, to, name )
+   section( aria-label='Сроки реализации проекта #{name}' ).deadline__container.mt3
       .wrapper.mb4
          .deadline__icon
          .deadline__text

@@ -1,0 +1,6 @@
+mixin result( text, image, short )
+   article.result__holder.mb3
+      .result__content
+         .result__text !{text}
+      .result__image
+         img( src='./assets/images/results/#{image}.jpg' alt='#{short}' )

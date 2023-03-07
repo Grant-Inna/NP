@@ -14,12 +14,12 @@ html
          +caption( 'Молодежь России', 'Федеральный проект &laquo;Развитие системы поддержки молодежи ("Молодежь России")&raquo; направлен на&nbsp;<b>создание условий для эффективной самореализации молодежи, в&nbsp;том числе развитие инфраструктуры</b>. В&nbsp;рамках проекта предусмотрены мероприятия для повышения охвата молодежными проектами и&nbsp;программами и&nbsp;информирования молодежи о&nbsp;возможностях, механизмах и&nbsp;путях её самореализации в&nbsp;России.')
 
          include ../../assets/jade/content/pages/__headline
-         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта к&nbsp;концу 2024 года' )
+         +headline( 'blue', 'result', 'основные результаты и&nbsp;показатели,', 'которые будут достигнуты за&nbsp;счет мероприятий проекта &laquo;Молодежь России&raquo; к&nbsp;концу 2024 года' )
 
          include ../../assets/jade/content/pages/__info_block-simple/top
          include ../../assets/jade/content/pages/__info_block-simple/middle
          include ../../assets/jade/content/pages/__info_block-simple/top-bottom
-         section.info_block__container
+         section( aria-label='Перечень прогнозируемых результатов работы проекта "Молодежь России"' ).info_block__container
             .wrapper.mb2
                .info_block__content
                   +top( '5,1% МОЛОДЫХ ЛЮДЕЙ', '', 'охваченных молодежными проектами и программами', '', '')
@@ -31,23 +31,24 @@ html
                   +top('36 ПРОСВЕТИТЕЛЬСКИХ МЕРОПРИЯТИЙ', 'inline mr', 'с&nbsp;участием экспертов, деятелей науки и&nbsp;культуры, выдающихся ученых, спортсменов, общественных и&nbsp;государственных деятелей и&nbsp;представителей бизнес&ndash;сообщества в&nbsp;субъектах Российской Федерации', 'inline', 'full')
 
          include ../../assets/jade/content/pages/__deadline
-         +deadline( '01.01.2022', '30.12.2024')
+         +deadline( '01.01.2022', '30.12.2024', '"Молодежь России"')
 
          include ../../assets/jade/content/pages/__person
-         section.person__container
+         section( aria-label='Руководитель и администратор проекта "Молодежь России"' ).person__container
             .wrapper.mb6
                .person__holder
                   +person( 'Руководитель и&nbsp;администратор проекта', 'Разуваева', 'Ксения', 'Денисовна', 'руководитель Федерального агентства по&nbsp;делам молодёжи', 'razyvaeva')
 
          include ../../assets/jade/content/pages/__sources
-         section.sources__container
+         section( aria-label='Источники финансирования проекта "Молодежь России"' ).sources__container
             .wrapper
                .sources__content.inner
                   .sources__title
                      .sources__text.title Источники финансирования проекта
                      .sources__icon
                   .sources__holder
-                     +sources( 'Федеральный<br>бюджет', '44,38')
+                     +sources( 'Федеральный<br>бюджет', '69,0')
+                     +sources( 'Из них передано субъектам<br>Российской Федерации', '11,0')
 
 
          include ../../assets/jade/footer/footer
