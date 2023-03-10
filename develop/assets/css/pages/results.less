@@ -2,14 +2,20 @@
    position: relative;
    z-index: 500;
 }
-
 .results__container .wrapper {
+}
+
+.container__results .page__title {
+   .column-center();
+   margin: 8rem auto;
+   
+   .middle-block({
+      margin: 5rem auto;
+   })
 }
 
 .result__holder {
    .flex();
-   .items-center();
-   background-color: @color-background-white;
    
    border-radius: 2px;
    border-width: 0;
@@ -29,6 +35,8 @@
    width: 50%;
    min-width: 300px;
    
+   background-color: @color-background-white;
+
    padding: @inner;
    box-sizing: border-box;
    
@@ -59,6 +67,9 @@
    .md-block({
       padding: 2rem;
    });
+   img {
+      border-radius: 2px;
+   }
 }
 
 
@@ -66,8 +77,6 @@
 .result__holder:nth-child(even) {
    flex-direction: row-reverse;
 }
-
-@border-w: .3rem;
 
 .result__holder:nth-child(odd) {
    border-left-width: @border-w;

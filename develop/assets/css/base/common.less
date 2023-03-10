@@ -1,5 +1,3 @@
-
-
 .rotate {
    transform: rotate(180deg);
    .tr();
@@ -18,12 +16,23 @@
    });
    
    color: @color-text-gray;
-   text-align: left;
 }
 .title-blue {
    color: @color-text-blue;
+}
+b.title-blue {
+   display: block;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+   color: @color-text-blue;
+}
+.left {
+   text-align: left;
+}
+.center {
    text-align: center;
 }
+
 main h1 {
    .oswald-regular();
    font-size: 4rem;
@@ -71,6 +80,7 @@ article h2 {
    });
 }
 article h3 {
+    display: initial;
    .headline();
    font-size: 1.5rem; // 30
    line-height: 1.8rem;
@@ -82,9 +92,15 @@ article .span {
    .opensans-regular();
    font-size: 1.3rem; // 20
    line-height: 1.7rem;
-   /*
+}
+
+.page__title_main {
+   position: relative;
+   z-index: 300;
+   text-transform: uppercase;
+   min-width: 500px;
+   
    .md-block({
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-   });*/
+      min-width: 300px;
+   })
 }

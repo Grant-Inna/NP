@@ -1,0 +1,116 @@
+doctype
+html
+   include ./assets/jade/static/__header
+   +head('О проекте | Национальный проект &laquo;Образование&raquo;', '.')
+
+   body
+      #container.container__about
+         include assets/jade/menu/menu
+         include assets/jade/menu/mobile
+         include ./assets/jade/content/pages/header
+         +header( 'О проекте' )
+
+         main.page__title
+            .wrapper
+               h1.page__title_main Национальный проект
+                  br
+                  | &laquoОбразование&raquo;&nbsp;&mdash;
+                  br
+                  |это:
+
+         include assets/jade/content/about/__about_outcome
+         section( aria-label='Цели работы проекта' ).info_block__container.info_about__container
+            .wrapper.mb2
+               .info_block__content.info_about__content-outcome
+                  +about-outcome( 'school', 'Школы', 'c&nbsp;современным оборудованием, в&nbsp;том числе в&nbsp;сельской местности' )
+                  +about-outcome( 'technical', 'Техникумы и&nbsp;колледжи', 'c современными мастерскими' )
+                  +about-outcome( 'dop', 'Центры дополнительного образования', 'для раскрытия талантов и&nbsp;способностей детей' )
+                  article.info_block__text
+                     .info_about__icon.info_about__icon-educational
+                     .span Современные
+                     h1 образовательные программы
+                  +about-outcome( 'parents', 'Родители', 'которые получают необходимую психолого-педагогическую и&nbsp;методическую поддержку по&nbsp;вопросам воспитания детей' )
+                  +about-outcome( 'teachers', 'Педагоги', 'c&nbsp;высоким уровнем профессионального мастерства' )
+                  +about-outcome( 'children', 'Дети', 'обеспеченные условиями для удовлетворения творческих интересов и&nbsp;способностей, профориентации, осознанного выбора профессиональной траектории, вовлеченные в&nbsp;мероприятия патриотической направленности' )
+                  +about-outcome( 'creative', 'Творческая молодежь', 'участвующая в&nbsp;конкурсах и&nbsp;фестивалях для реализации возможностей профессионального и&nbsp;карьерного роста' )
+                  .info_block__more
+                     b.mb1 Национальный проект &laquo;Образование&raquo; обеспечивает в&nbsp;первую очередь достижение национальной цели Российской Федерации, определенной Президентом Российской Федерации, по&nbsp;обеспечению возможности для самореализации и&nbsp;развития талантов.
+                     b Также отдельные мероприятия национального проекта ориентированы на&nbsp;поддержку достижения национальных целей &laquo;Достойный, эффективный труд и&nbsp;успешное предпринимательство&raquo; и&nbsp;&laquo;Сохранение населения, здоровье и&nbsp;благополучие людей&raquo;.
+
+         include assets/jade/content/pages/__headline-simple
+         +headline-simple( 'blue-dark', 'Целевые показатели национальной цели по&nbsp;обеспечению возможностей для самореализации и&nbsp;развития талантов:' )
+         include assets/jade/content/about/__about-target
+         section( aria-label='Целевые показатели' ).info_block__container
+            .wrapper.mb2
+               .info_about__content
+                  +about-targets( '1', 'Вхождение Российской Федерации в&nbsp;число десяти ведущих стран мира по&nbsp;качеству общего образования')
+                  +about-targets( '2', 'Формирование эффективной системы выявления, поддержки и&nbsp;развития способностей и&nbsp;талантов у&nbsp;детей и&nbsp;молодежи, основанной на&nbsp;принципах справедливости, всеобщности и&nbsp;направленной на&nbsp;самоопределение и&nbsp;профессиональную ориентацию всех обучающихся')
+                  +about-targets( '3', 'Создание условий для воспитания гармонично развитой и&nbsp;социально ответственной личности на&nbsp;основе духовно-нравственных ценностей народов Российской Федерации, исторических и&nbsp;национально-культурных традиций')
+                  +about-targets( '4', 'Увеличение доли граждан, занимающихся волонтерской (добровольческой) деятельностью или вовлеченных в&nbsp;деятельность волонтерских (добровольческих) организаций, до 15&nbsp;процентов')
+
+                  b.title-blue.mt6.mb6 За счет мероприятий национального проекта &laquo;Образование&raquo; в&nbsp;каждом регионе России обеспечивается развитие системы образования по&nbsp;следующим ключевым направлениям:
+                  include assets/jade/content/about/__about-development
+                  +about-development( 'infrastructure', 'Развитие инфраструктуры образования&nbsp;&mdash; ', 'строительство школ, обновление материально-технической базы образовательных организаций и&nbsp;оснащение их современным оборудованием')
+                  +about-development( 'development', 'Профессиональное развитие педагогических работников и&nbsp;управленческих кадров&nbsp;&mdash; ', 'реализация программ повышения квалификации, методическая поддержка и&nbsp;сопровождение педагогических работников и&nbsp;управленческих кадров системы образования, развитие навыков работы учителей в&nbsp;современной образовательной среде')
+                  +about-development( 'improvement', 'Совершенствование содержания образования и&nbsp;воспитание&nbsp;&mdash; ', 'обновление нормативных и&nbsp;методических документов, определяющих содержание образования, внедрение новых методик и&nbsp;технологий преподавания, формирование системы управления качеством образования, развитие программ воспитания в&nbsp;образовательных организациях, обеспечение условий для участия детей в&nbsp;мероприятиях патриотической направленности и&nbsp;детских общественных движениях, творческих конкурсах')
+
+
+         include assets/jade/content/pages/__deadline
+         +deadline( '01.01.2019', '30.12.2024', '"Образование"')
+
+         include assets/jade/content/pages/__person
+         section( aria-label='Руководитель проекта "Современная школа"' ).person__container
+            .wrapper.mb6
+               .person__holder
+                  +person( 'Куратор', 'Голикова', 'Татьяна', 'Алексеевна', 'заместитель Председателя Правительства Российской Федерации', 'golikova')
+                  +person( 'Руководитель', 'Кравцов', 'Сергей', 'Сергеевич', 'Министр просвещения Российской Федерации', 'kravcov')
+                  +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
+
+         include assets/jade/content/pages/__headline-simple
+         +headline-simple( 'blue', 'Ключевые показатели национального проекта &laquo;Образование&raquo; направлены на&nbsp;планомерное достижение к&nbsp;концу 2024 года общественно значимых результатов и&nbsp;задач:' )
+         include assets/jade/content/about/__about-plan
+         include assets/jade/content/pages/__info_block/bottom
+         section( aria-label='Желаемые результаты работы проекта' ).info_block__container
+            .wrapper
+               .info_about__content.info_about__content-plan
+                  include assets/jade/content/about/plan/children_high-quality-education
+                  include assets/jade/content/about/plan/teachers_opportunities-for-development
+                  include assets/jade/content/about/plan/chilren_identify-support-talents
+                  include assets/jade/content/about/plan/environment_created-introduced-in-organizations
+                  include assets/jade/content/about/plan/students_opportunity-for-vocational-education
+                  include assets/jade/content/about/plan/volunteerism_development-support
+                  include assets/jade/content/about/plan/youth_effective-self-realization
+                  include assets/jade/content/about/plan/educational_psychological-pedagogical-support
+                  include assets/jade/content/about/plan/education_system-digital-transformation
+                  include assets/jade/content/about/plan/competitions_system-formation-development
+                  include assets/jade/content/about/plan/patriotic_education-system
+
+
+         include assets/jade/content/pages/__sources
+         section( aria-label='Источники финансирования проекта "Образование"' ).sources__container
+            .wrapper
+               .sources__content.inner
+                  .sources__title
+                     .sources__text.title Источники финансирования проекта
+                     .sources__icon
+                  .sources__holder
+                     +sources( 'Федеральный<br>бюджет', '1065,8')
+                     +sources( 'Из них передано субъектам<br>Российской Федерации', '703,3')
+
+         section( aria-label='' ).about_project__container
+            .wrapper
+               .about_project__text
+                  p.mb2 Национальный проект &laquo;Образование&raquo; является не&nbsp;единственным механизмом достижения национальной цели, но&nbsp;направлен на&nbsp;максимально эффективное и&nbsp;оперативное их исполнение, а&nbsp;также решение прорывных задач развития отрасли общего, дополнительного и&nbsp;профессионального образования.
+                  p
+                     b.mr Национальный проект &laquo;Образование&raquo;
+                     | ориентирован на&nbsp;развитие системы образования на&nbsp;всех уровнях управления, поэтому значительная часть объема средств федерального бюджета на&nbsp;реализацию федеральных проектов национального проекта &laquo;Образование&raquo; направляется в&nbsp;субъекты Российской Федерации.
+
+
+
+
+         include assets/jade/footer/footer
+
+
+      script( src='./assets/js/jquery.js' )
+      script( src='./assets/js/slick.min.js' )
+      script( src='./assets/js/concat.js' )

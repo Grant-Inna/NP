@@ -32,10 +32,6 @@ header.header__container:before {
    right: 0;
    
    .header-pseudo-blue();
-   
-   /*.middle-block({
-      content: none;
-   })*/
 }
 
 .header__main_logo:before {
@@ -100,17 +96,7 @@ header.header__container:before {
       display: none;
    })
 }
-/*#container_main aside.header__aside_holder:after {
-   bottom: 14rem;
-   right: 0;
-   width: 25vw;
-   height: 40vw;
-   background-color: white;
-   transform: rotate(45deg) translateX(60%) translateY(-10%);
-   .middle-block({
-      .pseudo();
-   })
-}*/
+
 header.header__container .wrapper:after {
    .pseudo();
    .wrapper-main-blue();
@@ -223,6 +209,25 @@ footer.footer__container:after {
    
    .header-pseudo-blue-gradient();
 }
+#container.container__about header.header__container:before {
+   .pseudo();
+   z-index: 10;
+   
+    min-width: 100vw;
+    height: 300%;
+   
+   top: 0;
+   right: 0;
+   
+   .header-pseudo-about();
+   .md-block({
+      background-size: cover;
+      background-position: left;
+   });
+   .sm-block({
+      height: 400%;
+   });
+}
 
 .container__cos header.header__container:before {
    height: calc(325% - 2vw);
@@ -256,37 +261,14 @@ footer.footer__container:after {
    })
 }
 
-#container.container__school .header__container:before {
-   .header-pseudo-school();
-}
-
-#container.container__success .header__container:before {
-   .header-pseudo-success();
-}
-
-#container.container__professional .header__container:before {
-   .header-pseudo-professional();
-}
-
-#container.container__cos .header__container:before {
-   .header-pseudo-cos();
-}
-
-#container.container__social_activity .header__container:before {
-   .header-pseudo-social_activity();
-}
-
-#container.container__social_lift .header__container:before {
-   .header-pseudo-social_lift();
-}
-
-#container.container__patriot .header__container:before {
-   .header-pseudo-patriot();
-}
-
-#container.container__youth .header__container:before {
-   .header-pseudo-youth();
-}
+#container.container__school .header__container:before { .header-pseudo-school();}
+#container.container__success .header__container:before { .header-pseudo-success();}
+#container.container__professional .header__container:before { .header-pseudo-professional();}
+#container.container__cos .header__container:before { .header-pseudo-cos();}
+#container.container__social_activity .header__container:before { .header-pseudo-social_activity();}
+#container.container__social_lift .header__container:before { .header-pseudo-social_lift();}
+#container.container__patriot .header__container:before { .header-pseudo-patriot();}
+#container.container__youth .header__container:before { .header-pseudo-youth(); }
 
 #container .headline_blue:after {
    .pseudo();
@@ -297,6 +279,16 @@ footer.footer__container:after {
    
    width: 38rem;
    height: 38rem;
+}
+#container.container__about .headline_blue:after {
+   .pseudo();
+   .headline-about-blue();
+   
+   bottom: 2rem;
+   right: -2rem;
+   
+   width: 38rem;
+   height: 32rem;
 }
 
 #container .headline_blue-dark:after {
@@ -312,6 +304,9 @@ footer.footer__container:after {
    .md-block({
       top: -14%;
    })
+}
+#container.container__about .headline_blue-dark:after {
+   content: none;
 }
 
 #container header.header__container .wrapper:after {
@@ -393,10 +388,29 @@ section.deadline__container:before {
       
       width: 15%;
       height: 15%;
-      transform: rotate(40deg);
+      transform: rotate(120deg);
       
       top: 5%;
       right: 2%;
+      
+      .polygon-1-white();
+      .lg-block({
+         transform: rotate(83deg) translateX(-2px) translateY(-7px);
+      });
+      .md-block({
+         display: none;
+      })
+   }
+   &:nth-of-type(3):before {
+      .pseudo();
+      z-index: 300;
+      
+      width: 20%;
+      height: 20%;
+      transform: rotate(85deg);
+      
+      bottom: 10%;
+      right: 12%;
       
       .polygon-1-white();
       .lg-block({
@@ -425,7 +439,19 @@ section.deadline__container:before {
       transform: rotate(-10deg);
    })
 }
-
+#container.container__about:after {
+   .about_footer();
+   width: 100vw;
+   height: 100vh;
+   bottom: 25rem;
+   left: 0;
+   
+   transform: translateX(3px);
+   
+   .ll-block({
+      bottom: 15rem;
+   })
+}
 #container:before {
    .pseudo();
    z-index: 15;
@@ -466,4 +492,19 @@ section.deadline__container:before {
    .lg(display, none)
 }
 
+
+.about_project__container:after {
+   .pseudo();
+   top: -20%;
+   right: 5vw;
+   width: 20vw;
+   height: 20vw;
+   
+   min-width: 280px;
+   min-height: 280px;
+   
+   .about_bottom-polygon();
+   
+   transform: rotate(20deg);
+}
 

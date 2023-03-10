@@ -192,8 +192,26 @@
   .header-pages();
 }
 
+.header-pseudo-about() {
+   background-image: url("../data/images/about.jpg");
+  .header-pages();
+}
+.about-info-icon( @name ) {
+   background-image: url("../data/icons_article/about/@{name}.svg");
+   .contain();
+   background-position: left;
+}
+
+
+
+
 .headline-blue() {
    .bg('1.svg');
+   background-position: right;
+   .contain();
+}
+.headline-about-blue() {
+   .bg('about_headline.svg');
    background-position: right;
    .contain();
 }
@@ -272,6 +290,22 @@
 
 .projects-slick() {
    .bg('projects-slick.svg');
+   background-position: center;
+   .contain();
+}
+
+.about_project() {
+   .bg('about_project.svg');
+   background-position: top;
+   .cover();
+}
+.about_footer() {
+   .bg('about_footer.svg');
+   background-position: top;
+   .cover();
+}
+.about_bottom-polygon() {
+   .bg('about-bottom-polygon.svg');
    background-position: center;
    .contain();
 }

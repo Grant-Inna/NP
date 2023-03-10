@@ -1,0 +1,390 @@
+#container.container__about  main.page__title {
+   color: @color-text-white;
+   margin-top: 12rem;
+   
+   .middle-block({
+       margin-top: 5rem;
+   });
+   .md-block({
+       margin-top: 3rem;
+      margin-left: 1.8rem;
+   });
+   .sm-block({
+      margin-left: 0;
+   })
+}
+.container__about .info_about__container {
+   margin-top: 30rem;
+   
+   .middle-block({
+     margin-top: 25rem;
+   });
+}
+
+.container__about .info_block__text:nth-child(even) {
+   .md-block({
+      .column();
+      .items-end();
+      text-align: right;
+   })
+}
+
+
+
+
+@num-a: 1.6;
+.container__about .info_block__text {
+   margin-bottom: @offset * @num-a;
+    .xxl-block({
+       margin-bottom: @offset_xxl * @num-a + 1rem;
+    });
+    .md-block({
+       margin-bottom: @offset_xxl;
+    });
+    .sm-block({
+       margin-bottom: @offset_md;
+    });
+    .xs-block({
+       margin-bottom: @offset_md * 1.5;
+    });
+}
+.container__about .info_block__text h1,
+.container__about .info_block__text .span {
+   width: 96%;
+   .md-block({
+      width: 60%;
+   });
+   .xs-block({
+      width: 90%;
+   })
+}
+.container__about .info_about__text-plan > h1 {
+   .headline();
+   font-size: 1.6rem;
+   line-height: 2rem;
+
+   .ll-block({
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+   });
+   color: @color-text-black;
+}
+
+.container__about .info_block__more {
+   .col();
+   padding: 1rem 0 1rem @inner;
+   margin-top: 2rem;
+   border-left: .3rem solid @color-text-blue;
+   b {
+      display: block;
+   }
+   
+   .sm-block({
+      border-left: none;
+      padding-left: 0;
+   })
+}
+
+.info_about__content {
+   .flex-wrap();
+   
+   background-color: @color-background-white;
+   padding: @inner;
+   padding-bottom: @inner-sm;
+   
+   .md-block({
+      margin-left: 1.8rem;
+      margin-right: 1.8rem;
+      padding-top: 3rem;
+      .justify-center();
+   });
+   .sm-block({
+      margin-left: 0;
+      margin-right: 0;
+      padding-right: 2rem;
+      padding-left: 2rem;
+   })
+}
+
+.info_about__article {
+   .flex();
+   width: 100%;
+   margin-bottom: @offset * @num-a;
+    .xxl-block({
+       margin-bottom: @offset_xxl * @num-a + 1rem;
+    });
+    .md-block({
+       margin-bottom: @offset_xxl;
+    });
+    .sm-block({
+       margin-bottom: @offset_md;
+    });
+    .xs-block({
+       margin-bottom: @offset_md * 1.5;
+    });
+}
+
+.info_about__article.info_about__article-targets:first-child {
+   .md-block({
+       margin-bottom: @offset_xxl  * @num-a;
+    });
+    .xs-block({
+       margin-bottom: @offset_md * @num-a;
+    });
+    .xs-block({
+       margin-bottom: @offset_md * 1.5;
+    });
+}
+.info_about__number {
+   .flex-center();
+   width: 3.5rem;
+   height: 3.5rem;
+   flex-shrink: 0;
+   
+   margin-right: 2rem;
+   
+   background-color: @color-button-blue;
+   border-radius: 2px;
+   .md-block({
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+   })
+}
+article.info_about__article span {
+   font-size: 1.3rem;
+   color: @color-text-white;
+}
+
+
+.container__about .headline_blue {
+   margin-top: 5rem;
+}
+
+.info_about__article-development.info_about__article,
+.info_about__article-plan.info_about__article {
+   .md-block({
+      .column();
+   })
+}
+.container__about .info_about__article-development .info_about__icon,
+.info_about__article-plan.info_about__article .info_about__icon {
+   .md-block({
+      margin-bottom: 1rem;
+   })
+}
+
+.info_about__content.info_about__content-plan {
+   background-color: transparent;
+   padding: 0;
+}
+.info_about__article-plan {
+   margin-right: @inner;
+   margin-left: @inner;
+   
+   background-color: @color-background-white;
+   border-bottom: @border-w solid @color-button-blue;
+   border-radius: 2px;
+   padding-bottom: 1.8rem;
+   margin-bottom: 6rem;
+   .xxl-block({
+       margin-bottom: 5.5rem;
+    });
+    .md-block({
+       margin-bottom: 5rem;
+    });
+    .sm-block({
+       padding-bottom: 2rem;
+       margin-bottom: 4.6rem;
+    });
+    .xs-block({
+       margin-bottom: 4rem;
+    });
+}
+.info_about__article-plan:first-child {
+   margin-right: 0;
+   margin-left: 0;
+   border-bottom: none;
+   
+   padding-top: @inner;
+   padding-right: @inner;
+   padding-left: @inner;
+   padding-bottom: 1rem;
+   
+   margin-bottom: 0;
+   .xxl-block({
+       margin-bottom: 0;
+    });
+    .md-block({
+       margin-bottom: 0;
+    });
+    .sm-block({
+       padding-bottom: 0;
+       margin-bottom: 0;
+    });
+    .xs-block({
+       margin-bottom: 0;
+    });
+}
+.info_about__article-plan:nth-child(2) {
+   border-top: @border-w solid @color-button-blue;
+   padding-top: 6rem;
+   .xxl-block({
+       padding-top: 5.5rem;
+    });
+    .md-block({
+       padding-top: 5rem;
+    });
+    .sm-block({
+       padding-bottom: 2rem;
+       padding-top: 4.6rem;
+    });
+    .xs-block({
+       padding-top: 4rem;
+    });
+}
+
+.info_about__article-plan:last-child,
+.info_about__article-plan:nth-last-child(2) {
+   background-color: transparent;
+}
+.info_about__article-plan:last-child {
+   border-bottom: none;
+   margin-bottom: 2rem;
+}
+.container__about .info_about__article-plan .info_block__text,
+.container__about .info_about__article-outcome .info_block__text {
+   .md-block({
+       margin-bottom: @offset_xxl;
+    });
+}
+.container__about .info_about__article-plan .info_block__text h1 {
+   margin-top: .4rem;
+}
+.container__about .info_about__content-outcome .info_block__text h1,
+.container__about .info_about__content-outcome .info_block__text .span {
+   .md-block({
+      width: 85%;
+   });
+   .xs-block({
+      width: 100%;
+   });
+}
+.container__about .info_about__article-plan .info_block__text h1,
+.container__about .info_about__article-plan .info_block__text .span {
+   width: 96%;
+   .md-block({
+      width: 90%;
+   });
+   .xs-block({
+      width: 100%;
+   });
+}
+
+.container__about .info_about__article-development:not(:last-child) .info_about__text {
+   .md-block({
+      margin-bottom: 1rem;
+   })
+}
+
+
+
+
+// icons
+.container__about .info_about__icon {
+   min-width: 15rem;
+   height: 10rem;
+   
+   margin-bottom: 2rem;
+}
+
+.container__about .info_about__icon.info_about__icon-school{ .about-info-icon('school')}
+.container__about .info_about__icon.info_about__icon-technical{ .about-info-icon('technical')}
+.container__about .info_about__icon.info_about__icon-dop{ .about-info-icon('dop')}
+.container__about .info_about__icon.info_about__icon-educational{ .about-info-icon('educational')}
+.container__about .info_about__icon.info_about__icon-parents{ .about-info-icon('parents')}
+.container__about .info_about__icon.info_about__icon-teachers{ .about-info-icon('teachers')}
+.container__about .info_about__icon.info_about__icon-children{ .about-info-icon('children')}
+.container__about .info_about__icon.info_about__icon-creative{ .about-info-icon('creative')}
+
+
+.container__about .info_about__article-development .info_about__icon {
+   margin-bottom: .8rem;
+   margin-right: 1.5rem;
+}
+.container__about .info_about__icon.info_about__icon-infrastructure{ .about-info-icon('infrastructure');}
+.container__about .info_about__icon.info_about__icon-development{ .about-info-icon('development');}
+.container__about .info_about__icon.info_about__icon-improvement{ .about-info-icon('improvement');}
+
+
+.container__about .info_about__icon.info_about__icon-plan{
+   margin-bottom: 0;
+   margin-right: 1.5rem;
+}
+.info_about__icon-plan.about__children_high-quality-education{
+   .about-info-icon('children_high-quality-education');
+}
+.info_about__icon-plan.about__teachers_opportunities-for-development {
+   .about-info-icon('teachers_opportunities-for-development');
+}
+.info_about__icon-plan.about__children_identify-support-talents {
+   .about-info-icon('children_identify-support-talents');
+}
+.info_about__icon-plan.about__environment_created-introduced-in-organizations {
+   .about-info-icon('environment_created-introduced-in-organizations');
+}
+.info_about__icon-plan.about__students_opportunity-for-vocational-education {
+   .about-info-icon('students_opportunity-for-vocational-education');
+}
+.info_about__icon-plan.about__volunteerism_development-support {
+   .about-info-icon('volunteerism_development-support');
+}
+.info_about__icon-plan.about__youth_effective-self-realization {
+   .about-info-icon('youth_effective-self-realization');
+}
+.info_about__icon-plan.about__educational_psychological-pedagogical-support {
+   .about-info-icon('educational_psychological-pedagogical-support');
+   height: 11rem;
+}
+.info_about__icon-plan.about__education_system-digital-transformation {
+   .about-info-icon('education_system-digital-transformation');
+}
+.info_about__icon-plan.about__competitions_system-formation-development {
+   .about-info-icon('competitions_system-formation-development');
+}
+.info_about__icon-plan.about__patriotic_education-system {
+   .about-info-icon('patriotic_education-system');
+}
+
+
+// О проекте
+.about_project__container {
+   position: relative;
+   z-index: 400;
+   padding: 15rem 0 10rem;
+   .about_project();
+   
+   .ll-block({
+      padding: 7rem 0 6rem;
+   });
+   .sm-block({
+      padding: 5rem 0 3rem;
+   });
+}
+.about_project__container p {
+   position: relative;
+   z-index: 500;
+}
+.about_project__text {
+   .opensans-regular();
+   color: @color-text-white;
+   
+   font-size: 1.6rem;
+   line-height: 2rem;
+
+   .ll-block({
+      padding: 12rem 0 8rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+   });
+}
