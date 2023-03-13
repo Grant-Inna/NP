@@ -1,4 +1,3 @@
-
 #container aside.header__aside_holder {
    width: calc(37% + 3vw);
       .from(2000px, {
@@ -18,13 +17,6 @@
       .lg-block({
          display: none;
       });
-      /*.sm-block({
-         padding-top: 50px;
-         width: 47%;
-      });
-      .xs-block({
-         width: 52%;
-      })*/
 }
 #container .header__aside_block.aside__block_white {
    cursor: default;
@@ -52,6 +44,21 @@
       });
       .middle-block({
          transform: rotate(-40deg) translateX(8rem) translateY(8rem);
+      });
+}
+#container.container__plan .header__aside_block.aside__block_white {
+   cursor: default;
+   padding-top: 0;
+   transform: rotate(-40deg) translateX(9rem) translateY(6rem);
+      
+      .from(2050px, {
+         transform: rotate(-40deg) translateX(7rem) translateY(6rem);
+      });
+      .to(1380px, {
+         transform: rotate(-40deg) translateX(7rem) translateY(4rem);
+      });
+      .middle-block({
+         transform: rotate(-40deg) translateX(8rem) translateY(6rem)
       });
 }
 #container .header__aside_text {
