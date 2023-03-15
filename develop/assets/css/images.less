@@ -25,11 +25,7 @@
    background-position: right;
    .cover();
 }
-.orange_header-small() {
-   .bg('header-orange.svg');
-   background-position: right;
-   .cover();
-}
+
 .blue_header-bg() {
    .background('header-blue.svg');
    background-position: top;
@@ -44,7 +40,7 @@
    .contain();
 }
 .header-pseudo-blue-gradient() {
-   .bg('pseudo-blue-gradient.svg');
+   .pseudo('pseudo-blue-gradient.svg');
    background-position: right;
    .cover();
 }
@@ -153,7 +149,7 @@
    background-image: url("../data/images/pages/@{name}.jpg");
 }
 .headline( @name ) {
-   background-image: url("../data/images/@{name}.png");
+   background-image: url("../data/bg/headline/@{name}");
 }
 .header-pages() {
    background-position-x: right;
@@ -212,60 +208,71 @@
 }
 
 
-
+// Headline
 
 .headline-blue() {
-   .pseudo('1.svg');
+   .headline('1.svg');
+   background-position: right;
+   .contain();
+}
+.icon-result() {
+   .headline('improve.png');
+   background-position: left;
+   .contain();
+}
+
+.headline-blue-dark() {
+   .headline('2.svg');
+   background-position: right;
+   .contain();
+}
+.icon-ensuring() {
+   .headline('gear.png');
+   background-position: left;
+   .contain();
+}
+
+.icon-infrastructure() {
+   .headline('numbers.png');
+   background-position: left;
+   .contain();
+}
+.headline-about-blue() {
+   .headline('about-headline.svg');
    background-position: right;
    .contain();
 }
 
 .headline-plan() {
-   .bg('headline-plan.svg');
+   .headline('headline-plan.svg');
    background-position: right;
    .contain();
 }
-.headline-about-blue() {
-   .pseudo('about_headline.svg');
-   background-position: right;
-   .contain();
-}
-.icon-result() {
-   .headline('1');
-   background-position: left;
-   .contain();
-}
-.icon-ensuring() {
-   .headline('2');
-   background-position: left;
-   .contain();
-}
-.icon-infrastructure() {
-   .headline('5');
-   background-position: left;
-   .contain();
-}
+
 .icon-footage() {
-   .headline('6');
+   .headline('learn.png');
    background-position: left;
-   .contain();
-}
-.headline-blue-dark() {
-   .pseudo('2.svg');
-   background-position: right;
    .contain();
 }
 .headline-plan-footage() {
-   .bg('headline-plan-footage.svg');
+   .headline('headline-plan-footage.svg');
    background-position: right;
    .contain();
 }
 
 .deadline-icon() {
-   .headline('deadline1');
+   .headline('deadline.png');
    background-position: left;
    .contain();
 }
+
+.headline-orange() {
+   .headline('headline-orange.svg');
+   background-position: right;
+   .contain();
+}
+
+// Headline END
 
 
 .deadline-pseudo-blue() {
@@ -298,7 +305,7 @@
 
 
 .aside-menu-bg() {
-   .background('aside_bg.svg');
+   .background('aside-bg.svg');
    background-repeat: no-repeat;
    background-position: right top;
    background-size: contain;
@@ -318,12 +325,12 @@
 }
 
 .about_project() {
-   .background('about_project.svg');
+   .background('about-project.svg');
    background-position: top;
    .cover();
 }
 .about_footer() {
-   .pseudo('about_footer.svg');
+   .pseudo('about-footer.svg');
    background-position: top;
    .cover();
 }
@@ -332,3 +339,8 @@
    background-position: center;
    .contain();
 }
+
+
+// infrastructure info pseudo
+
+//.infrastructure-

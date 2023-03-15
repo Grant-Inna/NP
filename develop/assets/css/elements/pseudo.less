@@ -546,6 +546,16 @@ section.deadline__container:before {
 }
 
 // Блоки на странице инфраструктуры
-.infrastructure_info-orange:after {
+.pseudo-infrastructure-info() {
    .pseudo();
+   
+   top: 2%;
+   right: -1rem;
+   
+   width: 50%;
+   height: 95%;
+}
+.infrastructure_info-orange:after {
+   .pseudo-infrastructure-info();
+   .headline-orange();
 }

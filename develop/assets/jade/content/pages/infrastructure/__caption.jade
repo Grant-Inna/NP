@@ -1,16 +1,16 @@
 mixin caption( image, h1, span, h2)
    case h2
       when ''
-         main.page__caption.mt5.mb4
-            .wrapper
+         main.wrapper
+            .page__caption.mt5.mb4
                .page__image
                   img( src='../../assets/images/projects/#{image}.svg')
                .page__title.mt1
                   h1.mb2 !{h1}
                   .span !{span}
       default
-         main.page__caption.mt5.mb4
-            .wrapper
+         main.wrapper
+            .page__caption.mt5.mb4
                .page__image
                   img( src='../../assets/images/projects/#{image}.svg')
                .page__title.mt1

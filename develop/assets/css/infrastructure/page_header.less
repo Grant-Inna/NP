@@ -2,28 +2,28 @@
    position: relative;
    z-index: 300;
    color: @color-text-gray;
-}
-.page__caption .wrapper {
    .row();
 }
+.page__caption .wrapper {}
 .page__image {
    .col();
-   .size(12);
-   .size-large(12);
+   .size(10);
    .size-xxl(10);
    .size-xl(9);
    .size-md(24);
    
    box-sizing: border-box;
-   padding-right: 2.3vw;
+   padding-right: calc( 2rem - 1vw );
    
    .flex();
    .items-center();
 }
+.page__image img {
+   width: 100%;
+}
 .page__caption .page__title {
    .col();
-   .size(12);
-   .size-large(12);
+   .size(14);
    .size-xxl(14);
    .size-xl(15);
    .size-md(24);
