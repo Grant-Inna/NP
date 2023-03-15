@@ -1,0 +1,22 @@
+doctype
+html
+   include ../../assets/jade/static/__header
+   +head('Цифровая образовательная среда | Федеральные проекты', '../..')
+
+   body
+      #container.container__ctpd
+         include ../../assets/jade/menu/infrastructure/menu
+         include ../../assets/jade/menu/infrastructure/mobile
+         include ../../assets/jade/content/pages/header
+         +header( 'Инфраструктурные<br>объекты'  )
+
+
+         include ../../assets/jade/content/pages/infrastructure/__caption
+         +caption( 'pedagogikal_m', 'Центры непрерывного повышения профессионального мастерства педагогических работников', 'Ведущий институт вовлечения педагогических работников и управленческих кадров в национальную систему профессионального роста', '')
+
+         section( aria-label='О Центре')
+            .infrastructure_info__container.infrastructure_info-orange
+
+
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts

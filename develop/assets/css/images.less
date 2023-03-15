@@ -10,9 +10,18 @@
 .bg( @name ) {
    background-image: url("../data/bg/@{name}");
 }
+.pseudo( @name ) {
+   background-image: url("../data/bg/pseudo/@{name}");
+}
+.background( @name ) {
+   background-image: url("../data/bg/background/@{name}");
+}
+.polygon( @name ) {
+   background-image: url("../data/bg/polygon/@{name}");
+}
 
 .orange_header() {
-   .bg('header-orange.svg');
+   .background('header-orange.svg');
    background-position: right;
    .cover();
 }
@@ -22,7 +31,7 @@
    .cover();
 }
 .blue_header-bg() {
-   .bg('header-blue.svg');
+   .background('header-blue.svg');
    background-position: top;
    .cover();
    .to( 1450px, {
@@ -30,7 +39,7 @@
    })
 }
 .header-pseudo-blue() {
-   .bg('header-pseudo-blue.png');
+   .pseudo('header-pseudo-blue.png');
    background-position: right top;
    .contain();
 }
@@ -61,12 +70,12 @@
    background-position: left top;
 }
 .logo-pseudo() {
-   .bg('polygon-3-main.png');
+   .polygon('polygon-3-main.png');
    background-position: center;
    .contain();
 }
 .logo-pseudo-md() {
-   .bg('polygon-2.svg');
+   .polygon('polygon-2.svg');
    background-position: center;
    .contain();
 }
@@ -93,18 +102,18 @@
    
 }
 .wrapper-main-blue() {
-   background-image: url("../data/bg/polygon-1-main.png");
+   background-image: url("../data/bg/polygon/polygon-1-main.png");
    .contain();
    background-position: center;
 }
 .wrapper-main-white() {
-   background-image: url("../data/bg/polygon-1-main-white.png");
+   background-image: url("../data/bg/polygon/polygon-1-main-white.png");
    .contain();
    background-position: center;
 }
 
 .footer-bg-orange() {
-   .bg('footer-orange.svg');
+   .background('footer-orange.svg');
 }
 
 .logo( @name ) {
@@ -121,7 +130,7 @@
 
 
 .map-bg() {
-   .bg( 'long-blue-gradient.png' );
+   .background( 'long-blue-gradient.png' );
    background-repeat: no-repeat;
    .cover();
 }
@@ -132,7 +141,7 @@
 }
 
 .header-aside-image() {
-   .bg('header-aside-text.svg');
+   .pseudo('header-aside-text.svg');
    background-position: center;
    .contain();
 }
@@ -206,7 +215,7 @@
 
 
 .headline-blue() {
-   .bg('1.svg');
+   .pseudo('1.svg');
    background-position: right;
    .contain();
 }
@@ -217,7 +226,7 @@
    .contain();
 }
 .headline-about-blue() {
-   .bg('about_headline.svg');
+   .pseudo('about_headline.svg');
    background-position: right;
    .contain();
 }
@@ -242,7 +251,7 @@
    .contain();
 }
 .headline-blue-dark() {
-   .bg('2.svg');
+   .pseudo('2.svg');
    background-position: right;
    .contain();
 }
@@ -260,73 +269,66 @@
 
 
 .deadline-pseudo-blue() {
-   .bg('deadline-pseudo-blue.png');
+   .pseudo('deadline-pseudo-blue.png');
    background-position: top;
    .cover();
 }
 
 .polygon-3-main-white() {
-   .bg('polygon-3-main-white.svg');
+   .polygon('polygon-3-main-white.svg');
    background-position: top;
    .contain();
 }
 .polygon-3-person-white() {
-   .bg('polygon-3-person-white.svg');
+   .polygon('polygon-3-person-white.svg');
    background-position: top;
    .contain();
 }
 .polygon-1-white() {
-   .bg('polygon-1-white.svg');
+   .polygon('polygon-1-white.svg');
    background-position: top;
    .contain();
 }
 
 .polygon-purple() {
-   .bg('polygon-purple.svg');
+   .polygon('polygon-purple.svg');
    background-position: bottom;
    .contain();
 }
 
 
 .aside-menu-bg() {
-   .bg('aside_bg.svg');
+   .background('aside_bg.svg');
    background-repeat: no-repeat;
    background-position: right top;
    background-size: contain;
 }
 .mobile-polygon-pseudo() {
-   .bg('polygon-3-mobile.svg');
+   .polygon('polygon-3-mobile.svg');
    background-repeat: no-repeat;
    background-position: right top;
    background-size: contain;
 }
 
-.sources-icon() {
-   .bg('sources.svg');
-   background-position: center;
-   .contain();
-   
-}
-
 
 .projects-slick() {
-   .bg('projects-slick.svg');
+   .background('projects-slick.svg');
    background-position: center;
    .contain();
 }
 
 .about_project() {
-   .bg('about_project.svg');
+   .background('about_project.svg');
    background-position: top;
    .cover();
 }
 .about_footer() {
-   .bg('about_footer.svg');
+   .pseudo('about_footer.svg');
    background-position: top;
    .cover();
 }
 .about_bottom-polygon() {
-   .bg('about-bottom-polygon.svg');
+   .polygon('about-bottom-polygon.svg');
    background-position: center;
    .contain();
 }

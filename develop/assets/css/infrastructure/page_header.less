@@ -1,0 +1,41 @@
+.page__caption {
+   position: relative;
+   z-index: 300;
+   color: @color-text-gray;
+}
+.page__caption .wrapper {
+   .row();
+}
+.page__image {
+   .col();
+   .size(12);
+   .size-large(12);
+   .size-xxl(10);
+   .size-xl(9);
+   .size-md(24);
+   
+   box-sizing: border-box;
+   padding-right: 2.3vw;
+   
+   .flex();
+   .items-center();
+}
+.page__caption .page__title {
+   .col();
+   .size(12);
+   .size-large(12);
+   .size-xxl(14);
+   .size-xl(15);
+   .size-md(24);
+}
+
+.page__caption .span {
+   .opensans-regular();
+   font-size: 1.5rem;
+   line-height: 1.7rem;
+   .md-block({
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+   })
+   
+}
