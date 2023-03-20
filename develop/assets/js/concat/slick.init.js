@@ -53,8 +53,8 @@ $(document).ready(function(){
          window.addEventListener("resize", reinit);
       })
       .slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
+         slidesToShow: 2,
+         slidesToScroll: 2,
          speed: 400,
          arrows: false,
          dots: true,
@@ -64,15 +64,15 @@ $(document).ready(function(){
          responsive: [
             {
                breakpoint: 800,
-               settings: "unslick"
+               settings: "destroy"
             },
             {
-               breakpoint: 580,
+               breakpoint: 430,
                settings: {
                   arrows: false,
                   dots: true,
-                  slidesToShow: 2,
-                  slidesToScroll: 2
+                  slidesToShow: 1,
+                  slidesToScroll: 1
                }
             }
          ]

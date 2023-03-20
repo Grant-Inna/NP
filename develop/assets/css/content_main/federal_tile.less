@@ -19,22 +19,28 @@ section.tile_federal__container .wrapper {}
    position: relative;
    cursor: pointer;
    
-   padding-top: 60px;
+   padding-top: 75px;
    
    .col();
    .size(6);
    .size-ll(8);
    .size-xxl(8);
    
+   max-height: 440px;
+   
     margin-top: @offset_one_side;
     margin-bottom: @offset_one_side;
     .xxl-block({
         margin-top: @offset_lg_one_side;
         margin-bottom: @offset_lg_one_side;
+       max-height: 360px;
     });
    .to( 805px, {
        max-width: 94%;
        height: 35rem;
+   });
+   .middle-block({
+      max-height: unset;
    });
     .md-block({
         margin: @offset_xs_one_side 3%;
@@ -67,6 +73,7 @@ section.tile_federal__container .wrapper {}
 }
 img.tile_federal__image {
    min-height: 100%;
+   max-height: 100%;
    min-width: 100%;
     object-fit: cover;
    border-radius: 3px;
@@ -90,7 +97,7 @@ img.tile_federal__image {
    background-color: @color-background-white;
    
    box-sizing: border-box;
-   padding: 2rem;
+   padding: 1.5rem;
    .ll-block({
       padding: 3rem;
    });
@@ -98,7 +105,7 @@ img.tile_federal__image {
       display: none;
    });
    .sm-block({
-      padding: 2.5rem;
+      padding: 2rem;
    });
    
    box-shadow: @box-shadow;
