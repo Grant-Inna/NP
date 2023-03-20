@@ -3,14 +3,14 @@
 .page_footer__container {
    position: relative;
    z-index: 400;
-   padding: 15rem 0 10rem;
+   padding: 15rem 0 9rem;
    .about_project();
    
    .ll-block({
       padding: 12rem 0 8rem;
    });
    .sm-block({
-      //padding: 10rem 0 8rem;
+      padding: 10rem 0 6rem;
    });
 }
 .page_footer__container p {
@@ -29,4 +29,41 @@
       font-size: 1.4rem;
       line-height: 1.8rem;
    });
+}
+
+
+.page_footer__info {
+   .row-flex();
+}
+
+.page_footer__info article h1 {
+   .opensans-semibold();
+   color: @color-text-white;
+   font-size: 1.8rem;
+   line-height: 2rem;
+   margin-bottom: .5rem;
+
+   .ll-block({
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+   });
+   .middle-block({
+      font-size: 1.8rem;
+      line-height: 2rem;
+   });
+}
+.page_footer__info article .span {
+   .opensans-regular();
+   color: @color-text-white;
+   
+   font-size: 1.5rem;
+   line-height: 1.7rem;
+   
+}
+.page_footer__info .info_block__text {
+   margin-bottom: 2.5rem;
+}
+
+.icon-telegram {
+   .icon-telegram();
 }

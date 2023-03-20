@@ -20,13 +20,27 @@
 }
 #container .header__aside_block.aside__block_white {
    cursor: default;
-   transform: rotate(-40deg) translateX(9rem) translateY(6rem);
+   transform: rotate(-40deg) translateX(8rem) translateY(7rem);
       
       .from(2050px, {
-         transform: rotate(-40deg) translateX(4rem) translateY(3rem);
+         transform: rotate(-40deg) translateX(4rem) translateY(7rem);
       });
       .to(1380px, {
          transform: rotate(-40deg) translateX(9rem) translateY(5rem);
+      });
+      .middle-block({
+         transform: rotate(-40deg) translateX(8rem) translateY(6rem);
+      });
+}
+#container.container__infrastructure .header__aside_block.aside__block_white {
+   cursor: default;
+   transform: rotate(-40deg) translateX(9rem) translateY(6rem);
+      
+      .from(2050px, {
+         transform: rotate(-40deg) translateX(5rem) translateY(5rem);
+      });
+      .to(1380px, {
+         transform: rotate(-40deg) translateX(8rem) translateY(4rem);
       });
       .middle-block({
          transform: rotate(-40deg) translateX(8rem) translateY(6rem);
