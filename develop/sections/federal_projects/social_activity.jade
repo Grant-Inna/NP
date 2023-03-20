@@ -34,6 +34,12 @@ html
          include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2019', '30.12.2024', '"Социальная активность"')
 
+         include ../../assets/jade/content/pages/__person
+         section( aria-label='Руководитель и администратор проекта "Успех каждого ребенка"' ).person__container
+            .wrapper.mb6
+               .person__holder
+                  +person( 'Руководитель и&nbsp;администратор проекта', 'Разуваева', 'Ксения', 'Денисовна', 'руководитель Федерального агентства по&nbsp;делам молодёжи', 'razyvaeva')
+
          include ../../assets/jade/content/pages/__sources
          section( aria-label='Источники финансирования проекта "Социальная активность"' ).sources__container
             .wrapper
