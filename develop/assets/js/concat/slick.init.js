@@ -39,10 +39,10 @@ $(document).ready(function(){
       });
    }*/
    
-   const $slider_cell = $('.tile_federal__row');
-   
+      const $slider_cell = $('.tile_federal__row');
+
    if ($slider_cell.length > 0) {
-      
+
       $slider_cell
       .on("destroy", function(_, slick) {
          const reinit = debounce(() => {
@@ -53,8 +53,8 @@ $(document).ready(function(){
          window.addEventListener("resize", reinit);
       })
       .slick({
-         slidesToShow: 2,
-         slidesToScroll: 2,
+         slidesToShow: 1,
+         slidesToScroll: 1,
          speed: 400,
          arrows: false,
          dots: true,
@@ -63,16 +63,16 @@ $(document).ready(function(){
          autoplay: false,
          responsive: [
             {
-               breakpoint: 800,
-               settings: "destroy"
+               breakpoint: 770,
+               settings: "unslick"
             },
             {
-               breakpoint: 430,
+               breakpoint: 580,
                settings: {
                   arrows: false,
                   dots: true,
-                  slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToShow: 2,
+                  slidesToScroll: 2
                }
             }
          ]

@@ -62,9 +62,9 @@ html
          section( aria-label='Руководитель проекта "Современная школа"' ).person__container
             .wrapper.mb6
                .person__holder
-                  +person( 'Куратор', 'Голикова', 'Татьяна', 'Алексеевна', 'заместитель Председателя Правительства Российской Федерации', 'golikova')
-                  +person( 'Руководитель', 'Кравцов', 'Сергей', 'Сергеевич', 'Министр просвещения Российской Федерации', 'kravcov')
-                  +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'vasieva')
+                  +person( 'Куратор', 'Голикова', 'Татьяна', 'Алексеевна', 'заместитель Председателя Правительства Российской Федерации')
+                  +person( 'Руководитель', 'Кравцов', 'Сергей', 'Сергеевич', 'Министр просвещения Российской Федерации')
+                  +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации')
 
          include assets/jade/content/pages/__headline-simple
          +headline-simple( 'blue', 'Ключевые показатели национального проекта &laquo;Образование&raquo; направлены на&nbsp;планомерное достижение к&nbsp;концу 2024 года общественно значимых результатов и&nbsp;задач:' )
@@ -85,16 +85,16 @@ html
                   include assets/jade/content/about/plan/patriotic_education-system
 
 
-         include assets/jade/content/pages/__sources
-         section( aria-label='Источники финансирования проекта "Образование"' ).sources__container
-            .wrapper
-               .sources__content
-                  .sources__title
-                     .sources__text.title Источники финансирования проекта
-                     .sources__icon
-                  .sources__holder
-                     +sources( 'Федеральный<br>бюджет', '1065,8')
-                     +sources( 'Из них передано субъектам<br>Российской Федерации', '703,3')
+         //include assets/jade/content/pages/__sources
+         //section( aria-label='Источники финансирования проекта "Образование"' ).sources__container
+         //   .wrapper
+         //      .sources__content
+         //         .sources__title
+         //            .sources__text.title Источники финансирования проекта
+         //            .sources__icon
+         //         .sources__holder
+         //            +sources( 'Федеральный<br>бюджет', '1065,8')
+         //            +sources( 'Из них передано субъектам<br>Российской Федерации', '703,3')
 
          section( aria-label='О проекте' ).page_footer__container
             .wrapper
