@@ -1,0 +1,172 @@
+const region = [
+   { name: 'Республика Адыгея', federal_district: 'Южный', geoname_id: '584222',Adygeya Republic
+   },
+   { name: 'Республика Башкортостан', federal_district: 'Приволжский', geoname_id: '578853',Bashkortostan Republic
+   },
+   { name: 'Республика Бурятия', federal_district: 'Дальневосточный', geoname_id: '2050915',Buryatiya Republic
+   },
+   { name: 'Республика Алтай', federal_district: 'Сибирский', geoname_id: '1506272',Altai
+   },
+   { name: 'Республика Дагестан', federal_district: 'Северо-Кавказский', geoname_id: '567293',Dagestan
+   },
+   { name: 'Республика Ингушетия', federal_district: 'Северо-Кавказский', geoname_id: '556349',Ingushetiya Republic
+   },
+   { name: 'Кабардино-Балкарская Республика', federal_district: 'Северо-Кавказский', geoname_id: '554667',Kabardino-Balkariya Republic
+   },
+   { name: 'Республика Калмыкия', federal_district: 'Южный', geoname_id: '553972',Kalmykiya Republic
+   },
+   { name: 'Карачаево-Черкесская Республика', federal_district: 'Северо-Кавказский', geoname_id: '552927',Karachayevo-Cherkesiya Republic
+   },
+   { name: 'Республика Карелия', federal_district: 'Северо-Западный', geoname_id: '552548',Karelia
+   },
+   { name: 'Республика Коми', federal_district: 'Северо-Западный', geoname_id: '545854',Komi
+   },
+   { name: 'Республика Марий Эл', federal_district: 'Приволжский', geoname_id: '529352',Mariy-El Republic
+   },
+   { name: 'Республика Мордовия', federal_district: 'Приволжский', geoname_id: '525369',Mordoviya Republic
+   },
+   { name: 'Республика Саха (Якутия)', federal_district: 'Дальневосточный', geoname_id: '2013162',Sakha
+   },
+   { name: 'Республика Северная Осетия - Алания', federal_district: 'Северо-Кавказский', geoname_id: '519969',North Ossetia
+   },
+   { name: 'Республика Татарстан', federal_district: 'Приволжский', geoname_id: '484048',Tatarstan Republic
+   },
+   { name: 'Удмуртская Республика', federal_district: 'Приволжский', geoname_id: '479613',Udmurtiya Republic
+   },
+   { name: 'Республика Хакасия', federal_district: 'Сибирский', geoname_id: '1503834',Khakasiya Republic
+   },
+   { name: 'Чеченская Республика', federal_district: 'Северо-Кавказский', geoname_id: '569665',Chechnya
+   },
+   { name: 'Чувашская Республика - Чувашия', federal_district: 'Приволжский', geoname_id: '567395',Chuvashia
+   },
+   { name: 'Алтайский край', federal_district: 'Сибирский', geoname_id: '1511732',Altai Krai
+   },
+   { name: 'Краснодарский край', federal_district: 'Южный', geoname_id: '542415',Krasnodarskiy
+   },
+   { name: 'Красноярский край', federal_district: 'Сибирский', geoname_id: '1502020',Krasnoyarskiy
+   },
+   { name: 'Приморский край', federal_district: 'Дальневосточный', geoname_id: '2017623',Primorskiy (Maritime) Kray
+   },
+   { name: 'Ставропольский край', federal_district: 'Северо-Кавказский', geoname_id: '487839',Stavropol Kray
+   },
+   { name: 'Хабаровский край', federal_district: 'Дальневосточный', geoname_id: '2022888',Khabarovsk
+   },
+   { name: 'Амурская область', federal_district: 'Дальневосточный', geoname_id: '2027748',Amur Oblast
+   },
+   { name: 'Архангельская область', federal_district: 'Северо-Западный', geoname_id: '581043',Arkhangelskaya
+   },
+   { name: 'Астраханская область', federal_district: 'Южный', geoname_id: '580491',Astrakhan
+   },
+   { name: 'Белгородская область', federal_district: 'Центральный', geoname_id: '578071',Belgorod Oblast
+   },
+   { name: 'Брянская область', federal_district: 'Центральный', geoname_id: '571473',Bryansk Oblast
+   },
+   { name: 'Владимирская область', federal_district: 'Центральный', geoname_id: '826294',Vladimir
+   },
+   { name: 'Волгоградская область', federal_district: 'Южный', geoname_id: '472755',Volgograd Oblast
+   },
+   { name: 'Вологодская область', federal_district: 'Северо-Западный', geoname_id: '472454',Vologda
+   },
+   { name: 'Воронежская область', federal_district: 'Центральный', geoname_id: '472039',Voronezj
+   },
+   { name: 'Ивановская область', federal_district: 'Центральный', geoname_id: '555235',Ivanovo
+   },
+   { name: 'Иркутская область', federal_district: 'Сибирский', geoname_id: '2023468',Irkutsk Oblast
+   },
+   { name: 'Калининградская область', federal_district: 'Северо-Западный', geoname_id: '554230',Kaliningrad
+   },
+   { name: 'Калужская область', federal_district: 'Центральный', geoname_id: '553899',Kaluga
+   },
+   { name: 'Камчатский край', federal_district: 'Дальневосточный', geoname_id: '2125072',Kamchatka
+   },
+   { name: 'Кемеровская область - Кузбасс', federal_district: 'Сибирский', geoname_id: '1503900',Kemerovo Oblast
+   },
+   { name: 'Кировская область', federal_district: 'Приволжский', geoname_id: '548389',Kirov
+   },
+   { name: 'Костромская область', federal_district: 'Центральный', geoname_id: '543871',Kostroma Oblast
+   },
+   { name: 'Курганская область', federal_district: 'Уральский', geoname_id: '1501312',Kurgan Oblast
+   },
+   { name: 'Курская область', federal_district: 'Центральный', geoname_id: '538555',Kursk
+   },
+   { name: 'Ленинградская область', federal_district: 'Северо-Западный', geoname_id: '536199',Leningradskaya Oblast
+   },
+   { name: 'Липецкая область', federal_district: 'Центральный', geoname_id: '535120',Lipetsk Oblast
+   },
+   { name: 'Магаданская область', federal_district: 'Дальневосточный', geoname_id: '2123627',Magadan Oblast
+   },
+   { name: 'Московская область', federal_district: 'Центральный', geoname_id: '524925',Moscow Oblast
+   },
+   { name: 'Мурманская область', federal_district: 'Северо-Западный', geoname_id: '524304',Murmansk
+   },
+   { name: 'Нижегородская область', federal_district: 'Приволжский', geoname_id: '559838',Nizhny Novgorod Oblast
+   },
+   { name: 'Новгородская область', federal_district: 'Северо-Западный', geoname_id: '519324',Novgorod Oblast
+   },
+   { name: 'Новосибирская область', federal_district: 'Сибирский', geoname_id: '1496745',Novosibirsk Oblast
+   },
+   { name: 'Омская область', federal_district: 'Сибирский', geoname_id: '1496152',Omsk
+   },
+   { name: 'Оренбургская область', federal_district: 'Приволжский', geoname_id: '515001',Orenburg Oblast
+   },
+   { name: 'Орловская область', federal_district: 'Центральный', geoname_id: '514801',Orel Oblast
+   },
+   { name: 'Пензенская область', federal_district: 'Приволжский', geoname_id: '511555',Penza
+   },
+   { name: 'Пермский край', federal_district: 'Приволжский', geoname_id: '511180',Perm
+   },
+   { name: 'Псковская область', federal_district: 'Северо-Западный', geoname_id: '504338',Pskov Oblast
+   },
+   { name: 'Ростовская область', federal_district: 'Южный', geoname_id: '501165',Rostov
+   },
+   { name: 'Рязанская область', federal_district: 'Центральный', geoname_id: '500059',Ryazan Oblast
+   },
+   { name: 'Самарская область', federal_district: 'Приволжский', geoname_id: '499068',Samara Oblast
+   },
+   { name: 'Саратовская область', federal_district: 'Приволжский', geoname_id: '498671',Saratovskaya Oblast
+   },
+   { name: 'Сахалинская область', federal_district: 'Дальневосточный', geoname_id: '2121529',Sakhalin Oblast
+   },
+   { name: 'Свердловская область', federal_district: 'Уральский',6600000000000,92b30014-4d52-4e2e-892d-928142b924bf,65000000000,65000000,6600,620000,RU-SVE,UTC+5,RU.71,1490542,Sverdlovsk
+   },
+   { name: 'Смоленская область', federal_district: 'Центральный',6700000000000,e8502180-6d08-431b-83ea-c7038f0df905,66000000000,66000000,6700,,RU-SMO,UTC+3,RU.69,491684,Smolensk
+   },
+   { name: 'Тамбовская область', federal_district: 'Центральный',6800000000000,a9a71961-9363-44ba-91b5-ddf0463aebc2,68000000000,68000000,6800,392000,RU-TAM,UTC+3,RU.72,484638,Tambov
+   },
+   { name: 'Тверская область', federal_district: 'Центральный',6900000000000,61723327-1c20-42fe-8dfa-402638d9b396,28000000000,28000000,6900,,RU-TVE,UTC+3,RU.77,480041,Tver Oblast
+   },
+   { name: 'Томская область', federal_district: 'Сибирский',7000000000000,889b1f3a-98aa-40fc-9d3d-0f41192758ab,69000000000,69000000,7000,,RU-TOM,UTC+7,RU.75,1489421,Tomsk Oblast
+   },
+   { name: 'Тульская область', federal_district: 'Центральный',7100000000000,d028ec4f-f6da-4843-ada6-b68b3e0efa3d,70000000000,70000000,7100,,RU-TUL,UTC+3,RU.76,480508,Tula
+   },
+   { name: 'Тюменская область', federal_district: 'Уральский',7200000000000,54049357-326d-4b8f-b224-3c6dc25d6dd3,71000000000,71000000,7200,,RU-TYU,UTC+5,RU.78,1488747,Tyumen Oblast
+   },
+   { name: 'Ульяновская область', federal_district: 'Приволжский',7300000000000,fee76045-fe22-43a4-ad58-ad99e903bd58,73000000000,73000000,7300,433000,RU-ULY,UTC+4,RU.81,479119,Ulyanovsk
+   },
+   { name: 'Челябинская область', federal_district: 'Уральский',7400000000000,27eb7c10-a234-44da-a59c-8b1f864966de,75000000000,75000000,7400,454000,RU-CHE,UTC+5,RU.13,1508290,Chelyabinsk
+   },
+   { name: 'Забайкальский край', federal_district: 'Дальневосточный',7500000000000,b6ba5716-eb48-401b-8443-b197c9578734,76000000000,76000000,7500,,RU-ZAB,UTC+9,RU.93,7779061,Transbaikal Territory
+   },
+   { name: 'Ярославская область', federal_district: 'Центральный',7600000000000,a84b2ef4-db03-474b-b552-6229e801ae9b,78000000000,78000000,7600,,RU-YAR,UTC+3,RU.88,468898,Jaroslavl
+   },
+   { name: 'Москва', federal_district: 'Центральный',7700000000000,0c5b2444-70a0-4932-980c-b4dc0d3f02b5,45000000000,45000000,7700,101000,RU-MOW,UTC+3,RU.48,524894,Moscow
+   },
+   { name: 'Санкт-Петербург', federal_district: 'Северо-Западный',7800000000000,c2deb16a-0330-4f05-821f-1d09c93331e6,40000000000,40000000,7800,190000,RU-SPE,UTC+3,RU.66,536203,St.-Petersburg
+   },
+   { name: 'Еврейская Аобл', federal_district: 'Дальневосточный',7900000000000,1b507b09-48c9-434f-bf6f-65066211c73e,99000000000,99000000,7900,,RU-YEV,UTC+10,RU.89,2026639,Jewish Autonomous Oblast
+   },
+   { name: 'Ненецкий АО', federal_district: 'Северо-Западный',8300000000000,89db3198-6803-4106-9463-cbf781eff0b8,11100000000,11800000,2983,166000,RU-NEN,UTC+3,RU.50,522652,Nenets
+   },
+   { name: 'Ханты-Мансийский Автономный округ - Югра', federal_district: 'Уральский',8600000000000,d66e5325-3a25-4d29-ba86-4ca351d9704b,71100000000,71800000,8600,,RU-KHM,UTC+5,RU.32,1503773,Khanty-Mansia
+   },
+   { name: 'Чукотский АО', federal_district: 'Дальневосточный',8700000000000,f136159b-404a-4f1f-8d8d-d169e1374d5c,77000000000,77000000,8700,,RU-CHU,UTC+12,RU.15,2126099,Chukotka
+   },
+   { name: 'Ямало-Ненецкий АО', federal_district: 'Уральский',8900000000000,826fa834-3ee8-404f-bdbc-13a5221cfb6e,71140000000,71900000,8900,629000,RU-YAN,UTC+5,RU.87,1486462,Yamalo-Nenets
+   },
+   { name: 'Республика Крым', federal_district: 'Южный',9100000000000,bd8e6511-e4b9-4841-90de-6bbc231a789e,35000000000,35000000,9100,,UA-43,UTC+3,UA.11,703883,Crimea
+   },
+   { name: 'Севастополь', federal_district: 'Южный',9200000000000,6fdecb78-893a-4e3f-a5ba-aa062459463b,67000000000,67000000,9200,299700,UA-40,UTC+3,UA.20,694422,Sevastopol City
+   },
+   { name: 'Байконур', federal_district: '', 9900000000000,63ed1a35-4be6-4564-a1ec-0c51f7383314,55000000000,55000000,9900,468320,KZ-BAY,UTC+5,KZ.08,1538316,Baikonur
+   }
+]

@@ -1,7 +1,7 @@
 mixin person( status, f, i, o, position, image )
    section( area-label='#{f}' ).person__content
       .person__image
-         img( src='../../assets/images/person/#{f}.jpg' alt='#{f}' )
+         img( src='../../assets/images/person/#{image}.jpg' alt='#{f}' )
       .person__text
          .person__status.mb4 !{status}
          .person__name !{f}

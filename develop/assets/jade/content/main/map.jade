@@ -2,9 +2,12 @@ section( aria-label='Объекты инфраструктуры на карте
    .wrapper
       h1 Объекты инфрастуктуры проекта "Образования"
       form.map_index__form
-         select().map_index__select.block_12
-         select().map_index__select.block_7
-         a( href='').button_white.map_index__button.block_5
-            i.icon-load.mr2
-            span Скачать реестр
+         .block_12
+            select#region( data-placeholder='Выберите регион').map_index__select
+         .block_7
+            select#object( data-placeholder='Выберите объект инфраструктуры').map_index__select
+         .block_5
+            a( href='').button_white.map_index__button
+               i.icon-load.mr2
+               span Скачать реестр
 
