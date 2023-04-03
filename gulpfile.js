@@ -121,9 +121,9 @@ function fonts(done){
    done();
 }
 function js(done){
-   return gulp.src(src + 'js/concat/*.js')
+   return gulp.src(src + 'js/*.js')
    .pipe(gulpif(isProd, uglify()))
-   .pipe(concat('concat.js'))
+   // .pipe(concat('concat.js'))
    .pipe(gulp.dest( dist + 'js'))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
@@ -161,7 +161,7 @@ function watch(done){
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
    gulp.watch( src + 'js/*.js', js);
-   gulp.watch( src + 'js/concat/*.js', js);
+   // gulp.watch( src + 'js/concat/*.js', js);
    done();
 }
 

@@ -9,10 +9,10 @@ $(document).ready(function() {
     $region.on('select2:select', function (e) {
         let data = e.params.data;
 
-        let id = data.id,
-            text = data.text;
+        let id = data.geoname_id,
+            name = data.name;
         console.log(id);
-        console.log(text);
+        console.log(name);
     });
     
     $object.select2({
@@ -21,9 +21,9 @@ $(document).ready(function() {
     $object.on('select2:select', function (e) {
         let data = e.params.data;
 
-        let id = data.id,
-            text = data.text;
+        let id = data.geoname_id,
+            name = data.name;
         console.log(id);
-        console.log(text);
+        console.log(name);
     });
 });

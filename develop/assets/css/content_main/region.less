@@ -1,0 +1,44 @@
+.region( @name ) {
+   background-image: url("../data/bg/region/@{name}.svg");
+   background-position: top;
+   .contain();
+}
+.all_regions .map_index__region {
+   opacity: 0;
+}
+.all_regions .map_index__information {
+   opacity: 1;
+   //bottom: 40%;
+   top: 10%;
+   right: 50%;
+   bottom: unset;
+   transform: translateX(50%);
+}
+.all_regions .map_index__information .map_index__amount {
+   display: none;
+}
+
+/* Регионы */
+.Adygeya_Republic .map_index__region {
+   opacity: 1;
+   .region('Adygeya_Republic');
+}
+.Adygeya_Republic .map_index__information {
+   opacity: 1;
+   right: unset;
+   bottom: 32%;
+   left: 0;
+   transform: none;
+}
+
+.Irkutsk_Oblast .map_index__region {
+   opacity: 1;
+   .region('Irkutsk_Oblast');
+}
+.Irkutsk_Oblast .map_index__information {
+   opacity: 1;
+   right: 33%;
+   bottom: 34%;
+   left: unset;
+   transform: none;
+}

@@ -131,9 +131,14 @@
    .cover();
 }
 .map() {
-   .bg( 'map.png' );
+   .bg( 'map.svg' );
    background-position: center;
    .cover();
+}
+.map_index() {
+   .bg( 'map.png' );
+   background-position: top;
+   .contain();
 }
 
 .header-aside-image() {
@@ -358,6 +363,12 @@
    .polygon('about-bottom-polygon.svg');
    background-position: center;
    .contain();
+}
+
+.region() {
+   .pseudo('region.svg');
+   background-position: top;
+   .cover();
 }
 
 
