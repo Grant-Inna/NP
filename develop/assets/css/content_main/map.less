@@ -121,6 +121,16 @@ section.map__container .wrapper {
    opacity: .6;
    background-color: @opacity-white-item-60;
 }
+.region__button.disable {
+   opacity: .7;
+   background-color: @color-button-blue;
+   color: @opacity-white-item-80;
+}
+.region__button.disable:hover {
+   opacity: .7;
+   background-color: @color-button-blue;
+   color: @opacity-white-item-80;
+}
 
 /*.map_index__button {
    outline: none;
@@ -237,6 +247,20 @@ section.map__container .wrapper {
    .size-xxl(18);
    .size-xl(17);
    .size-md(17);
+}
+h1.region__object {
+   .opensans-regular();
+   color: @color-text-gray;
+   text-transform: none;
+   text-align: left;
+   font-size: 1.3rem;
+   line-height: 1.45rem;
+   margin-top: 1.7rem;
+}
+h1.region__object + .region__object-num {
+   font-size: 1.7rem;
+   line-height: 1.7rem;
+   margin-top: .5rem;
 }
 
 .region__object-num {
