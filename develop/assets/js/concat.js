@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   const region = [
+   const regions = [
       {
          text: 'Все регионы',
          federalDistrict: '',
@@ -33,6 +33,11 @@ $(document).ready(function () {
                id: 1, // Этот id тот же, что и в массиве objects
                text: 'Кванториум',
                amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
             }
          ]
       },
@@ -558,8 +563,19 @@ $(document).ready(function () {
          geonameName: 'Baikonur'
       }
    ];
+
    
-   const object = [
+   // $(function() {  Access to XMLHttpRequest at 'http://10.50.10.180:8096/regions' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+   //    $.ajax({
+   //       type: "POST",
+   //       dataType: "json",
+   //       url: "http://10.50.10.180:8096/regions",
+   //       data: "regions",
+   //       // success: success
+   //    })
+   // });
+   
+   const objects = [
       {
          id: 1,
          text: 'Кванториум',
@@ -582,11 +598,11 @@ $(document).ready(function () {
       }
    ];
    /* Select у карты */
-   if ($('#region').length > 0 ) {
-      let $region = $('#region'),
-         $object = $('#object'),
+   if ($('#regions').length > 0 ) {
+      let $regions = $('#regions'),
+         $objects = $('#objects'),
          $map_index = $('.map_index__map'),
-         $name_region = $('.region__name'),
+         $region_name = $('.region__name'),
          $select_clear = $('.select__clear'),
          $region_infrastructure = $('.region__information'),
          $resulting_number = $('.map_index__amount span');
@@ -598,131 +614,124 @@ $(document).ready(function () {
          return false
       });
       
+       /* ОЧИСТКА СЕЛЕКТОВ */
+      function clearAllChosen() {
+         $(".map_index__information .icon_close").on("click", function () { // Скрываем при нажатии на крестик в блоке инфы
+            $regions.val(null).trigger("change");
+            $objects.val(null).trigger("change");
+            clearChosen();
+         });
+         $select_clear.on("click", function () { // Скрываем при нажатии на крестик рядом с селектами
+            $regions.val(null).trigger("change");
+            $objects.val(null).trigger("change");
+            clearChosen();
+         });
+      }
+      /* СКРЫТИЕ ПЛАШКИ */
+      function clearChosen() {
+         $map_index.removeAttr('class').addClass('map_index__map'); // Удаляем все лишние классы
+         $region_name.text(''); // Удаляем название региона
+         $select_clear.addClass('disable'); // Блокируем кнопку
+         $('.region__information div').remove(); // Удаляем все объекты инфраструктуры
+         $resulting_number.text(''); // Убираем цифры из оранджевого указателя
+      }
       
-      $region.select2({
-         data: region,
+      
+      $regions.select2({ // Преобразуем селект #regions в select2 и заполняем данными из json
+         data: regions,
          "language": {
             "noResults": function () {
                return "Результаты не найдены";
             }
          }
       });
-      $region.on('select2:select', function (e) { // При выборе, считываем данные этого округа
+      $objects.select2({ // Преобразуем селект #objects в select2 и заполняем данными из json
+         data: objects,
+         "language": {
+            "noResults": function () {
+               return "Результаты не найдены";
+            }
+         }
+      });
+      
+      
+      
+      $regions.on('select2:select', function (e) { // При выборе, считываем данные выбранного округа
          let data = e.params.data;
-            // console.log($region.find(':selected'));
 
          let geoname_id = data.geoname_id,
-            text = data.text,
-            name = data.geonameName,
-            dataObjects = data.objects;
-      
-         showRegion(name, text, dataObjects, geoname_id);
+            region_name = data.text,
+            region_name_en = data.geonameName,
+            region_inner_objects = data.objects;
+         
+         showRegion(region_name_en, region_name, region_inner_objects, geoname_id);
         
       });
    
       
       /* Появление плашки при ВЫБОРЕ РЕГИОНА */
-      function showRegion(name, text, dataObjects, geoname_id) {
+      function showRegion(region_name_en, region_name, region_inner_objects, geoname_id) {
          clearChosen(); // Удаляем всё предыдущее
+         newArr = []; num = []; amount = 0;
       
-         $map_index.addClass(name); // Добавляем сласс geonameName региона
-         $name_region.text(text); // Добавляем название выбранного региона
+         $map_index.addClass(region_name_en); // Добавляем сласс geonameName региона
+         $region_name.text(region_name); // Добавляем название выбранного региона
          $select_clear.removeClass('disable'); // Развлокируеп кнопку отчистки
       
          /* Формируем список объектов инфраструктуры */
-         
-         $.each(dataObjects, function (index, data) { // Перебираем массив объектов инфраструктуры
+         let ident = '', region__object;
+         $.each(region_inner_objects, function (index, data) { // Перебираем массив объектов инфраструктуры
             $.each(data, function (i, val) {
+               
+               if( i === 'id' ) {
+                  ident = val;
+               }
                if (i !== 'id') {
                   if (i === 'amount') { // Подставляем закреплённые там значения
-                     newArr.push('<div class="region__object-num">' + val + '</div>');
+                     region__object = $("<div>", { // Создатём елемент
+                        class: 'region__object-num region__object__' + ident,
+                        "data-num": val
+                      });
+                     newArr.push(region__object.text(val));
                      num.push(val);
                      amount = num.reduce(function(a,b){ return a + b; }); // Считаем сумму всех объектов инфраструктуры
                   } else if (i === 'text') {
-                     newArr.push('<div class="region__object">' + val + '</div>');
+                     region__object = $("<div>", { // Создатём елемент
+                        class: 'region__object region__object__' + ident
+                      });
+                     newArr.push(region__object.text(val));
                   }
                }
             });
          });
          $region_infrastructure.append(newArr);  // Формируем DOM
          $resulting_number.text(amount); // Вставляем сумму в оранджевый указатель
+         clearAllChosen();
          
+         /* СРАБАТЫВАЕТ ПРИ ВЫБОРЕ ОБЪЕКТА ИНФРАСТРУКТУРЫ, ПРИ ВЫБРАННОМ РЕГИОНЕ */
       
-         $(".map_index__information .icon_close").on("click", function () { // Скрываем при нажатии на крестик в блоке инфы
-            $region.val(null).trigger("change");
-            $object.val(null).trigger("change");
-            clearChosen();
-         });
-         $select_clear.on("click", function () { // Скрываем при нажатии на крестик рядом с селектами
-            $region.val(null).trigger("change");
-            $object.val(null).trigger("change");
-            clearChosen();
-         });
+         $objects.on('select2:select', function (e) {
+            let data = e.params.data;
+   
+            let object_id = data.id,
+               object_name = data.text,
+               object_number = data.amount;
          
-      }
-      
-      
-      $object.select2({
-         data: object,
-         "language": {
-            "noResults": function () {
-               return "Результаты не найдены";
-            }
-         }
-      });
-      $object.on('select2:select', function (e) { // При выборе, считываем данные объекта инфраструктуры
-         let data = e.params.data;
-      
-         let o_id = data.id,
-            o_text = data.text,
-            o_amount = data.amount;
-      
-         showObject( o_text, o_amount, o_id );
-        
-      });
-      
-      /* Появление плашки при ВЫБОРЕ ОБЪЕКТА ИНФРАСТРУКТУРЫ */
-      /*  ЕСЛИ НЕ ВЫБРАН РЕГИОН.... */
-      
-      function showObject( o_text, o_amount, o_id ) {
-         clearChosen(); // Удаляем всё предыдущее
-         
-         $select_clear.removeClass('disable'); // Развлокируем кнопку отчистки
-         
-         if( o_text === 'Все объекты инфраструктуры' ) {
-            showEachObject(object);
-            $map_index.addClass('all_regions'); // Добавляем класс all_regions
-            $name_region.text('Все регионы'); // Добавляем 'Все регионы'
-            
-         } else {
-            $('.region__information div').remove();
-            $region_infrastructure.append('<div class="region__object">' + o_text + '</div>');  // Формируем DOM
-            $region_infrastructure.append('<div class="region__object-num">' + o_amount + '</div>');  // Формируем DOM
-            $region.on('select2:select', function (e) { // При выборе, считываем данные этого округа
-               let data = e.params.data;
-            
-               let geoname_id = data.geoname_id,
-                  text = data.text,
-                  name = data.geonameName,
-                  dataObjects = data.objects;
-            
-                  showRegion(name, text, o_text, o_amount, o_id, geoname_id);
-         });
-         }
-         
-    
-         
-          $(".map_index__information .icon_close").on("click", function () { // Скрываем при нажатии на крестик в блоке инфы
-            $region.val(null).trigger("change");
-            $object.val(null).trigger("change");
-            clearChosen();
-         });
-         $select_clear.on("click", function () { // Скрываем при нажатии на крестик рядом с селектами
-            $region.val(null).trigger("change");
-            $object.val(null).trigger("change");
-            clearChosen();
+            showObjectInRegion( region_inner_objects, object_name, object_number, object_id );
+           
          });
       }
+      
+     function showObjectInRegion( region_inner_objects, object_name, object_number, object_id ) {
+         let chosen = $('.region__object__' + object_id),
+             num = $('.region__object-num.region__object__' + object_id).data( 'num');
+         $('.region__information div').not(chosen).hide();
+         chosen.show();
+         $resulting_number.text('');
+         $resulting_number.text(num);
+     }
+      
+     
       function showEachObject( arr ) {
          $('.region__information div').remove();
          newArr = []; num = []; amount = 0;
@@ -750,15 +759,7 @@ $(document).ready(function () {
          $region_infrastructure.append(newArr);  // Формируем DOM
       }
       
-      /* СКРЫТИЕ ПЛАШКИ */
-      function clearChosen() {
-         $map_index.removeAttr('class').addClass('map_index__map'); // Удаляем все лишние классы
-         $name_region.text(''); // Удаляем название региона
-         $select_clear.addClass('disable'); // Блокируем кнопку
-         $('.region__information div').remove(); // Удаляем все объекты инфраструктуры
-         $resulting_number.text(''); // Убираем цифры из оранджевого указателя
-      }
-   
+     
    }
    
    
