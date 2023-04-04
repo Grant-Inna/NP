@@ -28,7 +28,7 @@ $(document).ready(function () {
          federalDistrict: 'Южный',
          id: 584222,
          geonameName: 'Adygeya_Republic left',
-         object: [
+         objects: [
             {
                id: 1, // Этот id тот же, что и в массиве objects
                text: 'Кванториум',
@@ -591,7 +591,14 @@ $(document).ready(function () {
          $region_infrastructure = $('.region__information'),
          $resulting_number = $('.map_index__amount span');
    
+      let newArr = [], num = [], amount;
    
+      $('.disable').on('click', function (event) { // Кнопка в состоянии disable не нажимается
+         event.preventDefault();
+         return false
+      });
+      
+      
       $region.select2({
          data: region,
          "language": {
@@ -602,45 +609,20 @@ $(document).ready(function () {
       });
       $region.on('select2:select', function (e) { // При выборе, считываем данные этого округа
          let data = e.params.data;
-      
+            // console.log($region.find(':selected'));
+
          let geoname_id = data.geoname_id,
             text = data.text,
             name = data.geonameName,
             dataObjects = data.objects;
       
-         showChosen(name, text, dataObjects, geoname_id);
-      
-         $object.on('select2:select ', function (e) { // При выборе, считываем данные этого объекта
-            let data = e.params.data;
-         
-            let o_text = data.text;
-         
-            showObject(o_text, dataObjects);
-         });
+         showRegion(name, text, dataObjects, geoname_id);
+        
       });
- 
-      
-      // // Пишем во всплывашке все объекты
-      // if ($object.hasClass("select2-hidden-accessible")) {
-      //    showAllObjects();
-      // }
-      // $object.on('select2:select', function (e) {
-      //    let data = e.params.data;
-      //
-      //    let id = data.id,
-      //       text = data.text;
-      // });
    
-   
-      $('.disable').on('click', function (event) { // Кнопка в состоянии disable не нажимается
-         event.preventDefault();
-         return false
-      });
-      
-      let newArr = [], num = [], amount;
       
       /* Появление плашки при ВЫБОРЕ РЕГИОНА */
-      function showChosen(name, text, dataObjects, geoname_id) {
+      function showRegion(name, text, dataObjects, geoname_id) {
          clearChosen(); // Удаляем всё предыдущее
       
          $map_index.addClass(name); // Добавляем сласс geonameName региона
@@ -676,6 +658,7 @@ $(document).ready(function () {
             $object.val(null).trigger("change");
             clearChosen();
          });
+         
       }
       
       
@@ -695,23 +678,36 @@ $(document).ready(function () {
             o_amount = data.amount;
       
          showObject( o_text, o_amount, o_id );
-         
+        
       });
       
       /* Появление плашки при ВЫБОРЕ ОБЪЕКТА ИНФРАСТРУКТУРЫ */
+      /*  ЕСЛИ НЕ ВЫБРАН РЕГИОН.... */
+      
       function showObject( o_text, o_amount, o_id ) {
          clearChosen(); // Удаляем всё предыдущее
          
-         $map_index.addClass('all_regions'); // Добавляем класс all_regions
-         $name_region.text('Все регионы'); // Добавляем 'Все регионы'
          $select_clear.removeClass('disable'); // Развлокируем кнопку отчистки
          
          if( o_text === 'Все объекты инфраструктуры' ) {
             showEachObject(object);
+            $map_index.addClass('all_regions'); // Добавляем класс all_regions
+            $name_region.text('Все регионы'); // Добавляем 'Все регионы'
+            
          } else {
             $('.region__information div').remove();
             $region_infrastructure.append('<div class="region__object">' + o_text + '</div>');  // Формируем DOM
             $region_infrastructure.append('<div class="region__object-num">' + o_amount + '</div>');  // Формируем DOM
+            $region.on('select2:select', function (e) { // При выборе, считываем данные этого округа
+               let data = e.params.data;
+            
+               let geoname_id = data.geoname_id,
+                  text = data.text,
+                  name = data.geonameName,
+                  dataObjects = data.objects;
+            
+                  showRegion(name, text, o_text, o_amount, o_id, geoname_id);
+         });
          }
          
     
@@ -729,7 +725,7 @@ $(document).ready(function () {
       }
       function showEachObject( arr ) {
          $('.region__information div').remove();
-         newArr = [], num = [], amount;
+         newArr = []; num = []; amount = 0;
          
          $.each(arr, function (index, data) { // Перебираем массив объектов инфраструктуры
             // console.log();
@@ -745,7 +741,6 @@ $(document).ready(function () {
                      newArr.push('<div class="region__object-num">' + val + '</div>');
                      num.push(val);
                      amount = num.reduce(function(a,b){ return a + b; }); // Считаем сумму всех объектов инфраструктуры
-                     console.log(amount);
                   } else if ( val === '' ) {
                      newArr.push('<div class="region__object-num mt1">' + amount + '</div>')
                   }
