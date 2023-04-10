@@ -133,12 +133,18 @@ section.map__container .wrapper {
 }
 
 .map_index__map {
-   min-width: 100%;
+   width: 100%;
+   margin-right: 4%;
+   margin-left: .5%;
    height: 58rem;
    margin-top: 1.2rem;
    .map_index();
    .xxl-block({
       height: 56vw;
+   });
+   .xs-block({
+      margin-right: 2%;
+      margin-left: .5%;
    });
    
    position: relative;
@@ -161,18 +167,23 @@ section.map__container .wrapper {
 .map_index__information {
    position: absolute;
    max-height: 90%;
-   width: calc( 300px + 4vw );
+   width: 450px;
    
    background-color: @opacity-white-item-80;
-   padding: 1rem 1.2rem 2.2rem;
+   padding: 1rem 1.2rem 2.3rem;
+   box-sizing: border-box;
    border-radius: 2px;
    
    z-index: 99999;
    opacity: 0;
    
-}
-.left .map_index__information {
-   max-width: calc( 350px + 2rem );
+   .middle-block({
+      width: 400px;
+   });
+   .sm-block({
+      width: 300px;
+   })
+   
 }
 
 .map_index__information .icon_close {
@@ -191,13 +202,19 @@ section.map__container .wrapper {
    .items-center();
    margin-right: 2.5rem;
 }
-.left .region__chosen,
-.left .region__information {
-   margin-left: 2rem;
+.region__chosen {
+   .items-start();
+   margin-bottom: 1rem;
+}
+.region__information {
+   //width: calc( 100% - 15px );
+   width: 100%;
+    max-height: 100px;
 }
 
 .region__chosen .icon-pointer {
    margin-right: .6rem;
+   margin-top: 0.3rem;
 }
 
 .region__name {
@@ -277,9 +294,6 @@ h1.region__object + .region__object-num {
    margin-top: 2rem;
    margin-right: 2.5rem;
 }
-.left .region__button {
-   margin-left: 2rem;
-}
 
 .region__button .icon-load-white {
    .icon-load-white();
@@ -311,6 +325,22 @@ h1.region__object + .region__object-num {
    color: @color-text-white;
    font-size: 1.8rem;
 }
+
+// Sides
+// left
+.left .map_index__information {
+   //max-width: calc( 350px + 2rem );
+   padding-left: 3rem;
+}
+
+.left .region__chosen,
+.left .region__information {
+   //margin-left: 2rem;
+}
+.left .region__button {
+   //margin-left: 2rem;
+}
+
 .left .map_index__amount {
    left: -35px;
    bottom: -35px;
@@ -320,6 +350,29 @@ h1.region__object + .region__object-num {
 }
 .left .map_index__amount span {
    transform: rotateY(180deg);
+}
+
+// top left
+.top-left .map_index__information {
+   max-width: calc( 350px + 2rem );
+   padding-left: 3rem;
+}
+.top-left .region__chosen,
+.top-left .region__information {
+   //margin-left: 2rem;
+}
+.top-left .map_index__amount {
+   left: -35px;
+   top: -35px;
+   padding-left: 0;
+   padding-right: 8px;
+   transform: rotateX(180deg) rotateY(180deg);
+}
+.top-left .region__button {
+   //margin-left: 2rem;
+}
+.top-left .map_index__amount span {
+   transform: rotateX(180deg) rotateY(180deg);
 }
 
 

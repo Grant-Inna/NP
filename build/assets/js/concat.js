@@ -43,6 +43,24 @@ $(document).ready(function () {
                id: 2,
                text: 'IT-Kub',
                amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
             }
          ]
       },
@@ -50,7 +68,19 @@ $(document).ready(function () {
          text: 'Республика Башкортостан',
          federalDistrict: 'Приволжский',
          id: 578853,
-         geonameName: 'Bashkortostan_Republic'
+         geonameName: 'Bashkortostan_Republic left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Республика Бурятия',
@@ -62,25 +92,25 @@ $(document).ready(function () {
          text: 'Республика Алтай',
          federalDistrict: 'Сибирский',
          id: 1506272,
-         geonameName: 'Altai'
+         geonameName: 'Altai_Republic'
       },
       {
          text: 'Республика Дагестан',
          federalDistrict: 'Северо-Кавказский',
          id: 567293,
-         geonameName: 'Dagestan'
+         geonameName: 'Dagestan_Republic left'
       },
       {
          text: 'Республика Ингушетия',
          federalDistrict: 'Северо-Кавказский',
          id: 556349,
-         geonameName: 'Ingushetiya_Republic'
+         geonameName: 'Ingushetiya_Republic left'
       },
       {
          text: 'Кабардино-Балкарская Республика',
          federalDistrict: 'Северо-Кавказский',
          id: 554667,
-         geonameName: 'Kabardino-Balkariya_Republic'
+         geonameName: 'Kabardino-Balkariya_Republic left'
       },
       {
          text: 'Республика Калмыкия',
@@ -92,19 +122,49 @@ $(document).ready(function () {
          text: 'Карачаево-Черкесская Республика',
          federalDistrict: 'Северо-Кавказский',
          id: 552927,
-         geonameName: 'Karachayevo-Cherkesiya_Republic'
+         geonameName: 'Karachayevo-Cherkesiya_Republic left'
       },
       {
          text: 'Республика Карелия',
          federalDistrict: 'Северо-Западный',
          id: 552548,
-         geonameName: 'Karelia'
+         geonameName: 'Karelia_Republic top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Республика Коми',
          federalDistrict: 'Северо-Западный',
          id: 545854,
-         geonameName: 'Komi'
+         geonameName: 'Komi_Republic'
       },
       {
          text: 'Республика Марий Эл',
@@ -122,13 +182,13 @@ $(document).ready(function () {
          text: 'Республика Саха (Якутия)',
          federalDistrict: 'Дальневосточный',
          id: 2013162,
-         geonameName: 'Sakha'
+         geonameName: 'Sakha_Republic'
       },
       {
          text: 'Республика Северная Осетия - Алания',
          federalDistrict: 'Северо-Кавказский',
          id: 519969,
-         geonameName: 'North_Ossetia'
+         geonameName: 'North_Ossetia_Republic'
       },
       {
          text: 'Республика Татарстан',
@@ -152,13 +212,13 @@ $(document).ready(function () {
          text: 'Чеченская Республика',
          federalDistrict: 'Северо-Кавказский',
          id: 569665,
-         geonameName: 'Chechnya'
+         geonameName: 'Chechnya_Republic'
       },
       {
          text: 'Чувашская Республика - Чувашия',
          federalDistrict: 'Приволжский',
          id: 567395,
-         geonameName: 'Chuvashia'
+         geonameName: 'Chuvashia_Republic'
       },
       {
          text: 'Алтайский край',
@@ -170,19 +230,19 @@ $(document).ready(function () {
          text: 'Краснодарский край',
          federalDistrict: 'Южный',
          id: 542415,
-         geonameName: 'Krasnodarskiy'
+         geonameName: 'Krasnodarskiy_Krai'
       },
       {
          text: 'Красноярский край',
          federalDistrict: 'Сибирский',
          id: 1502020,
-         geonameName: 'Krasnoyarskiy'
+         geonameName: 'Krasnoyarskiy_Krai'
       },
       {
          text: 'Приморский край',
          federalDistrict: 'Дальневосточный',
          id: 2017623,
-         geonameName: 'Primorskiy_(Maritime)_Kray'
+         geonameName: 'Primorskiy_Maritime_Kray'
       },
       {
          text: 'Ставропольский край',
@@ -194,7 +254,7 @@ $(document).ready(function () {
          text: 'Хабаровский край',
          federalDistrict: 'Дальневосточный',
          id: 2022888,
-         geonameName: 'Khabarovsk'
+         geonameName: 'Khabarovsk_Krai'
       },
       {
          text: 'Амурская область',
@@ -206,13 +266,13 @@ $(document).ready(function () {
          text: 'Архангельская область',
          federalDistrict: 'Северо-Западный',
          id: 581043,
-         geonameName: 'Arkhangelskaya'
+         geonameName: 'Arkhangelskaya_Oblast'
       },
       {
          text: 'Астраханская область',
          federalDistrict: 'Южный',
          id: 580491,
-         geonameName: 'Astrakhan'
+         geonameName: 'Astrakhan_Oblast'
       },
       {
          text: 'Белгородская область',
@@ -230,7 +290,7 @@ $(document).ready(function () {
          text: 'Владимирская область',
          federalDistrict: 'Центральный',
          id: 826294,
-         geonameName: 'Vladimir'
+         geonameName: 'Vladimir_Oblast'
       },
       {
          text: 'Волгоградская область',
@@ -242,19 +302,19 @@ $(document).ready(function () {
          text: 'Вологодская область',
          federalDistrict: 'Северо-Западный',
          id: 472454,
-         geonameName: 'Vologda'
+         geonameName: 'Vologda_Oblast'
       },
       {
          text: 'Воронежская область',
          federalDistrict: 'Центральный',
          id: 472039,
-         geonameName: 'Voronezj'
+         geonameName: 'Voronezj_Oblast'
       },
       {
          text: 'Ивановская область',
          federalDistrict: 'Центральный',
          id: 555235,
-         geonameName: 'Ivanovo'
+         geonameName: 'Ivanovo_Oblast'
       },
       {
          text: 'Иркутская область',
@@ -278,19 +338,19 @@ $(document).ready(function () {
          text: 'Калининградская область',
          federalDistrict: 'Северо-Западный',
          id: 554230,
-         geonameName: 'Kaliningrad'
+         geonameName: 'Kaliningrad_Oblast'
       },
       {
          text: 'Калужская область',
          federalDistrict: 'Центральный',
          id: 553899,
-         geonameName: 'Kaluga'
+         geonameName: 'Kaluga_Oblast'
       },
       {
          text: 'Камчатский край',
          federalDistrict: 'Дальневосточный',
          id: 2125072,
-         geonameName: 'Kamchatka'
+         geonameName: 'Kamchatka_Krai'
       },
       {
          text: 'Кемеровская область - Кузбасс',
@@ -302,7 +362,7 @@ $(document).ready(function () {
          text: 'Кировская область',
          federalDistrict: 'Приволжский',
          id: 548389,
-         geonameName: 'Kirov'
+         geonameName: 'Kirov_Oblast'
       },
       {
          text: 'Костромская область',
@@ -320,7 +380,7 @@ $(document).ready(function () {
          text: 'Курская область',
          federalDistrict: 'Центральный',
          id: 538555,
-         geonameName: 'Kursk'
+         geonameName: 'Kursk_Oblast'
       },
       {
          text: 'Ленинградская область',
@@ -350,7 +410,7 @@ $(document).ready(function () {
          text: 'Мурманская область',
          federalDistrict: 'Северо-Западный',
          id: 524304,
-         geonameName: 'Murmansk'
+         geonameName: 'Murmansk_Oblast'
       },
       {
          text: 'Нижегородская область',
@@ -374,7 +434,7 @@ $(document).ready(function () {
          text: 'Омская область',
          federalDistrict: 'Сибирский',
          id: 1496152,
-         geonameName: 'Omsk'
+         geonameName: 'Omsk_Oblast'
       },
       {
          text: 'Оренбургская область',
@@ -392,13 +452,13 @@ $(document).ready(function () {
          text: 'Пензенская область',
          federalDistrict: 'Приволжский',
          id: 511555,
-         geonameName: 'Penza'
+         geonameName: 'Penza_Oblast'
       },
       {
          text: 'Пермский край',
          federalDistrict: 'Приволжский',
          id: 511180,
-         geonameName: 'Perm'
+         geonameName: 'Perm_Krai'
       },
       {
          text: 'Псковская область',
@@ -410,7 +470,7 @@ $(document).ready(function () {
          text: 'Ростовская область',
          federalDistrict: 'Южный',
          id: 501165,
-         geonameName: 'Rostov'
+         geonameName: 'Rostov_Oblast'
       },
       {
          text: 'Рязанская область',
@@ -440,19 +500,19 @@ $(document).ready(function () {
          text: 'Свердловская область',
          federalDistrict: 'Уральский',
          id: 1490542,
-         geonameName: 'Sverdlovsk'
+         geonameName: 'Sverdlovsk_Oblast'
       },
       {
          text: 'Смоленская область',
          federalDistrict: 'Центральный',
          id: 491684,
-         geonameName: 'Smolensk'
+         geonameName: 'Smolensk_Oblast'
       },
       {
          text: 'Тамбовская область',
          federalDistrict: 'Центральный',
          id: 484638,
-         geonameName: 'Tambov'
+         geonameName: 'Tambov_Oblast'
       },
       {
          text: 'Тверская область',
@@ -470,7 +530,7 @@ $(document).ready(function () {
          text: 'Тульская область',
          federalDistrict: 'Центральный',
          id: 480508,
-         geonameName: 'Tula'
+         geonameName: 'Tula_Oblast'
       },
       {
          text: 'Тюменская область',
@@ -482,40 +542,64 @@ $(document).ready(function () {
          text: 'Ульяновская область',
          federalDistrict: 'Приволжский',
          id: 479119,
-         geonameName: 'Ulyanovsk'
+         geonameName: 'Ulyanovsk_Oblast'
       },
       {
          text: 'Челябинская область',
          federalDistrict: 'Уральский',
          id: 1508290,
-         geonameName: 'Chelyabinsk'
+         geonameName: 'Chelyabinsk_Oblast'
       },
       {
          text: 'Забайкальский край',
          federalDistrict: 'Дальневосточный',
          id: 7779061,
-         geonameName: 'Transbaikal_Territory'
+         geonameName: 'Transbaikal_Krai'
       },
       {
          text: 'Ярославская область',
          federalDistrict: 'Центральный',
          id: 468898,
-         geonameName: 'Jaroslavl'
+         geonameName: 'Jaroslavl_Oblast'
+      },
+      {
+         text: 'Луганская область',
+         federalDistrict: 'Южный',
+         id: 80,
+         geonameName: 'Luhansk_Oblast'
+      },
+      {
+         text: 'Донецкая область',
+         federalDistrict: 'Южный',
+         id: 81,
+         geonameName: 'Donetsk_Oblast'
+      },
+      {
+         text: 'Запорожская область',
+         federalDistrict: 'Южный',
+         id: 82,
+         geonameName: 'Zaporizhia_Oblast'
+      },
+      {
+         text: 'Херсонская область',
+         federalDistrict: 'Южный',
+         id: 82,
+         geonameName: 'Kherson_Oblast'
       },
       {
          text: 'Москва',
          federalDistrict: 'Центральный',
          id: 524894,
-         geonameName: 'Moscow'
+         geonameName: 'Moscow_City'
       },
       {
          text: 'Санкт-Петербург',
          federalDistrict: 'Северо-Западный',
          id: 536203,
-         geonameName: 'St.-Petersburg'
+         geonameName: 'St-Petersburg_City'
       },
       {
-         text: 'Еврейская Аобл',
+         text: 'Еврейская АО',
          federalDistrict: 'Дальневосточный',
          id: 2026639,
          geonameName: 'Jewish_Autonomous_Oblast'
@@ -524,43 +608,37 @@ $(document).ready(function () {
          text: 'Ненецкий АО',
          federalDistrict: 'Северо-Западный',
          id: 522652,
-         geonameName: 'Nenets'
+         geonameName: 'Nenets_AO'
       },
       {
-         text: 'Ханты-Мансийский Автономный округ - Югра',
+         text: 'Ханты-Мансийский АО - Югра',
          federalDistrict: 'Уральский',
          id: 1503773,
-         geonameName: 'Khanty-Mansia'
+         geonameName: 'Khanty-Mansia_AO'
       },
       {
          text: 'Чукотский АО',
          federalDistrict: 'Дальневосточный',
          id: 2126099,
-         geonameName: 'Chukotka'
+         geonameName: 'Chukotka_AO'
       },
       {
          text: 'Ямало-Ненецкий АО',
          federalDistrict: 'Уральский',
          id: 1486462,
-         geonameName: 'Yamalo-Nenets'
+         geonameName: 'Yamalo-Nenets_AO'
       },
       {
          text: 'Республика Крым',
          federalDistrict: 'Южный',
          id: 703883,
-         geonameName: 'Crimea'
+         geonameName: 'Crimea_Republic'
       },
       {
          text: 'Севастополь',
          federalDistrict: 'Южный',
          id: 694422,
          geonameName: 'Sevastopol_City'
-      },
-      {
-         text: 'Байконур',
-         federalDistrict: '',
-         id: 1538316,
-         geonameName: 'Baikonur'
       }
    ];
 
@@ -899,7 +977,9 @@ $(document).ready(function () {
    }
    
 // КОНЕЦ БЛОКА КОДА ДЛЯ КАРТЫ НА ГЛАВНОЙ СТРАНИЦЕ //
+   /* полоса прокрутки */
    
+   $('.scrollbar-inner').scrollbar();
    
    /* боковое меню */
    const width = $(document).width();
