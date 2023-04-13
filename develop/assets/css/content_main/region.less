@@ -2,7 +2,9 @@
    background-image: url("../data/bg/region/@{name}.svg");
    background-position: top;
    .contain();
+   .tr();
 }
+
 
 .all_regions .map_index__region {
    opacity: 0;
@@ -10,13 +12,24 @@
 
 .all_regions .map_index__information {
    opacity: 1;
-   //bottom: 40%;
    top: 10%;
    right: 50%;
+   left: 50%;
    bottom: unset;
-   transform: translateX(50%);
+   transform: translateX(-50%);
 }
-
+.map_index__map.open.all_regions {
+   margin-top: 20px !important;
+}
+.map_index__map.open.all_regions .map_index__information {
+   .to( 800px, {
+      top: 0 !important;
+      right: 50% !important;
+      left: 50% !important;
+   });
+   bottom: unset;
+   transform: translateX(-50%);
+}
 .all_regions .map_index__information .map_index__amount {
    display: none;
 }
@@ -30,12 +43,11 @@
    opacity: 1;
    top: unset;
    right: unset;
-   bottom: 30%;
+   bottom: 35%;
    left: -14px;
-   //transform: translateX(6%) translateY(36%);
-   //.ll-block({
-   //   bottom: 46%;
-   //})
+   .to( 800px, {
+      top: 3rem;
+   });
 }
 
 .Irkutsk_Oblast .map_index__region {
@@ -60,6 +72,9 @@
    left: 18%;
    bottom: 39%;
    transform: none;
+   .to( 800px, {
+      top: 4rem;
+   });
 }
 
 .Buryatiya_Republic .map_index__region {
@@ -68,10 +83,17 @@
 }
 .Buryatiya_Republic .map_index__information {
    opacity: 1;
-   right: 35vw;
-   //left: 34%;
-   bottom: 32%;
-   transform: translateX(30%) translateY(-10%);
+   right: 25%;
+   left: unset;
+   bottom: 34%;
+   //transform: translateX(30%) translateY(-10%);
+   .to( 800px, {
+      //top: 4rem;
+   });
+   .sm-block({
+      right: 0;
+      bottom: unset;
+   })
 }
 
 .Altai_Republic .map_index__region {
@@ -80,9 +102,9 @@
 }
 .Altai_Republic .map_index__information {
    opacity: 1;
-   right: unset;
-   left: 15%;
-   bottom: 21%;
+   left: unset;
+   right: calc( 30% + 11vw );
+   bottom: calc( 27% - 2vw );
    transform: none;
 }
 
@@ -94,8 +116,18 @@
    opacity: 1;
    right: unset;
    left: 3%;
-   bottom: 23%;
+   bottom: calc( 40% - 5vw );
    transform: none;
+}
+.map_index__map.Dagestan_Republic.left.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+}
+.map_index__map.Dagestan_Republic.left.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+   });
 }
 
 .Ingushetiya_Republic .map_index__region {
@@ -106,8 +138,18 @@
    opacity: 1;
    right: unset;
    left: 1.5%;
-   bottom: 26%;
+   bottom: calc( 38% - 3vw );
    transform: none;
+}
+.map_index__map.Ingushetiya_Republic.left.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+}
+.map_index__map.Ingushetiya_Republic.left.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+   });
 }
 
 .Kabardino-Balkariya_Republic .map_index__region {
@@ -118,8 +160,21 @@
    opacity: 1;
    right: unset;
    left: 0.5%;
-   bottom: 28%;
+   bottom: calc( 30% + 1vw );
    transform: none;
+   .ll-block({
+      bottom: calc( 40% + 1vw );
+   })
+}
+.map_index__map.Kabardino-Balkariya_Republic.left.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+}
+.map_index__map.Kabardino-Balkariya_Republic.left.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+   });
 }
 
 .Karachayevo-Cherkesiya_Republic .map_index__region {
@@ -129,9 +184,22 @@
 .Karachayevo-Cherkesiya_Republic .map_index__information {
    opacity: 1;
    right: unset;
-   left: -0.5%;
-   bottom: 30%;
+   left: calc( 1% - 1vw );
+   bottom: calc( 36% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: calc( 40% + 1vw );
+   })
+}
+.map_index__map.Karachayevo-Cherkesiya_Republic.left.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+}
+.map_index__map.Karachayevo-Cherkesiya_Republic.left.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+   });
 }
 
 .Karelia_Republic .map_index__region {
@@ -140,11 +208,27 @@
 }
 .Karelia_Republic .map_index__information {
    opacity: 1;
-   top: 46%;
+   top: 48%;
    right: unset;
-    left: 12%;
+    left: 10%;
     bottom: unset;
    transform: none;
+}
+.map_index__map.Karelia_Republic.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Karelia_Republic.top-left.open .map_index__information {
+   .to( 800px, {
+      top: 15% !important;
+   });
+   .sm-block({
+      top: -250px !important;
+   })
 }
 
 .Kalmykiya_Republic .map_index__region {
@@ -153,10 +237,10 @@
 }
 .Kalmykiya_Republic .map_index__information {
    opacity: 1;
-   top: 46%;
+   top: unset;
    right: unset;
-    left: 12%;
-    bottom: unset;
+    left: 2%;
+    bottom: calc( 40% - 3vw );
    transform: none;
 }
 
@@ -166,11 +250,40 @@
 }
 .Komi_Republic .map_index__information {
    opacity: 1;
-   top: 46%;
+   top: unset;
    right: unset;
-    left: 12%;
-    bottom: unset;
+   left: calc(24% + 8vw);
+   bottom: calc(5% + 2vw);
    transform: none;
+   .ll-block({
+      left: calc(36%);
+      bottom: calc( 5% );
+   });
+   .lg-block({
+      bottom: 0;
+   })
+}
+.top-right.map_index__map.open.Komi_Republic .map_index__information {
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 20% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.map_index__map.Komi_Republic.top-left.open .map_index__information {
+   .to( 800px, {
+      top: 30% !important;
+   });
+   .sm-block({
+    top: -250px !important;
+    bottom: unset !important;
+   })
 }
 
 .Mariy-El_Republic .map_index__region {
@@ -179,11 +292,14 @@
 }
 .Mariy-El_Republic .map_index__information {
    opacity: 1;
-   top: 46%;
+   top: unset;
    right: unset;
     left: 12%;
-    bottom: unset;
+    bottom: calc( 52% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 55%;
+   })
 }
 
 .Mordoviya_Republic .map_index__region {
@@ -192,10 +308,10 @@
 }
 .Mordoviya_Republic .map_index__information {
    opacity: 1;
-   top: 46%;
+   top: unset;
    right: unset;
-    left: 12%;
-    bottom: unset;
+    left: calc( 1% + 6vw );
+    bottom: calc( 54% - 2vw );
    transform: none;
 }
 
@@ -205,11 +321,25 @@
 }
 .Sakha_Republic .map_index__information {
    opacity: 1;
-   top: 46%;
-   right: unset;
-    left: 12%;
-    bottom: unset;
+   top: unset;
+   right: calc( 1% + 5vw );
+    left: unset;
+    bottom: 2vw;
    transform: none;
+}
+.Sakha_Republic .map_index__information .map_index__amount {
+   .to( 800px, {
+      top: unset;
+      left: -15px;
+      bottom: -25px;
+      transform: rotateY(180deg);
+   });
+}
+.Sakha_Republic .map_index__information .map_index__amount span {
+   .to( 800px, {
+      text-align: left;
+      transform: rotateY(180deg);
+   });
 }
 
 .North_Ossetia_Republic .map_index__region {
@@ -218,11 +348,29 @@
 }
 .North_Ossetia_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
     left: 0;
-    bottom: unset;
+    bottom: calc( 34% - 2vw );
    transform: none;
+}
+.map_index__map.North_Ossetia_Republic.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.North_Ossetia_Republic.left.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
 }
 
 .Tatarstan_Republic .map_index__region {
@@ -231,10 +379,10 @@
 }
 .Tatarstan_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 7% + 4vw );
+    bottom: calc( 50% - 2vw );
    transform: none;
 }
 
@@ -244,10 +392,10 @@
 }
 .Udmurtiya_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+  top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 3% - 2vw );
+    bottom: calc( 56% - 3vw );
    transform: none;
 }
 
@@ -257,10 +405,10 @@
 }
 .Khakasiya_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+  top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 10% + 12vw );
+    bottom: calc( 40% - 4vw );
    transform: none;
 }
 
@@ -270,10 +418,10 @@
 }
 .Chechnya_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 3vw;
+    bottom: calc( 44% - 6vw );
    transform: none;
 }
 
@@ -283,10 +431,10 @@
 }
 .Chuvashia_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 10% + 2vw );
+    bottom: calc( 52% - 2vw );
    transform: none;
 }
 
@@ -296,10 +444,10 @@
 }
 .Altai_Krai .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 15% + 3vw );
+    bottom: calc( 38% - 4vw );
    transform: none;
 }
 
@@ -309,10 +457,10 @@
 }
 .Krasnodarskiy_Krai .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc(  1vw );
+    bottom: calc( 45% - 3vw );
    transform: none;
 }
 
@@ -322,10 +470,10 @@
 }
 .Krasnoyarskiy_Krai .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   left: unset;
+    right: calc( 34% +  1vw );
+    bottom: calc( 55% + 3vw );
    transform: none;
 }
 
@@ -335,10 +483,10 @@
 }
 .Primorskiy_Maritime_Kray .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   left: unset;
+    right: calc( 2% +  1vw );
+    bottom: calc( 40% - 1vw );
    transform: none;
 }
 
@@ -348,10 +496,10 @@
 }
 .Stavropol_Kray .map_index__information {
    opacity: 1;
-   top: 0;
+      top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc(  1vw );
+    bottom: calc( 45% - 4vw );
    transform: none;
 }
 
@@ -361,10 +509,10 @@
 }
 .Khabarovsk_Krai .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+    top: unset;
+   left: unset;
+    right: calc( 6% + 2vw );
+    bottom: calc( 65% - 4vw );
    transform: none;
 }
 
@@ -374,10 +522,10 @@
 }
 .Amur_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+    top: unset;
+   left: unset;
+    right: calc( 8% + 2vw );
+    bottom: calc( 52% - 4vw );
    transform: none;
 }
 
@@ -387,11 +535,20 @@
 }
 .Arkhangelskaya_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 20% - 3vw );
+    bottom: 6%;
    transform: none;
+}
+.map_index__map.Arkhangelskaya_Oblast.top-left.open .map_index__information {
+   .to( 800px, {
+      top: 24% !important;
+   });
+   .sm-block({
+    top: -250px !important;
+    bottom: unset !important;
+   })
 }
 
 .Astrakhan_Oblast .map_index__region {
@@ -400,10 +557,10 @@
 }
 .Astrakhan_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 3% + 2vw );
+    bottom: calc( 44% - 4vw );
    transform: none;
 }
 
@@ -413,10 +570,10 @@
 }
 .Belgorod_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 2% + 1vw );
+    bottom: calc( 60% - 4vw );
    transform: none;
 }
 
@@ -426,10 +583,10 @@
 }
 .Bryansk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 2% + 1vw );
+    bottom: calc( 64% - 4vw );
    transform: none;
 }
 
@@ -439,10 +596,10 @@
 }
 .Vladimir_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 6% + 1vw );
+    bottom: calc( 60% - 4vw );
    transform: none;
 }
 
@@ -452,10 +609,10 @@
 }
 .Volgograd_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 2% + 1vw );
+    bottom: calc( 58% - 6vw );
    transform: none;
 }
 
@@ -465,10 +622,71 @@
 }
 .Vologda_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 9% + 2vw );
+    bottom: calc( 6vw - 5% );
+   transform: none;
+}
+.top-left.map_index__map.open.Vologda_Oblast .map_index__information {
+   .to( 1050px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 20%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 20% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-left.Vologda_Oblast .map_index__amount {
+   .to( 1050px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-left.Vologda_Oblast .map_index__amount span {
+   .to( 1050px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
+
+.Voronezj_Oblast .map_index__region {
+   opacity: 1;
+   .region('Voronezj_Oblast');
+}
+.Voronezj_Oblast .map_index__information {
+   opacity: 1;
+   top: unset;
+   right: unset;
+    left: calc( 6%  );
+    bottom: calc( 52% - 2vw );
    transform: none;
 }
 
@@ -478,11 +696,58 @@
 }
 .Ivanovo_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 7% + 2vw );
+    bottom: 1vw;
    transform: none;
+}
+.top-left.map_index__map.open.Ivanovo_Oblast .map_index__information {
+   .to( 1150px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 20%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 20% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-left.Ivanovo_Oblast .map_index__amount {
+   .to( 1150px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-left.Ivanovo_Oblast .map_index__amount span {
+   .to( 1150px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
 }
 
 .Kaliningrad_Oblast .map_index__region {
@@ -491,12 +756,60 @@
 }
 .Kaliningrad_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 10%;
+    bottom: calc( 6% + 5vw );
    transform: none;
 }
+.top-right.map_index__map.open.Kaliningrad_Oblast .map_index__information {
+   .to( 900px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 20%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 20% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Kaliningrad_Oblast .map_index__amount {
+   .to( 900px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Kaliningrad_Oblast .map_index__amount span {
+   .to( 900px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
 
 .Kaluga_Oblast .map_index__region {
    opacity: 1;
@@ -504,10 +817,10 @@
 }
 .Kaluga_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 2vw;
+    bottom: 55%;
    transform: none;
 }
 
@@ -517,12 +830,60 @@
 }
 .Kamchatka_Krai .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   right: -3vw;
+    left: unset;
+    bottom: calc( 4% + 5vw );
    transform: none;
+   .ll-block({
+      right: 0;
+   })
 }
+.top-left.map_index__map.open.Kamchatka_Krai .map_index__information {
+   .to( 800px, {
+      top: unset !important;
+      left: 6px !important;
+      bottom: 30% !important;
+      right: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+      
+      left: 0 !important;
+    right: 0 !important;
+   })
+}
+.top-left.Kamchatka_Krai .map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+      top: unset;
+      left: unset;
+      bottom: -25px;
+      right: -80px;
+      .region-adapt();
+      transform: rotateY(180deg);
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-left.Kamchatka_Krai .map_index__amount span {
+   .to( 800px, {
+     transform: rotateY(180deg);
+      text-align: left;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
 
 .Kemerovo_Oblast .map_index__region {
    opacity: 1;
@@ -530,10 +891,10 @@
 }
 .Kemerovo_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 28% - 6vw );
+    bottom: calc( 40% - 2vw );
    transform: none;
 }
 
@@ -543,11 +904,14 @@
 }
 .Kirov_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
     left: 0;
-    bottom: unset;
+    bottom: calc( 55% - 1vw );
    transform: none;
+   .ll-block({
+       bottom: calc( 57% - 2vw );
+   })
 }
 
 .Kostroma_Oblast .map_index__region {
@@ -556,12 +920,79 @@
 }
 .Kostroma_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 25%;
+    bottom: 0;
    transform: none;
 }
+.map_index__map.Kostroma_Oblast.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Kostroma_Oblast.top-right.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+
+.top-right.map_index__map.open.Kostroma_Oblast .map_index__information {
+   .to( 900px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 20%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 20% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Kostroma_Oblast .map_index__amount {
+   .to( 900px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Kostroma_Oblast .map_index__amount span {
+   .to( 900px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
 
 .Kurgan_Oblast .map_index__region {
    opacity: 1;
@@ -569,10 +1000,10 @@
 }
 .Kurgan_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 3vw;
+    bottom: 41%;
    transform: none;
 }
 
@@ -582,10 +1013,10 @@
 }
 .Kursk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 3vw - 2% );
+    bottom: 53%;
    transform: none;
 }
 
@@ -595,11 +1026,61 @@
 }
 .Leningradskaya_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 25%;
+    bottom: 6vw;
    transform: none;
+   .xxl-block({
+      bottom: 0;
+   })
+}
+.top-right.map_index__map.open.Leningradskaya_Oblast .map_index__information {
+   .to( 900px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 20%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 20% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Leningradskaya_Oblast .map_index__amount {
+   .to( 900px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Leningradskaya_Oblast .map_index__amount span {
+   .to( 900px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
 }
 
 .Lipetsk_Oblast .map_index__region {
@@ -608,10 +1089,10 @@
 }
 .Lipetsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 2%;
+    bottom: calc( 55% - 2vw );
    transform: none;
 }
 
@@ -621,12 +1102,64 @@
 }
 .Magadan_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   right: -2vw;
+    left: unset;
+    bottom: calc( 15% - 3vw );
    transform: none;
+   .ll-block({
+      right: 0;
+      bottom: 15%;
+   });
+   .middle-block({
+      bottom: 4%;
+   })
 }
+.top-left.map_index__map.open.Magadan_Oblast .map_index__information {
+   .to( 800px, {
+      top: unset !important;
+      left: 6px !important;
+      bottom: 40% !important;
+      right: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+      
+      left: 0 !important;
+    right: 0 !important;
+   })
+}
+.top-left.Magadan_Oblast .map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+      top: unset;
+      left: unset;
+      bottom: -25px;
+      right: -80px;
+      .region-adapt();
+      transform: rotateY(180deg);
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-left.Magadan_Oblast .map_index__amount span {
+   .to( 800px, {
+     transform: rotateY(180deg);
+      text-align: left;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
 
 .Moscow_Oblast .map_index__region {
    opacity: 1;
@@ -634,12 +1167,16 @@
 }
 .Moscow_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 5% );
+    bottom: calc(54% + 2vw);
    transform: none;
+   .lg-block({
+      bottom: calc( 53% + 1vw);
+   })
 }
+
 
 .Murmansk_Oblast .map_index__region {
    opacity: 1;
@@ -647,12 +1184,29 @@
 }
 .Murmansk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: 10%;
+    bottom: 20%;
    transform: none;
+   .xxl-block({
+      bottom: 10%;
+   })
 }
+.top-left.map_index__map.open.Murmansk_Oblast {
+   .from-to( 800px, 580px, {
+      margin-top: 20px !important;
+   })
+}
+.top-left.map_index__map.open.Murmansk_Oblast .map_index__information {
+   .to( 800px, {
+      top: 20% !important;
+   });
+   .sm-block({
+      top: -250px !important;
+   })
+}
+
 
 .Nizhny_Novgorod_Oblast .map_index__region {
    opacity: 1;
@@ -660,11 +1214,14 @@
 }
 .Nizhny_Novgorod_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc(6% + 1vw);
+   bottom: calc(53% - 1vw);
    transform: none;
+   .ll-block({
+      bottom: 54%;
+   })
 }
 
 .Novgorod_Oblast .map_index__region {
@@ -673,11 +1230,79 @@
 }
 .Novgorod_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+    left: calc( 26% - 2vw );
+    bottom: 3vw;
    transform: none;
+   .xl-block({
+      bottom: 0;
+   })
+}
+.map_index__map.Novgorod_Oblast.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Novgorod_Oblast.top-left.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.map_index__map.open.Novgorod_Oblast .map_index__information {
+   .to( 900px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 15%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 15% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Novgorod_Oblast .map_index__amount {
+   .to( 900px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Novgorod_Oblast .map_index__amount span {
+   .to( 900px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
 }
 
 .Novosibirsk_Oblast .map_index__region {
@@ -686,11 +1311,17 @@
 }
 .Novosibirsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 4% + 9vw);
+   bottom: calc( 38% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 40%;
+   });
+   .xl-block({
+      left: calc( 10% - 5vw )
+   })
 }
 
 .Omsk_Oblast .map_index__region {
@@ -699,11 +1330,17 @@
 }
 .Omsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 2% + 9vw);
+   bottom: calc( 42% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 44%;
+   });
+   .xl-block({
+      left: calc( 10% - 5vw )
+   })
 }
 
 .Orenburg_Oblast .map_index__region {
@@ -712,11 +1349,17 @@
 }
 .Orenburg_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 2% + 9vw);
+   bottom: calc( 42% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 46%;
+   });
+   .xl-block({
+      left: calc( 12% - 5vw )
+   })
 }
 
 .Orel_Oblast .map_index__region {
@@ -725,11 +1368,17 @@
 }
 .Orel_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 1% + 3vw);
+   bottom: calc( 58% - 2vw );
    transform: none;
+   .xl-block({
+      left: 2vw
+   });
+   .middle-block({
+      bottom: 52%;
+   })
 }
 
 .Penza_Oblast .map_index__region {
@@ -738,11 +1387,21 @@
 }
 .Penza_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 3% + 3vw);
+   bottom: calc( 50% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 52%;
+   });
+   .xl-block({
+      left: 2vw
+   });
+   .middle-block({
+      bottom: 45%;
+      left: 3vw;
+   })
 }
 
 .Perm_Krai .map_index__region {
@@ -751,11 +1410,17 @@
 }
 .Perm_Krai .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 15% + 3vw );
+   bottom: 50%;
    transform: none;
+   .ll-block({
+      bottom: 52%;
+   });
+   .middle-block({
+      left: 15%
+   })
 }
 
 .Pskov_Oblast .map_index__region {
@@ -764,12 +1429,85 @@
 }
 .Pskov_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 15% + 3vw );
+   bottom: 14%;
    transform: none;
+   .ll-block({
+      bottom: calc( 10% + 1vw );
+   });
+   .middle-block({
+      bottom: -1%;
+      left: 20%;
+   })
 }
+.map_index__map.Pskov_Oblast.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Pskov_Oblast.top-right.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.map_index__map.open.Pskov_Oblast .map_index__information {
+   .to( 900px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 15%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 15% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Pskov_Oblast .map_index__amount {
+   .to( 900px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Pskov_Oblast .map_index__amount span {
+   .to( 900px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
 
 .Rostov_Oblast .map_index__region {
    opacity: 1;
@@ -777,11 +1515,14 @@
 }
 .Rostov_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: 0;
+   bottom: calc( 44% - 1vw );
    transform: none;
+   .ll-block({
+      bottom: 44%
+   });
 }
 
 .Ryazan_Oblast .map_index__region {
@@ -790,11 +1531,14 @@
 }
 .Ryazan_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: 5%;
+   bottom: 50%;
    transform: none;
+   .ll-block({
+      bottom: calc( 52% + 1vw );
+   });
 }
 
 .Samara_Oblast .map_index__region {
@@ -803,11 +1547,14 @@
 }
 .Samara_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 2% + 7vw );
+   bottom: calc( 40% + 1vw );
    transform: none;
+   .ll-block({
+      bottom: calc( 45% + 1vw );
+   });
 }
 
 .Saratovskaya_Oblast .map_index__region {
@@ -816,11 +1563,14 @@
 }
 .Saratovskaya_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 2% + 5vw );
+   bottom: 48%;
    transform: none;
+   .middle-block({
+      left: 5vw
+   })
 }
 
 .Sakhalin_Oblast .map_index__region {
@@ -829,10 +1579,10 @@
 }
 .Sakhalin_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   right: 3%;
+   left: unset;
+   bottom: 50%;
    transform: none;
 }
 
@@ -842,11 +1592,14 @@
 }
 .Sverdlovsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: 20%;
+   bottom: calc( 50% - 1vw );
    transform: none;
+   .ll-block({
+      bottom: 54%;
+   });
 }
 
 .Smolensk_Oblast .map_index__region {
@@ -855,12 +1608,82 @@
 }
 .Smolensk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 22% - 2vw );
+   bottom: calc( 8% - 2vw );
    transform: none;
+   .middle-block({
+      bottom: 0
+   })
 }
+.map_index__map.Smolensk_Oblast.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Smolensk_Oblast.top-right.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.map_index__map.open.Smolensk_Oblast .map_index__information {
+   .to( 1050px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 15%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 15% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Smolensk_Oblast .map_index__amount {
+   .to( 1050px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Smolensk_Oblast .map_index__amount span {
+   .to( 1050px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
+
 
 .Tambov_Oblast .map_index__region {
    opacity: 1;
@@ -868,11 +1691,14 @@
 }
 .Tambov_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 6% - 1rem );
+   bottom: calc( 55% - 4vw );
    transform: none;
+   .ll-block({
+      bottom:  calc( 55% - 2vw )
+   });
 }
 
 .Tver_Oblast .map_index__region {
@@ -881,12 +1707,82 @@
 }
 .Tver_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 19% + 3vw );
+   bottom: calc( 2% + 2vw );
    transform: none;
+   .middle-block({
+      bottom: 0
+   })
 }
+.map_index__map.Tver_Oblast.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Tver_Oblast.top-right.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.map_index__map.open.Tver_Oblast .map_index__information {
+   .to( 950px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 15%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 15% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Tver_Oblast .map_index__amount {
+   .to( 950px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Tver_Oblast .map_index__amount span {
+   .to( 950px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
+
 
 .Tomsk_Oblast .map_index__region {
    opacity: 1;
@@ -894,11 +1790,14 @@
 }
 .Tomsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 28% + 3vw );
+   bottom: calc( 40% + 2vw );
    transform: none;
+   .ll-block({
+      bottom:  calc( 44% + 2vw )
+   });
 }
 
 .Tula_Oblast .map_index__region {
@@ -907,11 +1806,14 @@
 }
 .Tula_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 3% + 1vw );
+   bottom: calc( 52% );
    transform: none;
+   .ll-block({
+      bottom: calc( 57% - 1vw )
+   });
 }
 
 .Tyumen_Oblast .map_index__region {
@@ -920,12 +1822,65 @@
 }
 .Tyumen_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   right: calc( 14vw - 5% );
+   left: unset;
+   bottom: 0;
    transform: none;
+   .xl-block({
+      right: -1%;
+   })
 }
+
+.top-right.map_index__map.open.Tyumen_Oblast .map_index__information {
+   .to( 950px, {
+      top: calc( 2vw - 1% );
+      right: 6px !important;
+      bottom: unset;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: -80px !important;
+      right: 6px !important;
+      bottom: unset !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Tyumen_Oblast .map_index__amount {
+   .to( 950px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: unset;
+      bottom: -25px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Tyumen_Oblast .map_index__amount span {
+   .to( 950px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
 
 .Ulyanovsk_Oblast .map_index__region {
    opacity: 1;
@@ -933,11 +1888,18 @@
 }
 .Ulyanovsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 10% + 2vw );
+   bottom: calc( 50% - 3vw );
    transform: none;
+   .ll-block({
+      bottom: 50%
+   });
+   .xl-block({
+      left: 10%;
+      bottom: calc( 53% - 3vw );
+   })
 }
 
 .Chelyabinsk_Oblast .map_index__region {
@@ -946,10 +1908,10 @@
 }
 .Chelyabinsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 17% + 1vw );
+   bottom: calc( 48% - 3vw );
    transform: none;
 }
 
@@ -959,50 +1921,218 @@
 }
 .Transbaikal_Krai .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 38% + 3vw );
+   bottom: calc( 38% + 2vw );
    transform: none;
+   .xl-block({
+      left: calc(30% - 1vw);
+   })
 }
 
-.Moscow .map_index__region {
+.Jaroslavl_Oblast .map_index__region {
    opacity: 1;
-   .region('Moscow');
+   .region('Jaroslavl_Oblast');
 }
-.Moscow .map_index__information {
+.Jaroslavl_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 17% + 5vw );
+   bottom: calc( 10% + 2vw );
    transform: none;
+   .xl-block({
+      left: calc(30% - 1vw);
+   });
+   .middle-block({
+      bottom: 0;
+   })
+}
+.map_index__map.Jaroslavl_Oblast.open {
+   .to( 800px, {
+      margin-top: 40px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Jaroslavl_Oblast.top-right.open .map_index__information {
+   .to( 800px, {
+      top: -40px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.map_index__map.open.Jaroslavl_Oblast .map_index__information {
+   .to( 950px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 18%;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 18% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.Jaroslavl_Oblast .map_index__amount {
+   .to( 950px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.Jaroslavl_Oblast .map_index__amount span {
+   .to( 950px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
 }
 
-.St-Petersburg .map_index__region {
+
+.Moscow_City .map_index__region {
+   opacity: 1;
+   .region('Moscow_City');
+}
+.Moscow_City .map_index__information {
+   opacity: 1;
+   top: unset;
+   right: unset;
+   left: calc( 1% + 3vw );
+   bottom: calc( 52% + 1vw );
+   transform: none;
+   .ll-block({
+      bottom: 57%
+   })
+}
+.map_index__map.Moscow_City.open {
+   .to( 900px, {
+      margin-top: 80px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.Moscow_City.left.open .map_index__information {
+   .to( 900px, {
+      top: -80px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+
+.St-Petersburg_City .map_index__region {
    opacity: 1;
    .region('St-Petersburg');
 }
-.St-Petersburg .map_index__information {
+.St-Petersburg_City .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 17% + 1vw );
+   bottom: calc( 26% - 3vw );
    transform: none;
+   .xxl-block({
+      left: 23%;
+      bottom: 2%;
+   });
+   .lg-block({
+      bottom: 0;
+   })
+}
+.top-right.map_index__map.open.St-Petersburg_City {
+   .to( 800px, {
+          margin-top: 25px !important;
+   });
+   .sm-block({
+          margin-top: 250px !important;
+   });
+}
+.top-right.map_index__map.open.St-Petersburg_City .map_index__information {
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 18% !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right.St-Petersburg_City .map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right.St-Petersburg_City .map_index__amount span {
+   .to( 800px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
 }
 
-.Jewish_Autonomous_Oblast .map_index__region {
+
+.Jewish_AO .map_index__region {
    opacity: 1;
-   .region('Jewish_Autonomous_Oblast');
+   .region('Jewish_AO');
 }
-.Jewish_Autonomous_Oblast .map_index__information {
+.Jewish_AO .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   right: 5%;
+   left: unset;
+   bottom: calc( 40% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 44%
+   })
 }
 
 .Nenets_AO .map_index__region {
@@ -1011,11 +2141,22 @@
 }
 .Nenets_AO .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 17% + 2vw );
+   bottom: calc( 12% + 2vw );
    transform: none;
+   .xl-block({
+      bottom: -2%;
+   })
+}
+.top-left.map_index__map.open.Nenets_AO {
+   .to( 800px, {
+       margin-top: 100px !important;
+   });
+   .sm-block({
+       margin-top: 250px !important;
+   });
 }
 
 .Khanty-Mansia_AO .map_index__region {
@@ -1024,11 +2165,14 @@
 }
 .Khanty-Mansia_AO .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 5% + 2vw );
+   bottom: calc( 46% + 3vw );
    transform: none;
+   .xl-block({
+      left: -2%
+   })
 }
 
 .Chukotka_AO .map_index__region {
@@ -1037,11 +2181,35 @@
 }
 .Chukotka_AO .map_index__information {
    opacity: 1;
-   top: 0;
-   right: unset;
-    left: 0;
-    bottom: unset;
+   top: unset;
+   right: 0;
+   left: unset;
+   bottom: calc( 44% - 6vw );
    transform: none;
+   .xl-block({
+      bottom: 20%;
+   })
+}
+.map_index__map.open.Chukotka_AO {
+   .to( 800px, {
+       margin-top: 10px !important;
+   });
+   .sm-block({
+       margin-top: 250px !important;
+   });
+}
+.top-left.map_index__map.open.Chukotka_AO .map_index__information {
+   .to( 800px, {
+      top: unset !important;
+      right: 6px !important;
+      bottom: 0 !important;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
 }
 
 .Yamalo-Nenets_AO .map_index__region {
@@ -1050,11 +2218,28 @@
 }
 .Yamalo-Nenets_AO .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 24% + 2vw );
+   bottom: 0;
    transform: none;
+}
+.top-left.map_index__map.open.Yamalo-Nenets_AO .map_index__information {
+   .to( 800px, {
+      top: -130px !important;
+      bottom: unset;
+   });
+   .sm-block({
+      top: -250px !important;
+   })
+}
+.map_index__map.open.Yamalo-Nenets_AO {
+   .to( 800px, {
+       margin-top: 150px !important;
+   });
+   .sm-block({
+       margin-top: 250px !important;
+   });
 }
 
 .Crimea_Republic .map_index__region {
@@ -1063,11 +2248,18 @@
 }
 .Crimea_Republic .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: -3vw;
+   bottom: calc( 17% + 10vw );
    transform: none;
+   .to( 1600px, {
+      left: -1vw;
+      bottom: calc( 45% + 3vw );
+   });
+   .ll-block({
+      left: 0;
+   })
 }
 
 .Sevastopol_City .map_index__region {
@@ -1076,11 +2268,18 @@
 }
 .Sevastopol_City .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: -3vw;
+   bottom: calc( 17% + 10vw );
    transform: none;
+   .to( 1600px, {
+      left: -1vw;
+      bottom: calc( 45% + 3vw );
+   });
+   .ll-block({
+      left: 0;
+   })
 }
 
 .Luhansk_Oblast .map_index__region {
@@ -1089,11 +2288,18 @@
 }
 .Luhansk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: calc( 1% + 1vw);
+   bottom: calc( 50% - 2vw );
    transform: none;
+   .xl-block({
+      left: 2vw
+   });
+   .middle-block({
+      bottom: 45%;
+      left: 1vw;
+   })
 }
 
 .Donetsk_Oblast .map_index__region {
@@ -1102,11 +2308,18 @@
 }
 .Donetsk_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: 1vw;
+   bottom: calc( 50% - 2vw );
    transform: none;
+   .xl-block({
+      left: 2vw
+   });
+   .middle-block({
+      bottom: 45%;
+      left: 0;
+   })
 }
 
 .Zaporizhia_Oblast .map_index__region {
@@ -1115,11 +2328,21 @@
 }
 .Zaporizhia_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: 0;
+   bottom: calc( 50% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 52%
+   });
+   .xl-block({
+      left: 2vw
+   });
+   .middle-block({
+      bottom: 45%;
+      left: 0;
+   })
 }
 
 .Kherson_Oblast .map_index__region {
@@ -1128,9 +2351,20 @@
 }
 .Kherson_Oblast .map_index__information {
    opacity: 1;
-   top: 0;
+   top: unset;
    right: unset;
-    left: 0;
-    bottom: unset;
+   left: -1vw;
+   bottom: calc( 50% - 2vw );
    transform: none;
+   .ll-block({
+      bottom: 52%
+   });
+   .xxl-block({
+      left: 1%;
+   });
+   .middle-block({
+      bottom: 45%;
+      left: 0;
+   })
 }
+

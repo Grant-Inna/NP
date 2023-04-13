@@ -76,6 +76,8 @@ section.map__container .wrapper {
 // Карта на главной
 
 .map_index__container {
+   position: relative;
+   z-index: 999;
    width: 100%;
    min-height: 500px;
    margin-top: 3rem;
@@ -149,6 +151,10 @@ section.map__container .wrapper {
    
    position: relative;
    z-index: 999;
+   
+   //.sm-block({
+   //   margin-top: 260px;
+   //})
 }
 
 .map_index__region {
@@ -162,12 +168,12 @@ section.map__container .wrapper {
    
    opacity: 0;
    z-index: 9999;
+   .tr();
 }
 
 .map_index__information {
    position: absolute;
-   max-height: 90%;
-   width: 450px;
+   width: 500px;
    
    background-color: @opacity-white-item-80;
    padding: 1rem 1.2rem 2.3rem;
@@ -178,10 +184,12 @@ section.map__container .wrapper {
    opacity: 0;
    
    .middle-block({
-      width: 400px;
+      width: 450px;
    });
    .sm-block({
-      width: 300px;
+      width: 100%;
+      top: -210px;
+      bottom: unset;
    })
    
 }
@@ -207,11 +215,12 @@ section.map__container .wrapper {
    margin-bottom: 1rem;
 }
 .region__information {
-   //width: calc( 100% - 15px );
    width: 100%;
-    max-height: 100px;
+    max-height: 6rem;
 }
-
+.all_regions .map_index__information .region__information  {
+   max-height: 40rem;
+}
 .region__chosen .icon-pointer {
    margin-right: .6rem;
    margin-top: 0.3rem;
@@ -310,10 +319,10 @@ h1.region__object + .region__object-num {
 .map_index__amount {
    position: absolute;
    padding-left: 36px;
-   padding-top: 8px;
+   padding-top: 5px;
    box-sizing: border-box;
-   width: 90px;
-   height: 60px;
+   width: 95px;
+   height: 65px;
    right: -35px;
    bottom: -35px;
    .region();
@@ -329,21 +338,13 @@ h1.region__object + .region__object-num {
 // Sides
 // left
 .left .map_index__information {
-   //max-width: calc( 350px + 2rem );
    padding-left: 3rem;
-}
-
-.left .region__chosen,
-.left .region__information {
-   //margin-left: 2rem;
-}
-.left .region__button {
-   //margin-left: 2rem;
 }
 
 .left .map_index__amount {
    left: -35px;
    bottom: -35px;
+   padding-top: 8px;
    padding-left: 0;
    padding-right: 11px;
    transform: rotateY(180deg);
@@ -354,26 +355,236 @@ h1.region__object + .region__object-num {
 
 // top left
 .top-left .map_index__information {
-   max-width: calc( 350px + 2rem );
    padding-left: 3rem;
-}
-.top-left .region__chosen,
-.top-left .region__information {
-   //margin-left: 2rem;
 }
 .top-left .map_index__amount {
    left: -35px;
    top: -35px;
    padding-left: 0;
    padding-right: 8px;
+   padding-top: 8px;
    transform: rotateX(180deg) rotateY(180deg);
-}
-.top-left .region__button {
-   //margin-left: 2rem;
 }
 .top-left .map_index__amount span {
    transform: rotateX(180deg) rotateY(180deg);
 }
+
+// top right
+.top-right .map_index__information {
+   padding-left: 3rem;
+}
+.top-right .map_index__amount {
+   left: -48px;
+    top: -45px;
+   padding-left: 0;
+   padding-right: 8px;
+   padding-top: 6px;
+   transform: rotateX(180deg);
+}
+.top-right .map_index__amount span {
+   transform: rotateX(180deg);
+   text-align: right;
+}
+
+
+
+// Adaptive
+.map_index__map.open {
+   .to( 800px, {
+      margin-top: 80px !important;
+   });
+   .sm-block({
+      margin-top: 250px !important;
+   })
+}
+.map_index__map.open .map_index__information {
+   .to( 800px, {
+      top: -80px !important;
+      bottom: unset !important;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.region__information {
+   .sm-block({
+      max-height: 90px;
+   })
+}
+
+.left .map_index__information {
+   .to( 800px, {
+      top: 0;
+      right: 6px;
+      bottom: unset;
+      left: unset;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px;
+   })
+}
+.left .map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+          left: unset;
+    bottom: -15px;
+    right: -35px;
+      .region-adapt();
+     transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+      padding-top: 7px;
+   })
+}
+.left .map_index__amount span {
+   .to( 800px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
+
+.top-left.map_index__map.open .map_index__information {
+   .to( 800px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 0;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+      
+      left: 0 !important;
+    right: 0 !important;
+   })
+}
+.top-left .map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-left .map_index__amount span {
+   .to( 800px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
+
+.top-right.map_index__map.open .map_index__information {
+   .to( 800px, {
+      top: unset;
+      right: 6px !important;
+      bottom: 0;
+      left: unset !important;
+      padding-left: 1.2rem;
+   });
+   .sm-block({
+      top: -250px !important;
+      bottom: unset !important;
+   })
+}
+.top-right .map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+      right: unset;
+      top: -15px;
+      left: -80px;
+      .region-adapt();
+      transform: none;
+   });
+   .sm-block({
+      .region-sm();
+      top: unset;
+      left: -2%;
+      bottom: -25px;
+      padding-left: 2%;
+   })
+}
+.top-right .map_index__amount span {
+   .to( 800px, {
+     transform: none;
+      text-align: right;
+   });
+   .sm-block({
+     text-align: left;
+   })
+}
+
+
+.map_index__information {
+   .to( 800px, {
+      top: 0 !important;
+      left: -3px !important;
+      bottom: unset !important;
+      right: unset !important;
+   });
+   .sm-block({
+      width: calc(100% - 4px);
+    margin-right: 1px;
+   })
+}
+
+.map_index__amount {
+   .to( 800px, {
+      width: 120px;
+      height: 35px;
+      left: -15px;
+      right: unset;
+      bottom: -15px;
+      .region-adapt();
+     transform: rotateY(180deg);
+      padding-right: 2%;
+   });
+   .sm-block({
+      .region-sm();
+      left: -2%;
+      bottom: -25px;
+      padding-right: 2%;
+   })
+}
+.map_index__amount span {
+   .to( 800px, {
+     transform: rotateY(180deg);
+      text-align: left;
+   });
+   .sm-block({
+   
+   })
+}
+
+
+
+
 
 
 // Selector

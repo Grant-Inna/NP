@@ -86,7 +86,19 @@ $(document).ready(function () {
          text: 'Республика Бурятия',
          federalDistrict: 'Дальневосточный',
          id: 2050915,
-         geonameName: 'Buryatiya_Republic'
+         geonameName: 'Buryatiya_Republic',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Республика Алтай',
@@ -116,7 +128,7 @@ $(document).ready(function () {
          text: 'Республика Калмыкия',
          federalDistrict: 'Южный',
          id: 553972,
-         geonameName: 'Kalmykiya_Republic'
+         geonameName: 'Kalmykiya_Republic left'
       },
       {
          text: 'Карачаево-Черкесская Республика',
@@ -164,37 +176,97 @@ $(document).ready(function () {
          text: 'Республика Коми',
          federalDistrict: 'Северо-Западный',
          id: 545854,
-         geonameName: 'Komi_Republic'
+         geonameName: 'Komi_Republic top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Республика Марий Эл',
          federalDistrict: 'Приволжский',
          id: 529352,
-         geonameName: 'Mariy-El_Republic'
+         geonameName: 'Mariy-El_Republic left'
       },
       {
          text: 'Республика Мордовия',
          federalDistrict: 'Приволжский',
          id: 525369,
-         geonameName: 'Mordoviya_Republic'
+         geonameName: 'Mordoviya_Republic left'
       },
       {
          text: 'Республика Саха (Якутия)',
          federalDistrict: 'Дальневосточный',
          id: 2013162,
-         geonameName: 'Sakha_Republic'
+         geonameName: 'Sakha_Republic top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Республика Северная Осетия - Алания',
          federalDistrict: 'Северо-Кавказский',
          id: 519969,
-         geonameName: 'North_Ossetia_Republic'
+         geonameName: 'North_Ossetia_Republic left'
       },
       {
          text: 'Республика Татарстан',
          federalDistrict: 'Приволжский',
          id: 484048,
-         geonameName: 'Tatarstan_Republic'
+         geonameName: 'Tatarstan_Republic left'
       },
       {
          text: 'Удмуртская Республика',
@@ -212,13 +284,13 @@ $(document).ready(function () {
          text: 'Чеченская Республика',
          federalDistrict: 'Северо-Кавказский',
          id: 569665,
-         geonameName: 'Chechnya_Republic'
+         geonameName: 'Chechnya_Republic left'
       },
       {
          text: 'Чувашская Республика - Чувашия',
          federalDistrict: 'Приволжский',
          id: 567395,
-         geonameName: 'Chuvashia_Republic'
+         geonameName: 'Chuvashia_Republic left'
       },
       {
          text: 'Алтайский край',
@@ -230,7 +302,7 @@ $(document).ready(function () {
          text: 'Краснодарский край',
          federalDistrict: 'Южный',
          id: 542415,
-         geonameName: 'Krasnodarskiy_Krai'
+         geonameName: 'Krasnodarskiy_Krai left'
       },
       {
          text: 'Красноярский край',
@@ -248,7 +320,7 @@ $(document).ready(function () {
          text: 'Ставропольский край',
          federalDistrict: 'Северо-Кавказский',
          id: 487839,
-         geonameName: 'Stavropol_Kray'
+         geonameName: 'Stavropol_Kray left'
       },
       {
          text: 'Хабаровский край',
@@ -266,55 +338,145 @@ $(document).ready(function () {
          text: 'Архангельская область',
          federalDistrict: 'Северо-Западный',
          id: 581043,
-         geonameName: 'Arkhangelskaya_Oblast'
+         geonameName: 'Arkhangelskaya_Oblast top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Астраханская область',
          federalDistrict: 'Южный',
          id: 580491,
-         geonameName: 'Astrakhan_Oblast'
+         geonameName: 'Astrakhan_Oblast left'
       },
       {
          text: 'Белгородская область',
          federalDistrict: 'Центральный',
          id: 578071,
-         geonameName: 'Belgorod_Oblast'
+         geonameName: 'Belgorod_Oblast left'
       },
       {
          text: 'Брянская область',
          federalDistrict: 'Центральный',
          id: 571473,
-         geonameName: 'Bryansk_Oblast'
+         geonameName: 'Bryansk_Oblast left'
       },
       {
          text: 'Владимирская область',
          federalDistrict: 'Центральный',
          id: 826294,
-         geonameName: 'Vladimir_Oblast'
+         geonameName: 'Vladimir_Oblast left'
       },
       {
          text: 'Волгоградская область',
          federalDistrict: 'Южный',
          id: 472755,
-         geonameName: 'Volgograd_Oblast'
+         geonameName: 'Volgograd_Oblast left'
       },
       {
          text: 'Вологодская область',
          federalDistrict: 'Северо-Западный',
          id: 472454,
-         geonameName: 'Vologda_Oblast'
+         geonameName: 'Vologda_Oblast top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Воронежская область',
          federalDistrict: 'Центральный',
          id: 472039,
-         geonameName: 'Voronezj_Oblast'
+         geonameName: 'Voronezj_Oblast left'
       },
       {
          text: 'Ивановская область',
          federalDistrict: 'Центральный',
          id: 555235,
-         geonameName: 'Ivanovo_Oblast'
+         geonameName: 'Ivanovo_Oblast top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Иркутская область',
@@ -338,19 +500,109 @@ $(document).ready(function () {
          text: 'Калининградская область',
          federalDistrict: 'Северо-Западный',
          id: 554230,
-         geonameName: 'Kaliningrad_Oblast'
+         geonameName: 'Kaliningrad_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Калужская область',
          federalDistrict: 'Центральный',
          id: 553899,
-         geonameName: 'Kaluga_Oblast'
+         geonameName: 'Kaluga_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Камчатский край',
          federalDistrict: 'Дальневосточный',
          id: 2125072,
-         geonameName: 'Kamchatka_Krai'
+         geonameName: 'Kamchatka_Krai top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Кемеровская область - Кузбасс',
@@ -362,13 +614,73 @@ $(document).ready(function () {
          text: 'Кировская область',
          federalDistrict: 'Приволжский',
          id: 548389,
-         geonameName: 'Kirov_Oblast'
+         geonameName: 'Kirov_Oblast',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Костромская область',
          federalDistrict: 'Центральный',
          id: 543871,
-         geonameName: 'Kostroma_Oblast'
+         geonameName: 'Kostroma_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Курганская область',
@@ -380,49 +692,289 @@ $(document).ready(function () {
          text: 'Курская область',
          federalDistrict: 'Центральный',
          id: 538555,
-         geonameName: 'Kursk_Oblast'
+         geonameName: 'Kursk_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Ленинградская область',
          federalDistrict: 'Северо-Западный',
          id: 536199,
-         geonameName: 'Leningradskaya_Oblast'
+         geonameName: 'Leningradskaya_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Липецкая область',
          federalDistrict: 'Центральный',
          id: 535120,
-         geonameName: 'Lipetsk_Oblast'
+         geonameName: 'Lipetsk_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Магаданская область',
          federalDistrict: 'Дальневосточный',
          id: 2123627,
-         geonameName: 'Magadan_Oblast'
+         geonameName: 'Magadan_Oblast top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Московская область',
          federalDistrict: 'Центральный',
          id: 524925,
-         geonameName: 'Moscow_Oblast'
+         geonameName: 'Moscow_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Мурманская область',
          federalDistrict: 'Северо-Западный',
          id: 524304,
-         geonameName: 'Murmansk_Oblast'
+         geonameName: 'Murmansk_Oblast top-left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Нижегородская область',
          federalDistrict: 'Приволжский',
          id: 559838,
-         geonameName: 'Nizhny_Novgorod_Oblast'
+         geonameName: 'Nizhny_Novgorod_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Новгородская область',
          federalDistrict: 'Северо-Западный',
          id: 519324,
-         geonameName: 'Novgorod_Oblast'
+         geonameName: 'Novgorod_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Новосибирская область',
@@ -440,115 +992,535 @@ $(document).ready(function () {
          text: 'Оренбургская область',
          federalDistrict: 'Приволжский',
          id: 515001,
-         geonameName: 'Orenburg_Oblast'
+         geonameName: 'Orenburg_Oblast left'
       },
       {
          text: 'Орловская область',
          federalDistrict: 'Центральный',
          id: 514801,
-         geonameName: 'Orel_Oblast'
+         geonameName: 'Orel_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Пензенская область',
          federalDistrict: 'Приволжский',
          id: 511555,
-         geonameName: 'Penza_Oblast'
+         geonameName: 'Penza_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Пермский край',
          federalDistrict: 'Приволжский',
          id: 511180,
-         geonameName: 'Perm_Krai'
+         geonameName: 'Perm_Krai left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Псковская область',
          federalDistrict: 'Северо-Западный',
          id: 504338,
-         geonameName: 'Pskov_Oblast'
+         geonameName: 'Pskov_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Ростовская область',
          federalDistrict: 'Южный',
          id: 501165,
-         geonameName: 'Rostov_Oblast'
+         geonameName: 'Rostov_Oblast left'
       },
       {
          text: 'Рязанская область',
          federalDistrict: 'Центральный',
          id: 500059,
-         geonameName: 'Ryazan_Oblast'
+         geonameName: 'Ryazan_Oblast left'
       },
       {
          text: 'Самарская область',
          federalDistrict: 'Приволжский',
          id: 499068,
-         geonameName: 'Samara_Oblast'
+         geonameName: 'Samara_Oblast left'
       },
       {
          text: 'Саратовская область',
          federalDistrict: 'Приволжский',
          id: 498671,
-         geonameName: 'Saratovskaya_Oblast'
+         geonameName: 'Saratovskaya_Oblast left'
       },
       {
          text: 'Сахалинская область',
          federalDistrict: 'Дальневосточный',
          id: 2121529,
-         geonameName: 'Sakhalin_Oblast'
+         geonameName: 'Sakhalin_Oblast',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Свердловская область',
          federalDistrict: 'Уральский',
          id: 1490542,
-         geonameName: 'Sverdlovsk_Oblast'
+         geonameName: 'Sverdlovsk_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Смоленская область',
          federalDistrict: 'Центральный',
          id: 491684,
-         geonameName: 'Smolensk_Oblast'
+         geonameName: 'Smolensk_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Тамбовская область',
          federalDistrict: 'Центральный',
          id: 484638,
-         geonameName: 'Tambov_Oblast'
+         geonameName: 'Tambov_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Тверская область',
          federalDistrict: 'Центральный',
          id: 480041,
-         geonameName: 'Tver_Oblast'
+         geonameName: 'Tver_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Томская область',
          federalDistrict: 'Сибирский',
          id: 1489421,
-         geonameName: 'Tomsk_Oblast'
+         geonameName: 'Tomsk_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Тульская область',
          federalDistrict: 'Центральный',
          id: 480508,
-         geonameName: 'Tula_Oblast'
+         geonameName: 'Tula_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Тюменская область',
          federalDistrict: 'Уральский',
          id: 1488747,
-         geonameName: 'Tyumen_Oblast'
+         geonameName: 'Tyumen_Oblast top-right',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Ульяновская область',
          federalDistrict: 'Приволжский',
          id: 479119,
-         geonameName: 'Ulyanovsk_Oblast'
+         geonameName: 'Ulyanovsk_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Челябинская область',
          federalDistrict: 'Уральский',
          id: 1508290,
-         geonameName: 'Chelyabinsk_Oblast'
+         geonameName: 'Chelyabinsk_Oblast left',
+         objects: [
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Забайкальский край',
@@ -560,85 +1532,395 @@ $(document).ready(function () {
          text: 'Ярославская область',
          federalDistrict: 'Центральный',
          id: 468898,
-         geonameName: 'Jaroslavl_Oblast'
+         geonameName: 'Jaroslavl_Oblast top-right'
       },
       {
          text: 'Луганская область',
          federalDistrict: 'Южный',
          id: 80,
-         geonameName: 'Luhansk_Oblast'
+         geonameName: 'Luhansk_Oblast left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Донецкая область',
          federalDistrict: 'Южный',
          id: 81,
-         geonameName: 'Donetsk_Oblast'
+         geonameName: 'Donetsk_Oblast left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Запорожская область',
          federalDistrict: 'Южный',
          id: 82,
-         geonameName: 'Zaporizhia_Oblast'
+         geonameName: 'Zaporizhia_Oblast left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Херсонская область',
          federalDistrict: 'Южный',
          id: 82,
-         geonameName: 'Kherson_Oblast'
+         geonameName: 'Kherson_Oblast left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Москва',
          federalDistrict: 'Центральный',
          id: 524894,
-         geonameName: 'Moscow_City'
+         geonameName: 'Moscow_City left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Санкт-Петербург',
          federalDistrict: 'Северо-Западный',
          id: 536203,
-         geonameName: 'St-Petersburg_City'
+         geonameName: 'St-Petersburg_City top-right',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Еврейская АО',
          federalDistrict: 'Дальневосточный',
          id: 2026639,
-         geonameName: 'Jewish_Autonomous_Oblast'
+         geonameName: 'Jewish_AO'
       },
       {
          text: 'Ненецкий АО',
          federalDistrict: 'Северо-Западный',
          id: 522652,
-         geonameName: 'Nenets_AO'
+         geonameName: 'Nenets_AO top-left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Ханты-Мансийский АО - Югра',
          federalDistrict: 'Уральский',
          id: 1503773,
-         geonameName: 'Khanty-Mansia_AO'
+         geonameName: 'Khanty-Mansia_AO',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Чукотский АО',
          federalDistrict: 'Дальневосточный',
          id: 2126099,
-         geonameName: 'Chukotka_AO'
+         geonameName: 'Chukotka_AO top-left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Ямало-Ненецкий АО',
          federalDistrict: 'Уральский',
          id: 1486462,
-         geonameName: 'Yamalo-Nenets_AO'
+         geonameName: 'Yamalo-Nenets_AO top-left',
+         objects: [
+            
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Длинное длинное название объекта инфраструктуры для повышения квалификации педагогами или развития школьников',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            },{
+               id: 1, // Этот id тот же, что и в массиве objects
+               text: 'Кванториум',
+               amount: 21
+            },
+            {
+               id: 2,
+               text: 'IT-Kub',
+               amount: 13
+            }
+         ]
       },
       {
          text: 'Республика Крым',
          federalDistrict: 'Южный',
          id: 703883,
-         geonameName: 'Crimea_Republic'
+         geonameName: 'Crimea_Republic left'
       },
       {
          text: 'Севастополь',
          federalDistrict: 'Южный',
          id: 694422,
-         geonameName: 'Sevastopol_City'
+         geonameName: 'Sevastopol_City left'
       }
    ];
 
@@ -733,7 +2015,7 @@ $(document).ready(function () {
       }
       /* ПОКАЗАТЬ КАРТОЧКУ  */
       function showInfoCard( reg_class, reg_name ) {
-         $map_index.addClass(reg_class); // Добавляем сласс geonameName региона
+         $map_index.addClass(reg_class + ' open'); // Добавляем сласс geonameName региона
          $region_name.text(reg_name); // Добавляем название выбранного региона
          $select_clear.removeClass('disable'); // Развлокирует кнопку отчистки у селектов
       }
