@@ -1,4 +1,5 @@
 $(document).ready(function () {
+/*
    const regions = [
       {
          text: 'Все регионы',
@@ -1923,17 +1924,18 @@ $(document).ready(function () {
          geonameName: 'Sevastopol_City left'
       }
    ];
+*/
 
    
-   // $(function() {  Access to XMLHttpRequest at 'http://10.50.10.180:8096/regions' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
-   //    $.ajax({
-   //       type: "POST",
-   //       dataType: "json",
-   //       url: "http://10.50.10.180:8096/regions",
-   //       data: "regions",
-   //       // success: success
-   //    })
-   // });
+   $(function() {
+      $.ajax({
+         type: "POST",
+         dataType: "json",
+         url: "http://10.50.10.180:8096/regions",
+         data: "regions",
+         // success: success
+      })
+   });
    
    const objects = [
       {
