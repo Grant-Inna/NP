@@ -1,5 +1,4 @@
 $(document).ready(function () {
-/*
    const regions = [
       {
          text: 'Все регионы',
@@ -1924,10 +1923,9 @@ $(document).ready(function () {
          geonameName: 'Sevastopol_City left'
       }
    ];
-*/
 
    
-   $(function() {
+/*   $(function() {
       $.ajax({
          type: "POST",
          dataType: "json",
@@ -1935,7 +1933,7 @@ $(document).ready(function () {
          data: "regions",
          // success: success
       })
-   });
+   });*/
    
    const objects = [
       {
