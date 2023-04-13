@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   const regions = [
+  /* const regions = [
       {
          text: 'Все регионы',
          federalDistrict: '',
@@ -1922,18 +1922,18 @@ $(document).ready(function () {
          id: 694422,
          geonameName: 'Sevastopol_City left'
       }
-   ];
+   ];*/
 
    
-/*   $(function() {
+   $(function() {
       $.ajax({
          type: "POST",
          dataType: "json",
-         url: "http://10.50.10.180:8096/regions",
+         url: "https://youtrackcos.ficto.ru/regions",
          data: "regions",
          // success: success
       })
-   });*/
+   });
    
    const objects = [
       {
