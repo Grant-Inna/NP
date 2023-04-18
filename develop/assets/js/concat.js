@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  /* const regions = [
+   const regions = [
       {
          text: 'Все регионы',
          federalDistrict: '',
@@ -257,7 +257,7 @@ $(document).ready(function () {
          ]
       },
       {
-         text: 'Республика Северная Осетия - Алания',
+         text: 'Республика Северная Осетия-Алания',
          federalDistrict: 'Северо-Кавказский',
          id: 519969,
          geonameName: 'North_Ossetia_Republic left'
@@ -267,6 +267,12 @@ $(document).ready(function () {
          federalDistrict: 'Приволжский',
          id: 484048,
          geonameName: 'Tatarstan_Republic left'
+      },
+      {
+         text: 'Республика Тыва',
+         federalDistrict: 'Южный',
+         id: 4048,
+         geonameName: 'Tuva_Republic left'
       },
       {
          text: 'Удмуртская Республика',
@@ -1922,10 +1928,10 @@ $(document).ready(function () {
          id: 694422,
          geonameName: 'Sevastopol_City left'
       }
-   ];*/
+   ];
 
    
-   $(function() {
+/*   $(function() {
       $.ajax({
          type: "POST",
          dataType: "json",
@@ -1934,7 +1940,7 @@ $(document).ready(function () {
          // success: success
       })
    });
-   
+   */
    const objects = [
       {
          id: 0,
