@@ -206,6 +206,59 @@
    .icon-15();
    background-position: center;
 }
+
+.pagination() {
+   background-size: contain;
+   background-position: center;
+   width: 15px;
+   height: 15px;
+}
+.pagination_disable .pagination__arrow_left {
+   .icon-color-svg('icons', 'arrow', 'disable_left');
+   .pagination();
+}
+.pagination__arrow_right {
+   .icon-color-svg('icons', 'arrow', 'active_right');
+   .pagination();
+}
+
+.pagination__arrow_left {
+   .icon-color-svg('icons', 'arrow', 'active_left');
+   .pagination();
+}
+.pagination_disable .pagination__arrow_right {
+   .icon-color-svg('icons', 'arrow', 'disable_right');
+   .pagination();
+}
+
+.pagination__arrow:hover .pagination__arrow_right {
+   .icon-color-svg('icons', 'arrow', 'hover_right');
+   .pagination();
+}
+.pagination__arrow:hover .pagination__arrow_left {
+   .icon-color-svg('icons', 'arrow', 'hover_left');
+   .pagination();
+}
+
+.pagination__arrow.pagination_disable:hover .pagination__arrow_left {
+   .icon-color-svg('icons', 'arrow', 'disable_left');
+}
+.pagination__arrow.pagination_disable:hover .pagination__arrow_right {
+      .icon-color-svg('icons', 'arrow', 'disable_right');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 .prev() {
    .icon-svg('icons', 'prev');
