@@ -1936,9 +1936,8 @@ $(document).ready(function () {
    function initMap(regions) {
       let id_r, reg, map, map_index;
       id_r = 0; reg = ''; map = [];
-   
-   
-      // Перебираем массив объектов инфраструктуры
+      
+      // Перебираем массив регионов
          $.each(regions, function (index, data) {
             $.each(data, function (i, val) {
                
@@ -1948,23 +1947,23 @@ $(document).ready(function () {
                if (i === 'path') { // Подставляем закреплённые там значения
                   reg = $("<path>", { // Создатём елемент
                      id: id_r,
-                     class: 'region',
                      d: val,
+                     class: 'region',
                      fill: 'white',
                      stroke: "grey",
-                     "stroke-width": ".3",
-                     "data-position": "up-right"
+                     "stroke-width": ".3"
                   });
                   map.push(reg);
                   }
             });
          });
-         // map_index = $('<svg class="map_index__svg" width="100%" height="100%" viewBox="0 0 1025 600" style="transition: all 0.5s ease 0s;"></svg>');
-         // map_index.append(map);
+         map_index = $('<svg class="map_index__svg" width="100%" height="100%" viewBox="0 0 1025 600" style="transition: all 0.5s ease 0s;"></svg>');
+         map_index.append(map);
         
+         $('.map_index__map').append(map_index);  // Формируем DOM
          $('.map_index__svg').append(map);  // Формируем DOM
    }
-   initMap(regions);
+   
    
 /*   $(function() {
       $.ajax({
@@ -2000,6 +1999,10 @@ $(document).ready(function () {
    ];
    /* Select у карты */
    if ($('#regions').length > 0) {
+      
+      initMap(regions);
+      
+      
       let $regions = $('#regions'),
          $objects = $('#objects'),
          $map_index = $('.map_index__map'),
