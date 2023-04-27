@@ -1,20 +1,5 @@
 mixin video( name, img, id )
-   a.materials_video__holder.modal-link(href='javascript: void(0);' data-modal-id='#{id}')
-      img( src='../../assets/images/video/#{img}' )
+   .materials_video__holder
+      iframe(src='http://www.youtube.com/embed/DkaUsBwe0fo' width='100%' height='100%' frameborder='0' allowfullscreen)
+         p Твой браузер устарел для отображения элемента iframe
       .materials_video__name.span !{name}
-   article.modal-overlay(data-modal-id='#{id}')
-      .modal-table
-         .modal-table-cell
-            .modal
-               .modal__close
-               h1.modal__header !{name}
-
-               .materials_video__container
-                  .materials_video__ratio
-                  .materials_video
-                     video(width='100%' height='100%' controls='controls' poster='../../assets/images/video/#{img}')
-                        source(src='video/duel.ogv' type='video/ogg; codecs="theora, vorbis"')
-                        source(src='video/duel.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
-                        source(src='video/duel.webm' type='video/webm; codecs="vp8, vorbis"')
-
-               a.materials_video__download( href='video/duel.mp4') Скачать видео

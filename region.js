@@ -1,3 +1,18 @@
+
+ //article.modal-overlay(data-modal-id='#{id}')
+   //   .modal-table
+   //      .modal-table-cell
+   //         .modal
+   //            .modal__close
+   //            h1.modal__header !{name}
+   //
+   //            .materials_video__container
+   //               .materials_video__ratio
+   //               .materials_video
+   //                  iframe(src='http://www.youtube.com/embed/DkaUsBwe0fo' width='100%' height='100%' frameborder='0' style='border: 1px solid #1D5EE4')
+
+
+ 
 const region = [
       {
          text: 'Все регионы', federal_district: '', geoname_id: '1', geoname_name: 'All'
