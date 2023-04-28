@@ -1954,7 +1954,7 @@ $(document).ready(function () {
                      "stroke-width": ".3"
                   });
                   map.push(reg);
-                  }
+               }
             });
          });
          map_index = $('<svg class="map_index__svg" width="100%" height="100%" viewBox="0 0 1025 600" style="transition: all 0.5s ease 0s;"></svg>');
@@ -2001,6 +2001,25 @@ $(document).ready(function () {
    if ($('#regions').length > 0) {
       
       initMap(regions);
+      
+      $('.map_index__svg path').on( 'click', function() { // пробуем обращаться к path
+         $('.map_index__svg path').attr( {
+            'fill': '#0D4ECA',
+            'stroke-width': '.3'
+         });
+         $(this).attr({ // Подсветить выбранное
+            'fill': '#E37878',
+            'stroke-width': '1'
+         });
+         
+         // Далее нужно будет считать id выбранного региона, перебрать массив regions и найти нужное.
+         // Далее перебрать objects и вывести в карточке информацию о объектах
+         // Нужно ещё добавлять класс, за которым будет всё тянуться. Отдельная функция с удалением и скрытием всего и вся
+         
+          $('#regions').val("1166").trigger("change"); // в select записывается выбранный через click регион
+         console.log($('#regions').val()); // id региона
+         $objects.prop("disabled", false); // Разблокируем выбор объекта инфраструктуры
+      });
       
       
       let $regions = $('#regions'),
@@ -2082,6 +2101,7 @@ $(document).ready(function () {
       });
       $objects.prop("disabled", true); // Блокируем выбор объекта
       
+      /* ВЫБИРАЕМ РЕГИОН */
       $regions.on('select2:select', function (e) { // При выборе, считываем данные выбранного округа
          $objects.prop("disabled", false); // Разблокируем выбор объекта
          
