@@ -2645,6 +2645,7 @@ $(document).ready(function () {
       
       /* ОЧИСТКА СЕЛЕКТОВ */
       function clearAllChosen() {
+         
          $(".map_index__information .icon_close").on("click", function () { // Скрываем при нажатии на крестик в блоке инфы
             $regions.val(null).trigger("change");
             $objects.val(null).trigger("change");
@@ -2657,6 +2658,7 @@ $(document).ready(function () {
             }).removeClass('region_chosen');
          });
          $select_clear.on("click", function () { // Скрываем при нажатии на крестик рядом с селектами
+            // alert();
             $regions.val(null).trigger("change");
             $objects.val(null).trigger("change");
             clearChosen();
@@ -2726,6 +2728,7 @@ $(document).ready(function () {
          }).addClass('region_chosen');
          
          $select_clear.removeClass('disable'); // Разблокируем кнопку
+         clearAllChosen();
          $district.hide();
          let id = $(this).attr('id');
          
