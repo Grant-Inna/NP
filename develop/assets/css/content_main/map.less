@@ -337,7 +337,7 @@ h1.region__object + .region__object-num {
    color: @color-text-white;
    font-size: 1.8rem;
 }
-
+/*
 // Sides
 // left
 .left .map_index__information {
@@ -583,8 +583,36 @@ h1.region__object + .region__object-num {
    .sm-block({
    
    })
+}*/
+
+
+
+.district {
+   .flex();
+   position: absolute;
+   top: calc( 1rem + 3vw);
+   width: 100%;
+   .opensans-semibold();
+   font-size: 1.4rem;
+   text-align: left;
+   color: #f2f2f2;
+   
+   .tr();
 }
 
+path:hover {
+   //fill: #5593df;
+   fill: #5b9def;
+   stroke-width: .5;
+   .tr();
+}
+
+path.region_chosen:hover {
+   fill: #b84442;
+   stroke: #d5ccc9;
+   stroke-width: .8;
+   .tr();
+}
 
 
 
