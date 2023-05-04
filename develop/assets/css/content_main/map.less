@@ -137,12 +137,12 @@ section.map__container .wrapper {
 .map_index__map {
    width: 100%;
    margin-right: 4%;
-   margin-left: .5%;
    height: 58rem;
    margin-top: 1.2rem;
-   //.map_index();
+  
    .xxl-block({
       height: 56vw;
+      //margin-top: calc( 6rem - 2vw );
    });
    .xs-block({
       margin-right: 2%;
@@ -151,10 +151,27 @@ section.map__container .wrapper {
    
    position: relative;
    z-index: 999;
+   .tr();
    
-   //.sm-block({
-   //   margin-top: 260px;
-   //})
+   .sm-block({
+      height: 56vw;
+      //margin-top: 170px;
+   })
+}
+.map_index__map.open {
+   .xxl-block({
+      margin-top: calc( 6rem - 2vw );
+   });
+    .sm-block({
+      margin-top: 150px;
+   });
+   .tr();
+}
+.district_hover {
+   .sm-block({
+      margin-top: 170px;
+   });
+   .tr();
 }
 
 .map_index__region {
@@ -174,9 +191,13 @@ section.map__container .wrapper {
    //transform: rotate(7deg) translateX(-32px) translateY(-38px)
 }
 
-.map_index__information {
+#map_index__information {
    position: absolute;
+   display: none;
    width: 500px;
+   top: 1vw;
+   left: 50%;
+   transform: translateX(-50%);
    
    background-color: @opacity-white-item-80;
    padding: 1rem 1.2rem 2.3rem;
@@ -184,20 +205,22 @@ section.map__container .wrapper {
    border-radius: 2px;
    
    z-index: 99999;
-   opacity: 0;
+   //opacity: 0;
    
    .middle-block({
       width: 450px;
+      top: 2vw
    });
    .sm-block({
       width: 100%;
-      top: -210px;
+      top: -115px;
       bottom: unset;
+      margin-right: 6px;
    })
    
 }
 
-.map_index__information .icon_close {
+#map_index__information .icon_close {
    cursor: pointer;
    width: 1.6rem;
    height: 1.6rem;
@@ -221,9 +244,7 @@ section.map__container .wrapper {
    width: 100%;
     max-height: 6rem;
 }
-.all_regions .map_index__information .region__information  {
-   max-height: 40rem;
-}
+
 .region__chosen .icon-pointer {
    margin-right: .6rem;
    margin-top: 0.3rem;
@@ -304,7 +325,7 @@ h1.region__object + .region__object-num {
 
 .region__button {
    margin-top: 2rem;
-   margin-right: 2.5rem;
+   //margin-right: 2.5rem;
 }
 
 .region__button .icon-load-white {
@@ -319,7 +340,9 @@ h1.region__object + .region__object-num {
    line-height: 1rem;
 }
 
-.map_index__amount {
+/*.map_index__amount {
+   display: none;
+   
    position: absolute;
    padding-left: 36px;
    padding-top: 5px;
@@ -336,7 +359,7 @@ h1.region__object + .region__object-num {
    .opensans-semibold();
    color: @color-text-white;
    font-size: 1.8rem;
-}
+}*/
 /*
 // Sides
 // left
@@ -585,13 +608,15 @@ h1.region__object + .region__object-num {
    })
 }*/
 
-
+.region_chosen {
+   fill: #b84442;
+   stroke-width: .6;
+   stroke: #d5ccc9;
+}
 
 .district {
-   .flex();
-   .items-center();
    position: absolute;
-   top: calc( 1rem + 3vw);
+   top: 1vw;
    width: 100%;
    .opensans-semibold();
    font-size: 1.4rem;
@@ -599,6 +624,30 @@ h1.region__object + .region__object-num {
    color: #f2f2f2;
    
    .tr();
+   
+   .sm-block({
+     top: -10px;
+   });
+   
+   div {
+      .flex();
+      .items-center();
+   }
+   .fd {
+      margin-top: 0.5rem;
+      margin-left: 23px;
+   }
+}
+.map_index__map.open .district {
+   .xxl-block({
+      top: -4vw;
+   });
+   .lg-block({
+      top: calc( -5vw - 1rem)
+   });
+    .sm-block({
+      top: -165px;
+   });
 }
 
 path:hover {

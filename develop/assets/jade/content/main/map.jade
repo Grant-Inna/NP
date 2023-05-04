@@ -14,11 +14,15 @@ section( aria-label='Объекты инфраструктуры на карте
       .map_index__map
          svg#map_index__svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 808.9 458.9' width='100%' style='transition: all 0.5s ease 0s;' xml:space='preserve')
          .district
-            i.icon-point
-            span
+            .name
+               i.icon-point
+               span
+            .fd
+               span
+               | &nbsp;Федеральный округ
 
          //.map_index__region
-         .map_index__information
+         #map_index__information
             .icon_close
             .region__chosen
                .icon-pointer
@@ -28,7 +32,7 @@ section( aria-label='Объекты инфраструктуры на карте
             .button_blue.region__button
                .icon-load-white
                span Скачать реестр
-            .map_index__amount
-               span
+            //.map_index__amount
+            //   span
 
 
