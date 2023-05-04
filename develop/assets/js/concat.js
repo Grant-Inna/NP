@@ -1311,6 +1311,7 @@ $(document).ready(function () {
   function initMap(regions) {
    // console.log(regions)
    $('.district').hide();
+   $('#map_index__information').hide();
    // Перебираем массив регионов
       $.each(regions, function (index, data) {
          var newpath = document.createElementNS("http://www.w3.org/2000/svg","path");
