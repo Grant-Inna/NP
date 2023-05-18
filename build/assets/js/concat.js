@@ -1428,7 +1428,7 @@ $(document).ready(function () {
       function returnObjectsNull() {
          $load_info_btn.addClass('disable'); // Блокирование кнопки "скачать..."
          // Добавляем "пустой" элемент
-         $total_wrapper.show(); // Показываем надпись "всего объектов...."
+         $total_wrapper.show().addClass(); // Показываем надпись "всего объектов...."
          $total_text.text(region__object_null);
          $total_num.text('');
          
@@ -1781,10 +1781,50 @@ $(document).ready(function () {
             returnObjectsNull();
          }
       }
-      
-      
-   }
    
+   
+      var $map_index__total = $('h1.map_index__total'),
+         $arrow_more = $('.region__more');
+      
+      $arrow_more.on( 'click', showInformationOnMobile);
+      
+      var total_hide_style = {
+            height: 0,
+            opacity: 0,
+            marginBottom: 0,
+            marginTop: 0
+         },
+         total_show_style = {
+            height: 'auto',
+            opacity: 1,
+            marginBottom: '2rem',
+            marginTop: '2rem'
+         };
+      
+      if ( $(document).width() <= 1070 ) {
+         $map_index__total.css( total_hide_style );
+      }
+   }
+   function showInformationOnMobile() {
+      let parent =  $(this).parent('#map_index__information');
+      $(this).hide();
+      parent.find('.scroll-wrapper.scrollbar-inner').css( 'height', '100%');
+      parent.find('.scrollbar-inner.scroll-content.scroll-scrolly_visible').css( 'max-height', 'unset');
+      parent.find($map_index__total).css( total_show_style );
+      parent.find('.button_blue.region__button').css( 'display', 'flex' );
+      
+      $("#map_index__information .icon_close").on("click", hidenformationOnMobile );
+      $('.select__clear').on("click", hidenformationOnMobile );
+   }
+   function hidenformationOnMobile() {
+      $arrow_more.show();
+      $('.scroll-wrapper.scrollbar-inner').css( 'height', '0');
+      $('.scrollbar-inner.scroll-content.scroll-scrolly_visible').css( 'max-height', '0');
+      $map_index__total.css( total_hide_style );
+      $('.button_blue.region__button').css( 'display', 'none' );
+      
+      $arrow_more.on( 'click', showInformationOnMobile);
+   }
 // КОНЕЦ БЛОКА КОДА ДЛЯ КАРТЫ НА ГЛАВНОЙ СТРАНИЦЕ //
    /* полоса прокрутки */
    
