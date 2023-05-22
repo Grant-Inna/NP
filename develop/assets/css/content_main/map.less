@@ -273,6 +273,12 @@ section.map__container .wrapper {
    .xl-block({
        max-height: 8rem;
    });
+   .middle-block({
+       max-height: 12rem;
+   });
+   .md-block({
+       max-height: 15rem;
+   });
 }
 
 .region__chosen .icon-pointer {
@@ -309,6 +315,11 @@ section.map__container .wrapper {
    .size-xxl(19);
    .size-xl(18);
    .size-md(18);
+   
+   .md-block({
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+   })
 }
 h1.map_index__total .region__object {
    .opensans-regular();
@@ -510,6 +521,10 @@ path.region_chosen:hover {
    
    text-align: center;
     margin-top: 2rem;
+   
+   .from( @break_middle, {
+      display: none !important;
+   })
 }
 .icon_arrow-black {
    margin-right: auto;
@@ -517,6 +532,12 @@ path.region_chosen:hover {
    margin-top: .8rem;
 }
 @media screen and (max-width: @break_middle) {
+   //#map_index__information.open .total__empty {
+   //   height: auto;
+   //   opacity: 1;
+   //   margin-bottom: 2rem;
+   //   margin-top: 2rem;
+   //}
    #map_index__information {
       padding: 1rem 1.2rem 1.8rem;
    }
