@@ -34,17 +34,17 @@ $(document).ready(function () {
          Objects: [
             {
                id: 1, // Этот id тот же, что и в массиве objects
-               text: 'Центры непрерывного повышения профессионального мастерства педагогических работников',
+               text: 'Центр образования «Точка роста»',
                amount: 21
             },
             {
                id: 2,
-               text: 'Региональные центры выявления, поддержки и развития способностей и талантов у детей и молодежи',
+               text: 'Центр «IT-куб»',
                amount: 13
             },
             {
-               id: 3,
-               text: 'Педагогические технопарки «КВАНТОРИУМ»',
+               id: 4,
+               text: 'Детский и мобильный технопарк «Кванториум»',
                amount: 15
             }
          ],
@@ -1320,25 +1320,54 @@ $(document).ready(function () {
          amount: ''
       },{
          id: 1,
-         text: 'Центры непрерывного повышения профессионального мастерства педагогических работников',
+         text: 'Центр образования «Точка роста»',
          amount: 400
       },
       {
          id: 2,
-         text: 'Региональные центры выявления, поддержки и развития способностей и талантов у детей и молодежи',
+         text: 'Центр «IT-куб»',
          amount: 200
       },
       {
-         id: 4,
-         text: '«Точка роста»',
+         id: 3,
+         text: 'Кванториум',
          amount: 300
       },
       {
-         id: 3,
-         text: 'Педагогические технопарки «КВАНТОРИУМ»',
+         id: 4,
+         text: 'Школьный Кванториум',
          amount: 500
       },
-      
+      {
+         id: 5,
+         text: 'Детский и мобильный технопарк «Кванториум»',
+         amount: 500
+      },
+      {
+         id: 6,
+         text: 'Педагогический Кванториум',
+         amount: 500
+      },
+      {
+         id: 7,
+         text: 'Центр опережающей профессиональной подготовки',
+         amount: 500
+      },
+      {
+         id: 8,
+         text: 'Центр «ДНК»',
+         amount: 500
+      },
+      {
+         id: 9,
+         text: 'Центр выявления и поддержки одарённых детей',
+         amount: 500
+      },
+      {
+         id: 10,
+         text: 'Центр непрерывного повышения профессионального мастерства педагогических работников',
+         amount: 500
+      }
    ];
    
    
@@ -1485,16 +1514,16 @@ $(document).ready(function () {
       });
       
       
-      /* ___ ВЫЗОВ КАРТОЧКИ РЕГИОНА И ФИКСАЦИЯ ЕГО ID ____ */
+/* _______________ ВЫЗОВ КАРТОЧКИ РЕГИОНА И ФИКСАЦИЯ ЕГО ID ________________ */
       
       $region_svg.on('click', function (event) {
          showRegionCard(event.target.id)
       });
       $regions.on('select2:select', function (event) {
          if (event.params.data.id > 0) {
-            showRegionCard(event.params.data.id)
+            showRegionCard(event.params.data.id) // Функция для отдельных регионов
          } else {
-            showAllRegionsCard()
+            showAllRegionsCard() // Функция для 'все регионы'
          }
       });
       
@@ -1666,9 +1695,9 @@ $(document).ready(function () {
          $('.button_blue.region__button').css('display', 'flex');
       }
       
+      /* ФУНКЦИИ ТОЛЬКО ДЛЯ ВЫБОРА В SELECT 'ВСЕ РЕГИОНЫ' */
       
       function showAllRegionsCard() {
-         
          clearChosen(); // Удаляем и очищаем всё, сделанное ранее
          $information_card.show(200).addClass('show_every_width');
          $map_index.addClass('open'); // Добавляем класс open региона
@@ -1715,7 +1744,6 @@ $(document).ready(function () {
             showOneObject(event, objects, total_amount);
          });
       }
-      
       
    }
   
