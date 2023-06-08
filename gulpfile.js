@@ -56,6 +56,9 @@ let gridOptions = {
          fields: "20px",
          offset: "12px"
       },
+      mdsm: {
+         width: "660px"
+      },
       sm: {
          width: "580px"
       },

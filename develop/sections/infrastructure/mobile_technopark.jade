@@ -1,0 +1,138 @@
+doctype
+html
+   include ../../assets/jade/static/__header
+   +head('Детские и мобильные технопарки "Кванториум" | Инфраструктура проекта', '../..')
+
+   body
+      #container.container__infrastructure.container__mobile
+         include ../../assets/jade/menu/infrastructure/menu
+         include ../../assets/jade/menu/infrastructure/mobile
+         include ../../assets/jade/content/pages/header
+         +header( 'Инфраструктура<br>проекта'  )
+
+
+         include ../../assets/jade/content/pages/infrastructure/__caption
+         +caption( 'kvantorium', 'Детские технопарки «КВАНТОРИУМ»', 'Образовательный центр с высокотехнологичным оборудованием, в котором реализуются программы как дополнительного образования (технической и естественнонаучной направленности), так и общего. Ключевая особенность — проектный подход и решение максимально практикоориентированных задач (зачастую из реального сектора) из-за наличия оборудования, позволяющего реализовать идеи команды; наставники — «не педагоги»: около 50% практикующих специалистов', '')
+
+         include  ../../assets/jade/content/pages/infrastructure/__info-one
+         include  ../../assets/jade/content/pages/infrastructure/__info-text-line
+         section( aria-label='О региональных центрах')
+            .infrastructure_info__container.infrastructure_info-green
+               .wrapper
+                  +info-one( 'created', '135', 'создано<br>и&nbsp;функционирует' )
+                  .info_list__container
+                     +info-text( 'Командная работа')
+                     +info-text( 'Среда ускоренного инженерного развития')
+                     +info-text( 'Социальный лифт')
+                     +info-text( 'Совместные проекты с бизнесом и госкорпорациями')
+
+         section( aria-label='О региональном центре')
+            .wrapper.mb4
+               article
+                  h1.text-blue.mt4 Командная работа
+                  .span.mt1 Обучение основано на принципах проектной командной деятельности: все навыки дети получают непосредственно в процессе своего проекта. Обучение предполагает формирование несоревновательной среды, в которой каждый ребенок может проявить свои навыки и умения, не зависимо от начального уровня подготовки.
+               article
+                  h1.text-blue.mt3 Среда ускоренного инженерного развития
+                  .span.mt1 Занятия нацелены на формирование национально-ориентированного кадрового резерва для наукоемких и высокотехнологичных отраслей экономики РФ.
+               article
+                  h1.text-blue.mt3 Социальный лифт
+                  .span.mt1 Все обучающиеся детских технопарков получают поддержку и сопровождение, в том числе после окончания обучения, что позволяет выстроить социальный лифт для тех, кто проявил значительные таланты в научно-техническом творчестве.
+               article
+                  h1.text-blue.mt3 Совместные проекты с бизнесом и госкорпорациями
+                  .span.mt1 Разработка востребованных образовательных программ технической направленности совместно с партнерами, предоставление детям производственных задач для решения в рамках образовательного процесса. Проведение конкурсных и иных мероприятий для детей и наставников, в том числе проведение летних смен.
+
+         .line_blue
+
+         include ../../assets/jade/content/pages/infrastructure/__caption
+         +caption( 'kvantorium', 'Мобильный технопарк «КВАНТОРИУМ»', 'Мобильный технопарк «Кванториум» — передвижная лаборатория, оснащенная высокотехнологичным оборудованием.', '')
+
+         include  ../../assets/jade/content/pages/infrastructure/__info-one
+         include  ../../assets/jade/content/pages/infrastructure/__info-text-line
+         section( aria-label='О региональных центрах')
+            .infrastructure_info__container.infrastructure_info-gblue
+               .wrapper
+                  +info-one( 'created', '85', 'создано<br>и&nbsp;функционирует' )
+                  .info_list__container
+                     +info-text( 'обучение детей в сельских школах и школах, расположенных в труднодоступной местности')
+                     +info-text( 'осуществление дополнительной подготовки и практико-ориентированного обучения педагогов школ и учреждений дополнительного образования детей технических областей')
+
+         section( aria-label='Занятия в рамках этих центров').mt4.mb5
+            .wrapper
+               article.span
+                  b.inline.mr В первой половине дня
+                  span на базе мобильных технопарков  «Кванториум» обучающиеся осваивают предметную область «Технология»
+               article.span.mt2
+                  b.inline.mr Вторая половина
+                  span дня посвящена реализации дополнительных общеразвивающих программ естественнонаучного и технического характера по следующим направлениям:
+                  .row.mt2.mb2
+                     .block_8.flex
+                        .icon_check-blue.mr1
+                        span VR/Промдизайн
+                     .block_14.flex
+                        .icon_check-blue.mr1
+                        span Робо/IT
+                     .block_8.flex
+                        .icon_check-blue.mr1
+                        span Гео/Аэро
+                     .block_14.flex
+                        .icon_check-blue.mr1
+                        span Хайтек
+               article
+                  .span На базе мобильного технопарка «Кванториум» также осуществляется дополнительная подготовка и практико-ориентированное обучение педагогов школ и учреждений дополнительного образования детей технических областей.
+
+         section( aria-label='Скачать информацию о контактах всех центров непрерывного повышения профессионального мастерства педагогических работников')
+            include ../../assets/jade/content/pages/infrastructure/__map
+            +map( 'Детские и мобильные технопарки &laquo;Кванториум&raquo;', '')
+
+
+         include ../../assets/jade/content/materials/__file
+         section( aria-label='Список документов' ).mt5
+            .wrapper
+               .page__title
+                  h1.page__title_main.text-blue.center Нормативные документы
+               .materials__container.mt3
+                  +file( 'текст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст текст')
+                  +file( 'текст текст текст')
+                  +file( 'текст текст текст')
+                  +file( 'текст текст текст')
+
+                  include ../../assets/jade/content/pages/pagination
+
+         include ../../assets/jade/content/materials/__video
+         section( aria-label='Список видеозаписей' ).mt8.mb5
+            .wrapper
+               .page__title
+                  h1.page__title_main.text-blue.center Видеоматериалы
+
+               .span.center.mt2 Практические мастер-классы
+               .materials__container.mt3
+                  +video( 'Название 1', '', 'sirius_11')
+                  +video( 'Название 5', '', 'sirius_5')
+                  +video( 'Название 6', '', 'sirius_6')
+                  +video( 'Название 7', '', 'sirius_7')
+
+
+               .span.center.mt4 Вебинары, методические конфиренции и&nbsp;семинары
+               .materials__container.mt3
+                  +video( 'Название 1', '', 'sirius_1')
+                  +video( 'Название 2', '', 'sirius_2')
+                  +video( 'Название 4', '', 'sirius_4')
+                  +video( 'Название 3', '', 'sirius_3')
+
+         include ../../assets/jade/content/pages/__info_block/top
+         include ../../assets/jade/content/pages/__info_block/__footer-link
+         include ../../assets/jade/content/pages/__info_block/__footer-mail
+         include ../../assets/jade/content/pages/__info_block/__footer-phone
+         include ../../assets/jade/content/pages/__info_block/__footer-vk
+         section( aria-label='Контакты региональных центров' ).page_footer__container
+            .wrapper
+               .page_footer__info
+                  +top( 'Федеральный оператор:', '', 'Федеральное государственное бюджетное образовательное учреждение дополнительного образования «Федеральный центр дополнительного образования и организации отдыха и оздоровления детей»', '', 'full')
+                  +top( 'Юридический и фактический адрес:', '', '107014, Москва, Ростокинский проезд, дом 3', '', 'full')
+                  +phone( 'Горячая линия:', '+7 (495) 603-30-15', '+74956033015')
+                  +mail( 'Электронная почта:', 'info@fedcdo.ru')
+                  +site( 'Сайт:', 'https://roskvantorium.ru/')
+                  +vk( 'Страница проекта в социальных сетях&nbsp;&mdash; https://vk.com/roskvantorium', 'https://vk.com/roskvantorium')
+
+         include ../../assets/jade/footer/footer
+      include ../../assets/jade/static/scripts

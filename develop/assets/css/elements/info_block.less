@@ -51,7 +51,13 @@ section.info_block__container .wrapper {
        margin-bottom: @offset_md * 1.6;
     });
 }
-
+.page_footer__info a:hover,
+.page_footer__info a:hover .span,
+.info_block__text a:hover,
+.info_block__text a:hover .span {
+   .tr();
+   text-shadow: @shadow-text-white;
+}
 .info_block__more {
    margin-left: @inner;
    margin-right: @inner;
@@ -70,8 +76,8 @@ section.info_block__container .wrapper {
 }
 .full {
    .col();
-   .size(24);
-   .size-xxl(24);
+   .size(20);
+   .size-xxl(20);
    .size-md(24);
 }
 .grow-full {

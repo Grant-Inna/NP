@@ -1297,7 +1297,7 @@ $(document).ready(function () {
          newpath.setAttribute("data-district", data.federalDistrict);
          newpath.setAttribute("stroke", '#ebf1f6');
          newpath.setAttribute("stroke-width", '.4');
-         newpath.setAttribute("fill", "#0D4ECA");
+         newpath.setAttribute("fill", "#0272B0");
          document.getElementById("map_index__svg").appendChild(newpath);
       });
 }

@@ -15,7 +15,7 @@ section.deadline__container:after {
    top: 0;
    left: 0;
    
-   background: @color-background-blue-dark;
+   background: @color-background-blue-light-new;
    .large-block({
       width: calc(40% - 10vw);
    })
@@ -348,6 +348,23 @@ footer.footer__container:after {
       top: -14%;
    })
 }
+/*#container.container__mobile .headline_green:after {
+   .pseudo();
+   .headline-green();
+   
+   top: -2%;
+   right: 0;
+   
+   width: 35rem;
+   height: 105%;
+   
+   .md-block({
+      top: -14%;
+   })
+}*/
+
+
+
 #container.container__about .headline_blue-dark:after {
    content: none;
 }
@@ -561,15 +578,32 @@ section.deadline__container:before {
 }
 .page_footer__info:before {
    .pseudo();
+   z-index: 300;
    bottom: 2%;
-   right: 3rem;
+   left: 100%;
    width: 50%;
    height: 70%;
    
    min-width: 280px;
    min-height: 280px;
    
+   transform: translateX(-60%) translateY(25%);
+   
    .page_footer();
+   
+   opacity: .8;
+   .xxl-block({
+      left: 90%;
+      opacity: .6;
+   });
+   .xl-block({
+      left: 80%;
+      opacity: .4;
+   });
+   .middle-block({
+      bottom: 14%;
+      opacity: .3;
+   });
 }
 #container.container__infrastructure header.header__container:before {
    .pseudo();
@@ -611,7 +645,11 @@ section.deadline__container:before {
 }
 .infrastructure_info-dblue:after {
    .pseudo-infrastructure-info();
-   .headline-dblue();
+   .headline-blue-dark();
+}
+.infrastructure_info-green:after {
+   .pseudo-infrastructure-info();
+   .headline-green();
 }
 
 // Конец Разноцветных блоков на странице инфраструктуры

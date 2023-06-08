@@ -28,7 +28,7 @@
 
 .blue_header-bg() {
    .background('header-blue.svg');
-   background-position: top;
+   background-position: top right;
    .cover();
    .to( 1450px, {
       //background-position: 70%;
@@ -66,7 +66,7 @@
    background-position: left top;
 }
 .logo-pseudo() {
-   .polygon('polygon-3-main.png');
+   .polygon('polygon-3-main.svg');
    background-position: center;
    .contain();
 }
@@ -84,7 +84,7 @@
 }
 .aside-arrow-blue() {
    background-image: url("../data/icons/arrow-blue.svg");
-   .cover();
+   .contain();
    background-position: center;
    
    width: 5rem;
@@ -98,7 +98,7 @@
    
 }
 .wrapper-main-blue() {
-   background-image: url("../data/bg/polygon/polygon-1-main.png");
+   background-image: url("../data/bg/polygon/polygon-1-main.svg");
    .contain();
    background-position: center;
 }
@@ -126,7 +126,7 @@
 
 
 .map-bg() {
-   .background( 'long-blue-gradient.png' );
+   .background( 'long-blue-gradient.svg' );
    background-repeat: no-repeat;
    .cover();
 }
@@ -291,14 +291,75 @@
    background-position: right;
    .contain();
 }
-.headline-dblue() {
-   .headline('headline-dblue.svg');
+.headline-green() {
+   .headline('headline-green.svg');
+   background-position: right;
+   .contain();
+}
+.headline-g-blue() {
+   .headline('headline-g-blue.svg');
+   background-position: right;
+   .contain();
+}
+.headline-dgreen() {
+   .headline('headline-dgreen.svg');
    background-position: right;
    .contain();
 }
 
+
 // Headline END
 
+
+// IT-CUBE
+
+.it-cube( @name ) {
+   background-image: url("../data/it-cube/@{name}");
+}
+.cube() {
+   .it-cube( 'headline.svg');
+   background-position: left;
+   .cover();
+}
+.headline-text-cube() {
+   .it-cube( 'headline-text.svg');
+   background-position: bottom;
+   .contain();
+}
+.headline-boy() {
+   .it-cube( 'headline-boy.png');
+   background-position: right bottom;
+   .contain();
+}
+.it-provide( @name ) {
+   background-image: url("../data/it-cube/provide/@{name}.svg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+.it-provide-bg() {
+   .it-cube( 'bg.svg');
+   background-position: right;
+   .cover();
+}
+
+.it-areas( @name ) {
+   background-image: url("../data/it-cube/areas/@{name}.svg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+.it-diagram() {
+   .it-cube( 'diagram.svg');
+   background-position: bottom;
+   .contain();
+}
+.polygon-blue() {
+   .polygon('polygon-blue.svg');
+   background-position: right;
+   .contain();
+}
+// IT-CUBE END
 
 .deadline-pseudo-blue() {
    .pseudo('deadline-pseudo-blue.png');
@@ -380,6 +441,12 @@
    background-position: top;
    .cover();
 }
+
+
+
+
+
+
 
 
 // infrastructure footer pseudo

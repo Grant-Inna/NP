@@ -42,8 +42,8 @@
    border-color: #D9D9D9;
 }
 .pagination_active {
-   border-color: #5586eb;
-   color: #5586eb;
+   border-color: @color-text-blue;
+   color: @color-text-blue;
    font-size: 1.2rem;
    .opensans-semibold();
        box-sizing: border-box;
@@ -52,14 +52,14 @@
 }
 
 .pagination__item:hover  {
-   border-color: #8eaef1;
-   color: #8eaef1;
+   border-color: rgba(19, 100, 176, 0.45);
+   color: rgba(12, 89, 176, 0.6);
    .opensans-semibold();
    .tr();
 }
 .pagination__item.pagination_active:hover  {
-   border-color: #5586eb;
-   color: #5586eb;
+   border-color: @color-text-blue;
+   color: @color-text-blue;
 }
 .pagination__arrow.pagination_disable:hover {
       border-color: #D9D9D9;

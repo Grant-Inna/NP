@@ -26,7 +26,7 @@ html
                      +info-text( 'Проведение профориентационной деятельности со школьниками для привлечения к последующему поступлению в педагогические вузы, в том числе через мероприятия с профильными педагогическими классами общеобразовательных организаций ')
 
          include ../../assets/jade/content/materials/__video
-         section( aria-label='Список видеозаписей' ).mt5.mb4
+         section( aria-label='Список видеозаписей' ).mt8.mb5
             .wrapper
                .page__title
                   h1.page__title_main.text-blue.center Видеоматериалы
@@ -37,16 +37,18 @@ html
                   +video( 'Название 4', 'sirius/4.jpg', 'sirius_4')
                   +video( 'Название 3', 'sirius/3.jpg', 'sirius_3')
 
-         include ../../assets/jade/content/pages/infrastructure/__footer
          include ../../assets/jade/content/pages/__info_block/top
+         include ../../assets/jade/content/pages/__info_block/__footer-link
+         include ../../assets/jade/content/pages/__info_block/__footer-mail
+         include ../../assets/jade/content/pages/__info_block/__footer-phone
          section( aria-label='Контакты площадок' ).page_footer__container
             .wrapper
                .page_footer__info
-                  +top( 'Федеральный оператор:', '', 'Федеральное', '', 'full')
-                  +top( 'Юридический и почтовый адрес:', '', 'Федеральное', '', 'full')
-                  +top( 'Горячая линия:', '', 'Федеральное', '', '')
-                  +top( 'Электронная почта:', '', 'Федеральное', '', '')
-                  +top( 'Страница проекта на сайте:', '', 'Федеральное', '', 'full')
+                  +top( 'Федеральный оператор:', '', 'Федеральное государственное автономное образовательное учреждение дополнительного профессионального образования «Академия реализации государственной политики и профессионального развития работников образования Министерства просвещения Российской Федерации»', '', 'full')
+                  +top( 'Юридический и почтовый адрес:', '', '125212, г. Москва, Головинское шоссе, д. 8, корп. 2а', '', 'full')
+                  +phone( 'Горячая линия:', '+7 (800) 200-91-85, добавочный 9', '+78002009185p9')
+                  +mail( 'Электронная почта:', 'pedkvant@apkpro.ru')
+                  +site( 'Страница проекта на сайте Федерального оператора:', 'https://apkpro.ru/proekty/pedagogicheskiy-kvantorium/')
 
          include ../../assets/jade/footer/footer
       include ../../assets/jade/static/scripts
