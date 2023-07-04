@@ -122,6 +122,8 @@ header.header__container .wrapper:after {
    });
    
    .middle-block({
+      width: 11vw;
+      height: 12vw;
       top: 80%;
       right: 9%;
    });
@@ -268,7 +270,7 @@ footer.footer__container:after {
    .tr();
    
       top: 75%;
-    left: -75%;
+    left: -90%;
     transform: rotate(20deg) translateY(-80%);
    width: 10rem;
    height: 8rem;
@@ -364,7 +366,10 @@ footer.footer__container:after {
 }*/
 
 
-
+#container.container__about .header__aside_text:after,
+#container.container__results .header__aside_text:after {
+   left: -130%;
+}
 #container.container__about .headline_blue-dark:after {
    content: none;
 }
@@ -382,7 +387,8 @@ footer.footer__container:after {
       right: 2%;
    });
    .middle-block({
-      top: 52%;
+      top: 44%;
+      right: 5%;
    });
    .sm-block({
       right: 6%;

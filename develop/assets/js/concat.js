@@ -1421,7 +1421,7 @@ $(document).ready(function () {
          $regions.val(null).trigger("change");
          $objects.val(null).trigger("change");
          clearChosen();
-         // $objects.prop("disabled", true); // Блокируем выбор объекта инфраструктуры
+         $objects.prop("disabled", true); // Блокируем выбор объекта инфраструктуры
          // $('.region_chosen').removeClass('region_chosen');
          $information_card.hide();
          $map_index.removeClass('open');
@@ -1875,7 +1875,7 @@ $(document).ready(function () {
       
       $search_icon.on('click', function () {
          /* показываем элементы через удаление скрывающего класса */
-         $search_line.removeClass(hidden);
+         $search_line.removeClass(hidden).animate({ width: '100%' }, 200 );
          $close_icon.removeClass(hidden);
          
          $menu__eye.addClass(hidden);
@@ -1883,7 +1883,7 @@ $(document).ready(function () {
          // show( $search_line, $close_icon )
       });
       $close_icon.on('click', function () {
-         $search_line.addClass(hidden);
+         $search_line.addClass(hidden).animate({ 'width': '0' }, 200 );
          $close_icon.addClass(hidden);
          
          $menu__eye.removeClass(hidden);

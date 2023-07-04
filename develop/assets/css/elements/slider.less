@@ -99,17 +99,26 @@ section.slider__container .wrapper {
    .size(8);
    .size-xxl(8);
    
+   .size-middle(12);
    .size-md(12);
    
-   .size-xs(22);
-   
+   .size-sm(22);
+   .size-xs(24);
    .size-xxs(24);
-  
-   .tr();
    
+      .shift-sm-left(1);
+   .shift-xs-left(0);
+   
+   .tr();
+   margin-bottom: @offset;
+   
+   .middle-block({
+      margin-bottom: @offset_xxl;
+   });
    .md-block({
       margin-bottom: @offset_md;
    });
+
 }
 .slider__item-one {
    .col();
@@ -180,7 +189,7 @@ section.slider__container .wrapper {
 }
 
 .slick-dots li.slick-active button {
-   background-color: #0055FF;
+   background-color: @color-text-blue;
 }
 
 .slick-dots li button:before {

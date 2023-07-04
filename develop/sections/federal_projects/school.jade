@@ -40,7 +40,7 @@ html
                   +top( '3&nbsp;350 УЧИТЕЛЕЙ,', '', 'прибывших на&nbsp;работу в&nbsp;сельскую местность, получивших единовременную финансовую поддержку', '', '')
                   article.info_block__text( class='')
                      .span( class='inline mr') Повышение квалификации ежегодно
-                     h1( class='inline') не менее 17550 педагогических работников
+                     h1( class='inline') не&nbsp;менее 17550 педагогических работников
                      .span( class='') (в том числе воспитателей, управленческого персонала)
                      h1( class='inline') организаций, реализующих программы дошкольного образования
 
@@ -52,6 +52,17 @@ html
          include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2019', '30.12.2024', '"Современная школа"')
 
+         include ../../assets/jade/content/pages/slider/__slider_item
+         section( aria-label='Объекты инфраструктуры' ).slider__container
+            .slider__content
+               +slider_item( '', 'tochka', 'Центры образования естественно-научной и&nbsp;технологической направленностей &laquo;Точка роста&raquo;', 'Центры образования естественно-научной и технологической направленностей "Точка роста"', '../infrastructure/tochka_rosta.html')
+               +slider_item( '', 'kvantorium', 'Детские технопарки &laquo;Кванториум&raquo; на&nbsp;базе общеобразовательных организаций', 'Детские технопарки "Кванториум" на базе общеобразовательных организаций', '../infrastructure/children_kvantorium.html')
+               +slider_item( '', 'kvantorium', 'Педагогические технопарки &laquo;Кванториум&raquo;', 'Педагогические технопарки "Кванториум"', '../infrastructure/pedagogical_kvantorium.html')
+               +slider_item( '', 'pedagogikal_m', 'Центры непрерывного повышения профессионального мастерства педагогических работников', 'Центры непрерывного повышения профессионального мастерства педагогических работников', '../infrastructure/center_teachers_professional_development.html')
+
+
+         .wrapper
+               .title.mb5.inner Объекты инфраструктуры
          include ../../assets/jade/content/pages/__person
          section( aria-label='Руководитель проекта "Современная школа"' ).person__container
             .wrapper.mb6
