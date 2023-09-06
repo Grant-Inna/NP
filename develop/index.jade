@@ -6,7 +6,7 @@ html
 
    body
       #container_main
-         a( href="javascript://" onclick="letsee_toggle_panel()" ) Версия для слабовидящих
+         //a( href="javascript://" onclick="letsee_toggle_panel()" ) Версия для слабовидящих
          .letsee_toggle_panel
          include assets/jade/menu/menu
          include assets/jade/menu/mobile
@@ -20,6 +20,10 @@ html
 
       script( src='./assets/js/jquery.js' )
       script( src='./assets/js/letsee.js' )
+      script.
+         if (+localStorage.getItem('letsee') == 1 ) { // Если в localStorage при загрузке есть ключ, то включаем версию
+           $('body').addClass('letsee-active');
+         }
       script( src='./assets/js/slick.min.js' )
       script( src='./assets/js/scrollbar.min.js' )
       script( src='./assets/js/select.js' )

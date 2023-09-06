@@ -1,5 +1,6 @@
 ;(function ($) {
 
+
 var style_tag = $('<style>').appendTo('body');
 var letsee_custom_css = {};
 
@@ -187,6 +188,16 @@ function load_options() {
 
 window.letsee_toggle_panel = function () {
     $('body').toggleClass('letsee-active');
+    
+/*    if (+localStorage.getItem('letsee') == 0 ) { // Если в localStorage не включена версия, то включаем её
+        // и фиксируем это в localstorage
+        $('body').addClass('letsee-active');
+        localStorage.setItem('letsee', 1); // Добавляем в хранилище
+    } else { // Если при повторном нажатии, есть в localstorage отметка о включении версии, но выключаем её и удаляем ключ
+         $('body').removeClass('letsee-active');
+        localStorage.removeItem('letsee'); // Удаляем из хранилища
+    }*/
+   
     apply_panel();
 }
 
@@ -194,5 +205,20 @@ window.letsee_toggle_panel = function () {
 var options = load_options();
 options2panel(options);
 set_css(gen_css(options));
+
+/*document.addEventListener("DOMContentLoaded", function() {
+      if (+window.localStorage.getItem('letsee') === 1 ) { // Если в localStorage при загрузке есть ключ, то включаем версию
+        document.body.classList.add("letsee-active");
+        apply_panel();
+      }
+});*/
+if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
+    $('body').addClass('letsee-black');
+}
+
+letsee_custom_css = {
+    enabled: '.enable_letsee { display: none; }',
+    images_hidden: '.slideshow { display: none; }'
+}
 
 })(jQuery);

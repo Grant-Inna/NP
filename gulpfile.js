@@ -123,6 +123,11 @@ function fonts(done){
    .pipe(gulp.dest( dist + 'fonts'));
    done();
 }
+function letsee(done){
+   return gulp.src(src +'css/letsee.css')
+   .pipe(gulp.dest( dist + 'css'));
+   done();
+}
 function js(done){
    return gulp.src(src + 'js/*.js')
    .pipe(gulpif(isProd, uglify()))
@@ -174,9 +179,9 @@ function grid(done){
 }
 
 const build_old = gulp.series(clear,
-   gulp.parallel(html, styles, js, images, data, fonts )
+   gulp.parallel(html, styles, js, images, data, fonts, letsee )
 );
-const build = gulp.parallel(html, federal_projects, infrastructure, styles, js, js_copy, images, data, fonts );
+const build = gulp.parallel(html, federal_projects, infrastructure, styles, js, js_copy, images, data, fonts, letsee );
 
 gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
