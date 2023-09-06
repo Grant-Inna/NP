@@ -34,12 +34,12 @@ html
          include ../../assets/jade/content/pages/__deadline
          +deadline( '01.01.2019', '31.12.2024', '"Молодые профессионалы"')
 
-         include ../../assets/jade/content/pages/slider/__slider_item
-         section( aria-label='Объекты инфраструктуры проекта "Молодые профессионалы"' ).slider__container
-            .wrapper
-               .title.mb5.inner Объекты инфраструктуры
-               .slider__content
-                  +slider_item( '-one', 'center-opp', 'Центры опережающей профессиональной подготовки', 'Центры опережающей профессиональной подготовки', 'https://worldskills.ru/nashi-proektyi/czentr-operezhayushhej-professionalnoj-podgotovki.html')
+         //include ../../assets/jade/content/pages/slider/__slider_item
+         //section( aria-label='Объекты инфраструктуры проекта "Молодые профессионалы"' ).slider__container
+         //   .wrapper
+         //      .title.mb5.inner Объекты инфраструктуры
+         //      .slider__content
+         //         +slider_item( '-one', 'center-opp', 'Центры опережающей профессиональной подготовки', 'Центры опережающей профессиональной подготовки', '')
 
          include ../../assets/jade/content/pages/__person
          section( aria-label='Руководитель и администратор проекта "Молодые профессионалы"' ).person__container
@@ -47,17 +47,6 @@ html
                .person__holder
                   +person( 'Руководитель', 'Васильева', 'Татьяна', 'Викторовна', 'заместитель Министра просвещения Российской Федерации', 'Vasileva')
                   +person( 'Администратор', 'Бугаев', 'Александр', 'Вячеславович', 'заместитель Министра просвещения Российской Федерации', 'Bugaev')
-
-         //include ../../assets/jade/content/pages/__sources
-         //section( aria-label='Источники финансирования проекта "Молодые профессионалы"' ).sources__container
-         //   .wrapper
-         //      .sources__content
-         //         .sources__title
-         //            .sources__text.title Источники финансирования проекта
-         //            .sources__icon
-         //         .sources__holder
-         //            +sources( 'Федеральный<br>бюджет', '65,7')
-         //            +sources( 'Из них передано субъектам<br>Российской Федерации', '12,7')
 
 
 
