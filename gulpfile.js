@@ -73,21 +73,21 @@ let gridOptions = {
 
 function html(done){
    return gulp.src( base + '*.jade' )
-   .pipe(jade())
+   .pipe(jade({pretty: true}))
    .pipe(gulp.dest( prod ))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
 function federal_projects(done){
    return gulp.src([ base + 'sections/federal_projects/*.jade' ] )
-   .pipe(jade())
+   .pipe(jade({pretty: true}))
    .pipe(gulp.dest( prod + 'sections/federal_projects'))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
 function infrastructure(done){
    return gulp.src([ base + 'sections/infrastructure/*.jade'] )
-   .pipe(jade())
+   .pipe(jade({pretty: true}))
    .pipe(gulp.dest( prod + 'sections/infrastructure' ))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
