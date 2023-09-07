@@ -8,8 +8,8 @@
       <meta charset="UTF-8">
       <title>Национальный проект &laquo;Образование&raquo;</title>
       <link rel="shortcut icon" href="./assets/data/system/favicon.svg" type="image/x-icon">
-      <link type="text/css" rel="stylesheet" href="./assets/css/style.css?v=1">
       <link type="text/css" rel="stylesheet" href="./assets/css/letsee.css?v=1">
+      <link type="text/css" rel="stylesheet" href="./assets/css/style.css?v=1">
       <style></style>
     </head>
   <body>
@@ -34,7 +34,7 @@
               </label><a href="./results.html" class="menu__item">Результаты</a><a href="./plan.html" class="menu__item">План развития</a><a href="./about.html" class="menu__item">О проекте</a>
             </div>
             <form class="menu__form">
-              <div class="menu__icons_holder"><a href="javascript://" onclick="letsee_toggle_panel()" class="menu__eye">
+              <div class="menu__icons_holder"><a href="javascript://" onclick="letsee_toggle_panel()" class="menu__eye letsee-guard">
                   <div class="icon_eye"></div>
                   <div class="icon_eye_off hidden"></div></a></div>
             </form>
@@ -42,12 +42,10 @@
         </div>
       </nav>
       <div id="black_back"></div>
-      <menu class="mobile__container">
-        <div class="wrapper">
-          <div class="mobile__eye">
+      <menu class="mobile__container letsee-guard">
+        <div class="wrapper letsee-guard"><a href="javascript://" onclick="letsee_toggle_panel()" class="mobile__eye letsee-guard">
             <div class="icon_eye"></div>
-            <div class="icon_eye_off hidden"></div>
-          </div>
+            <div class="icon_eye_off hidden"></div></a>
           <div class="mobile__icon">
             <div class="first"></div>
             <div class="middle"></div>
@@ -72,10 +70,10 @@
       <header class="header__container">
         <div class="wrapper">
           <main class="header__main_holder">
-            <section aria-label="Логотип национального проекта &quot;Образование&quot;" class="header__main_logo"></section>
+            <section aria-label="Логотип национального проекта &quot;Образование&quot;" class="header__main_logo letsee-guard"></section>
             <div class="header__title">
-              <div class="header__logo_top"></div>
-              <div class="header__logo_title"></div>
+              <div class="header__logo_top letsee-guard"></div>
+              <div class="header__logo_title letsee-guard"></div>
               <div class="header__text">
                 <p>&rdquo;Национальный проект &laquo;Образование&raquo; направлен&nbsp;на&nbsp;достижение национальной цели Российской Федерации, определенной Президентом России Владимиром Путиным&nbsp;&mdash; обеспечение возможности самореализации и&nbsp;развития талантов.&rdquo;</p>
               </div><a href="./about.html" class="header__button button_white"><span>Подробнее о&nbsp;проекте</span></a>
@@ -90,7 +88,7 @@
       </header>
       <section aria-label="Перечень федеральных проектов" class="tile_federal__container">
         <div class="wrapper">
-          <h1 class="title mb5">Федеральные проекты</h1>
+          <h1 class="title mb5 letsee-guard">Федеральные проекты</h1>
           <div class="tile_federal__row">
                   <section aris-label="Современная школа" class="tile_federal__cell"><a href="./sections/federal_projects/school.html">
                       <div class="tile_federal__title"><span>Современная школа</span></div><img src="./assets/data/images/federal_tile/school.jpg?v=2" class="tile_federal__image"></a>
@@ -166,7 +164,7 @@
               <div class="name"><i class="icon-point"></i><span></span></div>
               <div class="fd"><span></span>&nbsp;Федеральный округ</div>
             </div>
-            <div id="map_index__information">
+            <div id="map_index__information" class="letsee-guard">
               <div class="icon_close"></div>
               <div class="region__chosen">
                 <div class="icon-pointer"></div>
@@ -192,7 +190,7 @@
       <div class="wrapper">
         <div class="to_top__container">
           <div id="back" class="to_top__holder">
-            <div class="to_top__icon"></div>
+            <div class="to_top__icon letsee-guard"></div>
             <div class="to_top__text">Наверх</div>
           </div>
         </div>
@@ -212,11 +210,6 @@
     </div>
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/letsee.js"></script>
-    <script>
-      if (+localStorage.getItem('letsee') == 1 ) { // Если в localStorage при загрузке есть ключ, то включаем версию
-        $('body').addClass('letsee-active');
-      }
-    </script>
     <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/scrollbar.min.js"></script>
     <script src="./assets/js/select.js"></script>

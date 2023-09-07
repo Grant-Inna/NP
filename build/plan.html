@@ -8,8 +8,8 @@
       <meta charset="UTF-8">
       <title>План развития проекта | Национальный проект &laquo;Образование&raquo;</title>
       <link rel="shortcut icon" href="./assets/data/system/favicon.svg" type="image/x-icon">
-      <link type="text/css" rel="stylesheet" href="./assets/css/style.css?v=1">
       <link type="text/css" rel="stylesheet" href="./assets/css/letsee.css?v=1">
+      <link type="text/css" rel="stylesheet" href="./assets/css/style.css?v=1">
       <style></style>
     </head>
   <body>
@@ -32,7 +32,7 @@
               </label><a href="./results.html" class="menu__item">Результаты</a><a href="./plan.html" class="menu__item">План развития</a><a href="./about.html" class="menu__item">О проекте</a>
             </div>
             <form class="menu__form">
-              <div class="menu__icons_holder"><a href="javascript://" onclick="letsee_toggle_panel()" class="menu__eye">
+              <div class="menu__icons_holder"><a href="javascript://" onclick="letsee_toggle_panel()" class="menu__eye letsee-guard">
                   <div class="icon_eye"></div>
                   <div class="icon_eye_off hidden"></div></a></div>
             </form>
@@ -40,12 +40,10 @@
         </div>
       </nav>
       <div id="black_back"></div>
-      <menu class="mobile__container">
-        <div class="wrapper">
-          <div class="mobile__eye">
+      <menu class="mobile__container letsee-guard">
+        <div class="wrapper letsee-guard"><a href="javascript://" onclick="letsee_toggle_panel()" class="mobile__eye letsee-guard">
             <div class="icon_eye"></div>
-            <div class="icon_eye_off hidden"></div>
-          </div>
+            <div class="icon_eye_off hidden"></div></a>
           <div class="mobile__icon">
             <div class="first"></div>
             <div class="middle"></div>
@@ -234,7 +232,7 @@
       <div class="wrapper">
         <div class="to_top__container">
           <div id="back" class="to_top__holder">
-            <div class="to_top__icon"></div>
+            <div class="to_top__icon letsee-guard"></div>
             <div class="to_top__text">Наверх</div>
           </div>
         </div>
@@ -253,6 +251,7 @@
       </footer>
     </div>
     <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/letsee.js"></script>
     <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/concat.js"></script>
   </body>

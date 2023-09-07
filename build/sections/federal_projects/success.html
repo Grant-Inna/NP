@@ -8,8 +8,8 @@
       <meta charset="UTF-8">
       <title>Успех каждого ребенка | Федеральные проекты</title>
       <link rel="shortcut icon" href="../../assets/data/system/favicon.svg" type="image/x-icon">
-      <link type="text/css" rel="stylesheet" href="../../assets/css/style.css?v=1">
       <link type="text/css" rel="stylesheet" href="../../assets/css/letsee.css?v=1">
+      <link type="text/css" rel="stylesheet" href="../../assets/css/style.css?v=1">
       <style></style>
     </head>
   <body>
@@ -40,13 +40,11 @@
         </div>
       </nav>
       <div id="black_back"></div>
-      <menu class="mobile__container">
-        <div class="wrapper">
-          <div class="mobile__eye">
+      <menu class="mobile__container letsee-guard">
+        <div class="wrapper letsee-guard"><a href="javascript://" onclick="letsee_toggle_panel()" class="mobile__eye">
             <div class="icon_eye"></div>
-            <div class="icon_eye_off hidden"></div>
-          </div>
-          <div class="mobile__icon">
+            <div class="icon_eye_off hidden"></div></a>
+          <div class="mobile__icon letsee-guard">
             <div class="first"></div>
             <div class="middle"></div>
             <div class="last"></div>
@@ -192,7 +190,7 @@
       <div class="wrapper">
         <div class="to_top__container">
           <div id="back" class="to_top__holder">
-            <div class="to_top__icon"></div>
+            <div class="to_top__icon letsee-guard"></div>
             <div class="to_top__text">Наверх</div>
           </div>
         </div>
