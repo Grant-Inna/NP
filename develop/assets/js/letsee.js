@@ -200,7 +200,11 @@ function load_options() {
 
 window.letsee_toggle_panel = function () {
     $('body').toggleClass('letsee-active');
-    $('body').addClass('letsee-white');
+    
+        $('.icon_eye_off').toggleClass('hidden');
+        $('.icon_eye').toggleClass('hidden');
+        
+    $('body').hasClass('letsee-white') ? $('body').addClass('letsee-white') : $('body').removeClass('letsee-white');
     
 /*    if (+localStorage.getItem('letsee') == 0 ) { // Если в localStorage не включена версия, то включаем её
         // и фиксируем это в localstorage
@@ -212,7 +216,7 @@ window.letsee_toggle_panel = function () {
     }*/
    
     apply_panel();
-}
+};
 
 
 var options = load_options();
@@ -225,8 +229,12 @@ set_css(gen_css(options));
         apply_panel();
       }
 });*/
+
 if ($('body').hasClass('letsee-active')) {
     $('body').addClass('letsee-white');
+    
+        $('.icon_eye_off').toggleClass('hidden');
+        $('.icon_eye').toggleClass('hidden');
 }
 if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
     $('body').addClass('letsee-black');
@@ -236,6 +244,14 @@ if ($('.letsee-colors-bonb').hasClass('letsee-colors-active')) { // Отфиль
     $('body').removeClass('letsee-black');
     $('body').addClass('letsee-white');
 }
+
+    /*if ($('body').hasClass('letsee-active')) {
+        $('.icon_eye_off').removeClass('hidden');
+        $('.icon_eye').addClass('hidden');
+    } else {
+        $('.icon_eye_off').addClass('hidden');
+        $('.icon_eye').removeClass('hidden');
+    }*/
 
 letsee_custom_css = {
     enabled: '.enable_letsee { display: none; }',

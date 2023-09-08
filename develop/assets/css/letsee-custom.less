@@ -1,27 +1,19 @@
 .letsee-active  {
-   
+   * {
+      line-height: 140% !important;
+      letter-spacing: 1.5px !important;
+   }
    nav .wrapper .background_orange {
       //display: none;
    }
-   .header__logo_title {
-      width: 445px;
-      
-      .xs-block({
-         //margin-top: 2.5rem;
-         margin-left: -20%;
-          width: 90%;
-          height: 55px;
-      });
-      .xxs-block({
-         margin-right: 3rem;
-         margin-left: -24%;
-      });
-   }
-
+   
+   .mobile__container,
+   .mobile__container .wrapper,
    .header__main_logo,
    .header__logo_title,
    .header__logo_top,
-   .mobile__eye .icon_eye_off,
+   .header__aside_holder,
+   .icon_eye_off,
    .icon_arrow_thin-white,
    .icon-check,
    .icon-created,
@@ -42,7 +34,6 @@
    .footer__np,
    .after_video_info__container .icon_check,
    .icon_arrow_thin-white,
-   .mobile__eye .icon_eye_off,
    .footer__minpros {
       background-repeat: no-repeat !important;
       background-size: contain !important;
@@ -51,8 +42,8 @@
    .icon_close {
       background-position: right !important;
    }
+   .icon_eye_off,
    .select2-container--default .select2-selection--single .select2-selection__arrow b, .icon_arrow-black,
-   .mobile__eye .icon_eye_off,
    .icon_arrow_thin-white,
    .icon-check,
    .icon-created,
@@ -67,7 +58,18 @@
       background-size: contain !important;
       background-position: center !important;
    }
-   
+   .header__logo_title {
+      .xs-block({
+         //margin-top: 2.5rem;
+         margin-left: -20%;
+          width: 90%;
+          height: 55px;
+      });
+      .xxs-block({
+         margin-right: 3rem;
+         margin-left: -24%;
+      });
+   }
    .footer__minpros {
      background-image: url("../data/black/minpros.svg") !important;
      width: 6rem;
@@ -208,10 +210,11 @@
        transition: all 0.3s ease-in-out;
        transform: rotate(-135deg) translateY(12.2px) translateX(2.4px);
    }
-   .mobile__item .menu__second_order {
+   .mobile__item .menu__second_order,
+   .mobile__item .second_order__item {
       margin-left: 0;
       min-width: unset;
-      width: 80%;
+      width: 100%;
    }
    .info_block__content {
       padding-right: 0 !important;
@@ -285,6 +288,15 @@
    .container__about .info_block__text {
       margin-bottom: 3rem;
    }
+   #container .header__aside_text:after,
+   .page_footer__info:before,
+   .person__content:after,
+   .person__content:before{
+      display: none;
+   }
+   .info__number.text-white {
+      font-size: 2.5rem !important;
+   }
 }
 .letsee-active.letsee-black {
    
@@ -328,11 +340,16 @@
    .icon_arrow_thin {
        background-image: url(../data/icons/white/arr-bottom.svg) !important;
    }
+   .icon_eye_off {
+       background-image: url(../data/icons/white/eye-off.svg) !important;
+      width: 1.5rem;
+      height: 1.5rem;
+   }
    
    .to_top__holder {
       background: white !important;
    }
-   
+   .slider__item,
    .button_blue,
    .button_orange,
    .button_white {
@@ -375,9 +392,6 @@
    }
    
    
-   .mobile__eye .icon_eye_off {
-        background-image: url("../data/icons/black/eye-off.svg") !important;
-   }
    .icon_arrow_thin-white {
       background-image: url(../data/icons/black/arr-bottom.svg) !important;
    }
@@ -406,6 +420,16 @@
    .icon_arrow_thin {
        background-image: url(../data/icons/black/arr-bottom.svg) !important;
    }
+   
+   .icon_eye_off {
+      background-image: url(../data/icons/black/eye-off.svg) !important;
+      width: 1.5rem;
+      height: 1.5rem;
+   }
+   .to_top__icon {
+      background-image: url(../data/icons/white/arr-top.svg) !important;
+   }
+   .slider__item,
    .button_blue,
    .button_orange,
    .button_white {
