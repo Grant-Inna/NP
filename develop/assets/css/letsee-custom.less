@@ -162,6 +162,16 @@
       margin-bottom: 1.5rem;
       order: 3;
    }
+   .block_12 {
+       .col();
+      .size(12);
+      .size-xxl(12);
+      .size-xl(12);
+      .size-middle(24);
+      .size-lg(24);
+      .size-md(24);
+      .size-sm(24);
+   }
    
    .select2-container--default .select2-selection--single {
       height: 60px;
@@ -228,7 +238,7 @@
       font-size: 35px !important;
    }
    .map_index__map {
-      height: 80vh;
+      height: unset;
    }
    /*#map_index__information {
        background-color: rgba(255, 255, 255, 0.8);
@@ -367,6 +377,10 @@
    }
    #container header.header__container .wrapper:after {
       display: none;
+   }
+   .map__container {
+      height: unset;
+      margin-bottom: 8rem;
    }
 }
 .letsee-active.letsee-black {
@@ -540,6 +554,7 @@
        background-color: rgba(108, 108, 108, 0.8);
    }
    .slider__item,
+   .slider__item-one,
    .button_blue,
    .button_orange,
    .button_white {
@@ -560,7 +575,9 @@
       background: black !important;
       opacity: .8 !important;
    }
-   
+   .title.mb5.letsee-guard {
+      color: black;
+   }
 }
 body.letsee-active {
     margin-top: 90px !important;
