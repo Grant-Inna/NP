@@ -2037,6 +2037,7 @@ $(document).ready(function () {
    const $slider_cell = $('.tile_federal__row');
    
    if ($slider_cell.length > 0) {
+      if (!$('body').hasClass('letsee-active')) {
       
       $slider_cell
       .on("destroy", function (_, slick) {
@@ -2072,5 +2073,6 @@ $(document).ready(function () {
             }
          ]
       });
+      }
    }
 });

@@ -18,6 +18,15 @@
          //padding-bottom: 2rem;
       }
    }
+   .scroll-wrapper.scrollbar-inner {
+      height: unset;
+   }
+   .scroll-wrapper > .scroll-content {
+      max-height: unset;
+   }
+   .button_blue.region__button {
+      display: flex;
+   }
    .menu__content,
    .deadline__text {
       width: 100%;
@@ -220,9 +229,9 @@
    .map_index__map {
       height: 80vh;
    }
-   #map_index__information {
-          background-color: rgba(255, 255, 255, 0.8);
-   }
+   /*#map_index__information {
+       background-color: rgba(255, 255, 255, 0.8);
+   }*/
    #show.mobile__icon .first {
        transition: all 0.3s ease-in-out;
        transform: rotate(135deg) translateY(-12.2px) translateX(2.4px);
@@ -318,12 +327,16 @@
    .info__number.text-white {
       font-size: 2.5rem !important;
    }
+   .tile_federal__row {
+      padding-bottom: 3rem;
+   }
    .tile_federal__about {
        height: 100%;
       position: relative;
       margin-top: 60px;
       opacity: 1 !important;
        display: flex !important;
+      box-shadow: none !important;
       .column-center();
       padding: 2rem;
       .lg-block({
@@ -343,7 +356,7 @@
       margin-bottom: 25px;
    }
    .tile_federal__button.button_orange {
-      margin-top: auto;
+      margin-top: 2rem;
    }
    header.header__container:before {
       background-image: none;
@@ -356,7 +369,9 @@
    }
 }
 .letsee-active.letsee-black {
-   
+   #map_index__information .icon_close {
+      background-image: url(../data/icons/black/close.svg) !important;
+   }
    nav .wrapper .background_orange {
       display: none;
    }
@@ -403,6 +418,10 @@
       height: 1.5rem;
    }
    
+   #map_index__information {
+       background-color: rgba(255, 255, 255, 0.8);
+   }
+   
    .select2-container--default .select2-selection--single .select2-selection__arrow b, .icon_arrow-black {
       background-image: url(../data/icons/white/arr-bottom.svg) !important;
    }
@@ -433,9 +452,21 @@
    .title.mb5.letsee-guard {
       color: white;
    }
-}
-.letsee-active.letsee-white {
    
+   .scrollbar-inner > .scroll-element .scroll-element_track {
+      background: grey !important;
+   }
+   .scrollbar-inner > .scroll-element .scroll-bar {
+      background: white !important;
+      opacity: .8 !important;
+   }
+}
+
+
+.letsee-active.letsee-white {
+   #map_index__information .icon_close {
+      background-image: url('../data/icons/white/close.svg') !important;
+   }
    .to_top__holder {
       background: black !important;
    }
@@ -503,6 +534,10 @@
    .to_top__icon {
       background-image: url(../data/icons/white/arr-top.svg) !important;
    }
+   
+   #map_index__information {
+       background-color: rgba(108, 108, 108, 0.8);
+   }
    .slider__item,
    .button_blue,
    .button_orange,
@@ -516,6 +551,13 @@
          background-color: black !important;
          background: black !important;
       }
+   }
+   .scrollbar-inner > .scroll-element .scroll-element_track {
+      background: grey !important;
+   }
+   .scrollbar-inner > .scroll-element .scroll-bar {
+      background: black !important;
+      opacity: .8 !important;
    }
    
 }
