@@ -206,6 +206,10 @@ window.letsee_toggle_panel = function () {
         
     $('body').hasClass('letsee-white') ? $('body').addClass('letsee-white') : $('body').removeClass('letsee-white');
     
+    if (!$('body').hasClass('letsee-active')) {
+        $('body').prop('class', '');
+    }
+    
 /*    if (+localStorage.getItem('letsee') == 0 ) { // Если в localStorage не включена версия, то включаем её
         // и фиксируем это в localstorage
         $('body').addClass('letsee-active');
@@ -229,12 +233,20 @@ set_css(gen_css(options));
         apply_panel();
       }
 });*/
+$('#letsee-hide-images').on( 'change', function () {
+    $(this).prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
+});
+    $('#letsee-hide-images').prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
 
 if ($('body').hasClass('letsee-active')) {
     $('body').addClass('letsee-white');
     
         $('.icon_eye_off').toggleClass('hidden');
         $('.icon_eye').toggleClass('hidden');
+} else {
+    $('body').removeClass('letsee-white');
+    $('body').removeClass('letsee-black');
+    $('body').removeClass('letsee-no-image');
 }
 if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
     $('body').addClass('letsee-black');
