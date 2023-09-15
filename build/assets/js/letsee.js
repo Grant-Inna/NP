@@ -215,7 +215,8 @@ window.letsee_toggle_panel = function () {
         localStorage.setItem('letsee', 1); // Добавляем в хранилище
         
         // $('body').hasClass('letsee-black') ? $('body').removeClass('letsee-white') : $('body').addClass('letsee-white');
-    
+        $('#letsee-hide-images').prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
+
     
         if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
                 $('body').addClass('letsee-black');
@@ -249,7 +250,7 @@ set_css(gen_css(options));
 $('#letsee-hide-images').on( 'change', function () {
     $(this).prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
 });
-    $('#letsee-hide-images').prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
+$('#letsee-hide-images').prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
 
 if ($('body').hasClass('letsee-active')) {
     $('body').addClass('letsee-white');
@@ -265,7 +266,7 @@ $('.letsee-colors-wonb').on( 'click', function() {
     $('body').removeClass('letsee-white');
 });
 $('.letsee-colors-bonb').on( 'click', function() {
-    $(this).addCollection('letsee-colors-active');
+    $(this).addClass('letsee-colors-active');
     $('body').removeClass('letsee-black');
     $('body').addClass('letsee-white');
 });
