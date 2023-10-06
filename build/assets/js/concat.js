@@ -2037,68 +2037,60 @@ $(document).ready(function () {
    const $slider_cell = $('.tile_federal__row');
    
    if ($slider_cell.length > 0) {
-      if (!$('body').hasClass('letsee-active')) {
       
-         $slider_cell
-         .on("destroy", function (_, slick) {
-            const reinit = debounce(() => {
-               if (slick.activeBreakpoint < window.innerWidth) return;
-               $(this).slick(slick.options);
-               window.removeEventListener("resize", reinit);
-            }, 200);
-            window.addEventListener("resize", reinit);
-         })
-         .slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 400,
-            arrows: false,
-            dots: true,
-            mobileFirst: true,
-            infinite: true,
-            autoplay: false,
-            responsive: [
-               {
-                  breakpoint: 770,
-                  settings: "unslick"
-               },
-               {
-                  breakpoint: 580,
-                  settings: {
-                     arrows: false,
-                     dots: true,
-                     slidesToShow: 2,
-                     slidesToScroll: 2
+      if (width <= 700) {
+         
+         if (!$('body').hasClass('letsee-active')) {
+            $slider_cell
+            .slick({
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               speed: 400,
+               arrows: false,
+               dots: true,
+               mobileFirst: true,
+               infinite: true,
+               autoplay: false,
+               responsive: [
+                  {
+                     breakpoint: 580,
+                     settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                     }
                   }
-               }
-            ]
-         });
-      } else {
-         $slider_cell.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 400,
-            arrows: false,
-            dots: true,
-            mobileFirst: true,
-            infinite: true,
-            autoplay: false,
-            responsive: [
-               {
-                  breakpoint: 770,
-                  settings: "unslick"
-               },
-               {
-                  breakpoint: 580,
-                  settings: {
-                     arrows: false,
-                     dots: true,
-                     slidesToShow: 1,
-                     slidesToScroll: 1
+               ]
+            });
+         } else {
+            
+            $slider_cell.slick({
+               slidesToShow: 2,
+               slidesToScroll: 2,
+               speed: 400,
+               arrows: false,
+               dots: true,
+               mobileFirst: true,
+               infinite: true,
+               autoplay: false,
+               responsive: [
+                  {
+                     breakpoint: 580,
+                     settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                     }
                   }
-               }
-            ]
-         })
+               ]
+            })
+            
+            
+         }
+         
       }
    }
+   
 });

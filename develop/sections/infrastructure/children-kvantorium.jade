@@ -1,7 +1,7 @@
 doctype
 html
    include ../../assets/jade/static/__header
-   +head('Детские и&nbsp;мобильные технопарки "Кванториум" | Инфраструктура проекта', '../..')
+   +head('Детские технопарки "Кванториум" | Инфраструктура проекта', '../..')
 
    body
       #container.container__infrastructure.container__mobile
@@ -41,48 +41,10 @@ html
                   h1.text-blue.mt3 Совместные проекты с&nbsp;бизнесом и&nbsp;госкорпорациями
                   .span.mt1 Разработка востребованных образовательных программ технической направленности совместно с&nbsp;партнерами, предоставление детям производственных задач для решения в&nbsp;рамках образовательного процесса. Проведение конкурсных и&nbsp;иных мероприятий для детей и&nbsp;наставников, в&nbsp;том числе проведение летних смен.
 
-         .line_blue
-
-         include ../../assets/jade/content/pages/infrastructure/__caption
-         +caption( 'kvantorium', 'Мобильный технопарк &laquo;КВАНТОРИУМ&raquo;', 'Мобильный технопарк &laquo;Кванториум&raquo;&nbsp;&mdash;  передвижная лаборатория, оснащенная высокотехнологичным оборудованием.', '')
-
-         include  ../../assets/jade/content/pages/infrastructure/__info-one
-         include  ../../assets/jade/content/pages/infrastructure/__info-text-line
-         section( aria-label='О региональных центрах')
-            .infrastructure_info__container.infrastructure_info-gblue
-               .wrapper
-                  +info-one( 'created', '85', 'создано<br>и&nbsp;функционирует' )
-                  .info_list__container
-                     +info-text( 'обучение детей в&nbsp;сельских школах и&nbsp;школах, расположенных в&nbsp;труднодоступной местности')
-                     +info-text( 'осуществление дополнительной подготовки и&nbsp;практико-ориентированного обучения педагогов школ и&nbsp;учреждений дополнительного образования детей технических областей')
-
-         section( aria-label='Занятия в&nbsp;рамках этих центров').mt4.mb5
-            .wrapper
-               article.span
-                  b.inline.mr В первой половине дня
-                  span на&nbsp;базе мобильных технопарков &laquo;Кванториум&raquo; обучающиеся осваивают предметную область &laquo;Технология&raquo;
-               article.span.mt2
-                  b.inline.mr Вторая половина
-                  span дня посвящена реализации дополнительных общеразвивающих программ естественнонаучного и&nbsp;технического характера по&nbsp;следующим направлениям:
-                  .row.mt2.mb2
-                     .block_8.flex
-                        .icon_check-blue.mr1
-                        span VR/Промдизайн
-                     .block_14.flex
-                        .icon_check-blue.mr1
-                        span Робо/IT
-                     .block_8.flex
-                        .icon_check-blue.mr1
-                        span Гео/Аэро
-                     .block_14.flex
-                        .icon_check-blue.mr1
-                        span Хайтек
-               article
-                  .span На базе мобильного технопарка &laquo;Кванториум&raquo; также осуществляется дополнительная подготовка и&nbsp;практико-ориентированное обучение педагогов школ и&nbsp;учреждений дополнительного образования детей технических областей.
 
          section( aria-label='Скачать информацию о контактах всех центров непрерывного повышения профессионального мастерства педагогических работников')
             include ../../assets/jade/content/pages/infrastructure/__map
-            +map( 'Детские и&nbsp;мобильные технопарки &laquo;Кванториум&raquo;', '')
+            +map( 'Детские технопарки &laquo;Кванториум&raquo;', '')
 
 
          include ../../assets/jade/content/materials/__file
