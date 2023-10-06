@@ -2040,10 +2040,10 @@ $(document).ready(function () {
       
       if (width <= 700) {
          
-         if (!$('body').hasClass('letsee-active')) {
+         if ($('body').hasClass('letsee-active')) {
             $slider_cell
             .slick({
-               slidesToShow: 1,
+               slidesToShow: 2,
                slidesToScroll: 1,
                speed: 400,
                arrows: false,
@@ -2057,8 +2057,8 @@ $(document).ready(function () {
                      settings: {
                         arrows: false,
                         dots: true,
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                      }
                   }
                ]
