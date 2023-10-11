@@ -197,33 +197,52 @@ function load_options() {
     }
 }
 
+const $body = $('body');
 
 window.letsee_toggle_panel = function () {
-    // $('body').toggleClass('letsee-active');
-    
-        $('.icon_eye_off').toggleClass('hidden');
-        $('.icon_eye').toggleClass('hidden');
+
+    //     $('.icon_eye_off').toggleClass('hidden');
+    //     $('.icon_eye').toggleClass('hidden');
     
     if (+localStorage.getItem('letsee') == 0 ) { // Если в localStorage не включена версия, то включаем её
         // и фиксируем это в localstorage
-        $('body').addClass('letsee-active letsee-white');
-        localStorage.setItem('letsee', 1); // Добавляем в хранилище
         
-        $('#letsee-hide-images').prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
+        $body.addClass('letsee-active letsee-white');
+        localStorage.setItem('letsee', 100); // Добавляем в хранилище
+        localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
+        
+        
+        $('.icon_eye_off').removeClass('hidden');
+        $('.icon_eye').addClass('hidden');
+        
+        if ($('#letsee-hide-images').prop( 'checked')) {
+            $body.addClass('letsee-no-image');
+            localStorage.setItem('letsee-no-image', 100); // Добавляем в хранилище выключение картинок
+        } else {
+            $body.removeClass('letsee-no-image');
+            localStorage.removeItem('letsee-no-image'); // Удаляем из хранилища выключение картинок
+        }
 
     
         if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
-            $('body').addClass('letsee-black');
-            $('body').removeClass('letsee-white');
+            $body.addClass('letsee-black');
+            $body.removeClass('letsee-white');
+            localStorage.setItem('letsee-black', 100); // Добавляем в хранилище
+            localStorage.removeItem('letsee-white'); // Удаляем из хранилища
         }
-        if ($('.letsee-colors-bonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
-            $('body').removeClass('letsee-black');
-            $('body').addClass('letsee-white');
+        if ($('.letsee-colors-bonb').hasClass('letsee-colors-active')) { // Отфильтровываем белый
+            $body.removeClass('letsee-black');
+            $body.addClass('letsee-white');
+            localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
+            localStorage.removeItem('letsee-black'); // Удаляем из хранилища
         }
 
     } else { // Если при повторном нажатии, есть в localstorage отметка о включении версии, то выключаем её и удаляем ключ
         localStorage.removeItem('letsee'); // Удаляем из хранилища
         $('body').prop('class', '');
+        
+        $('.icon_eye_off').addClass('hidden');
+        $('.icon_eye').removeClass('hidden');
     }
    
     apply_panel();
@@ -234,37 +253,95 @@ var options = load_options();
 options2panel(options);
 set_css(gen_css(options));
 
+
+
+if (+localStorage.getItem('letsee') == 100 ) { // Если в localStorage не включена версия, то включаем её
+    // и фиксируем это в localstorage
+    
+    $body.addClass('letsee-active letsee-white');
+    localStorage.setItem('letsee', 100); // Добавляем в хранилище
+    
+    
+    $('.icon_eye_off').removeClass('hidden');
+    $('.icon_eye').addClass('hidden');
+}
+if (+localStorage.getItem('letsee-black') == 100 ) { // Если в localStorage включена чёрная версия, то добавляем класс
+    $body.addClass('letsee-black');
+} else {
+    $body.removeClass('letsee-black');
+    localStorage.removeItem('letsee-black');
+    localStorage.setItem('letsee-white', 100)
+}
+if (+localStorage.getItem('letsee-white') == 100 ) { // Если в localStorage включена чёрная версия, то добавляем класс
+    $body.addClass('letsee-white');
+} else {
+    $body.removeClass('letsee-white');
+    localStorage.removeItem('letsee-white');
+    localStorage.setItem('letsee-black', 100);
+}
+if (+localStorage.getItem('letsee-no-image') == 100 ) { // Если в localStorage включена чёрная версия, то добавляем класс
+    $body.addClass('letsee-no-image');
+} else {
+    $body.removeClass('letsee-no-image');
+    localStorage.removeItem('letsee-no-image');
+}
+$('.letsee-colors-wonb').on( 'click', function() { // Делаем чёрным
+    $(this).addClass('letsee-colors-active');
+    $body.addClass('letsee-black');
+    $body.removeClass('letsee-white');
+            localStorage.setItem('letsee-black', 100); // Добавляем в хранилище
+            localStorage.removeItem('letsee-white'); // Удаляем из хранилища
+    
+});
+$('.letsee-colors-bonb').on( 'click', function() { // Делаем белым
+    $(this).addClass('letsee-colors-active');
+    $body.removeClass('letsee-black');
+    $body.addClass('letsee-white');
+            localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
+            localStorage.removeItem('letsee-black'); // Удаляем из хранилища
+});
+$('#letsee-hide-images').on( 'click', function() { // Делаем белым
+    switch ($(this).prop( 'checked'))
+    {
+        case true: $body.addClass('letsee-no-image'); localStorage.setItem('letsee-no-image', 100); break; // Добавляем в хранилище
+        case false: $body.removeClass('letsee-no-image'); localStorage.removeItem('letsee-no-image'); break;
+    }
+});
+if ($body.hasClass('letsee-white')) {
+    localStorage.removeItem('letsee-black');
+    localStorage.setItem('letsee-white', 100);
+}
 /*document.addEventListener("DOMContentLoaded", function() {
       if (+window.localStorage.getItem('letsee') === 1 ) { // Если в localStorage при загрузке есть ключ, то включаем версию
         document.body.classList.add("letsee-active");
         apply_panel();
       }
 });*/
-$('#letsee-hide-images').on( 'change', function () {
-    $(this).prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
+/*$('#letsee-hide-images').on( 'change', function () {
+    $(this).prop( 'checked') ? $body.addClass('letsee-no-image') :$body.removeClass('letsee-no-image');
 });
-$('#letsee-hide-images').prop( 'checked') ? $('body').addClass('letsee-no-image') :$('body').removeClass('letsee-no-image');
+$('#letsee-hide-images').prop( 'checked') ? $body.addClass('letsee-no-image') :$body.removeClass('letsee-no-image');
 
-if ($('body').hasClass('letsee-active')) {
-    $('body').addClass('letsee-white');
+if ($body.hasClass('letsee-active')) {
+    $body.addClass('letsee-white');
     
         $('.icon_eye_off').toggleClass('hidden');
         $('.icon_eye').toggleClass('hidden');
 } else {
-    $('body').prop('class', '');
+    $body.prop('class', '');
 }
 $('.letsee-colors-wonb').on( 'click', function() {
     $(this).addClass('letsee-colors-active');
-    $('body').addClass('letsee-black');
-    $('body').removeClass('letsee-white');
+    $body.addClass('letsee-black');
+    $body.removeClass('letsee-white');
 });
 $('.letsee-colors-bonb').on( 'click', function() {
     $(this).addClass('letsee-colors-active');
-    $('body').removeClass('letsee-black');
-    $('body').addClass('letsee-white');
-});
+    $body.removeClass('letsee-black');
+    $body.addClass('letsee-white');
+});*/
 
-    /*if ($('body').hasClass('letsee-active')) {
+    /*if ($body.hasClass('letsee-active')) {
         $('.icon_eye_off').removeClass('hidden');
         $('.icon_eye').addClass('hidden');
     } else {

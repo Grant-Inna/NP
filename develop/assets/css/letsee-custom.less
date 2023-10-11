@@ -6,17 +6,19 @@
    #container:after {
       background-image: none;
    }
-   nav .wrapper .background_orange {
-      //display: none;
+   
+   #container.container__school .header__container:before,
+   #container.container__success .header__container:before,
+   #container.container__professional .header__container:before,
+   #container.container__cos .header__container:before,
+   #container.container__social_activity .header__container:before,
+   #container.container__social_lift .header__container:before,
+   #container.container__patriot .header__container:before,
+   #container.container__youth .header__container:before {
+      display: none;
    }
-   .menu__items_holder {
-      //height: calc( 100% + 4rem );
-      flex-wrap: wrap;
-      .justify-start();
-      .menu__item {
-         height: 50%;
-         //padding-bottom: 2rem;
-      }
+   #container .header__main_logo:before {
+      display: none;
    }
    .scroll-wrapper.scrollbar-inner {
       height: unset;
@@ -399,8 +401,11 @@
    .header__main_logo {
       background-image: url(../data/logo/npr.svg) !important;
    }
+   .header__logo_top {
+      background-image: url(../data/logo/np_text-top.svg) !important;
+   }
    .header__logo_title {
-      background-image: url(../data/logo/npr_text.svg) !important;
+      background-image: url("../data/logo/np_text-xs.svg") !important;
    }
    .icon_arrow_thin-white {
       background-image: url(../data/icons/white/arr-bottom.svg) !important;
@@ -432,8 +437,8 @@
    }
    .icon_eye_off {
        background-image: url(../data/icons/white/eye-off.svg) !important;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.6rem;
+      height: 1.6rem;
    }
    
    #map_index__information {
@@ -546,8 +551,8 @@
    
    .icon_eye_off {
       background-image: url(../data/icons/black/eye-off.svg) !important;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.8rem;
+      height: 1.8rem;
    }
    .to_top__icon {
       background-image: url(../data/icons/white/arr-top.svg) !important;
@@ -637,6 +642,9 @@ body.letsee-active {
    }
    .page__caption .page__title {
       width: 100% !important;
+   }
+   .person__image {
+      display: none !important;
    }
 }
 
