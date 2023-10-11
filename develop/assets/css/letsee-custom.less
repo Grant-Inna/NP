@@ -6,7 +6,18 @@
    #container:after {
       background-image: none;
    }
-   
+   nav.menu__container {
+       height: 5rem;
+   }
+   .menu__items_holder {
+      height: 5rem;
+      flex-wrap: wrap;
+      .justify-start();
+      .menu__item {
+         height: auto;
+         margin-bottom: .6rem;
+      }
+   }
    #container.container__school .header__container:before,
    #container.container__success .header__container:before,
    #container.container__professional .header__container:before,
@@ -19,6 +30,9 @@
    }
    #container .header__main_logo:before {
       display: none;
+   }
+   .infrastructure_info-cube .info_line__text {
+      width: 90% !important;
    }
    .scroll-wrapper.scrollbar-inner {
       height: unset;
