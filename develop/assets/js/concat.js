@@ -2043,7 +2043,7 @@ $(document).ready(function () {
          if ($('body').hasClass('letsee-active')) {
             $slider_cell
             .slick({
-               slidesToShow: 2,
+               slidesToShow: 1,
                slidesToScroll: 1,
                speed: 400,
                arrows: false,
@@ -2063,6 +2063,7 @@ $(document).ready(function () {
                   }
                ]
             });
+            
          } else {
             
             $slider_cell.slick({

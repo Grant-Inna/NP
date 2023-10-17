@@ -14,6 +14,23 @@ html
          include ../../assets/jade/content/pages/infrastructure/__caption
          +caption( 'kvantorium', 'Детские технопарки &laquo;КВАНТОРИУМ&raquo;', 'Создаются и&nbsp;функционируют на&nbsp;базе общеобразовательных организаций в&nbsp;целях обеспечения реализации федерального проекта &laquo;Современная школа&raquo; национального проекта &laquo;Образование&raquo; ', 'на базе общеобразовательных организаций')
 
+
+
+         section( aria-label='О региональных центрах').after_video_info__container
+            .wrapper
+               .infrastructure__video
+                  .infrastructure__video_ratio
+                  .infrastructure__iframe
+                     iframe(src='https://vk.com/video_ext.php?oid=-221670803&id=456239025&hash=bf19f5e3e5b3dc4a' width='100%' height='100%' frameborder='0' allowfullscreen='1' allow='autoplay; encrypted-media; fullscreen; picture-in-picture')
+                        p Твой браузер устарел для отображения элемента iframe
+            .after_video_info__holder
+               .wrapper
+                  .span Детский технопарк &laquo;Кванториум&raquo;&nbsp;&mdash; современное образовательное пространство в&nbsp;общеобразовательной организации, оснащенное оборудованием, средствами обучения и&nbsp;воспитания для&nbsp;организации образовательной деятельности по&nbsp;учебным предметам естественно&ndash;научной и&nbsp;технологической направленностей, обеспечения вариативности курсов внеурочной деятельности и&nbsp;дополнительного образования.
+                  .span.mt2 На&nbsp;базе Школьного Кванториума для&nbsp;обучающихся проводятся внеклассные мероприятия, олимпиады, конкурсы, профориентационные мероприятия и&nbsp;иные события естественнонаучной и&nbsp;технологической направленностей.
+
+
+
+
          include  ../../assets/jade/content/pages/infrastructure/__info-two
          include  ../../assets/jade/content/pages/infrastructure/__info-text-line
          section( aria-label='О площадках')
@@ -23,13 +40,13 @@ html
                   .info_list__container
                      article.info_line__holder.text-white.mb2.items-center
                         .info_line__icon.icon-check
-                        .info_line__text Создание условий для расширения содержания общего образования
-                     +info-text( 'Развитие у обучающихся современных компетенций и&nbsp;навыков, в&nbsp;том числе естественно-научной, математической, информационной грамотности, формирование критического и&nbsp;креативного мышления, совершенствование навыков естественно-научной и&nbsp;технологической направленностей')
-                     +info-text( 'Практическую отработку учебного материала по&nbsp;учебным предметам &laquo;Физика&raquo;, &laquo;Химия&raquo;, &laquo;Биология&raquo;, реализацию дополнительных общеобразовательных программ ')
+                        .info_line__text Создание условий для&nbsp;расширения содержания общего образования
+                     +info-text( 'Развитие у&nbsp;обучающихся современных компетенций и&nbsp;навыков, в&nbsp;том&nbsp;числе естественно&ndash;научной, математической, информационной, технологической грамотности, формирование критического и&nbsp;креативного мышления')
+                     +info-text( 'Практическую отработку материала по&nbsp;учебным предметам &laquo;Физика&raquo;, &laquo;Химия&raquo;, &laquo;Биология&raquo;, реализацию внеурочной деятельности и&nbsp;дополнительных общеобразовательных программ с&nbsp;помощью приобретаемого оборудования, средств обучения и&nbsp;воспитания')
 
-         section( aria-label='Скачать информацию о контактах всех центров непрерывного повышения профессионального мастерства педагогических работников')
+         section( aria-label='Скачать информацию обо всех школьных технопарках Кванториум')
             include ../../assets/jade/content/pages/infrastructure/__map
-            +map( 'Детские технопарки &laquo;Кванториум&raquo;<br>на карте России', '')
+            +map( 'Реестр школьных технопарков &laquo;КВАНТОРИУМ&raquo;', '')
 
 
          include ../../assets/jade/content/materials/__file
@@ -38,10 +55,7 @@ html
                .page__title
                   h1.page__title_main.text-blue.center Нормативные документы
                .materials__container.mt3
-                  +file( 'текст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст текст')
-                  +file( 'текст текст текст')
-                  +file( 'текст текст текст')
-                  +file( 'текст текст текст')
+                  +file( 'Название')
 
          include ../../assets/jade/content/materials/__video
          section( aria-label='Список видеозаписей' ).mt8.mb5
@@ -53,13 +67,9 @@ html
                .materials__container.mt3
                   +video( 'Название 1', 'sirius/1.jpg', 'sirius_1')
                   +video( 'Название 2', 'sirius/2.jpg', 'sirius_2')
-                  +video( 'Название 4', 'sirius/4.jpg', 'sirius_4')
-                  +video( 'Название 3', 'sirius/3.jpg', 'sirius_3')
 
                .span.center.mt4 Вебинары, методические конференции и&nbsp;семинары
                .materials__container.mt3
-                  +video( 'Название 1', 'sirius/1.jpg', 'sirius_11')
-                  +video( 'Название 5', 'sirius/5.jpg', 'sirius_5')
                   +video( 'Название 6', 'sirius/6.jpg', 'sirius_6')
                   +video( 'Название 7', 'sirius/7.jpg', 'sirius_7')
 

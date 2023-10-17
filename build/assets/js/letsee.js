@@ -197,12 +197,22 @@ function load_options() {
     }
 }
 
+
+var options = load_options();
+options2panel(options);
+set_css(gen_css(options));
+
+
+letsee_custom_css = {
+    enabled: '.enable_letsee { display: none; }',
+    images_hidden: '.slideshow { display: none; }'
+};
+
+
 const $body = $('body');
 
 window.letsee_toggle_panel = function () {
 
-    //     $('.icon_eye_off').toggleClass('hidden');
-    //     $('.icon_eye').toggleClass('hidden');
     
     if (+localStorage.getItem('letsee') == 0 ) { // Если в localStorage не включена версия, то включаем её
         // и фиксируем это в localstorage
@@ -249,12 +259,6 @@ window.letsee_toggle_panel = function () {
 };
 
 
-var options = load_options();
-options2panel(options);
-set_css(gen_css(options));
-
-
-
 if (+localStorage.getItem('letsee') == 100 ) { // Если в localStorage не включена версия, то включаем её
     // и фиксируем это в localstorage
     
@@ -265,20 +269,18 @@ if (+localStorage.getItem('letsee') == 100 ) { // Если в localStorage не 
     $('.icon_eye_off').removeClass('hidden');
     $('.icon_eye').addClass('hidden');
 }
-if (+localStorage.getItem('letsee-black') == 100 ) { // Если в localStorage включена чёрная версия, то добавляем класс
-    $body.addClass('letsee-black');
-} else {
+if($('.letsee-colors-bonw').hasClass('letsee-colors-active')) {
+    $body.addClass('letsee-white');
     $body.removeClass('letsee-black');
     localStorage.removeItem('letsee-black');
     localStorage.setItem('letsee-white', 100)
-}
-if (+localStorage.getItem('letsee-white') == 100 ) { // Если в localStorage включена чёрная версия, то добавляем класс
-    $body.addClass('letsee-white');
 } else {
+    $body.addClass('letsee-black');
     $body.removeClass('letsee-white');
     localStorage.removeItem('letsee-white');
     localStorage.setItem('letsee-black', 100);
 }
+
 if (+localStorage.getItem('letsee-no-image') == 100 ) { // Если в localStorage включена чёрная версия, то добавляем класс
     $body.addClass('letsee-no-image');
 } else {
@@ -289,16 +291,16 @@ $('.letsee-colors-wonb').on( 'click', function() { // Делаем чёрным
     $(this).addClass('letsee-colors-active');
     $body.addClass('letsee-black');
     $body.removeClass('letsee-white');
-            localStorage.setItem('letsee-black', 100); // Добавляем в хранилище
-            localStorage.removeItem('letsee-white'); // Удаляем из хранилища
+    localStorage.setItem('letsee-black', 100); // Добавляем в хранилище
+    localStorage.removeItem('letsee-white'); // Удаляем из хранилища
     
 });
 $('.letsee-colors-bonb').on( 'click', function() { // Делаем белым
     $(this).addClass('letsee-colors-active');
     $body.removeClass('letsee-black');
     $body.addClass('letsee-white');
-            localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
-            localStorage.removeItem('letsee-black'); // Удаляем из хранилища
+    localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
+    localStorage.removeItem('letsee-black'); // Удаляем из хранилища
 });
 $('#letsee-hide-images').on( 'click', function() { // Делаем белым
     switch ($(this).prop( 'checked'))
@@ -310,48 +312,6 @@ $('#letsee-hide-images').on( 'click', function() { // Делаем белым
 if ($body.hasClass('letsee-white')) {
     localStorage.removeItem('letsee-black');
     localStorage.setItem('letsee-white', 100);
-}
-/*document.addEventListener("DOMContentLoaded", function() {
-      if (+window.localStorage.getItem('letsee') === 1 ) { // Если в localStorage при загрузке есть ключ, то включаем версию
-        document.body.classList.add("letsee-active");
-        apply_panel();
-      }
-});*/
-/*$('#letsee-hide-images').on( 'change', function () {
-    $(this).prop( 'checked') ? $body.addClass('letsee-no-image') :$body.removeClass('letsee-no-image');
-});
-$('#letsee-hide-images').prop( 'checked') ? $body.addClass('letsee-no-image') :$body.removeClass('letsee-no-image');
-
-if ($body.hasClass('letsee-active')) {
-    $body.addClass('letsee-white');
-    
-        $('.icon_eye_off').toggleClass('hidden');
-        $('.icon_eye').toggleClass('hidden');
-} else {
-    $body.prop('class', '');
-}
-$('.letsee-colors-wonb').on( 'click', function() {
-    $(this).addClass('letsee-colors-active');
-    $body.addClass('letsee-black');
-    $body.removeClass('letsee-white');
-});
-$('.letsee-colors-bonb').on( 'click', function() {
-    $(this).addClass('letsee-colors-active');
-    $body.removeClass('letsee-black');
-    $body.addClass('letsee-white');
-});*/
-
-    /*if ($body.hasClass('letsee-active')) {
-        $('.icon_eye_off').removeClass('hidden');
-        $('.icon_eye').addClass('hidden');
-    } else {
-        $('.icon_eye_off').addClass('hidden');
-        $('.icon_eye').removeClass('hidden');
-    }*/
-
-letsee_custom_css = {
-    enabled: '.enable_letsee { display: none; }',
-    images_hidden: '.slideshow { display: none; }'
 }
 
 })(jQuery);

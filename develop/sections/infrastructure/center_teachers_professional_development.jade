@@ -14,6 +14,23 @@ html
          include ../../assets/jade/content/pages/infrastructure/__caption
          +caption( 'pedagogikal_m', 'Центры непрерывного повышения профессионального мастерства педагогических работников', 'Ведущий институт вовлечения педагогических работников и&nbsp;управленческих кадров в&nbsp;национальную систему профессионального роста ', '')
 
+
+
+
+
+         section( aria-label='О региональных центрах').after_video_info__container
+            .wrapper
+               .infrastructure__video
+                  .infrastructure__video_ratio
+                  .infrastructure__iframe
+                     iframe(src='https://vk.com/video_ext.php?oid=-198655662&id=456239903&hash=d9901a904bc1f6d7' width='100%' height='100%' frameborder='0' allowfullscreen='1' allow='autoplay; encrypted-media; fullscreen; picture-in-picture')
+                        p Твой браузер устарел для отображения элемента iframe
+            .after_video_info__holder
+               .wrapper
+                  .span Центры непрерывного повышения профессионального мастерства педагогических работников&nbsp;&mdash; площадки, формируемые как&nbsp;структурные подразделения организаций дополнительного профессионального образования, организаций высшего образования, профессиональных образовательных организаций или&nbsp;в&nbsp;качестве самостоятельных юридических лиц в&nbsp;целях координации деятельности региональных сегментов&nbsp;ЕФС.
+
+
+
          include  ../../assets/jade/content/pages/infrastructure/__info-one
          include  ../../assets/jade/content/pages/infrastructure/__info-text-line
          section( aria-label='О центре')
@@ -50,9 +67,9 @@ html
                   li.flex.mt1 формирование и&nbsp;развитие исследовательской культуры педагогических работников
 
 
-         section( aria-label='Скачать информацию о контактах всех центров непрерывного повышения профессионального мастерства педагогических работников')
+         section( aria-label='Скачать информацию обо всех центрах непрерывного повышения профессионального мастерства педагогических работников')
             include ../../assets/jade/content/pages/infrastructure/__map
-            +map( 'Центры непрерывного повышения профессионального мастерства педагогических работников', '')
+            +map( 'Реестр Центров непрерывного повышения профессионального мастерства педагогических работников', '')
 
          include ../../assets/jade/content/materials/__file
          section( aria-label='Список документов' ).mt5

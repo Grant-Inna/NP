@@ -4,7 +4,7 @@
 .infrastructure__video_ratio {
    width: 100%;
    height: 0;
-   padding-top: 56%;
+   padding-top: 56.3%;
 }
 .infrastructure__iframe {
    position: absolute;
@@ -30,7 +30,7 @@
 }
 
 .after_video_info__holder {
-   background-color: @color-text-blue;
+   //background-color: @color-text-blue;
    
    padding-top: @top;
    padding-bottom: calc( 2rem + 6vw );
@@ -43,12 +43,14 @@
    });
 }
 .after_video_info__holder .span {
-   color: white;
+   color: @color-text-black;
 }
 
 .after_video_info__container .icon_check {
-   .icon-color-svg('icons', 'white', 'check');
-   .icon-30();
+   .icon-color-svg('icons', 'black', 'dot');
+   .icon-05();
    flex-shrink: 0;
+   margin-top: .55rem;
    margin-right: 1rem;
+   margin-left: 1rem;
 }
