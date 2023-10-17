@@ -61,13 +61,19 @@ html
                +more( 'Центры &laquo;Точка роста&raquo; обеспечивают повышение охвата обучающихся общеобразовательных организаций, расположенных в&nbsp;сельской местности и&nbsp;малых городах, программами основного общего и&nbsp;дополнительного образования естественно-научной и&nbsp;технологической направленностей с&nbsp;использованием современного оборудования')
 
          include ../../assets/jade/content/materials/__file
+         include ../../assets/jade/content/materials/__filter
          section( aria-label='Список документов' ).mt5
             .wrapper
                .page__title
                   h1.page__title_main.text-blue.center Нормативные документы
+               .materials_filter__holder
+                  .materials_filter__item.active
+                     .filter
+                        span Все
+                  +filter( 'Для&nbsp;родителей')
+                  +filter( 'Для&nbsp;руководителей')
+                  +filter( 'Для&nbsp;педагогов')
                .materials__container.mt3
-                  +file( 'текст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст текст')
-                  +file( 'текст текст текст')
                   +file( 'текст текст текст')
                   +file( 'текст текст текст')
 
@@ -80,16 +86,10 @@ html
                .span.center.mt2 Практические мастер-классы
                .materials__container.mt3
                   +video( 'Название 1', 'sirius/1.jpg', 'sirius_11')
-                  +video( 'Название 5', 'sirius/5.jpg', 'sirius_5')
-                  +video( 'Название 6', 'sirius/6.jpg', 'sirius_6')
-                  +video( 'Название 7', 'sirius/7.jpg', 'sirius_7')
 
                .span.center.mt4 Вебинары, методические конференции и&nbsp;семинары
                .materials__container.mt3
                   +video( 'Название 1', 'sirius/1.jpg', 'sirius_1')
-                  +video( 'Название 2', 'sirius/2.jpg', 'sirius_2')
-                  +video( 'Название 4', 'sirius/4.jpg', 'sirius_4')
-                  +video( 'Название 3', 'sirius/3.jpg', 'sirius_3')
 
          include ../../assets/jade/content/pages/infrastructure/__footer
          include ../../assets/jade/content/pages/__info_block/top

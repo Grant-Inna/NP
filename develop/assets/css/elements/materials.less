@@ -73,3 +73,40 @@
    
    .tr();
 }
+
+
+.materials_filter__holder {
+   .row-flex();
+   .justify-center();
+   margin-top: 4rem;
+}
+.materials_filter__item {
+   .col();
+   cursor: pointer;
+}
+.materials_filter__holder .filter {
+   .flex-center();
+   padding: .8rem 2.6rem;
+   border: 1px solid rgba(68, 68, 68, 0.30);
+   border-radius: 2px;
+   color: @color-text-gray;
+   .tr();
+   
+   span {
+      .opensans-regular();
+      font-size: 18px;
+   }
+}
+.materials_filter__item:hover > .filter {
+   .flex-center();
+   border-color: #64BDE1;
+   .tr();
+}
+
+.materials_filter__item.active .filter {
+   .flex-center();
+   border-color: #64BDE1;
+   background-color: #64BDE1;
+   color: white;
+   .tr();
+}
