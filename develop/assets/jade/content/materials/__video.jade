@@ -1,5 +1,9 @@
 mixin video( name, img, id )
    .materials_video__holder
-      iframe(src='http://www.youtube.com/embed/DkaUsBwe0fo' width='100%' height='100%' frameborder='0' allowfullscreen)
-         p Твой браузер устарел для отображения элемента iframe
-      .materials_video__name.span !{name}
+      .materials_video__relative
+         .infrastructure__video_ratio
+         .infrastructure__iframe
+            iframe(src='http://www.youtube.com/embed/DkaUsBwe0fo' width='100%' height='100%' frameborder='0' allowfullscreen)
+               p Твой браузер устарел для отображения элемента iframe
+      .materials_video__name.span
+         .video_name__full !{name}
