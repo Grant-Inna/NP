@@ -10,6 +10,14 @@ $(document).ready(function () {
          DeletedAt: null
       },
       {
+         text: 'Байконур',
+         federalDistrict: '??',
+         id: 88,
+         path: 'M302.7,450.7z',
+         Objects: null,
+         DeletedAt: null
+      },
+      {
          text: 'Республика Адыгея',
          federalDistrict: 'Южный',
          id: 87,
@@ -2067,8 +2075,8 @@ $(document).ready(function () {
          } else {
             
             $slider_cell.slick({
-               slidesToShow: 2,
-               slidesToScroll: 2,
+               slidesToShow: 1,
+               slidesToScroll: 1,
                speed: 400,
                arrows: false,
                dots: true,
@@ -2081,8 +2089,8 @@ $(document).ready(function () {
                      settings: {
                         arrows: false,
                         dots: true,
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToShow: 2,
+                        slidesToScroll: 2
                      }
                   }
                ]

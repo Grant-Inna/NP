@@ -198,16 +198,6 @@ function load_options() {
 }
 
 
-var options = load_options();
-options2panel(options);
-set_css(gen_css(options));
-
-
-letsee_custom_css = {
-    enabled: '.enable_letsee { display: none; }',
-    images_hidden: '.slideshow { display: none; }'
-};
-
 
 const $body = $('body');
 
@@ -313,5 +303,19 @@ if ($body.hasClass('letsee-white')) {
     localStorage.removeItem('letsee-black');
     localStorage.setItem('letsee-white', 100);
 }
+
+
+
+
+
+var options = load_options();
+options2panel(options);
+set_css(gen_css(options));
+
+
+letsee_custom_css = {
+    enabled: '.enable_letsee { display: none; }',
+    images_hidden: '.slideshow { display: none; }'
+};
 
 })(jQuery);
