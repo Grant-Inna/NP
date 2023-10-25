@@ -42,7 +42,7 @@
 
 .info_line__holder {
    .flex();
-   color: @color-text-white;
+   //color: @color-text-white;
 }
 .info_line__icon {
    flex-shrink: 0;
@@ -51,8 +51,20 @@
        display: none;
    })
 }
+
 .info_line__text {
    .opensans-semibold();
+}
+.info_line__text b.text-blue {
+   display: inline;
+   .opensans-semibold();
+      font-size: 1.3rem;
+    line-height: 1.6rem;
+   
+   .middle-block({
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+   })
 }
 ul.info_line__text li {
    .flex();

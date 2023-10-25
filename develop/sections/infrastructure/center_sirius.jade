@@ -26,8 +26,8 @@ html
                      +info-text( 'вовлечение промышленных предприятий, научных, культурных, спортивных и&nbsp;общественных организаций в&nbsp;создание образовательных программ')
                      +info-text( 'индивидуальное сопровождение одаренных детей и&nbsp;молодежи в&nbsp;соответствии с&nbsp;задачами социально-экономического и&nbsp;промышленного развития региона')
 
-         section( aria-label='О региональном центре')
-            .wrapper.mb4
+         section( aria-label='Общие сведения об Образовательном центре')
+            .wrapper.mb7
                article
                   b.text-blue.mt4 Региональные центры призваны действовать как агрегатор передовых педагогических технологий в&nbsp;интересах талантливых школьников и&nbsp;молодежи региона
                   ul.mt2.ml3
@@ -40,6 +40,44 @@ html
                      | в&nbsp;региональном центре, пройдя успешный конкурсный отбор
                   .span.mt1 Научно-методической поддержкой регионов, повышением квалификации педагогов, обменом опытом и&nbsp;лучшими практиками по&nbsp;работе с&nbsp;одаренными детьми занимается
                      h1.inline.mr.ml Фонд &laquo;Талант и&nbsp;успех&raquo;
+
+               .footer_line
+               article
+                  b.text-blue.mt4 Общие сведения об Образовательном центре «Сириус»
+                  .span.mt2 Образовательный центр «Сириус» создан Образовательным Фондом «Талант и успех» на базе олимпийской инфраструктуры по инициативе Президента Российской Федерации В.В. Путина. Фонд учрежден 24 декабря 2014 г. выдающимися российскими деятелями науки, спорта и искусства.
+                  .span.mt1 Цель работы Образовательного центра «Сириус» – раннее выявление, развитие и дальнейшая профессиональная поддержка одарённых детей, проявивших выдающиеся способности в области искусств, спорта, естественнонаучных дисциплин, а также добившихся успеха в техническом творчестве.
+
+               article.info_line__holder.mb2.mt2
+                  .info_line__icon.icon-check-blue
+                  .info_line__text.items-center
+                     .span.inline Центр работает &nbsp;
+                     b.text-blue круглый год
+               article.info_line__holder.mb2.mt15
+                  .info_line__icon.icon-check-blue
+                  .info_line__text.items-center
+                     .span.inline Проезд и пребывание в Центре для детей &nbsp;
+                     b.text-blue бесплатные
+               article.info_line__holder.mb2.mt15
+                  .info_line__icon.icon-check-blue
+                  .info_line__text
+                     .span.inline Ежемесячно в «Сириус» приезжают
+                     b.text-blue  800 детей
+                     .span.inline  в возрасте
+                     b.text-blue  10-17 лет
+                     .span.inline  из всех регионов России. Их сопровождают более
+                     b.text-blue  100 преподавателей и тренеров,
+                     .span.inline повышающих в Центре свою квалификацию
+               article.info_line__holder.mb2.mt15
+                  .info_line__icon.icon-check-blue
+                  .info_line__text
+                     .span.inline Образовательная
+                     b.text-blue  программа рассчитана на 24 дня
+                     .span.inline  и включает в себя как занятия по специальности, так и развивающий досуг, мастер-классы, творческие встречи с признанными в своих областях профессионалами, комплекс оздоровительных процедур, а в течение учебного года общеобразовательные занятия
+
+
+
+
+
 
          section( aria-label='Скачать информацию обо всех центрах Сириус')
             include ../../assets/jade/content/pages/infrastructure/__map
@@ -82,9 +120,16 @@ html
          include ../../assets/jade/content/pages/__info_block/__footer-link
          include ../../assets/jade/content/pages/__info_block/__footer-mail
          include ../../assets/jade/content/pages/__info_block/__footer-phone
+         include ../../assets/jade/content/pages/__info_block/__footer-telegram
+         include ../../assets/jade/content/pages/__info_block/__footer-vk
+         include ../../assets/jade/content/pages/__info_block/__footer-site
+         include ../../assets/jade/content/pages/__info_block/__footer-rutube
+
          section( aria-label='Контакты региональных центров' ).page_footer__container
             .wrapper
                .page_footer__info
+
+                  .footer_line
                   +top( 'Федеральный оператор:', '', 'Образовательный Фонд &laquo;Талант и&nbsp;успех&raquo; ', '', 'full')
                   +top( 'Адрес:', '', 'Краснодарский край, пгт&nbsp;&laquo;Сириус&raquo;, Олимпийский пр-т, д.&nbsp;40, 354349', '', 'full')
                   +site( 'Сайт:', 'https://sochisirius.ru/regions-info')

@@ -47,6 +47,14 @@
       .size-middle(24);
       .size-lg(24);
    }
+   .materials_video__name {
+      height: 120px !important;
+   }
+   .video_name__full {
+      -webkit-line-clamp: 4 !important;
+      font-size: 22px !important;
+    line-height: 30px !important;
+   }
    #container.container__school .header__container:before,
    #container.container__success .header__container:before,
    #container.container__professional .header__container:before,
@@ -60,7 +68,9 @@
    .page_footer__container:after,
    section.deadline__container:before,
    #container .headline_blue:after,
-   #container .headline_blue-dark:after {
+   #container .headline_blue-dark:after,
+   .infrastructure_info-cube .info_line__text:before,
+   .it_diagram__container {
       display: none;
    }
    #container .header__main_logo:before {
@@ -83,6 +93,16 @@
       width: 100%;
       max-width: unset;
    }
+   .pagination__item {
+      width: 36px;
+      height: 36px;
+      margin-right: 8px;
+      margin-left: 8px;
+   }
+   .pagination__arrow {
+      margin-right: 20px;
+      margin-left: 20px;
+   }
    .mobile__container,
    .mobile__container .wrapper,
    .header__main_logo,
@@ -95,11 +115,14 @@
    .icon-created,
    .icon-telegram,
    .icon-file,
+   .icon-site,
+   .icon-rutube,
    .icon-vk,
    .icon-plan,
    .icon_arrow_thin,
    .after_video_info__container .icon_check,
-   .icon_close {
+   .icon_close,
+   .pagination__number {
       background: none !important;
    }
    .header__main_logo,
@@ -125,6 +148,8 @@
    .icon-created,
    .icon-telegram,
    .icon-vk,
+   .icon-site,
+   .icon-rutube,
    .icon-file,
    .icon-plan,
    .icon_arrow_thin,
@@ -336,7 +361,10 @@
       height: 3rem;
    }
    .icon-check,
-   .icon-telegram {
+   .icon-telegram,
+   .icon-vk,
+   .icon-site,
+   .icon-rutube {
        width: 2rem;
        height: 2rem;
    }
@@ -498,6 +526,12 @@
    .icon-vk {
       background-image: url(../data/icons/vk.svg) !important;
    }
+   .icon-site {
+      background-image: url(../data/icons/white/site.svg) !important;
+   }
+   .icon-rutube {
+      background-image: url(../data/icons/white/rutube.svg) !important;
+   }
    .icon-file {
       background-image: url(../data/icons/white/upload.svg) !important;
    }
@@ -520,8 +554,12 @@
    .icon_close {
       background-image: url(../data/icons/white/close.svg) !important;
    }
-   .to_top__holder {
+   .to_top__holder,
+   .to_top__text {
       background: white !important;
+   }
+   .to_top__text {
+      color: black;
    }
    .slider__item,
    .button_blue,
@@ -559,8 +597,12 @@
    #map_index__information .icon_close {
       background-image: url('../data/icons/white/close.svg') !important;
    }
-   .to_top__holder {
+   .to_top__holder,
+   .to_top__text {
       background: black !important;
+   }
+   .to_top__text {
+      color: white !important;
    }
    header.header__container:after,
    section.deadline__container:after {
@@ -609,6 +651,12 @@
    }
    .icon-vk {
       background-image: url(../data/black/vk.svg) !important;
+   }
+   .icon-site {
+      background-image: url(../data/icons/black/site.svg) !important;
+   }
+   .icon-rutube {
+      background-image: url(../data/icons/black/rutube.svg) !important;
    }
    .icon-file {
       background-image: url(../data/icons/black/upload.svg) !important;

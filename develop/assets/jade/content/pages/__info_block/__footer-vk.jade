@@ -1,5 +1,5 @@
-mixin vk( text, link )
-   article.full.mt
+mixin vk( text, link, cl )
+   article.mt( class='#{cl}' )
       a( href='#{link}' target='_blank' ).flex.items-center
          .icon-vk.mr1
          .span !{text}
