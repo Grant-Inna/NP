@@ -16,15 +16,21 @@ header.header__container .wrapper {
       background-position: 40%;
   });
   .md-block({
-     background-size: cover;
+     background-size: auto 103%;
      background-position: unset;
+  });;
+  .mdsm-block({
+     background-size: auto 100%;
   });
   .sm-block({
-     background-size: 150%;
+     height: 150px;
+     background-size: cover;
+    background-position: center;
   });
   .xs-block({
+     height: 130px;
      background-image: none;
-     background-color: @color-background-blue-footer;
+     background-color: @color-background-blue-light-new;
   });
 }
 

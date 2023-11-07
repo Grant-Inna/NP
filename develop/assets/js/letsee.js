@@ -299,6 +299,19 @@ $('#letsee-hide-images').on( 'click', function() { // Делаем белым
         case false: $body.removeClass('letsee-no-image'); localStorage.removeItem('letsee-no-image'); break;
     }
 });
+
+if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
+    $body.addClass('letsee-black');
+    $body.removeClass('letsee-white');
+    localStorage.setItem('letsee-black', 100); // Добавляем в хранилище
+    localStorage.removeItem('letsee-white'); // Удаляем из хранилища
+}
+if ($('.letsee-colors-bonb').hasClass('letsee-colors-active')) { // Отфильтровываем белый
+    $body.removeClass('letsee-black');
+    $body.addClass('letsee-white');
+    localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
+    localStorage.removeItem('letsee-black'); // Удаляем из хранилища
+}
 if ($body.hasClass('letsee-white')) {
     localStorage.removeItem('letsee-black');
     localStorage.setItem('letsee-white', 100);

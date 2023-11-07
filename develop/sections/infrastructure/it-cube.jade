@@ -126,21 +126,25 @@ html
          include ../../assets/jade/content/pages/__info_block/__footer-link
          include ../../assets/jade/content/pages/__info_block/__footer-mail
          include ../../assets/jade/content/pages/__info_block/__footer-phone
+         include ../../assets/jade/content/pages/__info_block/__footer-vk
+         include ../../assets/jade/content/pages/__info_block/__footer-site
+         include ../../assets/jade/content/pages/__info_block/__footer-telegram
          section( aria-label='Контакты региональных центров' ).page_footer__container
             .wrapper
                .page_footer__info
+                  +ssite( 'www.it-cube.ficto.ru', 'www.it-cube.ficto.ru', 'third')
+                  +vk( 'Официальная группа сети Центров &laquo;IT-куб&raquo;', 'https://vk.com/itcube_official', 'half')
+                  +telegram( 'Информационно&ndash;методический канал Федерального оператора для представителей центров цифрового образования детей &laquo;IT-куб&raquo;', 'https://t.me/ITcube_metod', 'full')
+                  .footer_line
                   +top( 'Федеральный оператор:', '', 'Федеральное государственное автономное научное учреждение &laquo;Федеральный институт цифровой трансформации в&nbsp;сфере образования&raquo;', '', 'full')
                   +top( 'Зона ответственности:', '', 'Организационно-методическое и&nbsp;информационное сопровождение функционирования Центров &laquo;IT-куб&raquo; в&nbsp;субъектах Российской Федерации', '', 'full')
-                  +site( 'Сайт:', 'https://ficto.ru/')
-                  +mail( 'Электронная почта:', 'it-cube@ficto.ru')
-                  +phone( 'Горячая линия:', '+7&nbsp;(495)&nbsp;137-47-16, добавочный&nbsp;3', '84951374716p3')
-                  article.full.mt.mb3
-                     a( href='https://t.me/ITcube_metod' target='_blank').flex.items-center
-                        .icon-telegram.mr1
-                        .span Информационно-методический канал Федерального оператора для представителей центров цифрового образования детей &laquo;IT-куб&raquo;&nbsp;&mdash; https://t.me/ITcube_metod
+                  +site( 'Сайт:', 'https://ficto.ru', 'third')
+                  +mail( 'Электронная почта:', 'it-cube@ficto.ru', 'third')
+                  +phone( 'Горячая линия:', '+7&nbsp;(495)&nbsp;137-47-16, добавочный&nbsp;3', '84951374716p3', 'third')
+                  .footer_line
                   +top( 'Центр проектного сопровождения:', '', 'Федеральный государственный автономное учреждение &laquo;Центр просветительских инициатив Министерства просвещения Российской Федерации&raquo; ', '', 'full')
                   +top( 'Зона ответственности:', '', 'Организационно-методическое и&nbsp;информационное сопровождение создания Центров &laquo;IT-куб&raquo; в&nbsp;субъектах Российской Федерации, а&nbsp;также организационно-техническое сопровождение субъектов Российской Федерации в&nbsp;части мониторинга использования субсидии из&nbsp;федерального бюджета с&nbsp;учётом обязательств по&nbsp;достижению значений результатов использования данной субсидии субъектами Российской Федерации', '', 'full')
-                  +site( 'Сайт:', 'https://mpcenter.ru/')
+                  +site( 'Сайт:', 'https://mpcenter.ru')
 
          include ../../assets/jade/footer/footer
       include ../../assets/jade/static/scripts

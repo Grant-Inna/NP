@@ -136,13 +136,11 @@ html
          section( aria-label='Контакты региональных центров' ).page_footer__container
             .wrapper
                .page_footer__info
-                  +vk( 'Страница проекта в&nbsp;социальных сетях', 'https://vk.com/roskvantorium', 'full')
-                  .footer_line
                   +top( 'Федеральный оператор:', '', 'Федеральное государственное бюджетное образовательное учреждение дополнительного образования &laquo;Федеральный центр дополнительного образования и&nbsp;организации отдыха и&nbsp;оздоровления детей&raquo;', '', 'full')
                   +top( 'Юридический и&nbsp;фактический адрес:', '', 'г.&nbsp;Москва, Ростокинский проезд, д.&nbsp;3, 107014', '', 'full')
-                  +phone( 'Горячая линия:', '+7&nbsp;(495)&nbsp;603-30-15', '+74956033015')
-                  +mail( 'Электронная почта:', 'info@fedcdo.ru')
-                  +site( 'Сайт:', 'https://roskvantorium.ru/')
+                  +phone( 'Горячая линия:', '+7&nbsp;(495)&nbsp;603-30-15', '+74956033015', '')
+                  +mail( 'Электронная почта:', 'info@fedcdo.ru', '')
+                  +site( 'Сайт:', 'https://roskvantorium.ru', '')
 
          include ../../assets/jade/footer/footer
       include ../../assets/jade/static/scripts

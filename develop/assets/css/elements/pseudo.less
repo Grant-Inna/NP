@@ -70,18 +70,8 @@ header.header__container:before {
     right: calc(-7rem + 5vw);
    });
    .md-block({
-      top: 5rem;
-    right: -4rem;
-   });
-   .sm-block({
-      top: 14vw;
-      right: -5rem;
-      width: 37vw;
-      min-width: 190px;
-   });
-   .xs-block({
       display: none;
-   })
+   });
 }
 
 .aside__block_white .header__aside_icon:after {
@@ -202,14 +192,24 @@ footer.footer__container:after {
    height: @height-header-pseudo;
    //max-height: 45vw;
    max-height: 1100px;
+   
+   .middle-block({
+      top: 15%;
+      height: calc(325% - 2vw);
+   });
+   .lg-block({
+      height: calc(340% - 2vw);
+   });
    .md-block({
-      height: calc(240% - 2vw);
+      top: 28%;
+      height: calc(317% - 2vw);
    });
    .sm-block({
-      height: calc(270% - 2vw);
+      height: calc(385% - 2vw);
    });
    .xs-block({
-      height: calc(235% - 2vw);
+      top: 130px;
+      height: 210px;
    });
 }
 #container.container__results header.header__container:before {
@@ -259,6 +259,22 @@ footer.footer__container:after {
       height: calc(280% - 2vw);
    });
 }
+#container.container__cos header.header__container:before {
+   .lg-block({
+      height: calc(360% - 2vw);
+   });
+   .md-block({
+      top: 28%;
+      height: calc(317% - 2vw);
+   });
+   .sm-block({
+      height: calc(385% - 2vw);
+   });
+   .xs-block({
+      top: 130px;
+      height: 210px;
+   });
+}
 
 #container header.header__container .wrapper:before {
    content: none;
@@ -282,14 +298,104 @@ footer.footer__container:after {
    })
 }
 
-#container.container__school .header__container:before { .header-pseudo-school();}
-#container.container__success .header__container:before { .header-pseudo-success();}
-#container.container__professional .header__container:before { .header-pseudo-professional();}
-#container.container__cos .header__container:before { .header-pseudo-cos();}
-#container.container__social_activity .header__container:before { .header-pseudo-social_activity();}
-#container.container__social_lift .header__container:before { .header-pseudo-social_lift();}
-#container.container__patriot .header__container:before { .header-pseudo-patriot();}
-#container.container__youth .header__container:before { .header-pseudo-youth(); }
+#container.container__school .header__container:before {
+   .header-pseudo-school();
+   .lg-block({
+      .header-pseudo-school-lg();
+   });
+   .md-block({
+      .header-pseudo-school-md();
+   });
+   .xs-block({
+      .header-pseudo-school();
+   });
+}
+#container.container__success .header__container:before {
+   .header-pseudo-success();
+   .lg-block({
+      .header-pseudo-success-lg();
+   });
+   .md-block({
+      .header-pseudo-success-md();
+   });
+   .xs-block({
+      .header-pseudo-success();
+   });
+}
+#container.container__professional .header__container:before {
+   .header-pseudo-professional();
+   .lg-block({
+      .header-pseudo-professional-lg();
+   });
+   .md-block({
+      .header-pseudo-professional-md();
+   });
+   .xs-block({
+      .header-pseudo-professional();
+   });
+}
+#container.container__cos .header__container:before {
+   .header-pseudo-cos();
+   .lg-block({
+      .header-pseudo-cos-lg();
+   });
+   .md-block({
+      .header-pseudo-cos-md();
+   });
+   .xs-block({
+      .header-pseudo-cos();
+   });
+}
+#container.container__social_activity .header__container:before {
+   .header-pseudo-social_activity();
+   .lg-block({
+      .header-pseudo-social_activity-lg();
+   });
+   .md-block({
+      .header-pseudo-social_activity-md();
+   });
+   .xs-block({
+      .header-pseudo-social_activity();
+   });
+}
+#container.container__social_lift .header__container:before {
+   .header-pseudo-social_lift();
+   .lg-block({
+      .header-pseudo-social_lift-lg();
+   });
+   .md-block({
+      .header-pseudo-social_lift-md();
+   });
+   .xs-block({
+      .header-pseudo-social_lift();
+   });
+}
+#container.container__patriot .header__container:before {
+   .header-pseudo-patriot();
+   .lg-block({
+      .header-pseudo-patriot-lg();
+   });
+   .md-block({
+      .header-pseudo-patriot-md();
+   });
+   .xs-block({
+      .header-pseudo-patriot();
+   });
+}
+#container.container__youth .header__container:before {
+   .header-pseudo-youth();
+   .lg-block({
+      .header-pseudo-youth-lg();
+   });
+   .md-block({
+      .header-pseudo-youth-md();
+   });
+   .xs-block({
+      .header-pseudo-youth();
+   });
+}
+
+
 
 #container .headline_blue:after {
    .pseudo();
@@ -390,10 +496,30 @@ footer.footer__container:after {
       top: 44%;
       right: 5%;
    });
+   /*.lg-block({
+      right: 50px;
+   });*/
+   .md-block({
+      top: 0;
+      right: 13vw;
+      .header-md();
+      
+      width: 60%;
+      height: calc( 220px + 3vw );
+      max-height: 250px;
+   });
    .sm-block({
-      right: 6%;
-      top: 44%
-   })
+      right: 4vw;
+   });
+   .xs-block({
+      .header-xs();
+      top: 60px;
+      right: 15px;
+      width: 110px;
+   });
+   .xxs-block({
+      display: none;
+   });
 }
 
 section.deadline__container:before {
