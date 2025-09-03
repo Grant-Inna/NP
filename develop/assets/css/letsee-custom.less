@@ -137,7 +137,8 @@
    .after_video_info__container .icon_check,
    .icon_close,
    .pagination__number,
-   .materials__pagination_container {
+   .materials__pagination_container,
+   .materials__pagination_holder {
       background: none !important;
    }
    .header__main_logo,
@@ -174,6 +175,11 @@
       background-repeat: no-repeat !important;
       background-size: contain !important;
       background-position: center !important;
+   }
+   .after_video_info__container .icon_check,
+   .icon_check-blue {
+      width: 30px !important;
+      height: 30px !important;
    }
    .header__logo_title {
       .xs-block({
@@ -264,6 +270,14 @@
       .size-md(24);
       .size-sm(24);
    }
+   .container__mobile .block_14 {
+      order: unset;
+      .size(13.5);
+      .size-xxl(13.5);
+      .size-xl(12);
+      .size-md(24);
+   
+   }
    
    .select2-container--default .select2-selection--single {
       height: 60px;
@@ -320,7 +334,8 @@
    .it_areas__icon,
    .headline__icon,
    .info_about__icon,
-   .footer__icon.icon_mail {
+   .footer__icon.icon_mail,
+   footer.footer__container:after {
       display: none;
    }
    .tile_federal__title {

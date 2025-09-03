@@ -1308,7 +1308,7 @@ $(document).ready(function () {
          newpath.setAttribute("fill", "#0272B0");
          document.getElementById("map_index__svg").appendChild(newpath);
       });
-}
+   }
    
    
 /*   $(function() {
@@ -1437,7 +1437,7 @@ $(document).ready(function () {
       
       function clearAllChosen() {
          $("#map_index__information .icon_close").on("click", close);
-         $select_clear.on("click", close)
+         $select_clear.on("click", close);
       }
       
       /* СКРЫТИЕ КАРТОЧКИ */
@@ -1465,6 +1465,7 @@ $(document).ready(function () {
          $objects.val(0).trigger("change");
          
          $('.scroll-wrapper.scrollbar-inner').hide();   // Скрываем блок со списком объектов
+         clearAllChosen();
       }
       
       /* ПОКАЗ "ЭТОГО ОБЪЕКТА НЕТ" ПРИ ВЫБОРЕ ОДНОГО ОБЪЕКТА */
@@ -1548,7 +1549,7 @@ $(document).ready(function () {
          $map_index.addClass('open'); // Добавляем класс open региона
          $region_name.text(region_name); // Добавляем название выбранного региона
          
-         $select_clear.removeClass('disable'); // Развлокируем кнопку отчистки у селектов
+         $select_clear.removeClass('disable'); // Разблокируем кнопку отчистки у селектов
       }
       
       function showRegionObjects(data) { // Проверяем, есть ли Objects у выбранного региона, пишем, если нет
@@ -1581,7 +1582,7 @@ $(document).ready(function () {
       
       // Отрисовка всех объектов инфраструктуры выбранного региона
       // Подсчёт общего числа объектов инфраструктуры в выбранном регионе
-      function showRegionObjectsArray(region_objects) {
+      function showRegionObjectsArray( region_objects) {
          newArr = []; // Очищаем переменные
          num = [];
          total_amount = 0;

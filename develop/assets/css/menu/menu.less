@@ -15,12 +15,19 @@ nav.menu__container {
    height: @height-menu;
    width: 17vw;
    
+   .from( 4510px, {
+      width: calc(31vw + 9%);
+   });
+   .from( 3000px, {
+      width: calc(28vw + 7%);
+   });
+   
+   .from( 2550px, {
+      width: calc(24vw + 5%);
+   });
    .from( 1920px, {
       width: calc(19vw + 5%);
    });
-   .from( 2500px, {
-      width: calc(24vw + 5%);
-   })
 }
 .menu__container .wrapper {
    .flex();
@@ -34,6 +41,10 @@ nav .wrapper .background_orange {
    .orange_header();
    width: @width-wrapper-or;
    height: 100%;
+   
+   .from( 2550px, {
+      background: none !important;
+   });
 }
 .menu__content {
    .flex();

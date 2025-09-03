@@ -300,13 +300,13 @@ $('#letsee-hide-images').on( 'click', function() { // Делаем белым
     }
 });
 
-if ($('.letsee-colors-wonb').hasClass('letsee-colors-active')) { // Отфильтровываем чёрный
+if ($('.letsee-colors-active').data('letsee-colors', 'wonb')) { // Отфильтровываем чёрный
     $body.addClass('letsee-black');
     $body.removeClass('letsee-white');
     localStorage.setItem('letsee-black', 100); // Добавляем в хранилище
     localStorage.removeItem('letsee-white'); // Удаляем из хранилища
 }
-if ($('.letsee-colors-bonb').hasClass('letsee-colors-active')) { // Отфильтровываем белый
+if ($('.letsee-colors-active').data('letsee-colors', 'bonw')) { // Отфильтровываем белый
     $body.removeClass('letsee-black');
     $body.addClass('letsee-white');
     localStorage.setItem('letsee-white', 100); // Добавляем в хранилище
